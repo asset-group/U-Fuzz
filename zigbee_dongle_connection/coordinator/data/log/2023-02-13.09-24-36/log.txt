@@ -1,0 +1,17 @@
+info  2023-02-13 09:24:36: Logging to console and directory: '/app/data/log/2023-02-13.09-24-36' filename: log.txt
+info  2023-02-13 09:24:36: Starting Zigbee2MQTT version 1.30.1 (commit #eb878d3)
+info  2023-02-13 09:24:36: Starting zigbee-herdsman (0.14.89)
+info  2023-02-13 09:24:36: zigbee-herdsman started (resumed)
+info  2023-02-13 09:24:36: Coordinator firmware version: '{"meta":{"maintrel":3,"majorrel":2,"minorrel":6,"product":0,"revision":20211116,"transportrev":2},"type":"zStack12"}'
+info  2023-02-13 09:24:36: Currently 2 devices are joined:
+info  2023-02-13 09:24:36: Router1 (0x00124b001cde5546): CC2530.ROUTER - Custom devices (DiY) [CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/) (Router)
+info  2023-02-13 09:24:36: 0xa4c13852c87d504f (0xa4c13852c87d504f): TS0201 - TuYa Temperature & humidity sensor with display (EndDevice)
+warn  2023-02-13 09:24:36: `permit_join` set to  `true` in configuration.yaml.
+warn  2023-02-13 09:24:36: Allowing new devices to join.
+warn  2023-02-13 09:24:36: Set `permit_join` to `false` once you joined all devices.
+info  2023-02-13 09:24:36: Zigbee: allowing new devices to join.
+info  2023-02-13 09:24:36: Connecting to MQTT server at mqtt://127.0.0.1:1883
+error 2023-02-13 09:24:36: MQTT error: connect ECONNREFUSED 127.0.0.1:1883
+error 2023-02-13 09:24:36: MQTT failed to connect, exiting...
+info  2023-02-13 09:24:36: Stopping zigbee-herdsman...
+info  2023-02-13 09:24:37: Stopped zigbee-herdsman

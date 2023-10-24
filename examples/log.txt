@@ -1,0 +1,41 @@
+packet1 : fe 17 24 01 55 d4 08 01 04 06 13 00 1e 0d 10 08 02 4d 00 42 06 68 65 6c 6c 6f 31 f8
+
+zigbee2mqtt    | Zigbee2MQTT:error 2022-11-08 08:56:33: Publish 'set' 'write' to 'Router1' failed: 'Error: Write 0x00124b001cde5546/8 piAnalogOutputReg({"objectName":"hello1"}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 54357 - 8 - 8 - 1540 - 4 after 10000ms)'
+
+packet2 : fe 17 24 01 55 d4 08 01 04 06 14 00 1e 0d 10 09 02 4d 00 42 06 68 65 6c 6c 6f 31 fe
+
+zigbee2mqtt    | Zigbee2MQTT:info  2022-11-08 08:56:33: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"Publish 'set' 'write' to 'Router1' failed: 'Error: Write 0x00124b001cde5546/8 piAnalogOutputReg({\"objectName\":\"hello1\"}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (Timeout - 54357 - 8 - 8 - 1540 - 4 after 10000ms)'","meta":{"friendly_name":"Router1"},"type":"zigbee_publish_error"}'
+
+packet3: 
+read
+ fe 0f 24 01 55 d4 08 01 10 06 1d 00 1e 05 10 0f  ..$.U...........
+ 00 4d 00 e0                                      .M..
+--
+> 2022/11/08 16:42:08.787225  length=6 from=1546 to=1551
+ fe 01 64 01 00 64                                ..d..d
+--
+> 2022/11/08 16:42:08.794401  length=8 from=1552 to=1559
+ fe 03 44 80 00 01 1d db              
+
+write: 
+three packets sent 
+ fe 17 24 01 55 d4 08 01 10 06 1a 00 1e 0d 10 0e  ..$.U...........
+ 02 4d 00 42 06 68 65 6c 6c 6f 31 e3              .M.B.hello1.
+--
+> 2022/11/08 16:41:20.461716  length=6 from=1466 to=1471
+ fe 01 64 01 00 64                                ..d..d
+--
+> 2022/11/08 16:41:20.469368  length=8 from=1472 to=1479
+ fe 03 44 80 00 01 1a dc                          ..D.....
+
+
+packet: 
+genIdentify : IdentifyTime:7 (write)
+fe 12 24 01 55 d4 08 01 03 00 28 00 1e 08 10 14  ..$.U.....(.....
+ 02 00 00 21 07 00 a2                             ...!...
+--
+> 2022/11/08 16:45:15.931254  length=6 from=1744 to=1749
+ fe 01 64 01 00 64                                ..d..d
+--
+> 2022/11/08 16:45:16.133342  length=8 from=1750 to=1757
+ fe 03 44 80 00 01 28 ee    

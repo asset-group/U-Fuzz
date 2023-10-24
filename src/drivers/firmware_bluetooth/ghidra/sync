@@ -1,0 +1,2 @@
+[INIT]
+context = {"pid": 200, "mappings": [ [0x3f400020, 0x3f40cebf, 0xcea0, "firmware.elf"], [0x400d0018, 0x4012c7f3, 0x5c7dc, "firmware.elf"], [0x40080000, 0x400803ff, 0x3ff, "firmware.elf"], [0x40080400, 0x4009396c, 0x1356c, "firmware.elf"], [0x3ffadb5c, 0x3ffadfff, 0x4a4, "esp32_rom.elf"], [0x40010000, 0x40064ef1, 0x54ef2, "esp32_rom.elf"] ]}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This is the ZTool Config XML file
+
+Tag Keys:
+
+<cfg_name>Name For the Data Set</cfg_name> 
+  Valid Entries:
+    Ascii Text
+
+<cfg_set>A Set Of Config Data</cfg_set>   
+  Valid Entries:
+    Ascii Text
+
+<zstack_version>Chip Name</zstack_version> 
+  Valid Entries:
+    Ascii Text
+
+-->
+<ztool_config>
+    <version>00.00.01</version>
+    <cfg_name>ZTool Config Items</cfg_name>
+    <cfg_set>
+      <zstack_version>2.7.1</zstack_version>
+    </cfg_set>
+</ztool_config>
+

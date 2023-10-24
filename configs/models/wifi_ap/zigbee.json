@@ -1,0 +1,923 @@
+{
+    "StatesNodes": {
+        "IDLE": {
+            "direction": 0,
+            "layers_count": 0,
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 3083
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / zigbeeAck / Ack": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 3365
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / zigbeeCommand / Command": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 4165
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / zigbeeExtended / Extended": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 18,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 6126
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "RX / zigbeeLinkQualityResp / Data": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 20,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 7194
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / zigbeeLinkStatus / Command": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 3229
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / zigbeeManyToOne / Command": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 16,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5815
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / zigbeePermitJoinReq / Data": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 9,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5371
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / zigbeeReserved / Reserved": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5282
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / zigbeeRouteRecord / Command": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 17,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5875
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / zigbeeRouteReply / Command": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 14,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5582
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / zigbeeRouteReq / Command": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 3300
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / zigbeeZclGreenPower / Data": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 11,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5433
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / zigbeeZclReportAttribute / Profile-wide": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 3349
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / zigbeeLinkQualityReq / Data": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 19,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 7109
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / zigbeeLinkStatus / Command": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 12,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5476
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / zigbeeManyToOne / Command": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5320
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / zigbeePermitJoinReq / Data": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5346
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / zigbeeRouteReq / Command": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 13,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5539
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / zigbeeZclDefaultResp / Profile-wide": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 15,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5647
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / zigbeeZclGreenPower / Data": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 10,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1663739500,
+                "tv_usec": 5403
+            },
+            "timeout": 0,
+            "type_value": 0
+        }
+    },
+    "StatesTransitions": {
+        "IDLE": {
+            "from_state": null,
+            "to_state": {
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 3230
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeAck / Ack": {
+            "from_state": [
+                "RX / zigbeeLinkQualityResp / Data",
+                "TX / zigbeeZclDefaultResp / Profile-wide",
+                "RX / zigbeeZclReportAttribute / Profile-wide",
+                "TX / zigbeeLinkQualityReq / Data",
+                "RX / zigbeeRouteRecord / Command",
+                "RX / zigbeeRouteReply / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeLinkQualityResp / Data": {
+                    "dst_state_name": "RX / zigbeeLinkQualityResp / Data",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7195
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 3411
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeRouteRecord / Command": {
+                    "dst_state_name": "RX / zigbeeRouteRecord / Command",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7141
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeRouteReply / Command": {
+                    "dst_state_name": "RX / zigbeeRouteReply / Command",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5613
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeZclReportAttribute / Profile-wide": {
+                    "dst_state_name": "RX / zigbeeZclReportAttribute / Profile-wide",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5912
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "TX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7240
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeePermitJoinReq / Data": {
+                    "dst_state_name": "TX / zigbeePermitJoinReq / Data",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 6536
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeRouteReq / Command": {
+                    "dst_state_name": "TX / zigbeeRouteReq / Command",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5539
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeZclDefaultResp / Profile-wide": {
+                    "dst_state_name": "TX / zigbeeZclDefaultResp / Profile-wide",
+                    "src_state_name": "RX / zigbeeAck / Ack",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5648
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeCommand / Command": {
+            "from_state": [
+                "TX / zigbeeLinkStatus / Command",
+                "RX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeCommand / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 4188
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeExtended / Extended": {
+            "from_state": [
+                "TX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeExtended / Extended",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 6144
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeLinkQualityResp / Data": {
+            "from_state": [
+                "RX / zigbeeAck / Ack"
+            ],
+            "to_state": {
+                "RX / zigbeeAck / Ack": {
+                    "dst_state_name": "RX / zigbeeAck / Ack",
+                    "src_state_name": "RX / zigbeeLinkQualityResp / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7208
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeLinkStatus / Command": {
+            "from_state": [
+                "TX / zigbeeZclDefaultResp / Profile-wide",
+                "RX / zigbeeManyToOne / Command",
+                "RX / zigbeeLinkStatus / Command",
+                "RX / zigbeeExtended / Extended",
+                "IDLE",
+                "TX / zigbeeLinkStatus / Command",
+                "RX / zigbeeAck / Ack",
+                "RX / zigbeeZclGreenPower / Data",
+                "RX / zigbeeCommand / Command",
+                "RX / zigbeeReserved / Reserved"
+            ],
+            "to_state": {
+                "RX / zigbeeCommand / Command": {
+                    "dst_state_name": "RX / zigbeeCommand / Command",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 4166
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 3262
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeReserved / Reserved": {
+                    "dst_state_name": "RX / zigbeeReserved / Reserved",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5283
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeRouteReq / Command": {
+                    "dst_state_name": "RX / zigbeeRouteReq / Command",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 3301
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkQualityReq / Data": {
+                    "dst_state_name": "TX / zigbeeLinkQualityReq / Data",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7110
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "TX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5477
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeManyToOne / Command": {
+                    "dst_state_name": "TX / zigbeeManyToOne / Command",
+                    "src_state_name": "RX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5321
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeManyToOne / Command": {
+            "from_state": [
+                "TX / zigbeeManyToOne / Command",
+                "TX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeManyToOne / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5837
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "TX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeManyToOne / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 6109
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeePermitJoinReq / Data": {
+                    "dst_state_name": "TX / zigbeePermitJoinReq / Data",
+                    "src_state_name": "RX / zigbeeManyToOne / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 8745
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeePermitJoinReq / Data": {
+            "from_state": [
+                "TX / zigbeeZclGreenPower / Data",
+                "TX / zigbeePermitJoinReq / Data"
+            ],
+            "to_state": {
+                "RX / zigbeeZclGreenPower / Data": {
+                    "dst_state_name": "RX / zigbeeZclGreenPower / Data",
+                    "src_state_name": "RX / zigbeePermitJoinReq / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 8812
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeZclGreenPower / Data": {
+                    "dst_state_name": "TX / zigbeeZclGreenPower / Data",
+                    "src_state_name": "RX / zigbeePermitJoinReq / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5404
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeReserved / Reserved": {
+            "from_state": [
+                "RX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeReserved / Reserved",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5301
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeRouteRecord / Command": {
+            "from_state": [
+                "RX / zigbeeAck / Ack",
+                "TX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeAck / Ack": {
+                    "dst_state_name": "RX / zigbeeAck / Ack",
+                    "src_state_name": "RX / zigbeeRouteRecord / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5888
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeRouteReply / Command": {
+            "from_state": [
+                "RX / zigbeeAck / Ack",
+                "TX / zigbeeRouteReq / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeAck / Ack": {
+                    "dst_state_name": "RX / zigbeeAck / Ack",
+                    "src_state_name": "RX / zigbeeRouteReply / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5595
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeRouteReq / Command": {
+            "from_state": [
+                "RX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeZclReportAttribute / Profile-wide": {
+                    "dst_state_name": "RX / zigbeeZclReportAttribute / Profile-wide",
+                    "src_state_name": "RX / zigbeeRouteReq / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 3350
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeZclGreenPower / Data": {
+            "from_state": [
+                "RX / zigbeePermitJoinReq / Data",
+                "TX / zigbeeZclGreenPower / Data"
+            ],
+            "to_state": {
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeZclGreenPower / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5455
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "TX / zigbeeLinkStatus / Command",
+                    "src_state_name": "RX / zigbeeZclGreenPower / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 8831
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / zigbeeZclReportAttribute / Profile-wide": {
+            "from_state": [
+                "RX / zigbeeAck / Ack",
+                "RX / zigbeeRouteReq / Command",
+                "TX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeAck / Ack": {
+                    "dst_state_name": "RX / zigbeeAck / Ack",
+                    "src_state_name": "RX / zigbeeZclReportAttribute / Profile-wide",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 3366
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeeLinkQualityReq / Data": {
+            "from_state": [
+                "RX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeAck / Ack": {
+                    "dst_state_name": "RX / zigbeeAck / Ack",
+                    "src_state_name": "TX / zigbeeLinkQualityReq / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7123
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeeLinkStatus / Command": {
+            "from_state": [
+                "TX / zigbeeLinkStatus / Command",
+                "RX / zigbeeAck / Ack",
+                "RX / zigbeeZclGreenPower / Data",
+                "RX / zigbeeLinkStatus / Command",
+                "RX / zigbeeManyToOne / Command",
+                "TX / zigbeeManyToOne / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeCommand / Command": {
+                    "dst_state_name": "RX / zigbeeCommand / Command",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 9119
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeExtended / Extended": {
+                    "dst_state_name": "RX / zigbeeExtended / Extended",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 6126
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5722
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeManyToOne / Command": {
+                    "dst_state_name": "RX / zigbeeManyToOne / Command",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5816
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeRouteRecord / Command": {
+                    "dst_state_name": "RX / zigbeeRouteRecord / Command",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5876
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeZclReportAttribute / Profile-wide": {
+                    "dst_state_name": "RX / zigbeeZclReportAttribute / Profile-wide",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5501
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "TX / zigbeeLinkStatus / Command",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7357
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeManyToOne / Command": {
+                    "dst_state_name": "TX / zigbeeManyToOne / Command",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7392
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeePermitJoinReq / Data": {
+                    "dst_state_name": "TX / zigbeePermitJoinReq / Data",
+                    "src_state_name": "TX / zigbeeLinkStatus / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7618
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeeManyToOne / Command": {
+            "from_state": [
+                "TX / zigbeeLinkStatus / Command",
+                "RX / zigbeeLinkStatus / Command"
+            ],
+            "to_state": {
+                "RX / zigbeeManyToOne / Command": {
+                    "dst_state_name": "RX / zigbeeManyToOne / Command",
+                    "src_state_name": "TX / zigbeeManyToOne / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 6091
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "TX / zigbeeLinkStatus / Command",
+                    "src_state_name": "TX / zigbeeManyToOne / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5794
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeePermitJoinReq / Data": {
+                    "dst_state_name": "TX / zigbeePermitJoinReq / Data",
+                    "src_state_name": "TX / zigbeeManyToOne / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5347
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeePermitJoinReq / Data": {
+            "from_state": [
+                "TX / zigbeeLinkStatus / Command",
+                "RX / zigbeeManyToOne / Command",
+                "TX / zigbeeManyToOne / Command",
+                "RX / zigbeeAck / Ack"
+            ],
+            "to_state": {
+                "RX / zigbeePermitJoinReq / Data": {
+                    "dst_state_name": "RX / zigbeePermitJoinReq / Data",
+                    "src_state_name": "TX / zigbeePermitJoinReq / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5371
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeZclGreenPower / Data": {
+                    "dst_state_name": "TX / zigbeeZclGreenPower / Data",
+                    "src_state_name": "TX / zigbeePermitJoinReq / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 8768
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeeRouteReq / Command": {
+            "from_state": [
+                "TX / zigbeeRouteReq / Command",
+                "RX / zigbeeAck / Ack"
+            ],
+            "to_state": {
+                "RX / zigbeeRouteReply / Command": {
+                    "dst_state_name": "RX / zigbeeRouteReply / Command",
+                    "src_state_name": "TX / zigbeeRouteReq / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5582
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeRouteReq / Command": {
+                    "dst_state_name": "TX / zigbeeRouteReq / Command",
+                    "src_state_name": "TX / zigbeeRouteReq / Command",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5560
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeeZclDefaultResp / Profile-wide": {
+            "from_state": [
+                "RX / zigbeeAck / Ack"
+            ],
+            "to_state": {
+                "RX / zigbeeAck / Ack": {
+                    "dst_state_name": "RX / zigbeeAck / Ack",
+                    "src_state_name": "TX / zigbeeZclDefaultResp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5662
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeLinkStatus / Command": {
+                    "dst_state_name": "RX / zigbeeLinkStatus / Command",
+                    "src_state_name": "TX / zigbeeZclDefaultResp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 6943
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / zigbeeZclGreenPower / Data": {
+            "from_state": [
+                "TX / zigbeePermitJoinReq / Data",
+                "RX / zigbeePermitJoinReq / Data",
+                "TX / zigbeeZclGreenPower / Data"
+            ],
+            "to_state": {
+                "RX / zigbeePermitJoinReq / Data": {
+                    "dst_state_name": "RX / zigbeePermitJoinReq / Data",
+                    "src_state_name": "TX / zigbeeZclGreenPower / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 8790
+                    },
+                    "trigger": ""
+                },
+                "RX / zigbeeZclGreenPower / Data": {
+                    "dst_state_name": "RX / zigbeeZclGreenPower / Data",
+                    "src_state_name": "TX / zigbeeZclGreenPower / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 5434
+                    },
+                    "trigger": ""
+                },
+                "TX / zigbeeZclGreenPower / Data": {
+                    "dst_state_name": "TX / zigbeeZclGreenPower / Data",
+                    "src_state_name": "TX / zigbeeZclGreenPower / Data",
+                    "time": {
+                        "tv_sec": 1663739500,
+                        "tv_usec": 7706
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

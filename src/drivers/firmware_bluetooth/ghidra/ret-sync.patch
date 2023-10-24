@@ -1,0 +1,103 @@
+diff --git a/ext_ghidra/build.gradle b/ext_ghidra/build.gradle
+index e827d99..2fe4c34 100644
+--- a/ext_ghidra/build.gradle
++++ b/ext_ghidra/build.gradle
+@@ -24,6 +24,8 @@ else if (project.hasProperty("GHIDRA_INSTALL_DIR")) {
+ 	ghidraInstallDir = project.getProperty("GHIDRA_INSTALL_DIR")
+ }
+ 
++ghidraInstallDir = "/media/matheus/Data/ghidra/"
++
+ if (ghidraInstallDir) {
+ 	apply from: new File(ghidraInstallDir).getCanonicalPath() + "/support/buildExtension.gradle"
+ }
+diff --git a/ext_ghidra/dist/ghidra_9.1.2_PUBLIC_20200428_retsync.zip b/ext_ghidra/dist/ghidra_9.1.2_PUBLIC_20200428_retsync.zip
+deleted file mode 100644
+index a1b95ef..0000000
+Binary files a/ext_ghidra/dist/ghidra_9.1.2_PUBLIC_20200428_retsync.zip and /dev/null differ
+diff --git a/ext_ghidra/src/main/java/retsync/RequestHandler.java b/ext_ghidra/src/main/java/retsync/RequestHandler.java
+index c583f62..9b4b8d2 100644
+--- a/ext_ghidra/src/main/java/retsync/RequestHandler.java
++++ b/ext_ghidra/src/main/java/retsync/RequestHandler.java
+@@ -243,7 +243,7 @@ public class RequestHandler {
+             case "sync_mode":
+                 String auto = notice.getString("auto");
+                 rsplugin.cs.println(String.format("[<] sync mod auto: %s", auto));
+-
++                rsplugin.cs.println(String.format("Sync mode: %s", auto));
+                 switch (auto) {
+                 case "on":
+                     rsplugin.syncModAuto = true;
+@@ -367,7 +367,8 @@ public class RequestHandler {
+                 if (!rsplugin.program.equals(rsplugin.pm.getCurrentProgram())) {
+                     rsplugin.pm.setCurrentProgram(rsplugin.program);
+                 }
+-
++                rsplugin.cs.println(String.format("base:%d, offset:%d",base,offset));
++                rsplugin.setLocalBase(base); // New function added, a proper fix would have this being called by a new command
+                 rsplugin.gotoLoc(base, offset);
+                 rsplugin.clrs.cbColorPost();
+                 break;
+diff --git a/ext_ghidra/src/main/java/retsync/RetSyncPlugin.java b/ext_ghidra/src/main/java/retsync/RetSyncPlugin.java
+index 440f30e..2182160 100644
+--- a/ext_ghidra/src/main/java/retsync/RetSyncPlugin.java
++++ b/ext_ghidra/src/main/java/retsync/RetSyncPlugin.java
+@@ -336,6 +336,10 @@ public class RetSyncPlugin extends ProgramPlugin {
+         imageBaseRemote = imageBaseLocal.getNewAddress(rbase);
+     }
+ 
++    void setLocalBase(long cbase) {
++        imageBaseLocal = imageBaseLocal.getNewAddress(cbase);
++    }
++
+     boolean isRemoteBaseKnown() {
+         return imageBaseRemote != null;
+     }
+@@ -349,7 +353,10 @@ public class RetSyncPlugin extends ProgramPlugin {
+     // current program image base and update remote base address
+     Address rebase(long base, long offset) {
+         imageBaseRemote = imageBaseLocal.getNewAddress(base);
+-        return rebaseLocal(imageBaseLocal.getNewAddress(offset));
++        cs.println(String.format("rebase:base:%04X",base));
++        cs.println(String.format("rebase:offset:%04X",offset));
++         cs.println(String.format("rebase:imageBaseRemote:%s",imageBaseRemote));
++        return rebaseRemote(imageBaseLocal.getNewAddress(offset));
+     }
+ 
+     // rebase remote address with respect to
+@@ -361,7 +368,11 @@ public class RetSyncPlugin extends ProgramPlugin {
+             return null;
+ 
+         try {
++            cs.println(String.format("rebaseLocal:loc:%s",loc));
++            cs.println(String.format("rebaseLocal:imageBaseRemote:%s",imageBaseRemote));
++            cs.println(String.format("rebaseLocal:imageBaseLocal:%s",imageBaseLocal));
+             dest = imageBaseLocal.addNoWrap(loc.subtract(imageBaseRemote));
++            cs.println(String.format("rebaseLocal:dest:%s",dest));
+         } catch (AddressOverflowException e) {
+             cs.println(String.format("[x] unsafe rebase local (wrap): %s - %s", imageBaseRemote, loc));
+             return null;
+@@ -386,12 +397,14 @@ public class RetSyncPlugin extends ProgramPlugin {
+     // remote program image base
+     Address rebaseRemote(Address loc) {
+         Address dest;
++        cs.println(String.format("rebaseRemote:loc:%s",loc));
+ 
+         if (program == null)
+             return null;
+ 
+         try {
+             dest = imageBaseRemote.addNoWrap(loc.subtract(imageBaseLocal));
++            cs.println(String.format("rebaseRemote:dest:%s",dest));
+         } catch (AddressOverflowException e) {
+             cs.println(String.format("[x] unsafe rebase remote (wrap): %s - %s", imageBaseRemote, loc));
+             return null;
+@@ -408,6 +421,8 @@ public class RetSyncPlugin extends ProgramPlugin {
+ 
+         dest = rebase(base, offset);
+ 
++        cs.println(String.format("gotoLoc:dest:%s",dest.toString()));
++
+         if (dest != null) {
+             gs.goTo(dest);
+             clrs.setPrevAddr(dest);

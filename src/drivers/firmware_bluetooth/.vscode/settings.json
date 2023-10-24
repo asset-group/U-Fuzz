@@ -1,0 +1,14 @@
+{
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "cstddef": "c",
+        "future": "c",
+        "system_error": "c",
+        "random": "cpp",
+        "string_view": "c",
+        "array": "c",
+        "string": "c"
+    },
+    "cmake.configureOnOpen": false,
+    "workbench.editor.enablePreview": false
+}

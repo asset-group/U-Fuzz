@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+
+# iptables_=/usr/sbin/iptables
+iptables_=iptables
+
+function display_help()
+{
+  cat <<HELP
+DESCRIPTION
+This is a wrapper around iptables for appending and deleting rules. It will
+check for an existing matching rule when appending a rule to prevent duplicates
+and it will remove all matching rules when deleting a rule. It is intended for
+scripts that dynamically configure the firewall and which should be idempotent,
+i.e. subsequent invocations should not further alter the rules once they have
+been created. This prevents clutter in Netfilter if the script is rerun after an
+unexpected exit.
+
+USAGE
+
+    $0 <iptables args>
+
+IPTABLES HELP
+HELP
+"$iptables_" "$@"
+}
+
+if [[ -z $1 ]]
+then
+  display_help --help
+  exit 1
+fi
+
+
+# Expand short arguments.
+inputargs=()
+for a_ in "$@"
+do
+  if [[ ${a_:0:1} == '-' ]] \
+  && [[ ! -z ${a_:1:1} ]] \
+  && [[ ${a_:1:1} != '-' ]]
+  then
+    i=1
+    arg="${a_:i++:1}"
+    while [[ ! -z $arg ]]
+    do
+      inputargs+=("-$arg")
+      arg="${a_:i++:1}"
+    done
+  else
+    inputargs+=("$a_")
+  fi
+done
+
+# Collect the input arguments.
+i_=0
+cargs_=()
+args_=()
+for a_ in "${inputargs[@]}"
+do
+  args_[i_]="$a_"
+  # Detect the help flag.
+  if [[ $a_ == -h ]] || [[ $a_ == --help ]]
+  then
+    action_='help'
+  # Detect append and delete flags and replace them with the check flag in $cargs_
+  elif [[ $a_ == -A ]] || [[ $a_ == '--append' ]]
+  then
+    if [[ -z $action_ ]]
+    then
+      action_='append'
+    fi
+    cargs_[i_++]='-C'
+  elif [[ $a_ == -D ]] || [[ $a_ == '--delete' ]]
+  then
+    if [[ -z $action_ ]]
+    then
+      action_='delete'
+    fi
+    cargs_[i_++]='-C'
+  else
+    cargs_[i_++]="$a_"
+  fi
+done
+
+if [[ -z $action_ ]]
+then
+  "$iptables_" "${args_[@]}"
+elif [[ $action_ == 'help' ]]
+then
+  display_help "${args_[@]}"
+elif [[ $action_ == 'append' ]]
+then
+  # Append the rule if there is no match.
+  if ! "$iptables_" "${cargs_[@]}" >/dev/null 2>&1
+  then
+    "$iptables_" "${args_[@]}"
+  fi
+elif [[ $action_ == 'delete' ]]
+then
+  # Delete all mathing rules.
+  while "$iptables_" "${cargs_[@]}" >/dev/null 2>&1
+  do
+    "$iptables_" "${args_[@]}"
+  done
+fi

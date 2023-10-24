@@ -1,0 +1,7 @@
+SUBSYSTEM!="net", GOTO="nm_unmanaged_end"
+ACTION!="add|change|move", GOTO="nm_unmanaged_end"
+
+ATTRS{idProduct}=="8812", ATTRS{idVendor}=="0bda", ENV{NM_UNMANAGED}="1"
+ATTRS{idProduct}=="3070", ATTRS{idVendor}=="148f", ENV{NM_UNMANAGED}="1"
+
+LABEL="nm_unmanaged_end" 

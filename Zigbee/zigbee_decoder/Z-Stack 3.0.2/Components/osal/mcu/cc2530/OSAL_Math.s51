@@ -1,0 +1,200 @@
+/*******************************************************************************
+*  Filename:       OSAL_Math.s51
+*  Revised:        $Date: 2010-02-23 10:47:02 -0800 (Tue, 23 Feb 2010) $
+*  Revision:       $Revision: 21759 $
+*
+*  Description:    This module contains optimized math routines needed to
+*                  perform efficient as possible calculations for BLE operations
+*                  such as timer drift adjustments.
+*
+*  Copyright 2010 Texas Instruments Incorporated. All rights reserved.
+*
+*  IMPORTANT: Your use of this Software is limited to those specific rights
+*  granted under the terms of a software license agreement between the user
+*  who downloaded the software, his/her employer (which must be your employer)
+*  and Texas Instruments Incorporated (the "License").  You may not use this
+*  Software unless you agree to abide by the terms of the License. The License
+*  limits your use, and you acknowledge, that the Software may not be modified,
+*  copied or distributed unless embedded on a Texas Instruments microcontroller
+*  or used solely and exclusively in conjunction with a Texas Instruments radio
+*  frequency transceiver, which is integrated into your product.  Other than for
+*  the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+*  works of, modify, distribute, perform, display or sell this Software and/or
+*  its documentation for any purpose.
+
+*  YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+*  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+*  INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+*  NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+*  TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+*  NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+*  LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+*  INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+*  OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+*  OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+*  (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+*
+*  Should you have any questions regarding your right to use this Software,
+*  contact Texas Instruments Incorporated at www.TI.com.
+*******************************************************************************/
+
+  MODULE   OSAL_Math.s51
+
+/*******************************************************************************
+ *
+ * @fn          osalMcuDivide31By16To16
+ *
+ * @brief       This function is used to divide a 31 bit dividend by a 16 bit
+ *              divisor and return a  packed 16 bit quotient and 16 bit
+ *              remainder.
+ *
+ *              C Syntax
+ *              uint32 osalMcuDivide31By16To16( uint32 dividend, uint16 divisor );
+ *
+ *              Preserved registers used:
+ *              R7:R6
+ *
+ *              Note: This routine takes ~25.6us @32MHz. With C overhead, the
+ *                    time is ~32us.
+ *
+ * input parameters
+ *
+ * @param       R5:R4:R3:R2 - 31 bit dividend.
+ * @param       XDATA Stack - 16 bit divisor.
+ *
+ *              After initialization, the following register mapping is used:
+ *              R7:R6 - divisor
+ *              R5:R4 - quotient
+ *              R3:R2 - upper half of dividend; will become the remainder
+ *              R1:R0 - lower half of dividend
+ *              B     - loop counter
+ *
+ * output parameters
+ *
+ * @param       None.
+ *
+ * @return      R5:R4:R3:R2 - The 16 bit quotient is in R5:R4 and the 16 bit
+ *                            remainder is in R3:R2.
+ *
+ ******************************************************************************/
+
+  PUBLIC   osalMcuDivide31By16To16
+  FUNCTION osalMcuDivide31By16To16,0201H
+
+  EXTERN   ?XSP
+
+  RSEG DATA_Z:DATA:NOROOT(0)
+savedR6:
+  DS 1
+savedR7:
+  DS 1
+savedRemHi:
+  DS 1
+savedRemLow:
+  DS 1
+savedDPH:
+  DS 1
+savedDPL:
+  DS 1
+
+  RSEG NEAR_CODE:CODE:NOROOT(2)
+osalMcuDivide31By16To16:
+
+#ifdef DEBUG_GPIO
+  //SETB  P0.1
+#endif
+
+  // initialize loop counter
+  MOV   B,#16
+
+  //  save preserved registers R6 and R7
+  MOV   savedR6,R6
+  MOV   savedR7,R7
+
+  // save DPTR (which ever one is currently selected)
+  MOV   savedDPL,DPL
+  MOV   savedDPH,DPH
+
+  // get divisor from the XDATA stack
+  MOV   DPL,?XSP
+  MOV   DPH,?XSP+1
+  MOVX  A,@DPTR
+  XCH   A,R6
+  INC   DPTR
+  MOVX  A,@DPTR
+  XCH   A,R7
+
+  // restore DPTR
+  MOV   DPL,savedDPL
+  MOV   DPH,savedDPH
+
+  // move lower dividend R3:R2 to R1:R0
+  MOV   A,R3
+  XCH   A,R1
+  MOV   A,R2
+  XCH   A,R0
+  // move upper dividend R5:R4 to what will be the remainder R3:R2
+  MOV   A,R5
+  XCH   A,R3
+  MOV   A,R4
+  XCH   A,R2
+
+TopOfLoop:
+  // Step 1: Shift dividend and remainder left, feeding dividend into remainder.
+  CLR   C
+  MOV   A,R0
+  RLC   A
+  XCH   A,R0
+  MOV   A,R1
+  RLC   A
+  XCH   A,R1
+  MOV   A,R2
+  RLC   A
+  XCH   A,R2
+  MOV   A,R3
+  RLC   A
+  XCH   A,R3
+
+  // Step 2: Subtract divisor from remainder. If there is a borrow, then restore
+  //         the remainder.
+  CLR   C
+  MOV   A,R2
+  SUBB  A,R6
+  MOV   savedRemLow,A   ; save remainder in case it needs to be restored
+  MOV   A,R3
+  SUBB  A,R7
+  MOV   savedRemHi,A    ; save remainder in case it needs to be restored
+
+  // Step 3: Shift quotient left, feeding complement of borrow bit
+  //         Note: Remainder is left unchanged if there was a borrow.
+  CPL   C
+  JNC   ShiftQuotient
+  //
+  MOV   R3,savedRemHi
+  MOV   R2,savedRemLow
+
+ShiftQuotient:
+  MOV   A,R4
+  RLC   A
+  XCH   A,R4
+  MOV   A,R5
+  RLC   A
+  XCH   A,R5
+
+  // Step 4: Decrement count and loop if not zero.
+  DJNZ  B,TopOfLoop
+
+  // restore R6 and R7
+  MOV   R6,savedR6
+  MOV   R7,savedR7
+
+#ifdef DEBUG_GPIO
+  //CLR   P0.1
+#endif
+
+  RET
+
+/*******************************************************************************
+*******************************************************************************/
+
+  END

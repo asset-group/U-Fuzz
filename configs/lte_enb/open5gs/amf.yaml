@@ -1,0 +1,301 @@
+#
+# logger:
+#
+#  o Set OGS_LOG_INFO to all domain level
+#   - If `level` is omitted, the default level is OGS_LOG_INFO)
+#   - If `domain` is omitted, the all domain level is set from 'level'
+#    (Nothing is needed)
+#
+#  o Set OGS_LOG_ERROR to all domain level
+#   - `level` can be set with none, fatal, error, warn, info, debug, trace
+#    level: error
+#
+#  o Set OGS_LOG_DEBUG to mme/emm domain level
+#    level: debug
+#    domain: mme,emm
+#
+#  o Set OGS_LOG_TRACE to all domain level
+#    level: trace
+#    domain: core,ngap,nas,gmm,sbi,amf,event,tlv,mem,sock
+#
+logger:
+    file: /home/matheus/5g/open5gs-core/install/var/log/open5gs/amf.log
+#
+# amf:
+#
+#  <SBI Server>
+#
+#  o SBI Server(http://<all address available>:80)
+#    sbi:
+#
+#  o SBI Server(http://<any address>:80)
+#    sbi:
+#      - addr:
+#          - 0.0.0.0
+#          - ::0
+#        port: 7777
+#
+#  o SBI Server(https://<all address avaiable>:443)
+#    sbi:
+#        tls:
+#          key: amf.key
+#          pem: amf.pem
+#
+#  o SBI Server(https://127.0.0.5:443, http://[::1]:80)
+#    sbi:
+#      - addr: 127.0.0.5
+#        tls:
+#          key: amf.key
+#          pem: amf.pem
+#      - addr: ::1
+#
+#  o SBI Server(http://amf.open5gs.org:80)
+#    sbi:
+#      name: amf.open5gs.org
+#
+#  o SBI Server(http://127.0.0.5:7777)
+#    sbi:
+#      - addr: 127.0.0.5
+#        port: 7777
+#
+#  o SBI Server(http://<eth0 IP address>:80)
+#    sbi:
+#      dev: eth0
+#
+#  <NGAP Server>>
+#
+#  o NGAP Server(all address avaiable)
+#    ngap:
+#
+#  o NGAP Server(0.0.0.0:38412)
+#    ngap:
+#      addr: 0.0.0.0
+#
+#  o NGAP Server(127.0.0.5:38412, [::1]:38412)
+#    ngap:
+#      - addr: 127.0.0.5
+#      - addr: ::1
+#
+#  o NGAP Server(different port)
+#    ngap:
+#      - addr: 127.0.0.5
+#        port: 38413
+#
+#  o NGAP Server(address avaiable in `eth0` interface)
+#    ngap:
+#      dev: eth0
+#
+#  <GUAMI>
+#
+#  o Multiple GUAMI
+#    guami:
+#      - plmn_id:
+#          mcc: 901
+#          mnc: 70
+#        amf_id:
+#          region: 2
+#          set: 1
+#          pointer: 4
+#      - plmn_id:
+#          mcc: 001
+#          mnc: 01
+#        amf_id:
+#          region: 5
+#          set: 2
+#
+#  <TAI>
+#
+#  o Multiple TAI
+#    tai:
+#      - plmn_id:
+#          mcc: 001
+#          mnc: 01
+#        tac: [1, 2, 3]
+#    tai:
+#      - plmn_id:
+#          mcc: 002
+#          mnc: 02
+#        tac: 4
+#      - plmn_id:
+#          mcc: 003
+#          mnc: 03
+#        tac: 5
+#    tai:
+#      - plmn_id:
+#          mcc: 004
+#          mnc: 04
+#        tac: [6, 7]
+#      - plmn_id:
+#          mcc: 005
+#          mnc: 05
+#        tac: 8
+#      - plmn_id:
+#          mcc: 006
+#          mnc: 06
+#        tac: [9, 10]
+#
+#  <PLMN Support>
+#
+#  o Multiple PLMN Support
+#    plmn_support:
+#      - plmn_id:
+#          mcc: 901
+#          mnc: 70
+#        s_nssai:
+#          - sst: 1
+#          - sd: 010000
+#      - plmn_id:
+#          mcc: 901
+#          mnc: 70
+#        s_nssai:
+#          - sst: 1
+#
+#  <Network Name>
+#
+#    network_name:
+#        full: Open5GS
+#        short: Next
+#
+#  <AMF Name>
+#
+#    amf_name: amf1.open5gs.amf.5gc.mnc70.mcc901.3gppnetwork.org
+#
+amf:
+    sbi:
+      - addr: 127.0.0.5
+        port: 7777
+    ngap:
+      - addr: 127.0.0.5
+    guami:
+      - plmn_id:
+          mcc: 901
+          mnc: 70
+        amf_id:
+          region: 2
+          set: 1
+    tai:
+      - plmn_id:
+          mcc: 901
+          mnc: 70
+        tac: 1
+    plmn_support:
+      - plmn_id:
+          mcc: 901
+          mnc: 70
+        s_nssai:
+          - sst: 1
+    security:
+        integrity_order : [ NIA2, NIA1, NIA0 ]
+        ciphering_order : [ NEA0, NEA1, NEA2 ]
+    network_name:
+        full: Open5GS
+    amf_name: open5gs-amf0
+
+#
+# nrf:
+#
+#  <SBI Client>>
+#
+#  o SBI Client(http://127.0.0.10:7777)
+#    sbi:
+#      addr: 127.0.0.10
+#      port: 7777
+#
+#  o SBI Client(https://127.0.0.10:443, http://nrf.open5gs.org:80)
+#    sbi:
+#      - addr: 127.0.0.10
+#        tls:
+#          key: nrf.key
+#          pem: nrf.pem
+#      - name: nrf.open5gs.org
+#
+#  o SBI Client(http://[fe80::1%lo]:80)
+#    If prefer_ipv4 is true, http://127.0.0.10:80 is selected.
+#
+#    sbi:
+#      addr:
+#        - 127.0.0.10
+#        - fe80::1%lo
+#
+nrf:
+    sbi:
+      - addr:
+          - 127.0.0.10
+          - ::1
+        port: 7777
+
+#
+# parameter:
+#
+#  o Number of output streams per SCTP associations.
+#      sctp_streams: 30
+#
+#  o Disable use of IPv4 addresses (only IPv6)
+#      no_ipv4: true
+#
+#  o Disable use of IPv6 addresses (only IPv4)
+#      no_ipv6: true
+#
+#  o Prefer IPv4 instead of IPv6 for estabishing new GTP connections.
+#      prefer_ipv4: true
+#
+#  o Enable Multicast traffic to the UE
+#      multicast: true
+#
+#  o Disable Stateless Address Autoconfiguration for IPv6
+#      no_slaac: true
+#
+parameter:
+
+#
+# max:
+#
+# o Maximum Number of UE per AMF/MME
+#    ue: 1024
+# o Maximum Number of gNB/eNB per AMF/MME
+#    gnb: 32
+#
+max:
+
+#
+# pool:
+#
+# o The Number of Default Memory Pool Size
+#
+#   - Pool-size 128         => 32768 Number
+#   - Pool-size 256         => 4096 Number
+#   - Pool-size 512         => 2048 Number
+#   - Pool-size 1024        => 1024 Number
+#   - Pool-size 2048        => 512 Number
+#   - Pool-size 8192        => 128 Number
+#   - Pool-size 1024*1024   => 8 Number
+#
+#    128:  32768
+#    256:  4096
+#    512:  2048
+#    1024: 1024
+#    2048: 512
+#    8192: 128
+#    big:  8
+#
+pool:
+
+#
+# time:
+#
+#  o NF Instance Heartbeat (Default : 10 seconds)
+#
+#  o NF Instance Heartbeat (Disabled)
+#    nf_instance:
+#      heartbeat: 0
+#
+#  o NF Instance Heartbeat (10 seconds)
+#    nf_instance:
+#      heartbeat: 10
+#
+#  o Message Wait Duration (Default : 10,000 ms = 10 seconds)
+#
+#  o Message Wait Duration (3000 ms)
+#    message:
+#        duration: 3000
+time:

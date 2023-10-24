@@ -1,0 +1,96 @@
+Texas Instruments, Inc.
+
+Z-Stack 3.0.2 Release Notes
+
+---
+
+Version 3.0.2
+June 15, 2018
+
+Notices:
+
+ Z-Stack 3.0.2 meet the requirements for full conformance to ZigBee 3.0, including Base Device Behaviour 1.0, GreenPower Basic Proxy, and ZCL 6. The Z-Stack 3.0.2 release is based on Z-Stack Core 2.7.2 - see the "Z-Stack Core Release Notes" for details.
+
+ The sample application user interface is described in details in the header comment in the following files: The common interface is described in Projects\zstack\HomeAutomation\Source\zcl_sampleapps_ui.c and each application's specific interface is described in the respective files: Projects\zstack\HomeAutomation\Sample###\Source\zcl_Sample###.c 
+ 
+ Z-Stack projects specify compile options in two ways: (1) "-D" statements in f8wConfig.cfg and other *.cfg files, (2) entries in the IDE Compiler Preprocessor Defined Symbols. When using the EW8051 compiler, settings made in the IDE will override settings in the *.cfg files. When using the EWARM compiler, settings in the *.cfg files will override any made in the IDE.  
+
+ When programming devices for the first time with this release, the entire Flash memory should be erased. For the CC2530/1 platforms, select "Erase Flash" in the "Debugger->Texas Instruments->Download" tab of the project options. For the CC2538, select "Project->Download->Erase Memory".
+
+ Application, library, and hex files were built/tested with the following versions of IAR tools and may not work with different IAR tool versions:   - CC2538 + SRF06EB:  EWARM  8.22.1  (8.22.1.15700)   - CC2530 + SRF05EB:  EW8051 10.20.1 (10.20.1)
+	 
+ Foundation software library files for the CC2538 include the following:
+ - bsp.lib, version 1.3.1
+ - driverlib.lib, version 1.3.1
+ - usblib.lib, version 1.0.1
+ 
+ Test for BDB spot checking was done with ZTT 1.0.2.4 using a related sample application to validate the features tested in BDB test spec (14-0439-22).
+  
+ ZNP projects were tested to be backward compatible with previous versions of Linux gateway device and to support Z3.0 MT interface and commands.
+ 
+------------------------
+  
+Optimizations:
+
+- GP Proxy initialization process got optimized to reduce flash usage.
+
+- ZNP projects got optimized to use MAXMEMHEAP at the maximum value possible per target device.
+
+- End devices will now go to sleep as soon as Zigbee Stack finishes its initialization, while it waits for application to commission the device into the network.
+
+------------------------
+
+Fixes:
+
+- Fixed and issue that caused Nv corruption if there was a Nv Write operation while the power supply was under 2V. The device under 2V will not longer attempt the Nv Write operation (avoiding Nv corruption) and will notify the application via Callback message (see RegisterVoltageWarningCB) so the application can handle this.
+
+- Fixed that BDB reporting attribute feature to use callback function defined to retrieve the attribute value
+
+- Added ZCLSerialData missing data types (ZCL_DATATYPE_BITMAP40, ZCL_DATATYPE_BITMAP48, ZCL_DATATYPE_BITMAP56, ZCL_DATATYPE_BITMAP64)
+
+- Fix that under certain conditions the poll rate is not set properly after rejoin.
+
+- Fixed a possible memory leaks on BDB Reporting.
+
+- Fixed a bug that caused ZED to not go to low power state after losing parent and attempting to recover the network.
+
+- Fixed a bug that caused that under some conditions ZED rejoin does not set the ZED to sleep.
+
+- Fixed a bug that caused that under some conditions when an APS Remove/Leave Request is sent to a device to remove itself or another device, NV will not be cleared properly, causing joining issues.
+
+- Fixed a bug that caused that under some conditions applications using Reporting could cause the application to get freezed due to lack of Stack memory.
+
+- Fixed an issue that caused incompatibility in Nv items between HA1.2 devices upgrading using OTA upgrade feature to Z3.0 stack
+
+- Fixed a bug that caused CC2538 ZNP applications to flip the IEEE address under certain conditions.
+
+- Fixed wrong cluster ID for ZCL_CLUSTER_ID_TELECOMMUNICATIONS_CHATTING and ZCL_CLUSTER_ID_TELECOMMUNICATIONS_VOICE_OVER_ZIGBEE
+
+- Increase heap for ZNP devices to avoid getting ZMemError under certain conditions.
+
+- Fix APS counter to increase accordingly to the frames send.
+
+- Several Green Power Proxy fixes
+
+- Fix a bug that caused ZDO Parent Announce to not parse correctly when 2 or more entries are provided.
+
+- Fixed a possible memory leak on ZDO MatchEndDeviceBind
+
+- Fix UI Install codes menu to modify the right digit
+
+- Fix a bug that caused Finding and Binding to add binds on matching clusters regardless of the cluster type. Binds now will be added only if the local device is meant to create the bind according to the cluster type.
+
+Notes:
+
+ - During F&B with more than one device, the discovery process of the F&B (broadcast of IdentifyQuery and reception of IdentifyQueryRsp) may initially fail for some of the devices. The process is automatically retried by the stack every 15 seconds during 180 seconds, to make sure all the required devices can be found. This behaviour is controlled by the macro FINDING_AND_BINDING_PERIODIC_ENABLE.
+
+ - ZNP devices do not support GP Commissioning for GPD that request to change channel to perform bidirectional commissioning.
+ 
+ - To perform FN reset via MT interface, both ZCD_STARTOPT_DEFAULT_CONFIG_STATE and ZCD_STARTOPT_DEFAULT_NETWORK_STATE must be set when writing to NV start-up options.
+ 
+ - In big networks, it is recommended to all joining and rejoining process have a random jitter that needs to be tuned accordingly to the size of the network and the distribution of the nodes, to allow the joining process to be performed correctly.
+ 
+ - Trust Center Rejoin is not recommended to be used since it may expose the network to security vulnerabilities.
+
+
+ 

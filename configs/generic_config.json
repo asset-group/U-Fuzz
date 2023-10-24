@@ -1,0 +1,78 @@
+{
+    "config": {
+        "Name": "Bluetooth",
+        "Options": {
+            "DefaultPCAPProtocol": "encap:BLUETOOTH_HCI_H4",
+            "DefaultProtocol": "proto:hci_h4",
+            "DefaultPrograms": [""],
+            "Program": 0,
+            "CoreDump": true
+        },
+        "StateMapper": {
+            "Mapping": [{
+                    "Filter": "btsdp",
+                    "LayerName": "SDP",
+                    "StateNameField": "btsdp.pdu",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "bta2dp",
+                    "LayerName": "A2DP",
+                    "StateNameField": "bta2dp.codec",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "btavrcp",
+                    "LayerName": "AVRCP",
+                    "StateNameField": "btavrcp.notification.event_id",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "btavdtp",
+                    "LayerName": "AVDTP",
+                    "StateNameField": "btavdtp.signal_id",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "btrfcomm",
+                    "LayerName": "RFCOMM",
+                    "StateNameField": "btrfcomm.frame_type",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "btl2cap",
+                    "LayerName": "L2CAP",
+                    "StateNameField": "btl2cap.cmd_code",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "btlmp",
+                    "LayerName": "LMP",
+                    "StateNameField": [
+                        "btbrlmp.eop",
+                        "btbrlmp.op"
+                    ],
+                    "AppendSummary": false
+                }
+            ],
+            "Overrides": {},
+            "SaveFolder": "configs/models/generic/",
+            "ShowAllStates": true,
+            "PacketLayerOffset": 1
+        },
+        "Fuzzing": {
+            "Excludes": [{
+                "ApplyTo": "",
+                "Description": "",
+                "Filter": ""
+            }]
+        },
+        "Validation": {
+            "CommonRejections": [{
+                "Description": "LMP_not_accepted",
+                "Filter": "btbrlmp.op == 4"
+            }],
+            "InitialState": "IDLE"
+        }
+    }
+}

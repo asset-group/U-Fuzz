@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "monitor_netlink.h": "c",
+        "netlink.h": "c",
+        "rtl8812a_hal.h": "c",
+        "types.h": "c",
+        "jiffies.h": "c",
+        "mutex": "cpp",
+        "condition_variable": "cpp",
+        "wait.h": "c",
+        "current.h": "c"
+    },
+    "workbench.editor.wrapTabs": true
+}

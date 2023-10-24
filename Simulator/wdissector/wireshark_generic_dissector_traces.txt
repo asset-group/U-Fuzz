@@ -1,0 +1,39 @@
+        wireshark version                 = 4.1.0
+        wsgd generation data :
+        - wireshark compilation version   = 4.1.0
+        - WIRESHARK_VERSION_NUMBER        = 40100
+        - compilation date                = Apr 28 2023
+        - compiler                        = gcc 4
+        get_progfile_dir                  = /home/asset/Desktop/work/wireless-deep-fuzzer-zigbee/Simulator/wdissector/bin
+        get_plugins_dir_with_version      = bin/ws/plugins/4.1
+        get_plugins_pers_dir_with_version = /home/asset/.local/lib/wireshark/plugins/4.1
+        get_datafile_dir                  = bin/ws
+        get_systemfile_dir                = /etc
+        get_profiles_dir                  = bin/ws/profiles
+        get_persdatafile_dir              = 
+        locale LC_ALL         = en_SG.UTF-8
+        locale LC_COLLATE     = en_SG.UTF-8
+        locale LC_CTYPE       = en_SG.UTF-8
+        locale LC_MONETARY    = en_SG.UTF-8
+        locale LC_NUMERIC     = en_SG.UTF-8
+        locale LC_TIME        = en_SG.UTF-8
+  Enter cpp_proto_register_generic 
+  Enter get_files_in_dir dir_name=bin/ws/profiles  begin_file_name=  end_file_name=.wsgd
+  Leave get_files_in_dir
+  Enter get_files_in_dir dir_name=  begin_file_name=  end_file_name=.wsgd
+E       dir  not found
+  Leave get_files_in_dir
+  Enter get_files_in_dir dir_name=bin/ws  begin_file_name=  end_file_name=.wsgd
+  Leave get_files_in_dir
+  Enter get_files_in_dir dir_name=bin/ws/plugins/4.1/epan  begin_file_name=  end_file_name=.wsgd
+  Leave get_files_in_dir
+  Enter get_files_in_dir dir_name=/home/asset/.local/lib/wireshark/plugins/4.1/epan  begin_file_name=  end_file_name=.wsgd
+E       dir /home/asset/.local/lib/wireshark/plugins/4.1/epan not found
+  Leave get_files_in_dir
+  Enter get_files_in_dir dir_name=/home/asset/Desktop/work/wireless-deep-fuzzer-zigbee/Simulator/wdissector/bin  begin_file_name=  end_file_name=.wsgd
+  Leave get_files_in_dir
+  Enter get_files_in_dir dir_name=.  begin_file_name=  end_file_name=.wsgd
+  Leave get_files_in_dir
+  Enter set_max_nb_of_protocol_data 0
+  Leave set_max_nb_of_protocol_data
+  Leave cpp_proto_register_generic

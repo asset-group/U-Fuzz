@@ -1,0 +1,61 @@
+Final_Capture = Get_Final_capture(user_input)
+# This dictionary contains packet summary for each packet in the Final_Capture
+Full_dictionary = {}
+
+# The Packet_lst contains the desired packets for one state
+Packet_lst = Get_packet_lst(user_input) 
+
+# Final_target_filter_layers contains a potential filter list(value) for each layer(key)
+Final_target_filter_layers = {}
+
+Got_filter_flag = False
+# User specify the state name for new state they want to create
+state_name = Get_state_name(user_input)
+
+for idx, cap in merged_captures
+	layer_dictionary = {}
+	for layer in cap
+    	field_dicationary = {}
+    	for field in layer
+        	value = Get_Value(field)
+        	field_dictionary[field]=value
+		layer_dictionary[layer]=field_dicationary
+  	Full_dictionary[idx]=layer_dictionary
+
+
+Target_layer_lst = Get_all_common_layers_except_first_layer_bottom_up(Packet_lst)
+
+if len(Target_layer_lst)==0:
+    print("There is no target layer, ending the process")
+else:
+    for lyr in Target_layer_lst:
+      	# filter_lst_for_layer contains the common field,value pair for all the packet in the packet_lst 		   with specific layer
+        filter_lst_for_layer = Get_all_common_field_value(lyr,Packet_lst)
+        Final_target_filter_layers[lyr]=filter_lst_for_layer
+
+for lyr in Target_layer_lst:
+    if Got_filter_flag == False:
+        Final_filter_lst_lyr = Generate_all_combination_of_filter(Final_target_filter_layers[lyr],1)
+        print("Start to check filter one by one")
+        for fil in Final_filter_lst_lyr:
+            if fil in useless_filter_lst:
+                print("Ignore useless filter")
+                pass
+            else:
+                tem_pkt_lst = Get_Pkt_Lst_by_apply_filter(fil)
+                if tem_pkt_lst == Packet_lst:
+                    Add fil to mapping rules for state_name
+                    Got_filter_flag = True
+                    print("Found Filter")
+                    break
+                else:
+                    pass
+        if Got_filter_flag == False:
+            Final_filter_lst_lyr = Generate_all_combination_of_filter(Final_target_filter_layers[lyr],2)
+            print("Start to check the combination of two filters")
+            Goto line 35
+            
+        if Got_filter_flag == False:
+            Print("There is no filter for this state")
+
+Output mapping rules

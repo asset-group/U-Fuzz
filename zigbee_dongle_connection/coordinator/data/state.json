@@ -1,0 +1,39 @@
+{
+    "0xa4c13852c87d504f": {
+        "humidity": 67.5,
+        "temperature": 24.4,
+        "linkquality": 194,
+        "battery": 81,
+        "voltage": 2900
+    },
+    "0x70b3d52b60018b62": {
+        "state": "OFF",
+        "power": 0,
+        "current": 0.01,
+        "voltage": 243,
+        "energy": 0,
+        "linkquality": 192,
+        "child_lock": "LOCK",
+        "indicator_mode": "off/on",
+        "power_outage_memory": "off"
+    },
+    "0x001788010c8336f3": {
+        "state": "ON",
+        "brightness": 229,
+        "color_mode": "xy",
+        "color": {
+            "x": 0.2832,
+            "y": 0.1149
+        },
+        "update": {
+            "state": "available",
+            "installed_version": 16782348,
+            "latest_version": 16785162
+        },
+        "update_available": true,
+        "power_on_behavior": "previous",
+        "color_temp": 424,
+        "color_temp_startup": 153,
+        "linkquality": 195
+    }
+}

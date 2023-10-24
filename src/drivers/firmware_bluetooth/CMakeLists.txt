@@ -1,0 +1,6 @@
+set(CMAKE_GENERATOR "Ninja" CACHE INTERNAL "" FORCE) 
+set(ENABLE_EXPORTS ON CACHE BOOL "" FORCE)
+cmake_minimum_required(VERSION 3.16.0)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(reverse)
+message(add_dependencies)

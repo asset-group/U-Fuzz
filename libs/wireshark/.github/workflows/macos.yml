@@ -1,0 +1,53 @@
+name: Build MacOS
+
+on: [push]
+
+jobs:
+  macos:
+    name: Build & Test
+    runs-on: macos-11.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dmgbuild
+        run: pip3 install dmgbuild
+      - name: Install pytest
+        run: pip install pytest pytest-xdist
+      - name: Install biplist
+        run: pip install biplist
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1.1.2
+        with:
+          ruby-version: '2.6'
+      - name: Install deps
+        run: ./tools/macos-setup-brew.sh
+      - name: Install asciidoctor
+        run: gem install asciidoctor
+      - name: Mkdir
+        run: mkdir build
+      - name: Cmake
+        working-directory: build
+        run: cmake -GNinja ..
+      - name: Build
+        run: ninja
+        working-directory: build
+      - name: Build test-programs
+        run: ninja test-programs
+        working-directory: build
+      - name: Run tests
+        env:
+          PYTEST_ADDOPTS: --skip-missing-programs=rawshark
+        run: pytest
+        working-directory: build
+      - name: Build dmg
+        run: ninja dmg_package
+        working-directory: build
+      - name: Upload dmg packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: package
+          path: build/run/*dmg

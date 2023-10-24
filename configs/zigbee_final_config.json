@@ -1,0 +1,291 @@
+{
+    "config": {
+        "Fuzzing": {
+            "DefaultDuplicationProbability": 0.3,
+            "DefaultMutationFieldProbability": 0.05000000000000002,
+            "DefaultMutationProbability": 0.9000000000000002,
+            "DefaultMutators": [
+                "Random",
+                "RandomBit",
+                "RandomZeroByte",
+                "RandomFullByte",
+                "ToggleBit"
+            ],
+            "DefaultSelectors": [
+                "Random",
+                "Sequential",
+                "Overlap"
+            ],
+            "Excludes": [
+                {
+                    "ApplyTo": "D",
+                    "Description": "Probe Response",
+                    "Filter": "(wlan.fc.type_subtype == 0x0005)"
+                },
+                {
+                    "ApplyTo": "R",
+                    "Description": "Deauth",
+                    "Filter": "wlan.fc.type_subtype == 0x000c"
+                },
+                {
+                    "ApplyTo": "V",
+                    "Description": "Probe Request",
+                    "Filter": "wlan.fc.type_subtype == 0x0004"
+                },
+                {
+                    "ApplyTo": "V",
+                    "Description": "Null Data",
+                    "Filter": "wlan.fc.type_subtype == 0x0024"
+                }
+            ],
+            "FieldMutationBackoffMultipler": 0.7,
+            "MaxDuplicationTime": 6000,
+            "MaxFieldsMutation": 4,
+            "Mutator": 1,
+            "PacketRetry": false,
+            "PacketRetryTimeoutMS": 1500,
+            "Selector": 0,
+            "enable_duplication": false,
+            "enable_mutation": false,
+            "enable_optimization": false,
+            "RestoreSession": true,
+            "SaveSession": true,
+            "RandomSeed": 123456789,
+            "StopCondition": {
+                "StopOnMaxIterations": true,
+                "MaxIterations": 1000,
+                "StopOnMaxTimeMinutes": true,
+                "MaxTimeMinutes": 240
+            }
+        },
+        "Monitor": {
+            "ADB": {
+                "ADBDevice": "3ffd4d9a",
+                "ADBFilter": "",
+                "ADBMagicWords": [
+                    "brcmf_fw_crashed",
+                    "SOC crashed",
+                    "Unable to wake SOC",
+                    "crash"
+                ],
+                "ADBProgram": "logcat"
+            },
+            "Enable": false,
+            "Microphone": {
+                "MicrophoneDetectionSensitivity": 0.7,
+                "MicrophoneDeviceId": -1
+            },
+            "MonitorType": 1,
+            "MonitorTypeList": [
+                "Serial",
+                "SSH",
+                "Microphone",
+                "ADB"
+            ],
+            "PrintToStdout": true,
+            "SSH": {
+                "SSHCommand": "sudo dmesg -C && sudo dmesg -e -w",
+                "SSHEnablePreCommands": true,
+                "SSHHostAddress": "10.42.0.220",
+                "SSHMagicWords": [
+                    "brcmf_fw_crashed",
+                    "Backtrace:",
+                    "Oops:",
+                    "BUG:",
+                    "RIP:",
+                    "Call Trace:"
+                ],
+                "SSHPassword": "raspberry123",
+                "SSHPort": 22,
+                "SSHPreCommands": [
+                    ""
+                ],
+                "SSHUsername": "pi"
+            },
+            "SerialUART": {
+                "SerialBaudRate": 115200,
+                "SerialMagicWords": [
+                    "brcmf_fw_crashed",
+                    "Backtrace:",
+                    "Oops:",
+                    "BUG:",
+                    "RIP:",
+                    "Call Trace:"
+                ],
+                "SerialPortName": "/dev/ttyUSB0"
+            }
+        },
+        "Name": "wifi_ap",
+        "Options": {
+            "AutoRestart": false,
+            "AutoStart": true,
+            "CoreDump": false,
+            "DefaultPCAPProtocol": "proto:wpan",
+            "DefaultPrograms": [
+                "3rd-party/hostapd/hostapd",
+                "3rd-party/hostapd/hostapd_cli"
+            ],
+            "DefaultProtocol": "proto:wpan",
+            "FileLogger": true,
+            "GlobalTimeout": 6,
+            "LaunchProgramWithGDB": false,
+            "LiveCapture": false,
+            "MainThreadCore": 2,
+            "Program": 0,
+            "SaveCapture": true
+        },
+        "ServerOptions": {
+            "APINamespace": "/",
+            "Enable": true,
+            "EnableEvents": false,
+            "ListenAddress": "0.0.0.0",
+            "Logging": false,
+            "Port": 3000,
+            "ServerModule": 0,
+            "ServerModulesList": [
+                "SocketIOServer",
+                "RESTServer"
+            ]
+        },
+        "StateMapper": {
+            "Enable": false,
+            "Mapping": [
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_nwk.radius==1",
+                    "LayerName": "zigbeeLinkStatus",
+                    "StateNameField": "zbee_nwk.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_nwk.cmd.route.opts.dest_ext==1",
+                    "LayerName": "zigbeeRouteReq",
+                    "StateNameField": "zbee_nwk.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_zcl.dir==0",
+                    "LayerName": "zigbeeZclReportAttribute",
+                    "StateNameField": "zbee_zcl.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "wpan.frame_type==2",
+                    "LayerName": "zigbeeAck",
+                    "StateNameField": "wpan.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "wpan.frame_type==3",
+                    "LayerName": "zigbeeCommand",
+                    "StateNameField": "wpan.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "wpan.frame_type==4",
+                    "LayerName": "zigbeeReserved",
+                    "StateNameField": "wpan.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_nwk.cmd.route.opts.dest_ext==0",
+                    "LayerName": "zigbeeManyToOne",
+                    "StateNameField": "zbee_nwk.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_aps.zdp_cluster==54",
+                    "LayerName": "zigbeePermitJoinReq",
+                    "StateNameField": "zbee_aps.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_aps.dst==242",
+                    "LayerName": "zigbeeZclGreenPower",
+                    "StateNameField": "zbee_aps.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_nwk.ext_dst==1",
+                    "LayerName": "zigbeeRouteReply",
+                    "StateNameField": "zbee_nwk.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_zcl.cmd.id==11",
+                    "LayerName": "zigbeeZclDefaultResp",
+                    "StateNameField": "zbee_zcl.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_nwk.cmd.id==5",
+                    "LayerName": "zigbeeRouteRecord",
+                    "StateNameField": "zbee_nwk.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "wpan.frame_type==7",
+                    "LayerName": "zigbeeExtended",
+                    "StateNameField": "wpan.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_aps.zdp_cluster==49",
+                    "LayerName": "zigbeeLinkQualityReq",
+                    "StateNameField": "zbee_aps.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "zbee_aps.zdp_cluster==32817",
+                    "LayerName": "zigbeeLinkQualityResp",
+                    "StateNameField": "zbee_aps.type"
+                }
+            ],
+            "Overrides": {},
+            "PacketLayerOffset": 0,
+            "SaveFolder": "configs/models/wifi_ap/",
+            "ShowAllStates": true
+        },
+        "Validation": {
+            "CommonRejections": [
+                {
+                    "Description": "LMP_not_accepted",
+                    "Filter": "btbrlmp.op == 4"
+                }
+            ],
+            "DefaultFragmentsLayer": "wlan",
+            "DefaultPacketLayer": "wlan",
+            "InitialState": "IDLE"
+        },
+        "Wifi": {
+            "Wifi802.11w": false,
+            "WifiAllowInternet": true,
+            "WifiChannel": 9,
+            "WifiCountryCode": "US",
+            "WifiDHCP": true,
+            "WifiDHCPGatewayAddress": "192.172.42.1",
+            "WifiEAPMethod": 0,
+            "WifiEAPMethodList": [
+                "PEAP",
+                "PWD",
+                "TTLS",
+                "TLS"
+            ],
+            "WifiInterface": "wlan1",
+            "WifiKeyAuth": 0,
+            "WifiKeyAuthList": [
+                "WPA-EAP",
+                "WPA-PSK",
+                "SAE"
+            ],
+            "WifiPassword": "testtest",
+            "WifiRSNCrypto": 0,
+            "WifiRSNCryptoList": [
+                "CCMP",
+                "TKIP"
+            ],
+            "WifiSSID": "TEST_KRA",
+            "WifiUsername": "matheus_garbelini"
+        }
+    }
+}

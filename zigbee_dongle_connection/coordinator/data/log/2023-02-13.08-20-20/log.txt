@@ -1,0 +1,84 @@
+info  2023-02-13 08:20:20: Logging to console and directory: '/app/data/log/2023-02-13.08-20-20' filename: log.txt
+info  2023-02-13 08:20:20: Starting Zigbee2MQTT version 1.27.2 (commit #7dc48fb)
+info  2023-02-13 08:20:20: Starting zigbee-herdsman (0.14.53)
+info  2023-02-13 08:20:21: zigbee-herdsman started (resumed)
+info  2023-02-13 08:20:21: Coordinator firmware version: '{"meta":{"maintrel":3,"majorrel":2,"minorrel":6,"product":0,"revision":20211116,"transportrev":2},"type":"zStack12"}'
+info  2023-02-13 08:20:21: Currently 1 devices are joined:
+info  2023-02-13 08:20:21: Router1 (0x00124b001cde5546): CC2530.ROUTER - Custom devices (DiY) [CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/) (Router)
+warn  2023-02-13 08:20:21: `permit_join` set to  `true` in configuration.yaml.
+warn  2023-02-13 08:20:21: Allowing new devices to join.
+warn  2023-02-13 08:20:21: Set `permit_join` to `false` once you joined all devices.
+info  2023-02-13 08:20:21: Zigbee: allowing new devices to join.
+info  2023-02-13 08:20:21: Connecting to MQTT server at mqtt://127.0.0.1:1883
+info  2023-02-13 08:20:21: Connected to MQTT server
+info  2023-02-13 08:20:21: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+info  2023-02-13 08:20:21: Started frontend on port 0.0.0.0:8080
+info  2023-02-13 08:20:21: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"7dc48fb","coordinator":{"meta":{"maintrel":3,"majorrel":2,"minorrel":6,"product":0,"revision":20211116,"transportrev":2},"type":"zStack12"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b001cd49979","panID":6754},"permit_join":true,"version":"1.27.2"}'
+info  2023-02-13 08:20:21: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":115}'
+info  2023-02-13 08:20:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 08:21:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:22:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 08:23:00: Starting network scan (includeRoutes 'false')
+info  2023-02-13 08:23:02: Network scan finished
+info  2023-02-13 08:23:02: MQTT publish: topic 'zigbee2mqtt/bridge/response/networkmap', payload '{"data":{"routes":false,"type":"raw","value":{"links":[{"depth":1,"linkquality":192,"lqi":192,"relationship":1,"routes":[],"source":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"sourceIeeeAddr":"0x00124b001cde5546","sourceNwkAddr":54357,"target":{"ieeeAddr":"0x00124b001cd49979","networkAddress":0},"targetIeeeAddr":"0x00124b001cd49979"},{"depth":0,"linkquality":190,"lqi":190,"relationship":0,"routes":[],"source":{"ieeeAddr":"0x00124b001cd49979","networkAddress":0},"sourceIeeeAddr":"0x00124b001cd49979","sourceNwkAddr":0,"target":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"targetIeeeAddr":"0x00124b001cde5546"}],"nodes":[{"definition":null,"failed":[],"friendlyName":"Coordinator","ieeeAddr":"0x00124b001cd49979","lastSeen":null,"networkAddress":0,"type":"Coordinator"},{"definition":{"description":"[CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/)","model":"CC2530.ROUTER","supports":"led, linkquality","vendor":"Custom devices (DiY)"},"failed":[],"friendlyName":"Router1","ieeeAddr":"0x00124b001cde5546","lastSeen":1676272974714,"manufacturerName":"LUMI","modelID":"lumi.router","networkAddress":54357,"type":"Router"}]}},"status":"ok","transaction":"iw2h0-1"}'
+info  2023-02-13 08:23:10: Starting network scan (includeRoutes 'false')
+info  2023-02-13 08:23:12: Network scan finished
+info  2023-02-13 08:23:12: MQTT publish: topic 'zigbee2mqtt/bridge/response/networkmap', payload '{"data":{"routes":false,"type":"raw","value":{"links":[{"depth":1,"linkquality":191,"lqi":191,"relationship":1,"routes":[],"source":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"sourceIeeeAddr":"0x00124b001cde5546","sourceNwkAddr":54357,"target":{"ieeeAddr":"0x00124b001cd49979","networkAddress":0},"targetIeeeAddr":"0x00124b001cd49979"},{"depth":0,"linkquality":190,"lqi":190,"relationship":0,"routes":[],"source":{"ieeeAddr":"0x00124b001cd49979","networkAddress":0},"sourceIeeeAddr":"0x00124b001cd49979","sourceNwkAddr":0,"target":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"targetIeeeAddr":"0x00124b001cde5546"}],"nodes":[{"definition":null,"failed":[],"friendlyName":"Coordinator","ieeeAddr":"0x00124b001cd49979","lastSeen":null,"networkAddress":0,"type":"Coordinator"},{"definition":{"description":"[CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/)","model":"CC2530.ROUTER","supports":"led, linkquality","vendor":"Custom devices (DiY)"},"failed":[],"friendlyName":"Router1","ieeeAddr":"0x00124b001cde5546","lastSeen":1676272974714,"manufacturerName":"LUMI","modelID":"lumi.router","networkAddress":54357,"type":"Router"}]}},"status":"ok","transaction":"iw2h0-2"}'
+info  2023-02-13 08:23:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:24:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:25:17: Succesfully changed options
+info  2023-02-13 08:25:17: MQTT publish: topic 'zigbee2mqtt/bridge/response/options', payload '{"data":{"restart_required":true},"status":"ok","transaction":"iw2h0-3"}'
+info  2023-02-13 08:25:54: MQTT publish: topic 'zigbee2mqtt/Router1/availability', payload 'online'
+info  2023-02-13 08:25:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+error 2023-02-13 08:26:26: Request 'zigbee2mqtt/bridge/request/group/add' failed with error: 'friendly_name must be at least 1 char long'
+info  2023-02-13 08:26:26: MQTT publish: topic 'zigbee2mqtt/bridge/response/group/add', payload '{"data":{},"error":"friendly_name must be at least 1 char long","status":"error","transaction":"iw2h0-4"}'
+info  2023-02-13 08:26:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 08:27:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:28:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 08:29:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 08:30:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:31:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:32:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:33:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:34:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:35:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:36:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:37:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:38:35: Start Touchlink scan
+info  2023-02-13 08:38:46: Finished Touchlink scan
+info  2023-02-13 08:38:46: MQTT publish: topic 'zigbee2mqtt/bridge/response/touchlink/scan', payload '{"data":{"found":[]},"status":"ok","transaction":"iw2h0-5"}'
+info  2023-02-13 08:38:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:39:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:40:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:41:34: Device '0xa4c13852c87d504f' joined
+info  2023-02-13 08:41:34: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c13852c87d504f","ieee_address":"0xa4c13852c87d504f"},"type":"device_joined"}'
+info  2023-02-13 08:41:34: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":{"friendly_name":"0xa4c13852c87d504f"},"type":"device_connected"}'
+info  2023-02-13 08:41:34: MQTT publish: topic 'zigbee2mqtt/0xa4c13852c87d504f/availability', payload 'online'
+info  2023-02-13 08:41:34: Starting interview of '0xa4c13852c87d504f'
+info  2023-02-13 08:41:34: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c13852c87d504f","ieee_address":"0xa4c13852c87d504f","status":"started"},"type":"device_interview"}'
+info  2023-02-13 08:41:34: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0xa4c13852c87d504f"},"type":"pairing"}'
+info  2023-02-13 08:41:35: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c13852c87d504f","ieee_address":"0xa4c13852c87d504f"},"type":"device_announce"}'
+info  2023-02-13 08:41:35: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0xa4c13852c87d504f"},"type":"device_announced"}'
+info  2023-02-13 08:41:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:41:57: Starting network scan (includeRoutes 'false')
+info  2023-02-13 08:41:59: Network scan finished
+info  2023-02-13 08:41:59: MQTT publish: topic 'zigbee2mqtt/bridge/response/networkmap', payload '{"data":{"routes":false,"type":"raw","value":{"links":[{"depth":1,"linkquality":193,"lqi":193,"relationship":1,"routes":[],"source":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"sourceIeeeAddr":"0x00124b001cde5546","sourceNwkAddr":54357,"target":{"ieeeAddr":"0x00124b001cd49979","networkAddress":0},"targetIeeeAddr":"0x00124b001cd49979"},{"depth":0,"linkquality":191,"lqi":191,"relationship":0,"routes":[],"source":{"ieeeAddr":"0x00124b001cd49979","networkAddress":0},"sourceIeeeAddr":"0x00124b001cd49979","sourceNwkAddr":0,"target":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"targetIeeeAddr":"0x00124b001cde5546"},{"depth":2,"linkquality":105,"lqi":105,"relationship":1,"routes":[],"source":{"ieeeAddr":"0xa4c13852c87d504f","networkAddress":55727},"sourceIeeeAddr":"0xa4c13852c87d504f","sourceNwkAddr":55727,"target":{"ieeeAddr":"0x00124b001cde5546","networkAddress":54357},"targetIeeeAddr":"0x00124b001cde5546"}],"nodes":[{"definition":null,"failed":[],"friendlyName":"Coordinator","ieeeAddr":"0x00124b001cd49979","lastSeen":null,"networkAddress":0,"type":"Coordinator"},{"definition":{"description":"[CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/)","model":"CC2530.ROUTER","supports":"led, linkquality","vendor":"Custom devices (DiY)"},"failed":[],"friendlyName":"Router1","ieeeAddr":"0x00124b001cde5546","lastSeen":1676274114680,"manufacturerName":"LUMI","modelID":"lumi.router","networkAddress":54357,"type":"Router"},{"definition":null,"friendlyName":"0xa4c13852c87d504f","ieeeAddr":"0xa4c13852c87d504f","lastSeen":1676274118768,"modelID":"TS0201","networkAddress":55727,"type":"EndDevice"}]}},"status":"ok","transaction":"iw2h0-6"}'
+info  2023-02-13 08:42:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:43:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:43:55: Successfully interviewed '0xa4c13852c87d504f', device has successfully been paired
+info  2023-02-13 08:43:55: Device '0xa4c13852c87d504f' is supported, identified as: TuYa Temperature & humidity sensor with display (TS0201)
+info  2023-02-13 08:43:55: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"definition":{"description":"Temperature & humidity sensor with display","exposes":[{"access":1,"description":"Remaining battery in %","name":"battery","property":"battery","type":"numeric","unit":"%","value_max":100,"value_min":0},{"access":1,"description":"Measured temperature value","name":"temperature","property":"temperature","type":"numeric","unit":"°C"},{"access":1,"description":"Measured relative humidity","name":"humidity","property":"humidity","type":"numeric","unit":"%"},{"access":1,"description":"Voltage of the battery in millivolts","name":"voltage","property":"voltage","type":"numeric","unit":"mV"},{"access":1,"description":"Link quality (signal strength)","name":"linkquality","property":"linkquality","type":"numeric","unit":"lqi","value_max":255,"value_min":0}],"model":"TS0201","options":[{"access":2,"description":"Number of digits after decimal point for temperature, takes into effect on next report of device.","name":"temperature_precision","property":"temperature_precision","type":"numeric","value_max":3,"value_min":0},{"access":2,"description":"Calibrates the temperature value (absolute offset), takes into effect on next report of device.","name":"temperature_calibration","property":"temperature_calibration","type":"numeric"},{"access":2,"description":"Number of digits after decimal point for humidity, takes into effect on next report of device.","name":"humidity_precision","property":"humidity_precision","type":"numeric","value_max":3,"value_min":0},{"access":2,"description":"Calibrates the humidity value (absolute offset), takes into effect on next report of device.","name":"humidity_calibration","property":"humidity_calibration","type":"numeric"}],"supports_ota":false,"vendor":"TuYa"},"friendly_name":"0xa4c13852c87d504f","ieee_address":"0xa4c13852c87d504f","status":"successful","supported":true},"type":"device_interview"}'
+info  2023-02-13 08:43:55: Configuring '0xa4c13852c87d504f'
+info  2023-02-13 08:43:55: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_successful","meta":{"description":"Temperature & humidity sensor with display","friendly_name":"0xa4c13852c87d504f","model":"TS0201","supported":true,"vendor":"TuYa"},"type":"pairing"}'
+info  2023-02-13 08:43:56: Successfully configured '0xa4c13852c87d504f'
+info  2023-02-13 08:44:42: MQTT publish: topic 'zigbee2mqtt/0xa4c13852c87d504f', payload '{"humidity":6.24,"linkquality":194}'
+info  2023-02-13 08:44:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:45:12: MQTT publish: topic 'zigbee2mqtt/0xa4c13852c87d504f', payload '{"humidity":6.89,"linkquality":194}'
+info  2023-02-13 08:45:27: MQTT publish: topic 'zigbee2mqtt/0xa4c13852c87d504f', payload '{"humidity":6.11,"linkquality":194}'
+info  2023-02-13 08:45:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 08:45:57: MQTT publish: topic 'zigbee2mqtt/0xa4c13852c87d504f', payload '{"humidity":5.42,"linkquality":194}'
+info  2023-02-13 08:46:34: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'offline'
+info  2023-02-13 08:46:34: Disconnecting from MQTT server
+info  2023-02-13 08:46:34: Stopping zigbee-herdsman...
+info  2023-02-13 08:46:35: Stopped zigbee-herdsman
+info  2023-02-13 08:46:35: Stopped Zigbee2MQTT

@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  # mosquitto:
+  #   image: eclipse-mosquitto:2.0.15-openssl
+  #   volumes:
+  #     - ./mosquitto:/mosquitto/:rw
+  #   ports:
+  #     - 1884:1883
+  #     - 9001:9001
+
+  zigbee2mqtt:
+    network_mode: "host"
+    container_name: zigbee2mqtt
+    privileged: true
+    image: koenkk/zigbee2mqtt
+    # frontend: true
+    restart: unless-stopped
+    # depends_on:
+    #   - "mosquitto"
+    volumes:
+      - ./data:/app/data
+      # This one is for fuzzing using
+      - /dev/ttyV0:/dev/ttyV0
+      # This line is for normal using of zigbee2mqtt (CC2531 coordinator dongle)
+      # - /dev/ttyACM0:/dev/ttyV0
+      # This line is for normal using of zigbee2mqtt (Sonoff coordinator dongle)
+      # - /dev/ttyUSB0:/dev/ttyV0
+      # - /dev/pts/4:/dev/ttyUSB0
+    ports:
+      # Frontend port
+      - 8080:8080
+      - 1884:1883
+    environment:
+      - TZ=Asia/Singapore
+    devices:
+      # Make sure this matched your adapter location
+      # - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B001CD49979-if00:/dev/ttyACM0 
+      # - /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_e8df57859945ed119a9bca8f0a86e0b4-if00-port0:/dev/ttyACM0 
+      - /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_e8df57859945ed119a9bca8f0a86e0b4-if00-port0:/dev/ttyUSB0 
+
+

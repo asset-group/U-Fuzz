@@ -1,0 +1,255 @@
+{
+    "config": {
+        "Name": "Bluetooth",
+        "Options": {
+            "DefaultProtocolName": "encap:BLUETOOTH_HCI_H4",
+            "DefaultProtocolEncapName": "encap:BLUETOOTH_HCI_H4",
+            "SaveProtocolCapture": true,
+            "LiveProtocolCapture": false,
+            "SaveLogsToFile": true,
+            "Program": 1,
+            "AutoStartProgram": true,
+            "AutoRestartProgram": false,
+            "LaunchProgramWithGDB": false,
+            "ProgramsList": [
+                "bin/spp_counter",
+                "bin/sdp_rfcomm_query",
+                "bin/sdp_general_query",
+                "bin/sdp_bnep_query",
+                "bin/a2dp_sink_demo",
+                "bin/a2dp_source_demo"
+            ],
+            "MainThreadCore": -1,
+            "SaveCoreDump": true
+        },
+        "Bluetooth": {
+            "AuthReq": 3,
+            "BridgeHCI": true,
+            "DisableRoleSwitch": false,
+            "EnableBounding": true,
+            "IOCap": 3,
+            "InterceptTX": true,
+            "LMPSniffing": true,
+            "OwnBDAddress": "bc:bb:b1:8c:dd:4e",
+            "Pin": "0000",
+            "RXBypass": false,
+            "RXBypassOnDemand": false,
+            "RandomizeOwnBTAddress": true,
+            "SaveHCIPackets": false,
+            "SerialAutoDiscovery": false,
+            "SerialBaudRate": 4000000,
+            "SerialEnableDebug": false,
+            "SerialEnableDebugHCI": false,
+            "SerialPort": "/dev/ttyUSB1",
+            "ShowNullPollPackets": false,
+            "TargetBDAddress": "3c:61:05:4c:34:56",
+            "TargetBDAddressList": [
+                "24:0A:C4:61:1C:1A",
+                "E0:D4:E8:19:C7:69"
+            ]
+        },
+        "Fuzzing": {
+            "EnableDuplication": true,
+            "EnableMutation": true,
+            "EnableOptimization": true,
+            "DefaultDuplicationProbability": 0.1,
+            "DefaultMutationProbability": 0.1,
+            "DefaultMutationFieldProbability": 0.1,
+            "FieldMutationBackoffMultipler": 0.7,
+            "MaxFieldsMutation": 6,
+            "MaxDuplicationTimeMS": 6000,
+            "NormalizeProtocolLayersMutation": false,
+            "PacketRetry": true,
+            "PacketRetryTimeoutMS": 2000,
+            "GlobalTimeout": true,
+            "GlobalTimeoutSeconds": 45,
+            "StateLoopDetection": true,
+            "StateLoopDetectionThreshold": 5,
+            "RandomSeed": 123456789,
+            "RestoreSessionOnStartup": true,
+            "SaveSessionOnExit": true,
+            "StopCondition": {
+                "MaxIterations": 1000,
+                "MaxTimeMinutes": 240,
+                "StopOnMaxIterations": true,
+                "StopOnMaxTimeMinutes": true
+            },
+            "Selector": 0,
+            "Mutator": 1,
+            "DefaultMutators": [
+                "Random",
+                "RandomBit",
+                "RandomZeroByte",
+                "RandomFullByte",
+                "ToggleBit"
+            ],
+            "DefaultSelectors": [
+                "Random",
+                "Sequential",
+                "Overlap"
+            ],
+            "Excludes": [
+                {
+                    "ApplyTo": "A",
+                    "Description": "LMP_set_AFH",
+                    "Filter": "btbrlmp.op == 60"
+                },
+                {
+                    "ApplyTo": "A",
+                    "Description": "LMP_detach",
+                    "Filter": "btbrlmp.op == 7"
+                },
+                {
+                    "ApplyTo": "A",
+                    "Description": "FHS",
+                    "Filter": "fhs"
+                },
+                {
+                    "ApplyTo": "D",
+                    "Description": "L2CAP",
+                    "Filter": "btl2cap"
+                }
+            ]
+        },
+        "StateMapper": {
+            "Enable": false,
+            "Mapping": [
+                {
+                    "AppendSummary": false,
+                    "Filter": "btsdp",
+                    "LayerName": "SDP",
+                    "StateNameField": "btsdp.pdu"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "bta2dp",
+                    "LayerName": "A2DP",
+                    "StateNameField": "bta2dp.codec"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btavrcp",
+                    "LayerName": "AVRCP",
+                    "StateNameField": "btavrcp.notification.event_id"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btavdtp",
+                    "LayerName": "AVDTP",
+                    "StateNameField": "btavdtp.signal_id"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btrfcomm",
+                    "LayerName": "RFCOMM",
+                    "StateNameField": "btrfcomm.frame_type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btl2cap",
+                    "LayerName": "L2CAP",
+                    "StateNameField": "btl2cap.cmd_code"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btbrlmp.op == 3",
+                    "LayerName": "LMP_accepted",
+                    "StateNameField": "btbrlmp.opinre"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "esp32_btlmp",
+                    "LayerName": "LMP",
+                    "StateNameField": [
+                        "btbrlmp.eop",
+                        "btbrlmp.op"
+                    ]
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "fhs",
+                    "LayerName": "Baseband",
+                    "StateNameField": "btbbd.type"
+                }
+            ],
+            "Overrides": {},
+            "PacketLayerOffset": 1,
+            "SaveFolder": "configs/models/bt/",
+            "ShowAllStates": false,
+            "PcapPseudoHeaderDirectionOffset": 50
+        },
+        "Validation": {
+            "CommonRejections": [
+                {
+                    "Description": "LMP_not_accepted",
+                    "Filter": "btbrlmp.op == 4"
+                }
+            ],
+            "DefaultFragmentsLayer": "btl2cap",
+            "DefaultPacketLayer": "btl2cap",
+            "InitialState": "IDLE"
+        },
+        "Monitor": {
+            "Enable": true,
+            "PrintToStdout": true,
+            "WaitExternalEvent": false,
+            "ActiveMonitorTypes": [
+                0
+            ],
+            "MonitorsTypeList": [
+                "Serial",
+                "SSH",
+                "Microphone",
+                "ADB",
+                "QCDM"
+            ],
+            "SerialUART": {
+                "SerialBaudRate": 115200,
+                "SerialMagicWords": [
+                    "DBFW_ASSERT_TYPE_FATAL!!!",
+                    "WRAP THOR AI",
+                    "BT Started!",
+                    "Guru Meditation Error",
+                    "abort()"
+                ],
+                "SerialPortName": "/dev/ttyUSB3"
+            },
+            "ADB": {
+                "ADBDevice": "",
+                "ADBFilter": "",
+                "ADBMagicWords": [
+                    "SOC crashed",
+                    "Unable to wake SOC"
+                ],
+                "ADBProgram": "logcat"
+            },
+            "Microphone": {
+                "MicrophoneDetectionSensitivity": 0.7,
+                "MicrophoneDeviceId": -1
+            },
+            "SSH": {
+                "SSHHostAddress": "127.0.0.1",
+                "SSHUsername": "matheus",
+                "SSHPassword": "",
+                "SSHPort": 22,
+                "SSHCommand": "sudo dmesg -C && sudo dmesg -e -w",
+                "SSHMagicWords": [
+                    "Backtrace:",
+                    "Oops:",
+                    "BUG:",
+                    "RIP:",
+                    "Call Trace:"
+                ],
+                "SSHEnablePreCommands": true,
+                "SSHPreCommands": [
+                    "sudo sh -c \"echo 'module btusb +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module btintel +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module bluetooth +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module rfcomm +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo hciconfig hci0 inqparms 18:18",
+                    "sudo hciconfig hci0 pageparms 18:18"
+                ]
+            }
+        }
+    }
+}

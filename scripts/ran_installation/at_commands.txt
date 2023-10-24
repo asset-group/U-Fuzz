@@ -1,0 +1,17 @@
+# ----------- Setup -------------
+# Disconnect
+at+cops=2
+# Connect to eNB
+at+cops=1,2,90170,7
+# Activate APN Context (Mobile Network)
+AT#SGACT=1,1
+
+# ----------- Ping -------------
+# Ping Google DNS
+AT#PING="8.8.8.8"
+
+# ----------- Http -------------
+# GET html page
+AT#HTTPCFG=0,"www.google.com",80
+AT#HTTPQRY=0,0,"/"
+AT#HTTPRCV=0

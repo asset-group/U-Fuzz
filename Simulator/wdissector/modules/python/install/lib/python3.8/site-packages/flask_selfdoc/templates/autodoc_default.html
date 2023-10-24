@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            {% if title is defined -%}
+                {{title}}
+            {% else -%}
+                Documentation
+            {% endif -%}
+        </title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+            }
+
+            body {
+                margin: 10px;
+            }
+
+            div.mapping {
+                margin: 20px 20px;
+            }
+
+            ul.methods:before { content: "Methods: "; }
+            ul.methods li {
+                display: inline;
+                list-style: none;
+            }
+            ul.methods li:after { content: ","; }
+            ul.methods li:last-child:after { content: ""; }
+
+            ul.arguments:before { content: "Arguments: "; }
+            ul.arguments li {
+                display: inline;
+                list-style: none;
+            }
+            ul.arguments .argument { font-style:italic }
+            ul.arguments .default:not(:empty):before { content: "("; }
+            ul.arguments .default:not(:empty):after { content: ")"; }
+            ul.arguments li:after { content: ","; }
+            ul.arguments li:last-child:after { content: ""; }
+
+            .docstring:before { content: "Description: "; }
+        </style>
+    </head>
+    <body>
+        <h1>
+            {% if title is defined -%}
+                {{title}}
+            {% else -%}
+                Documentation
+            {% endif -%}
+        </h1>
+
+        {% for doc in autodoc %}
+        <div class="mapping">
+            <a id="rule-{{doc.rule|urlencode}}" class="rule"><h2>{{doc.rule|escape}}</h2></a>
+            <ul class="methods">
+                {% for method in doc.methods -%}
+                    {% if method == 'GET' and doc.args == ['None'] %}
+                        <a href="{{doc.rule}}" class="getmethod">
+                            <li class="method">{{method}}</li>
+                        </a>
+                    {% else %}
+                        <li class="method">{{method}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="arguments">
+                {% for arg in doc.args %}
+                <li>
+                    <span class="argument">{{arg}}</span>
+                    <span class="default">{{doc.defaults[arg]}}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            <p class="docstring">{{doc.docstring|urlize|nl2br|safe}}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>

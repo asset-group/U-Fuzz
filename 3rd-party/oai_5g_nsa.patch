@@ -1,0 +1,779 @@
+diff --git a/cmake_targets/CMakeLists.txt b/cmake_targets/CMakeLists.txt
+index bd2d8e3..dde20c5 100644
+--- a/cmake_targets/CMakeLists.txt
++++ b/cmake_targets/CMakeLists.txt
+@@ -2804,6 +2804,14 @@ include_directories("${OPENAIR_DIR}/common/utils/T")
+ if (${T_TRACER})
+   set(T_SOURCE
+       ${OPENAIR_DIR}/common/utils/T/T.c
++
++      # FUZZ-LTE: interception #
++
++      ${OPENAIR_DIR}/common/utils/T/profiling.c
++      ${OPENAIR_DIR}/common/utils/T/shared_memory.c
++
++      # ---------------------- #
++
+       ${OPENAIR_DIR}/common/utils/T/local_tracer.c)
+   set(T_LIB "rt")
+ endif (${T_TRACER})
+@@ -2898,6 +2906,10 @@ add_executable(lte-softmodem
+   )
+ add_dependencies(lte-softmodem rrc_flag s1ap_flag x2_flag oai_iqplayer)
+ 
++# FUZZ-LTE : duplication #
++target_include_directories(lte-softmodem PUBLIC /usr/local/include/json-c)
++# ---------------------- #
++
+ target_link_libraries (lte-softmodem
+   -Wl,--start-group
+   RRC_LIB NR_RRC_LIB S1AP_LIB S1AP_ENB F1AP_LIB F1AP M2AP_LIB M2AP_ENB X2AP_LIB X2AP_ENB M3AP_LIB M3AP_ENB GTPV1U SECU_CN SECU_OSA UTIL HASHTABLE SCTP_CLIENT MME_APP UDP SCHED_LIB SCHED_RU_LIB 
+@@ -2910,6 +2922,9 @@ target_link_libraries (lte-softmodem pthread m ${CONFIG_LIB} rt crypt ${CRYPTO_L
+ target_link_libraries (lte-softmodem ${LIB_LMS_LIBRARIES})
+ target_link_libraries (lte-softmodem ${T_LIB})
+ 
++# FUZZ-LTE : duplication #
++target_link_libraries (lte-softmodem czmq json-c)
++# ---------------------- #
+ 
+ add_executable(ocp-enb
+   ${OPENAIR_DIR}/executables/main-ocp.c
+diff --git a/openair1/SCHED/phy_procedures_lte_eNb.c b/openair1/SCHED/phy_procedures_lte_eNb.c
+index 38307a7..8f01712 100644
+--- a/openair1/SCHED/phy_procedures_lte_eNb.c
++++ b/openair1/SCHED/phy_procedures_lte_eNb.c
+@@ -49,6 +49,14 @@
+ #include "intertask_interface.h"
+ #include <executables/split_headers.h> 
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/shared_memory.h"
++#include "common/utils/T/tracer/shm_lte_utils.h"
++#include "common/utils/T/profiling.h"
++
++/* ---------------------- */
++
+ #define MBMS_NFAPI_SCHEDULER
+ 
+ nfapi_ue_release_request_body_t release_rntis;
+@@ -250,6 +258,25 @@ void common_signal_procedures_fembms (PHY_VARS_eNB *eNB,int frame, int subframe)
+       mib[0] = pbch_pdu[2];
+       mib[1] = pbch_pdu[1];
+       mib[2] = pbch_pdu[0];
++
++      /* FUZZ-LTE: interception */
++
++      // send_pdu_data(T_ENB_PHY_MIB,
++      //               DIRECTION_DOWNLINK,
++      //               WS_NO_RNTI,
++      //               eNB->Mod_id, frame, subframe,
++      //               pbch_pdu, 3,
++      //               -1);
++
++      send_pdu_data(19,
++                    DIRECTION_DOWNLINK,
++                    WS_NO_RNTI,
++                    eNB->Mod_id, frame, subframe,
++                    pbch_pdu, 3,
++                    -1);
++
++      /* ---------------------- */
++
+       T(T_ENB_PHY_MIB, T_INT(eNB->Mod_id), T_INT(frame), T_INT(subframe),
+         T_BUFFER(mib, 3));
+     }
+@@ -326,6 +353,25 @@ void common_signal_procedures (PHY_VARS_eNB *eNB,int frame, int subframe) {
+       mib[0] = pbch_pdu[2];
+       mib[1] = pbch_pdu[1];
+       mib[2] = pbch_pdu[0];
++
++      /* FUZZ-LTE: interception */
++
++      // send_pdu_data(T_ENB_PHY_MIB,
++      //               DIRECTION_DOWNLINK,
++      //               WS_NO_RNTI,
++      //               eNB->Mod_id, frame, subframe,
++      //               pbch_pdu, 3,
++      //               -1);
++
++      send_pdu_data(19,
++                    DIRECTION_DOWNLINK,
++                    WS_NO_RNTI,
++                    eNB->Mod_id, frame, subframe,
++                    pbch_pdu, 3,
++                    -1);
++
++      /* ---------------------- */
++
+       T(T_ENB_PHY_MIB, T_INT(eNB->Mod_id), T_INT(frame), T_INT(subframe),
+         T_BUFFER(mib, 3));
+     }
+diff --git a/openair1/SCHED/prach_procedures.c b/openair1/SCHED/prach_procedures.c
+index b99bb2e..6131a2f 100644
+--- a/openair1/SCHED/prach_procedures.c
++++ b/openair1/SCHED/prach_procedures.c
+@@ -48,6 +48,12 @@
+ 
+ #include "intertask_interface.h"
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/shared_memory.h"
++#include "common/utils/T/tracer/shm_lte_utils.h"
++
++/* ---------------------- */
+ 
+ extern int oai_nfapi_rach_ind(nfapi_rach_indication_t *rach_ind);
+ 
+@@ -157,6 +163,18 @@ void prach_procedures(PHY_VARS_eNB *eNB,
+             max_preamble_energy[0]/10,
+             max_preamble_energy[0]%10,
+             max_preamble_delay[0]);
++
++      /* FUZZ-LTE: interception */
++
++      // send_pdu_data(T_ENB_PHY_INITIATE_RA_PROCEDURE,
++      //               DIRECTION_UPLINK, 0, 0,
++      //               frame, subframe, NULL, 0, max_preamble[0]);
++
++      send_pdu_data(18,
++                    DIRECTION_UPLINK, 0, 0,
++                    frame, subframe, NULL, 0, max_preamble[0]);
++      /*------------------------*/
++
+       T(T_ENB_PHY_INITIATE_RA_PROCEDURE, T_INT(eNB->Mod_id), T_INT(frame), T_INT(subframe),
+         T_INT(max_preamble[0]), T_INT(max_preamble_energy[0]), T_INT(max_preamble_delay[0]));
+       pthread_mutex_lock(&eNB->UL_INFO_mutex);
+diff --git a/openair2/LAYER2/MAC/eNB_scheduler_RA.c b/openair2/LAYER2/MAC/eNB_scheduler_RA.c
+index 3dea211..62c6466 100644
+--- a/openair2/LAYER2/MAC/eNB_scheduler_RA.c
++++ b/openair2/LAYER2/MAC/eNB_scheduler_RA.c
+@@ -64,6 +64,14 @@
+ #include "common/ran_context.h"
+ #include "LAYER2/MAC/eNB_scheduler_fairRR.h"
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/profiling.h"
++#include "common/utils/T/shared_memory.h"
++#include "common/utils/T/tracer/shm_lte_utils.h"
++
++/* ---------------------- */
++
+ extern RAN_CONTEXT_t RC;
+ 
+ extern const uint8_t pusch_repetition_Table8_2_36213[3][4];
+@@ -546,6 +554,17 @@ void generate_Msg2(module_id_t module_idP,
+           T_INT(CC_idP), T_INT(ra->RA_rnti), T_INT(frameP),
+           T_INT(subframeP), T_INT(0 /*harq_pid always 0? */ ),
+           T_BUFFER(cc[CC_idP].RAR_pdu.payload, 7));
++        
++        /* FUZZ-LTE: interception */
++
++        // send_pdu_data(T_ENB_MAC_UE_DL_RAR_PDU_WITH_DATA, DIRECTION_DOWNLINK,
++        //               WS_RA_RNTI, ra->RA_rnti, frameP, subframeP, cc[CC_idP].RAR_pdu.payload, 7, -1);
++
++        send_pdu_data(30, DIRECTION_DOWNLINK,
++                      WS_RA_RNTI, ra->RA_rnti, frameP, subframeP, cc[CC_idP].RAR_pdu.payload, 7, -1);
++
++        /* ---------------------- */
++
+         // DL request
+         mac->TX_req[CC_idP].sfn_sf = (frameP << 4) + subframeP;
+         TX_req =
+@@ -891,6 +910,25 @@ generate_Msg4(module_id_t module_idP,
+       }
+ 
+       ul_req_body->number_of_pdus++;
++
++      /* FUZZ-LTE: interception */
++
++      // send_pdu_data(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
++      //               DIRECTION_DOWNLINK,
++      //               ra->rnti != 0xffff ? WS_C_RNTI : WS_SI_RNTI,
++      //               ra->rnti, frameP, subframeP,
++      //               &mac->UE_info.DLSCH_pdu[CC_idP][0][UE_id].payload[0], ra->msg4_TBsize,
++      //               -1);
++
++      send_pdu_data(28,
++                    DIRECTION_DOWNLINK,
++                    ra->rnti != 0xffff ? WS_C_RNTI : WS_SI_RNTI,
++                    ra->rnti, frameP, subframeP,
++                    &mac->UE_info.DLSCH_pdu[CC_idP][0][UE_id].payload[0], ra->msg4_TBsize,
++                    -1);
++
++      /* ---------------------- */
++
+       T (T_ENB_MAC_UE_DL_PDU_WITH_DATA, T_INT (module_idP), T_INT (CC_idP), T_INT (ra->rnti), T_INT (frameP), T_INT (subframeP),
+          T_INT (0 /*harq_pid always 0? */ ), T_BUFFER (&mac->UE_info.DLSCH_pdu[CC_idP][0][UE_id].payload[0], ra->msg4_TBsize));
+       trace_pdu (DIRECTION_DOWNLINK, (uint8_t *) mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char) UE_id].payload[0],
+@@ -912,6 +950,12 @@ generate_Msg4(module_id_t module_idP,
+                                         UE_RNTI(module_idP,UE_id),1,  // 1 transport block
+                                         &cc[CC_idP].CCCH_pdu.payload[0], 0);  // not used in this case
+ 
++      /* FUZZ-LTE: duplication */
++      if (fuzz_lte_dup.flag_mac) {
++        rrc_sdu_length = fuzz_lte_dup.sdu_len;
++      }
++      /* --------------------- */
++
+       if (rrc_sdu_length > 0) {
+         LOG_D(MAC,
+               "[eNB %d][RAPROC] CC_id %d Frame %d, subframeP %d: UE_id %d, rrc_sdu_length %d\n",
+@@ -1050,6 +1094,23 @@ generate_Msg4(module_id_t module_idP,
+           LOG_D(MAC,
+                 "Filled DLSCH config, pdu number %d, non-dci pdu_index %d\n",
+                 dl_req_body->number_pdu, mac->pdu_index[CC_idP]);
++          
++          /* FUZZ-LTE: duplication */
++          if (fuzz_lte_dup.flag_mac) {
++            memcpy(mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0], fuzz_lte_dup.pdu_buf, fuzz_lte_dup.pdu_len);
++            fuzz_lte_dup.flag_mac = false;
++
++            LOG_W(MAC, "[duplication] rrc_sdu_length    = %d\n", rrc_sdu_length);
++            LOG_W(MAC, "[duplication] DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0]): \n");
++            LOG_W(MAC, "%02x %02x %02x %02x %02x ...\n", 
++                      mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0][0], 
++                      mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0][1], 
++                      mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0][2], 
++                      mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0][3], 
++                      mac->UE_info.DLSCH_pdu[CC_idP][0][(unsigned char)UE_id].payload[0][4]);
++          }
++          /* --------------------- */
++
+           // Tx request
+           mac->TX_req[CC_idP].sfn_sf =
+             fill_nfapi_tx_req(&mac->TX_req[CC_idP].tx_request_body,
+@@ -1069,6 +1130,25 @@ generate_Msg4(module_id_t module_idP,
+                                 ra->rnti,
+                                 (frameP * 10) + subframeP,
+                                 dl_config_pdu->dci_dl_pdu.dci_dl_pdu_rel8.cce_idx);
++
++          /* FUZZ-LTE: interception */
++
++          // send_pdu_data(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
++          //               DIRECTION_DOWNLINK,
++          //               WS_C_RNTI,
++          //               ra->rnti, frameP, subframeP,
++          //               &mac->UE_info.DLSCH_pdu[CC_idP][0][UE_id].payload[0], ra->msg4_TBsize,
++          //               -1);
++
++          send_pdu_data(28,
++                        DIRECTION_DOWNLINK,
++                        WS_C_RNTI,
++                        ra->rnti, frameP, subframeP,
++                        &mac->UE_info.DLSCH_pdu[CC_idP][0][UE_id].payload[0], ra->msg4_TBsize,
++                        -1);
++
++          /* ---------------------- */
++
+           T(T_ENB_MAC_UE_DL_PDU_WITH_DATA, T_INT(module_idP),
+             T_INT(CC_idP), T_INT(ra->rnti), T_INT(frameP),
+             T_INT(subframeP), T_INT(0 /*harq_pid always 0? */ ),
+diff --git a/openair2/LAYER2/MAC/eNB_scheduler_bch.c b/openair2/LAYER2/MAC/eNB_scheduler_bch.c
+index e4b9a7a..96c5dea 100644
+--- a/openair2/LAYER2/MAC/eNB_scheduler_bch.c
++++ b/openair2/LAYER2/MAC/eNB_scheduler_bch.c
+@@ -56,6 +56,13 @@ extern RAN_CONTEXT_t RC;
+ // NEED TO ADD schedule_SI_BR for SIB1_BR and SIB23_BR
+ // CCE_allocation_infeasible to be done for EPDCCH/MPDCCH
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/profiling.h"
++#include "common/utils/T/shared_memory.h"
++#include "common/utils/T/tracer/shm_lte_utils.h"
++
++/* ---------------------- */
+ 
+ #define size_Sj25 2
+ int Sj25[size_Sj25] = { 0, 3 };
+@@ -880,6 +887,17 @@ schedule_SI_MBMS(module_id_t module_idP, frame_t frameP,
+                 module_idP, CC_id, frameP, subframeP);
+         }
+ 
++        /* FUZZ-LTE: interception */
++
++        send_pdu_data(0xFE,				// Custom SIB Event
++												DIRECTION_DOWNLINK, // Downlink
++												4,					// WS_SI_RNTI
++												0xffff, frameP, subframeP,
++												cc->BCCH_MBMS_pdu.payload, bcch_sdu_length,
++												-1);
++
++        /* ---------------------- */
++
+         T(T_ENB_MAC_UE_DL_PDU_WITH_DATA, T_INT(module_idP), T_INT(CC_id), T_INT(0xffff),
+           T_INT(frameP), T_INT(subframeP), T_INT(0), T_BUFFER(cc->BCCH_MBMS_pdu.payload, bcch_sdu_length));
+         trace_pdu(DIRECTION_DOWNLINK,
+@@ -1207,6 +1225,17 @@ schedule_SI(module_id_t module_idP, frame_t frameP, sub_frame_t subframeP)
+                 module_idP, CC_id, frameP, subframeP);
+         }
+ 
++        /* FUZZ-LTE: interception */
++
++        send_pdu_data(0xFE,				// Custom SIB Event
++												DIRECTION_DOWNLINK, // Downlink
++												4,					// WS_SI_RNTI
++												0xffff, frameP, subframeP,
++												cc->BCCH_pdu.payload, bcch_sdu_length,
++												-1);
++
++        /* ---------------------- */
++
+         T(T_ENB_MAC_UE_DL_PDU_WITH_DATA, T_INT(module_idP), T_INT(CC_id), T_INT(0xffff),
+           T_INT(frameP), T_INT(subframeP), T_INT(0), T_BUFFER(cc->BCCH_pdu.payload, bcch_sdu_length));
+         trace_pdu(DIRECTION_DOWNLINK,
+diff --git a/openair2/LAYER2/MAC/eNB_scheduler_dlsch.c b/openair2/LAYER2/MAC/eNB_scheduler_dlsch.c
+index b516b04..10c3a99 100644
+--- a/openair2/LAYER2/MAC/eNB_scheduler_dlsch.c
++++ b/openair2/LAYER2/MAC/eNB_scheduler_dlsch.c
+@@ -65,6 +65,13 @@
+ #include "common/ran_context.h"
+ extern RAN_CONTEXT_t RC;
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/profiling.h"
++#include "common/utils/T/shared_memory.h"
++#include "common/utils/T/tracer/shm_lte_utils.h"
++
++/* ---------------------- */
+ 
+ //------------------------------------------------------------------------------
+ void
+@@ -923,6 +930,14 @@ schedule_ue_spec(module_id_t module_idP,
+         header_length_total++;
+       }
+ 
++      /* FUZZ-LTE: duplication */
++      if (fuzz_lte_dup.flag_mac) {
++        ta_len              = 0;
++        sdu_length_total    = fuzz_lte_dup.sdu_len;
++        header_length_total = 1;
++      }
++      /* --------------------- */
++
+       // there is at least one SDU or TA command
+       if (ta_len + sdu_length_total + header_length_total > 0) {
+         // Now compute number of required RBs for total sdu length
+@@ -1004,6 +1019,22 @@ schedule_ue_spec(module_id_t module_idP,
+           dlsch_pdu->payload[0][offset + sdu_length_total + j] = 0;
+         }
+ 
++        /* FUZZ-LTE: duplication */
++        if (fuzz_lte_dup.flag_mac) {
++          memcpy(dlsch_pdu->payload[0], fuzz_lte_dup.pdu_buf, fuzz_lte_dup.pdu_len);
++          fuzz_lte_dup.flag_mac = false;
++
++          LOG_W(MAC, "[duplication] ta_len              = %d\n", ta_len);
++          LOG_W(MAC, "[duplication] sdu_length_total    = %d\n", sdu_length_total);
++          LOG_W(MAC, "[duplication] header_length_total = %d\n", header_length_total);
++          LOG_W(MAC, "[duplication] TBS                 = %d\n", TBS);
++          LOG_W(MAC, "[duplication] dlsch_pdu->payload[0]: \n");
++          LOG_W(MAC, "%02x %02x %02x %02x %02x ...\n", 
++                    dlsch_pdu->payload[0][0], dlsch_pdu->payload[0][1], dlsch_pdu->payload[0][2], 
++                    dlsch_pdu->payload[0][3], dlsch_pdu->payload[0][4]);
++        }
++        /* --------------------- */
++
+         trace_pdu(DIRECTION_DOWNLINK,
+                   (uint8_t *) dlsch_pdu->payload[0],
+                   TBS,
+@@ -1015,6 +1046,25 @@ schedule_ue_spec(module_id_t module_idP,
+                   eNB->subframe,
+                   0,
+                   0);
++
++        /* FUZZ-LTE: interception */
++
++        // send_pdu_data(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
++        //                   DIRECTION_DOWNLINK,
++        //                   WS_C_RNTI,
++        //                   rnti, frameP, subframeP,
++        //                   dlsch_pdu->payload[0], TBS,
++        //                   -1);
++
++        send_pdu_data(28,
++                          DIRECTION_DOWNLINK,
++                          WS_C_RNTI,
++                          rnti, frameP, subframeP,
++                          dlsch_pdu->payload[0], TBS,
++                          -1);
++
++        /* ---------------------- */
++        
+         T(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
+           T_INT(module_idP),
+           T_INT(CC_id),
+@@ -1675,6 +1725,23 @@ schedule_ue_spec_br(module_id_t module_idP,
+                     mac->subframe,
+                     0,
+                     0);
++
++        /* FUZZ-LTE: interception */
++
++        // send_pdu_data(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
++        //                   DIRECTION_DOWNLINK,
++        //                   WS_C_RNTI,
++        //                   rnti, frameP, subframeP,
++        //                   UE_info->DLSCH_pdu[CC_id][0][UE_id].payload[0], TBS,-1);
++
++        send_pdu_data(28,
++                      DIRECTION_DOWNLINK,
++                      WS_C_RNTI,
++                      rnti, frameP, subframeP,
++                      UE_info->DLSCH_pdu[CC_id][0][UE_id].payload[0], TBS,-1);
++
++        /* ---------------------- */
++
+           T(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
+             T_INT(module_idP),
+             T_INT(CC_id),
+@@ -1859,6 +1926,23 @@ schedule_ue_spec_br(module_id_t module_idP,
+       }
+ 
+       ul_req->number_of_pdus++;
++
++      /* FUZZ-LTE: interception */
++
++      // send_pdu_data(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
++      //               DIRECTION_DOWNLINK,
++      //               WS_C_RNTI,
++      //               rnti, frameP, subframeP,
++      //               &mac->UE_info.DLSCH_pdu[CC_id][0][UE_id].payload[0], TX_req->pdu_length,-1);
++
++      send_pdu_data(28,
++                    DIRECTION_DOWNLINK,
++                    WS_C_RNTI,
++                    rnti, frameP, subframeP,
++                    &mac->UE_info.DLSCH_pdu[CC_id][0][UE_id].payload[0], TX_req->pdu_length,-1);
++
++      /* ---------------------- */
++
+       T(T_ENB_MAC_UE_DL_PDU_WITH_DATA,
+         T_INT (module_idP),
+         T_INT (CC_id),
+diff --git a/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c b/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c
+index 47c2779..c1d597f 100644
+--- a/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c
++++ b/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c
+@@ -58,6 +58,11 @@
+ #include <dlfcn.h>
+ #include <openair2/LAYER2/MAC/mac.h>
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/tracer/shm_lte_utils.h"
++
++/* ---------------------- */
+ 
+ #include "T.h"
+ 
+@@ -382,6 +387,27 @@ rx_sdu(const module_id_t enb_mod_idP,
+     T_INT(num_ce),
+     T_INT(num_sdu),
+     T_BUFFER(sduP, sdu_lenP));
++  
++  /* FUZZ-LTE: interception */
++  
++  // send_pdu_data(T_ENB_MAC_UE_UL_PDU_WITH_DATA,
++  //               DIRECTION_UPLINK,
++  //               WS_C_RNTI,
++  //               current_rnti,
++  //               frameP, subframeP,
++  //               sduP, sdu_lenP,
++  //               -1);
++
++  send_pdu_data(24,
++                DIRECTION_UPLINK,
++                WS_C_RNTI,
++                current_rnti,
++                frameP, subframeP,
++                sduP, sdu_lenP,
++                -1);
++  
++  /* ---------------------- */
++
+   mac->eNB_stats[CC_idP].ulsch_bytes_rx = sdu_lenP;
+   mac->eNB_stats[CC_idP].total_ulsch_bytes_rx += sdu_lenP;
+   mac->eNB_stats[CC_idP].total_ulsch_pdus_rx += 1;
+diff --git a/openair2/LAYER2/MAC/pre_processor.c b/openair2/LAYER2/MAC/pre_processor.c
+index bf8202f..6a458b3 100644
+--- a/openair2/LAYER2/MAC/pre_processor.c
++++ b/openair2/LAYER2/MAC/pre_processor.c
+@@ -49,6 +49,10 @@
+ 
+ #include "common/ran_context.h"
+ 
++/* FUZZ-LTE: duplication */
++#include "targets/RT/USER/lte-softmodem.h"
++/* --------------------- */
++
+ extern RAN_CONTEXT_t RC;
+ 
+ #define DEBUG_eNB_SCHEDULER
+diff --git a/openair2/LAYER2/PDCP_v10.1.0/pdcp.c b/openair2/LAYER2/PDCP_v10.1.0/pdcp.c
+index ee2711c..e2cb1d0 100644
+--- a/openair2/LAYER2/PDCP_v10.1.0/pdcp.c
++++ b/openair2/LAYER2/PDCP_v10.1.0/pdcp.c
+@@ -64,7 +64,11 @@
+ 
+ #include "ENB_APP/enb_config.h"
+ 
++/* FUZZ-LTE: interception */
+ 
++#include "common/utils/T/tracer/shm_lte_utils.h"
++
++/* ---------------------- */
+ 
+ extern int otg_enabled;
+ extern uint8_t nfapi_mode;
+@@ -299,6 +303,20 @@ boolean_t pdcp_data_req(
+         pdcp_pdu_p->data[pdcp_header_len + sdu_buffer_sizeP + i] = 0x00;// pdu_header.mac_i[i];
+       }
+ 
++      /* FUZZ-LTE: interception */
++      
++      // Send PDU before encryption/integrity
++      send_pdu_data_pdcp(DIRECTION_DOWNLINK,
++                        (srb_flagP > 0 ? SIGNALING_PLANE : USER_PLANE),
++                        pdcp_p->lcid,
++                        FALSE,
++                        pdcp_p->header_compression_profile,
++                        pdcp_p->seq_num_size,
++                        pdcp_uid, // UE id
++                        pdcp_pdu_p->data, pdcp_pdu_size);
++      
++      /* ---------------------- */
++
+       if ((pdcp_p->security_activated != 0) &&
+           (((pdcp_p->cipheringAlgorithm) != 0) ||
+            ((pdcp_p->integrityProtAlgorithm) != 0))) {
+@@ -321,6 +339,21 @@ boolean_t pdcp_data_req(
+           stop_meas(&eNB_pdcp_stats[ctxt_pP->module_id].apply_security);
+         } else {
+           stop_meas(&UE_pdcp_stats[ctxt_pP->module_id].apply_security);
++
++          /* FUZZ-LTE: interception */
++          // Send PDU after encryption/integrity
++
++          send_pdu_data_pdcp(DIRECTION_DOWNLINK,
++                             (srb_flagP > 0 ? SIGNALING_PLANE : USER_PLANE),
++                             pdcp_p->lcid,
++                             TRUE,
++                             pdcp_p->header_compression_profile,
++                             pdcp_p->seq_num_size,
++                             pdcp_uid,
++                             pdcp_pdu_p->data, pdcp_pdu_size);
++                             
++	        /* ---------------------- */
++
+         }
+       }
+ 
+diff --git a/openair2/NETWORK_DRIVER/UE_IP/netlink.c b/openair2/NETWORK_DRIVER/UE_IP/netlink.c
+index 658ae19..b3829c5 100644
+--- a/openair2/NETWORK_DRIVER/UE_IP/netlink.c
++++ b/openair2/NETWORK_DRIVER/UE_IP/netlink.c
+@@ -39,6 +39,7 @@
+ #include "local.h"
+ #include "proto_extern.h"
+ 
++MODULE_LICENSE("OAI");
+ 
+ #define OAI_IP_DRIVER_NETLINK_ID 31
+ #define NL_DEST_PID 1
+diff --git a/targets/ARCH/ETHERNET/benetel/4g/low_dpdk.c b/targets/ARCH/ETHERNET/benetel/4g/low_dpdk.c
+index edf62a6..708273b 100644
+--- a/targets/ARCH/ETHERNET/benetel/4g/low_dpdk.c
++++ b/targets/ARCH/ETHERNET/benetel/4g/low_dpdk.c
+@@ -82,7 +82,7 @@ void *benetel_start_dpdk(char *ifname, shared_buffers *buffers, char *dpdk_main_
+ 
+   cpu_set_t cpuset;
+   CPU_ZERO(&cpuset);
+-  CPU_SET(12,&cpuset);
++  CPU_SET(4,&cpuset);
+   if (pthread_attr_setaffinity_np(&attr, sizeof(cpu_set_t), &cpuset) != 0) {
+     printf("pthread_attr_setaffinity_np failed\n");
+     exit(1);
+diff --git a/targets/RT/USER/lte-softmodem.c b/targets/RT/USER/lte-softmodem.c
+index 2e6f148..c759070 100644
+--- a/targets/RT/USER/lte-softmodem.c
++++ b/targets/RT/USER/lte-softmodem.c
+@@ -95,6 +95,23 @@ unsigned short config_frames[4] = {2,9,11,13};
+ #include "NB_IoT_interface.h"
+ #include <executables/split_headers.h>
+ 
++/* FUZZ-LTE: interception */
++
++#include "common/utils/T/T.h"
++#include "common/utils/T/shared_memory.h"
++
++/* ---------------------- */
++
++/* FUZZ-LTE: duplication */
++#include <czmq.h>
++#include <json.h>
++
++char       * dup_addr = "tcp://*:5563";
++zsock_t    * dup_sock;  
++pthread_t    dup_thread;
++
++fuzz_lte_duplication_t fuzz_lte_dup;
++/* --------------------- */
+ 
+ pthread_cond_t nfapi_sync_cond;
+ pthread_mutex_t nfapi_sync_mutex;
+@@ -507,6 +524,97 @@ static  void wait_nfapi_init(char *thread_name) {
+   printf( "NFAPI: got sync (%s)\n", thread_name);
+ }
+ 
++/* FUZZ-LTE: duplication */
++int fuzz_lte_dup_cmd(char *cmd, fuzz_lte_duplication_t *dup)
++{
++  json_object *jobj_dup     = json_tokener_parse(cmd);
++  json_object *jval_sdulen  = NULL;
++  json_object *jarr_pdubuf  = NULL;
++  json_object *jval_byte    = NULL;
++  int i = 0;
++
++  dup->sdu_len  = 0;
++  dup->pdu_len  = 0;
++  memset(dup->pdu_buf, 0, DUP_BUF_SIZE);
++
++  if (jobj_dup) {
++    jval_sdulen = json_object_object_get(jobj_dup, "sdu_len");
++    jarr_pdubuf = json_object_object_get(jobj_dup, "pdu_buf");
++
++    if (jval_sdulen && jarr_pdubuf) {
++      
++      if (json_object_is_type(jval_sdulen, json_type_int) && 
++          json_object_is_type(jarr_pdubuf, json_type_array)) {
++
++        dup->sdu_len = json_object_get_int(jval_sdulen);
++        dup->pdu_len = json_object_array_length(jarr_pdubuf);
++
++        LOG_W(ENB_APP, "[duplication] sdu_len = %d\n", dup->sdu_len);
++        LOG_W(ENB_APP, "[duplication] pdu_len = %d\n", dup->pdu_len);
++
++        if (dup->sdu_len > 0 && dup->sdu_len < dup->pdu_len) {
++
++          for (i = 0; i < dup->pdu_len; i++) {
++            jval_byte = json_object_array_get_idx(jarr_pdubuf, i);
++
++            if (json_object_is_type(jval_byte, json_type_int)) {
++              dup->pdu_buf[i] = json_object_get_int(jval_byte);
++            } else {
++              LOG_E(ENB_APP, "[duplication] Wrong json type");
++              return -1;
++            }
++          }
++
++          LOG_W(ENB_APP, "[duplication] pdu_buf = %02x %02x %02x %02x %02x ...\n", 
++              dup->pdu_buf[0], dup->pdu_buf[1], dup->pdu_buf[2], dup->pdu_buf[3], dup->pdu_buf[4]);
++
++        } else {
++          LOG_E(ENB_APP, "[duplication] Wrong sdu/pdu length");
++        }
++
++      } else {
++        LOG_E(ENB_APP, "[duplication] Wrong json type");
++      }
++
++    } else {
++      LOG_E(ENB_APP, "[duplication] Wrong json key");
++    }
++  } else {
++    LOG_E(ENB_APP, "[duplication] Wrong json object");
++    return -1;
++  }
++
++  return 0;  
++}
++
++void *fuzz_lte_dup_thread(void *param)
++{
++  fuzz_lte_duplication_t *dup = (fuzz_lte_duplication_t *)param;
++
++  while (!zsys_interrupted) {
++    char *rcv_str = zstr_recv(dup_sock);
++    
++    if (rcv_str != NULL) {
++      LOG_W(ENB_APP, "[duplication] received: %s\n", rcv_str);
++      int h_rtn = fuzz_lte_dup_cmd(rcv_str, dup);
++      
++      if (h_rtn < 0) {
++        zstr_send(dup_sock, "update_failed");
++      } else {
++        fuzz_lte_dup.flag_mac = true;
++        zstr_send(dup_sock, "update_succeed");
++      }
++
++      free (rcv_str); 
++    }
++
++    zclock_sleep(100);
++  }
++
++  zsock_destroy(&dup_sock);
++}
++/* --------------------- */
++
+ int main ( int argc, char **argv )
+ {
+   int i;
+@@ -531,6 +639,13 @@ int main ( int argc, char **argv )
+     exit(-1);
+   }
+ 
++  /* FUZZ-LTE: interception */
++
++  shm_init(SHM_CLIENT, 8192*2); // 8192 is the size of the shared memory
++  T_ACTIVE(T_ENB_PHY_MIB) = 1; // Enable MIB Interception
++
++  /* ---------------------- */
++
+ #if T_TRACER
+   T_Config_Init();
+ #endif
+@@ -563,6 +678,14 @@ int main ( int argc, char **argv )
+   printf("Runtime table\n");
+   fill_modeled_runtime_table(runtime_phy_rx,runtime_phy_tx);
+ 
++  /* FUZZ-LTE: duplication */
++  LOG_W(ENB_APP, "[duplication] Create dup socket\n"); 
++  dup_sock = zsock_new_rep(dup_addr);
++
++  LOG_W(ENB_APP, "[duplication] Start dup thread\n"); 
++  pthread_create(&dup_thread, NULL, &fuzz_lte_dup_thread, (void *)&fuzz_lte_dup);
++  /* --------------------- */
++
+   /* Read configuration */
+   if (RC.nb_inst > 0) {
+     read_config_and_init();
+diff --git a/targets/RT/USER/lte-softmodem.h b/targets/RT/USER/lte-softmodem.h
+index 1c537da..f8280b9 100644
+--- a/targets/RT/USER/lte-softmodem.h
++++ b/targets/RT/USER/lte-softmodem.h
+@@ -159,6 +159,19 @@ extern int emulate_rf;
+ extern int numerology;
+ extern int usrp_tx_thread;
+ 
++/* FUZZ-LTE: duplication */
++#define DUP_BUF_SIZE 200
++
++typedef struct fuzz_lte_duplication_s {
++  bool           flag_mac;
++  int            sdu_len;
++  int            pdu_len;
++  uint8_t        pdu_buf[DUP_BUF_SIZE];
++} fuzz_lte_duplication_t;
++
++extern fuzz_lte_duplication_t fuzz_lte_dup;
++/* --------------------- */
++
+ // In lte-enb.c
+ extern void stop_eNB(int);
+ extern void kill_eNB_proc(int inst);

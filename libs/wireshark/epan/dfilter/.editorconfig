@@ -1,0 +1,19 @@
+#
+# Editor configuration
+#
+# https://editorconfig.org/
+#
+
+# C
+[*.{c,h}]
+indent_style = tab
+indent_size = tab
+tab_width = 8
+
+[drange.[ch]]
+indent_style = space
+indent_size = 4
+
+[dfunctions.[ch]]
+indent_style = space
+indent_size = 4

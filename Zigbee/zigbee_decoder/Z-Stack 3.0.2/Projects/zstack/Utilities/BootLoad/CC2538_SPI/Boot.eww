@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\Boot.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>All</name>
+      <member>
+        <project>Boot</project>
+        <configuration>Basic</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

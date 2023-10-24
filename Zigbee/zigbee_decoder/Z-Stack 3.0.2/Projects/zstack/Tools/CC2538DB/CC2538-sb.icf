@@ -1,0 +1,142 @@
+//*****************************************************************************
+//
+// Linker configuration file for CC2538.
+//
+// Copyright (c) 2013 Texas Instruments Incorporated.  All rights reserved.
+//
+//*****************************************************************************
+
+//
+// Define a memory region that covers the entire 4 GB addressible space of the
+// processor.
+//
+define memory mem with size = 4G;
+
+//
+// Define a region for the NVIC table that is 512-byte aligned.
+//
+define region INTVEC = mem:[from 0x00200000 to 0x0020011B];
+
+//
+// Define a region for the serial bootloaded image checksum.
+//
+define region SBL_CHECKSUM = mem:[from 0x0020011C to 0x00200133];
+
+//
+// Define a region for the on-chip program code space.
+//
+define region FLASH = mem:[from 0x00200134 to 0x0027AFFF];
+
+//
+// Define a region for the on-chip non-volatile (NV) memory.
+//   "HAL_NV_PAGE_CNT" pages of on-chip flash memory (originally 6 pages) are
+//   designated for Z-Stack NV items to be stored outside program code space.
+//   The size of this region MUST MATCH the size defined by "HAL_NV_PAGE_CNT"
+//   in the file: hal_board_cfg.h
+//
+define region NV_MEM = mem:[from 0x0027C800 to 0x0027F7FF];
+
+//
+// Define regions for on-chip factory Commissioning Parameters.
+//   One page of on-chip flash memory (originally page 255) is designated
+//   for various parameters to be "commissioned" outside program code space.
+//
+//
+// Key-Establishment "Implicit Certificate 283"
+define region CP_IMPC_283 = mem:[from 0x0027FED4 to 0x0027FF1F];
+
+// Key-Establishment "Certificate Authority Public Key 283"
+define region CP_CAPK_283 = mem:[from 0x0027FF20 to 0x0027FF47];
+
+// Key-Establishment "Device Private Key 283"
+define region CP_DEPK_283 = mem:[from 0x0027FF48 to 0x0027FF6B];
+
+// Key-Establishment "Implicit Certificate"
+define region CP_IMPC = mem:[from 0x0027FF6C to 0x0027FF9B];
+
+// Key-Establishment "Certificate Authority Public Key"
+define region CP_CAPK = mem:[from 0x0027FF9C to 0x0027FFB3];
+
+// Key-Establishment "Device Private Key"
+define region CP_DEPK = mem:[from 0x0027FFB4 to 0x0027FFCB];
+
+// Device's unique 64-bit IEEE address
+define region CP_IEEE = mem:[from 0x0027FFCC to 0x0027FFD3];
+
+//
+// Define a region for Customer Configuration Area in flash.
+define region FLASH_CCA = mem:[from 0x0027FFD4 to 0x0027FFDF];
+
+//
+// Define the region for Lock Bits in flash.
+define region FLASH_LCK = mem:[from 0x0027FFE0 to 0x0027FFFF];
+
+//
+// Define a region for the on-chip SRAM.
+//
+define region SRAM = mem:[from 0x20004000 to 0x20007FFF];
+
+//
+// Define a block for the heap.  The size should be set to something other
+// than zero if things in the C library that require the heap are used.
+//
+define block HEAP with alignment = 8, size = 0x00000100 { };
+
+//
+// Indicate that the read/write values should be initialized by copying from
+// flash.
+//
+initialize by copy { readwrite };
+
+//
+// Indicate that the noinit values should be left alone.  This includes the
+// stack, which if initialized will destroy the return address from the
+// initialization code, causing the processor to branch to zero and fault.
+//
+do not initialize { section .noinit };
+
+//
+// Place the interrupt vectors at the start of flash.
+//
+place at start of INTVEC { readonly section .intvec };
+
+//
+// Place the checksum following the interrupt vectors 
+//
+place at start of SBL_CHECKSUM { readonly section .checksum };
+
+//
+// Place the image_status structure following the checksum 
+//
+place in SBL_CHECKSUM { readonly section .image_status };
+
+//
+// Place the cca area
+//
+place at start of FLASH_CCA { readonly section .cca };
+
+//
+// Place the commissioning parameter items.
+//
+place at start of CP_IEEE { readonly section IEEE_ADDRESS_SPACE };
+place at start of CP_DEPK { readonly section DEV_PRIVATE_KEY_ADDRESS_SPACE };
+place at start of CP_CAPK { readonly section CA_PUBLIC_KEY_ADDRESS_SPACE };
+place at start of CP_IMPC { readonly section IMPLICIT_CERTIFICATE_ADDRESS_SPACE };
+place at start of CP_DEPK_283 { readonly section PRIV_KEY_283_ADDRESS_SPACE };
+place at start of CP_CAPK_283 { readonly section CA_PUB_KEY_283_ADDRESS_SPACE };
+place at start of CP_IMPC_283 { readonly section IMPL_CERT_283_ADDRESS_SPACE };
+
+//
+// Place the remainder of the read-only items into flash.
+//
+place in FLASH { readonly };
+
+//
+// Place the RAM vector table at the start of SRAM.
+//
+place at start of SRAM { section VTABLE };
+
+//
+// Place all read/write items into SRAM.
+//
+place in SRAM { readwrite, block HEAP };

@@ -1,0 +1,893 @@
+{
+    "StatesNodes": {
+        "IDLE": {
+            "direction": 0,
+            "layers_count": 0,
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425367
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / MAC / Long BSR": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 9,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425908
+            },
+            "timeout": 0,
+            "type_value": 30
+        },
+        "RX / MAC / Power Headroom Report": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 19,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426978
+            },
+            "timeout": 0,
+            "type_value": 26
+        },
+        "RX / PDCP / Interspersed ROHC feedback packet": {
+            "direction": 1,
+            "layers_count": 5,
+            "node_number": 16,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426343
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / RLC / DRB": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 17,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426365
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "RX / RLC / Data PDU": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 12,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425996
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / RLC / STATUS PDU": {
+            "direction": 1,
+            "layers_count": 5,
+            "node_number": 11,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425963
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / RRC / rrcConnectionReconfigurationComplete": {
+            "direction": 1,
+            "layers_count": 8,
+            "node_number": 15,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426290
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / RRC / rrcConnectionRequest": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425599
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / RRC / rrcConnectionSetupComplete": {
+            "direction": 1,
+            "layers_count": 7,
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425721
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / RRC / securityModeComplete": {
+            "direction": 1,
+            "layers_count": 7,
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425870
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "RX / RRC / ueCapabilityInformation": {
+            "direction": 1,
+            "layers_count": 6,
+            "node_number": 13,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426144
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "TX / MAC / RA-RNTI": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425547
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / PDCP / Interspersed ROHC feedback packet": {
+            "direction": 0,
+            "layers_count": 5,
+            "node_number": 18,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426705
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / RLC / DRB": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 20,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 457478
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "TX / RLC / Data PDU": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425785
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / RLC / STATUS PDU": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425756
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / RRC / rrcConnectionReconfiguration": {
+            "direction": 0,
+            "layers_count": 6,
+            "node_number": 14,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 426240
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "TX / RRC / rrcConnectionSetup": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425664
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "TX / RRC / securityModeCommand": {
+            "direction": 0,
+            "layers_count": 6,
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425827
+            },
+            "timeout": 0,
+            "type_value": 6
+        },
+        "TX / RRC / ueCapabilityEnquiry": {
+            "direction": 0,
+            "layers_count": 6,
+            "node_number": 10,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1623936976,
+                "tv_usec": 425935
+            },
+            "timeout": 0,
+            "type_value": 7
+        }
+    },
+    "StatesTransitions": {
+        "IDLE": {
+            "from_state": null,
+            "to_state": {
+                "TX / MAC / RA-RNTI": {
+                    "dst_state_name": "TX / MAC / RA-RNTI",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425549
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / MAC / Long BSR": {
+            "from_state": [
+                "TX / PDCP / Interspersed ROHC feedback packet",
+                "TX / MAC / RA-RNTI",
+                "RX / MAC / Long BSR",
+                "RX / MAC / Power Headroom Report",
+                "RX / PDCP / Interspersed ROHC feedback packet",
+                "TX / RLC / STATUS PDU"
+            ],
+            "to_state": {
+                "RX / MAC / Long BSR": {
+                    "dst_state_name": "RX / MAC / Long BSR",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426764
+                    },
+                    "trigger": ""
+                },
+                "RX / MAC / Power Headroom Report": {
+                    "dst_state_name": "RX / MAC / Power Headroom Report",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426978
+                    },
+                    "trigger": ""
+                },
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 432583
+                    },
+                    "trigger": ""
+                },
+                "RX / RLC / DRB": {
+                    "dst_state_name": "RX / RLC / DRB",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 432200
+                    },
+                    "trigger": ""
+                },
+                "TX / MAC / RA-RNTI": {
+                    "dst_state_name": "TX / MAC / RA-RNTI",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 427063
+                    },
+                    "trigger": ""
+                },
+                "TX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 432620
+                    },
+                    "trigger": ""
+                },
+                "TX / RRC / ueCapabilityEnquiry": {
+                    "dst_state_name": "TX / RRC / ueCapabilityEnquiry",
+                    "src_state_name": "RX / MAC / Long BSR",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425935
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / MAC / Power Headroom Report": {
+            "from_state": [
+                "TX / PDCP / Interspersed ROHC feedback packet",
+                "TX / MAC / RA-RNTI",
+                "RX / MAC / Long BSR"
+            ],
+            "to_state": {
+                "RX / MAC / Long BSR": {
+                    "dst_state_name": "RX / MAC / Long BSR",
+                    "src_state_name": "RX / MAC / Power Headroom Report",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 427001
+                    },
+                    "trigger": ""
+                },
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / MAC / Power Headroom Report",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 447313
+                    },
+                    "trigger": ""
+                },
+                "RX / RLC / DRB": {
+                    "dst_state_name": "RX / RLC / DRB",
+                    "src_state_name": "RX / MAC / Power Headroom Report",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 435088
+                    },
+                    "trigger": ""
+                },
+                "TX / MAC / RA-RNTI": {
+                    "dst_state_name": "TX / MAC / RA-RNTI",
+                    "src_state_name": "RX / MAC / Power Headroom Report",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 436114
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / PDCP / Interspersed ROHC feedback packet": {
+            "from_state": [
+                "TX / MAC / RA-RNTI",
+                "RX / MAC / Power Headroom Report",
+                "RX / PDCP / Interspersed ROHC feedback packet",
+                "RX / MAC / Long BSR",
+                "TX / PDCP / Interspersed ROHC feedback packet",
+                "RX / RLC / DRB",
+                "TX / RLC / STATUS PDU"
+            ],
+            "to_state": {
+                "RX / MAC / Long BSR": {
+                    "dst_state_name": "RX / MAC / Long BSR",
+                    "src_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426747
+                    },
+                    "trigger": ""
+                },
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 434506
+                    },
+                    "trigger": ""
+                },
+                "RX / RLC / DRB": {
+                    "dst_state_name": "RX / RLC / DRB",
+                    "src_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426365
+                    },
+                    "trigger": ""
+                },
+                "TX / MAC / RA-RNTI": {
+                    "dst_state_name": "TX / MAC / RA-RNTI",
+                    "src_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 445177
+                    },
+                    "trigger": ""
+                },
+                "TX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426706
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RLC / DRB": {
+            "from_state": [
+                "TX / PDCP / Interspersed ROHC feedback packet",
+                "RX / MAC / Long BSR",
+                "TX / MAC / RA-RNTI",
+                "RX / RLC / DRB",
+                "RX / MAC / Power Headroom Report",
+                "RX / PDCP / Interspersed ROHC feedback packet"
+            ],
+            "to_state": {
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / RLC / DRB",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426678
+                    },
+                    "trigger": ""
+                },
+                "RX / RLC / DRB": {
+                    "dst_state_name": "RX / RLC / DRB",
+                    "src_state_name": "RX / RLC / DRB",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426386
+                    },
+                    "trigger": ""
+                },
+                "TX / MAC / RA-RNTI": {
+                    "dst_state_name": "TX / MAC / RA-RNTI",
+                    "src_state_name": "RX / RLC / DRB",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426487
+                    },
+                    "trigger": ""
+                },
+                "TX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "RX / RLC / DRB",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 435279
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RLC / Data PDU": {
+            "from_state": [
+                "RX / RLC / STATUS PDU"
+            ],
+            "to_state": {
+                "RX / RRC / ueCapabilityInformation": {
+                    "dst_state_name": "RX / RRC / ueCapabilityInformation",
+                    "src_state_name": "RX / RLC / Data PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426145
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RLC / STATUS PDU": {
+            "from_state": [
+                "TX / RRC / ueCapabilityEnquiry"
+            ],
+            "to_state": {
+                "RX / RLC / Data PDU": {
+                    "dst_state_name": "RX / RLC / Data PDU",
+                    "src_state_name": "RX / RLC / STATUS PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425996
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RRC / rrcConnectionReconfigurationComplete": {
+            "from_state": [
+                "TX / RRC / rrcConnectionReconfiguration"
+            ],
+            "to_state": {
+                "TX / RLC / STATUS PDU": {
+                    "dst_state_name": "TX / RLC / STATUS PDU",
+                    "src_state_name": "RX / RRC / rrcConnectionReconfigurationComplete",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426314
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RRC / rrcConnectionRequest": {
+            "from_state": [
+                "TX / MAC / RA-RNTI"
+            ],
+            "to_state": {
+                "TX / RRC / rrcConnectionSetup": {
+                    "dst_state_name": "TX / RRC / rrcConnectionSetup",
+                    "src_state_name": "RX / RRC / rrcConnectionRequest",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425664
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RRC / rrcConnectionSetupComplete": {
+            "from_state": [
+                "TX / RRC / rrcConnectionSetup"
+            ],
+            "to_state": {
+                "TX / RLC / STATUS PDU": {
+                    "dst_state_name": "TX / RLC / STATUS PDU",
+                    "src_state_name": "RX / RRC / rrcConnectionSetupComplete",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425757
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RRC / securityModeComplete": {
+            "from_state": [
+                "TX / RRC / securityModeCommand"
+            ],
+            "to_state": {
+                "TX / RLC / STATUS PDU": {
+                    "dst_state_name": "TX / RLC / STATUS PDU",
+                    "src_state_name": "RX / RRC / securityModeComplete",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425891
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / RRC / ueCapabilityInformation": {
+            "from_state": [
+                "RX / RLC / Data PDU"
+            ],
+            "to_state": {
+                "TX / RLC / STATUS PDU": {
+                    "dst_state_name": "TX / RLC / STATUS PDU",
+                    "src_state_name": "RX / RRC / ueCapabilityInformation",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426175
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / MAC / RA-RNTI": {
+            "from_state": [
+                "TX / PDCP / Interspersed ROHC feedback packet",
+                "RX / PDCP / Interspersed ROHC feedback packet",
+                "RX / MAC / Power Headroom Report",
+                "RX / RLC / DRB",
+                "RX / MAC / Long BSR",
+                "IDLE"
+            ],
+            "to_state": {
+                "RX / MAC / Long BSR": {
+                    "dst_state_name": "RX / MAC / Long BSR",
+                    "src_state_name": "TX / MAC / RA-RNTI",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 427076
+                    },
+                    "trigger": ""
+                },
+                "RX / MAC / Power Headroom Report": {
+                    "dst_state_name": "RX / MAC / Power Headroom Report",
+                    "src_state_name": "TX / MAC / RA-RNTI",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 433591
+                    },
+                    "trigger": ""
+                },
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "TX / MAC / RA-RNTI",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 437541
+                    },
+                    "trigger": ""
+                },
+                "RX / RLC / DRB": {
+                    "dst_state_name": "RX / RLC / DRB",
+                    "src_state_name": "TX / MAC / RA-RNTI",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426507
+                    },
+                    "trigger": ""
+                },
+                "RX / RRC / rrcConnectionRequest": {
+                    "dst_state_name": "RX / RRC / rrcConnectionRequest",
+                    "src_state_name": "TX / MAC / RA-RNTI",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425599
+                    },
+                    "trigger": ""
+                },
+                "TX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "TX / MAC / RA-RNTI",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 445204
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / PDCP / Interspersed ROHC feedback packet": {
+            "from_state": [
+                "TX / RLC / DRB",
+                "TX / MAC / RA-RNTI",
+                "RX / RLC / DRB",
+                "TX / PDCP / Interspersed ROHC feedback packet",
+                "RX / MAC / Long BSR",
+                "RX / PDCP / Interspersed ROHC feedback packet"
+            ],
+            "to_state": {
+                "RX / MAC / Long BSR": {
+                    "dst_state_name": "RX / MAC / Long BSR",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 432638
+                    },
+                    "trigger": ""
+                },
+                "RX / MAC / Power Headroom Report": {
+                    "dst_state_name": "RX / MAC / Power Headroom Report",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 440670
+                    },
+                    "trigger": ""
+                },
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426731
+                    },
+                    "trigger": ""
+                },
+                "RX / RLC / DRB": {
+                    "dst_state_name": "RX / RLC / DRB",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 435213
+                    },
+                    "trigger": ""
+                },
+                "TX / MAC / RA-RNTI": {
+                    "dst_state_name": "TX / MAC / RA-RNTI",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 467600
+                    },
+                    "trigger": ""
+                },
+                "TX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 434436
+                    },
+                    "trigger": ""
+                },
+                "TX / RLC / DRB": {
+                    "dst_state_name": "TX / RLC / DRB",
+                    "src_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 457478
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RLC / DRB": {
+            "from_state": [
+                "TX / PDCP / Interspersed ROHC feedback packet"
+            ],
+            "to_state": {
+                "TX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "TX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "TX / RLC / DRB",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 457508
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RLC / Data PDU": {
+            "from_state": [
+                "TX / RLC / STATUS PDU"
+            ],
+            "to_state": {
+                "TX / RRC / securityModeCommand": {
+                    "dst_state_name": "TX / RRC / securityModeCommand",
+                    "src_state_name": "TX / RLC / Data PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425828
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RLC / STATUS PDU": {
+            "from_state": [
+                "RX / RRC / rrcConnectionReconfigurationComplete",
+                "RX / RRC / ueCapabilityInformation",
+                "RX / RRC / securityModeComplete",
+                "RX / RRC / rrcConnectionSetupComplete"
+            ],
+            "to_state": {
+                "RX / MAC / Long BSR": {
+                    "dst_state_name": "RX / MAC / Long BSR",
+                    "src_state_name": "TX / RLC / STATUS PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425908
+                    },
+                    "trigger": ""
+                },
+                "RX / PDCP / Interspersed ROHC feedback packet": {
+                    "dst_state_name": "RX / PDCP / Interspersed ROHC feedback packet",
+                    "src_state_name": "TX / RLC / STATUS PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426343
+                    },
+                    "trigger": ""
+                },
+                "TX / RLC / Data PDU": {
+                    "dst_state_name": "TX / RLC / Data PDU",
+                    "src_state_name": "TX / RLC / STATUS PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425786
+                    },
+                    "trigger": ""
+                },
+                "TX / RRC / rrcConnectionReconfiguration": {
+                    "dst_state_name": "TX / RRC / rrcConnectionReconfiguration",
+                    "src_state_name": "TX / RLC / STATUS PDU",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426241
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RRC / rrcConnectionReconfiguration": {
+            "from_state": [
+                "TX / RLC / STATUS PDU"
+            ],
+            "to_state": {
+                "RX / RRC / rrcConnectionReconfigurationComplete": {
+                    "dst_state_name": "RX / RRC / rrcConnectionReconfigurationComplete",
+                    "src_state_name": "TX / RRC / rrcConnectionReconfiguration",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 426290
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RRC / rrcConnectionSetup": {
+            "from_state": [
+                "RX / RRC / rrcConnectionRequest"
+            ],
+            "to_state": {
+                "RX / RRC / rrcConnectionSetupComplete": {
+                    "dst_state_name": "RX / RRC / rrcConnectionSetupComplete",
+                    "src_state_name": "TX / RRC / rrcConnectionSetup",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425722
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RRC / securityModeCommand": {
+            "from_state": [
+                "TX / RLC / Data PDU"
+            ],
+            "to_state": {
+                "RX / RRC / securityModeComplete": {
+                    "dst_state_name": "RX / RRC / securityModeComplete",
+                    "src_state_name": "TX / RRC / securityModeCommand",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425871
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / RRC / ueCapabilityEnquiry": {
+            "from_state": [
+                "RX / MAC / Long BSR"
+            ],
+            "to_state": {
+                "RX / RLC / STATUS PDU": {
+                    "dst_state_name": "RX / RLC / STATUS PDU",
+                    "src_state_name": "TX / RRC / ueCapabilityEnquiry",
+                    "time": {
+                        "tv_sec": 1623936976,
+                        "tv_usec": 425964
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

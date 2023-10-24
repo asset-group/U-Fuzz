@@ -1,0 +1,279 @@
+/**************************************************************************************************
+  Filename:       cc2530-sb.xcl
+  Revised:        $Date: 2014-06-05 18:22:27 -0700 (Thu, 05 Jun 2014) $
+  Revision:       $Revision: 38845 $
+
+  Description:    This is a linker command line file for the IAR XLINK tool for the
+                  CC2530 SoC and Z-Stack sample applications where the General Options
+                  for location for constants and strings is "ROM mapped as data".
+                  This mapping is for applications that are to be loaded onto the
+                  TI CC2530/31 via the embedded serial boot loader.
+
+
+  Copyright 2009-2014 Texas Instruments Incorporated. All rights reserved.
+
+  IMPORTANT: Your use of this Software is limited to those specific rights
+  granted under the terms of a software license agreement between the user
+  who downloaded the software, his/her employer (which must be your employer)
+  and Texas Instruments Incorporated (the "License").  You may not use this
+  Software unless you agree to abide by the terms of the License. The License
+  limits your use, and you acknowledge, that the Software may not be modified,
+  copied or distributed unless embedded on a Texas Instruments microcontroller
+  or used solely and exclusively in conjunction with a Texas Instruments radio
+  frequency transceiver, which is integrated into your product.  Other than for
+  the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+  works of, modify, distribute, perform, display or sell this Software and/or
+  its documentation for any purpose.
+
+  YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+  PROVIDED “AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+  NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+  TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+  NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+  LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+  INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+  OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+  OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+  (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+
+  Should you have any questions regarding your right to use this Software,
+  contact Texas Instruments Incorporated at www.TI.com.
+
+**************************************************************************************************/
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// Segment limits
+// --------------
+//
+//
+// XDATA available to the program.
+//
+// Reserving address 0x0 for NULL.
+-D_XDATA_START=0x0001          // The boot loader code depends on stack setting this byte to 0xCD,
+                               // which happens because it is the last byte of the XSTACK.
+-D_XDATA_END=0x1EFF
+//
+//
+// The 8052 IDATA is overlayed on the SoC XDATA space from 0x1F00-0x1FFF.
+//
+-D_IDATA_END=0xFF              // Last address of Idata memory.
+//
+//
+//    CODE
+//
+-D_CODE_START=0x2000
+-D_CODE_END=0x7FFF             // Last address for ROOT bank.
+//
+-D_FIRST_BANK_ADDR=0x10000
+//
+//
+//
+// Special SFRs
+// ------------
+//
+//    Register bank setup
+//
+-D?REGISTER_BANK=0             // Default register bank (0,1,2,3).
+-D_REGISTER_BANK_START=0       // Start address for default register bank (00,08,10,18).
+//
+//
+//    PDATA page setup
+//
+-D?PBANK_NUMBER=00             // High byte of 16-bit address to the PDATA area.
+//
+//
+//    Virtual register setup
+//    ----------------------
+//
+-D_BREG_START=0x00             // The bit address where the BREG segments starts.
+                               // Must be placed on: _BREG_START%8=0 where _BREG_START <= 0x78.
+-D?VB=0x20                     // ?VB is used when referencing BREG as whole byte.
+                               // Must be placed on: ?VB=0x20+_BREG_START/8.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// IDATA memory
+//
+
+// Setup "bit" segments (only for '__no_init bool' variables).
+-Z(BIT)BREG=_BREG_START
+-Z(BIT)BIT_N=0-7F
+
+-Z(DATA)REGISTERS+8=_REGISTER_BANK_START
+-Z(DATA)BDATA_Z,BDATA_N,BDATA_I=20-2F
+-Z(DATA)VREG=08-7F
+-Z(DATA)PSP,XSP=08-7F
+-Z(DATA)DOVERLAY=08-7F
+-Z(DATA)DATA_I,DATA_Z,DATA_N=08-7F
+
+-U(IDATA)0-7F=(DATA)0-7F
+-Z(IDATA)IDATA_I,IDATA_Z,IDATA_N=08-_IDATA_END
+-Z(IDATA)ISTACK+_IDATA_STACK_SIZE#08-_IDATA_END
+-Z(IDATA)IOVERLAY=08-FF
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// ROM memory
+//
+//
+// The following segments *must* be placed in the root bank. The order of
+// placement also matters for these segments, which is why we use the -Z
+// placement directive.
+//
+-Z(CODE)INTVEC=_CODE_START
+
+-Z(CODE)CHECKSUM=0x2090-0x2091
+-Z(CODE)CRC_SHDW=0x2092-0x2093
+
+-Z(CODE)BIT_ID,BDATA_ID,DATA_ID,IDATA_ID,IXDATA_ID,PDATA_ID,PDATA_Z,XDATA_ID=_CODE_START-_CODE_END
+//
+// Sleep PCON instruction must be 4-byte aligned.
+//
+-D_SLEEP_CODE_SPACE_START=(_CODE_END-7)
+-D_SLEEP_CODE_SPACE_END=(_CODE_END)
+-Z(CODE)SLEEP_CODE=_SLEEP_CODE_SPACE_START-_SLEEP_CODE_SPACE_END
+//
+// The following segments *must* be placed in the root bank, but the order
+// of placement within the root bank is not important, which is why we use the
+// -P directive here.
+//
+-P(CODE)CSTART,BANK_RELAYS,RCODE,DIFUNCT,NEAR_CODE=_CODE_START-_CODE_END
+//
+// Setup for constants located in code memory:
+//
+-P(CODE)CODE_C=_CODE_START-_CODE_END
+//
+// Define segments for const data in flash.
+// First the segment with addresses as used by the program (flash mapped as XDATA)
+-P(CONST)XDATA_ROM_C=0x8000-0xFFFF
+//
+// Then the segment with addresses as put in the hex file (flash bank 1)
+-P(CODE)XDATA_ROM_C_FLASH=0x18000-0x1FFFF
+//
+// Finally link these segments (XDATA_ROM_C_FLASH is the initializer segment for XDATA_ROM_C,
+// we map the flash in the XDATA address range instead of copying the data to RAM)
+-QXDATA_ROM_C=XDATA_ROM_C_FLASH
+//
+// The directive below ensures that the remaining space in the root bank gets
+// filled, then starts filling the banks.
+//
+-P(CODE)BANKED_CODE=_CODE_START-_CODE_END,0x18000-0x1FFFF,0x28000-0x2FFFF,0x38000-0x3FFFF,\
+0x48000-0x4FFFF,0x58000-0x5FFFF,0x68000-0x6FFFF,0x78000-0x7C7FF
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// XDATA memory
+//
+
+-Z(XDATA)XSTACK+_XDATA_STACK_SIZE=_XDATA_START-_XDATA_END
+-Z(XDATA)XDATA_Z,XDATA_I=_XDATA_START-_XDATA_END
+-P(XDATA)XDATA_N=_XDATA_START-_XDATA_END
+
+-cx51
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Texas Instruments device specific
+// =================================
+//
+//
+// Layout of CODE banks
+// -------------------
+//
+//-D_BANK0_START=0x08000
+//-D_BANK0_END=0x0FFFF
+//
+//-D_BANK1_START=0x18000
+//-D_BANK1_END=0x1FFFF
+//
+//-D_BANK2_START=0x28000
+//-D_BANK2_END=0x2FFFF
+//
+//-D_BANK3_START=0x38000
+//-D_BANK3_END=0x3FFFF
+//
+//-D_BANK4_START=0x48000
+//-D_BANK4_END=0x4FFFF
+//
+//-D_BANK5_START=0x58000
+//-D_BANK5_END=0x5FFFF
+//
+//-D_BANK6_START=0x68000
+//-D_BANK6_END=0x6FFFF
+//
+//-D_BANK7_START=0x78000
+//-D_BANK7_END=0x7FFFF
+//
+//
+// Include these two lines when generating a .hex file for banked code model:
+-M(CODE)[(_CODEBANK_START+_FIRST_BANK_ADDR)-(_CODEBANK_END+_FIRST_BANK_ADDR)]*\
+_NR_OF_BANKS+_FIRST_BANK_ADDR=0x8000
+
+// When -M is used to build debug output, XLINK gives warning [w69] which is safely ignored.
+-ww69=i
+
+//
+//
+// Internal flash used for NV address space: reserving 6 pages.
+// NV memory segment size must coincide with page declarations in "hal_board_cfg.h" file.
+//
+-D_ZIGNV_ADDRESS_SPACE_START=(((_NR_OF_BANKS+1)*_FIRST_BANK_ADDR)-0x3800)
+-D_ZIGNV_ADDRESS_SPACE_END=(_ZIGNV_ADDRESS_SPACE_START+0x2FFF)
+-Z(CODE)ZIGNV_ADDRESS_SPACE=_ZIGNV_ADDRESS_SPACE_START-_ZIGNV_ADDRESS_SPACE_END
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+// The last available page of flash is reserved for special use as follows
+// (addressing from the end of the page down):
+//   16 bytes  Lock bits
+//    8 bytes  IEEE address space (EUI-64)
+//   22 bytes  Device Private Key (21 bytes + 1 byte pad to NV word size)
+//   22 bytes  CA Public Key (22 bytes)
+//   48 bytes  Implicit Certificate (48 bytes)
+// 1932 bytes  Reserved for future Z-Stack use (1932 bytes)
+//
+-D_LOCK_BITS_ADDRESS_SPACE_START=(((_NR_OF_BANKS+1)*_FIRST_BANK_ADDR)-0x10)
+-D_LOCK_BITS_ADDRESS_SPACE_END=(_LOCK_BITS_ADDRESS_SPACE_START+0x0F)
+-Z(CODE)LOCK_BITS_ADDRESS_SPACE=_LOCK_BITS_ADDRESS_SPACE_START-_LOCK_BITS_ADDRESS_SPACE_END
+//
+-D_IEEE_ADDRESS_SPACE_START=(_LOCK_BITS_ADDRESS_SPACE_START-0x08)
+-D_IEEE_ADDRESS_SPACE_END=(_IEEE_ADDRESS_SPACE_START+0x07)
+-Z(CODE)IEEE_ADDRESS_SPACE=_IEEE_ADDRESS_SPACE_START-_IEEE_ADDRESS_SPACE_END
+//
+-D_DEV_PRIVATE_KEY_ADDRESS_SPACE_START=(_IEEE_ADDRESS_SPACE_START-0x16)
+-D_DEV_PRIVATE_KEY_ADDRESS_SPACE_END=(_DEV_PRIVATE_KEY_ADDRESS_SPACE_START+0x15)
+-Z(CODE)DEV_PRIVATE_KEY_ADDRESS_SPACE=_DEV_PRIVATE_KEY_ADDRESS_SPACE_START-_DEV_PRIVATE_KEY_ADDRESS_SPACE_END
+//
+-D_CA_PUBLIC_KEY_ADDRESS_SPACE_START=(_DEV_PRIVATE_KEY_ADDRESS_SPACE_START-0x16)
+-D_CA_PUBLIC_KEY_ADDRESS_SPACE_END=(_CA_PUBLIC_KEY_ADDRESS_SPACE_START+0x15)
+-Z(CODE)CA_PUBLIC_KEY_ADDRESS_SPACE=_CA_PUBLIC_KEY_ADDRESS_SPACE_START-_CA_PUBLIC_KEY_ADDRESS_SPACE_END
+//
+-D_IMPLICIT_CERTIFICATE_ADDRESS_SPACE_START=(_CA_PUBLIC_KEY_ADDRESS_SPACE_START-0x30)
+-D_IMPLICIT_CERTIFICATE_ADDRESS_SPACE_END=(_IMPLICIT_CERTIFICATE_ADDRESS_SPACE_START+0x2F)
+-Z(CODE)IMPLICIT_CERTIFICATE_ADDRESS_SPACE=_IMPLICIT_CERTIFICATE_ADDRESS_SPACE_START-_IMPLICIT_CERTIFICATE_ADDRESS_SPACE_END
+//
+-D_RESERVED_ADDRESS_SPACE_START=(_IMPLICIT_CERTIFICATE_ADDRESS_SPACE_START-0x78C)
+-D_RESERVED_ADDRESS_SPACE_END=(_RESERVED_ADDRESS_SPACE_START+0x78B)
+-Z(CODE)RESERVED_ADDRESS_SPACE=_RESERVED_ADDRESS_SPACE_START-_RESERVED_ADDRESS_SPACE_END
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// Skip boot code, CRC/shadow & NV pages when calculating the CRC.
+//
+-J2,crc16,=2000-208F,2094-7C7FF
+//
+// Fill code gaps with 0xFFFF so that the CRC can be verified programatically.
+-HFFFF
+//
+////////////////////////////////////////////////////////////////////////////////

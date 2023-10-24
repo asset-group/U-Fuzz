@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\ZNP.ewp</path>
+    </project>
+    <batchBuild>
+        <batchDefinition>
+            <name>ALL</name>
+            <member>
+                <project>ZNP</project>
+                <configuration>CC2538ZNP-Debug</configuration>
+            </member>
+            <member>
+                <project>ZNP</project>
+                <configuration>CC2538ZNP-without-SBL</configuration>
+            </member>
+            <member>
+                <project>ZNP</project>
+                <configuration>CC2538ZNP-with-SBL</configuration>
+            </member>
+        </batchDefinition>
+    </batchBuild>
+</workspace>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\SampleSwitch.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>ALL</name>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Coordinator</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice - OTAClient - ImageA</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice - OTAClient - ImageA - withBootloader</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice - OTAClient - ImageB</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router - OTAClient - ImageA</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router - OTAClient - ImageA - withBootloader</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router - OTAClient - ImageB</configuration>
+      </member>
+    </batchDefinition>
+    <batchDefinition>
+      <name>EndDevice OTA</name>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice - OTAClient - ImageA</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice - OTAClient - ImageA - withBootloader</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>EndDevice - OTAClient - ImageB</configuration>
+      </member>
+    </batchDefinition>
+    <batchDefinition>
+      <name>Router OTA</name>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router - OTAClient - ImageA</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router - OTAClient - ImageA - withBootloader</configuration>
+      </member>
+      <member>
+        <project>SampleSwitch</project>
+        <configuration>Router - OTAClient - ImageB</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

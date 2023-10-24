@@ -1,0 +1,173 @@
+{
+    "config": {
+        "Name": "wifi_ap",
+        "Wifi": {
+            "ConfigFile": "config_wpa2_eap.conf"
+        },
+        "Options": {
+            "AutoRestart": false,
+            "AutoStart": true,
+            "CoreDump": true,
+            "DefaultPCAPProtocol": "encap:IEEE802_11_RADIOTAP",
+            "DefaultProtocol": "encap:IEEE802_11",
+            "DefaultPrograms": [
+                "configs/wifi_ap/hostapd"
+            ],
+            "FileLogger": true,
+            "LaunchProgramWithGDB": false,
+            "LiveCapture": false,
+            "MainThreadCore": 2,
+            "Program": 0,
+            "GlobalTimeout": 6,
+            "SaveCapture": true
+        },
+        "StateMapper": {
+            "Enable": false,
+            "Mapping": [{
+                    "Filter": "eap",
+                    "LayerName": "EAP",
+                    "StateNameField": [
+                        "eap.type",
+                        "eap.code"
+                    ],
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "eapol",
+                    "LayerName": "802.1X",
+                    "StateNameField": [
+                        "eapol.keydes.type",
+                        "eapol.type"
+                    ],
+                    "AppendSummary": true
+                },
+                {
+                    "Filter": "wlan.fixed.action_code",
+                    "LayerName": "Action",
+                    "StateNameField": "wlan.fixed.action_code",
+                    "AppendSummary": false
+                },
+                {
+                    "Filter": "wlan",
+                    "LayerName": "802.11",
+                    "StateNameField": "wlan.fc.type_subtype",
+                    "AppendSummary": false
+                }
+            ],
+            "Overrides": {},
+            "SaveFolder": "configs/models/wifi_ap/",
+            "ShowAllStates": true,
+            "PacketLayerOffset": 1
+        },
+        "Monitor": {
+            "ADB": {
+                "ADBDevice": "66766e89",
+                "ADBFilter": "",
+                "ADBMagicWords": [
+                    "SOC crashed",
+                    "Unable to wake SOC"
+                ],
+                "ADBProgram": "logcat"
+            },
+            "Enable": false,
+            "Microphone": {
+                "MicrophoneDetectionSensitivity": 0.7,
+                "MicrophoneDeviceId": -1
+            },
+            "MonitorType": 0,
+            "MonitorTypeList": [
+                "Serial",
+                "SSH",
+                "Microphone",
+                "ADB"
+            ],
+            "PrintToStdout": true,
+            "SSH": {
+                "SSHCommand": "sudo dmesg -C && sudo dmesg -e -w",
+                "SSHEnablePreCommands": true,
+                "SSHHostAddress": "127.0.0.1",
+                "SSHMagicWords": [
+                    "Backtrace:",
+                    "Oops:",
+                    "BUG:",
+                    "RIP:",
+                    "Call Trace:"
+                ],
+                "SSHPassword": "megaman500",
+                "SSHPort": 22,
+                "SSHPreCommands": [
+                    "sudo sh -c \"echo 'module btusb +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module btintel +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module bluetooth +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module rfcomm +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo hciconfig hci0 inqparms 18:18",
+                    "sudo hciconfig hci0 pageparms 18:18"
+                ],
+                "SSHUsername": "matheus"
+            },
+            "SerialUART": {
+                "SerialBaudRate": 115200,
+                "SerialMagicWords": [
+                    "DBFW_ASSERT_TYPE_FATAL!!!",
+                    "WRAP THOR AI",
+                    "BT Started!",
+                    "Guru Meditation Error",
+                    "Abort()"
+                ],
+                "SerialPortName": "/dev/ttyUSB3"
+            }
+        },
+        "ServerOptions": {
+            "APINamespace": "/",
+            "Enable": true,
+            "EnableEvents": false,
+            "ListenAddress": "127.0.0.1",
+            "Logging": false,
+            "Port": 3000,
+            "ServerModule": 1,
+            "ServerModulesList": [
+                "SocketIOServer",
+                "RESTServer"
+            ]
+        },
+        "Fuzzing": {
+            "DefaultDuplicationProbability": 0.049999999999999684,
+            "DefaultMutationFieldProbability": 0.05000000000000002,
+            "DefaultMutationProbability": 0.9000000000000002,
+            "DefaultMutators": [
+                "Random",
+                "RandomBit",
+                "RandomZeroByte",
+                "RandomFullByte",
+                "ToggleBit"
+            ],
+            "DefaultSelectors": [
+                "Random",
+                "Sequential",
+                "Overlap"
+            ],
+            "Excludes": [{
+                "ApplyTo": "",
+                "Description": "",
+                "Filter": ""
+            }],
+            "MaxDuplicationTime": 6000,
+            "Mutator": 1,
+            "PacketRetry": false,
+            "PacketRetryTimeoutMS": 2500,
+            "Selector": 0,
+            "enable_duplication": false,
+            "enable_mutation": false,
+            "enable_optimization": false
+        },
+        "Validation": {
+            "CommonRejections": [{
+                "Description": "LMP_not_accepted",
+                "Filter": "btbrlmp.op == 4"
+            }],
+            "InitialState": "IDLE",
+            "DefaultPacketLayer": "wlan",
+            "DefaultFragmentsLayer": "wlan"
+        }
+    }
+}

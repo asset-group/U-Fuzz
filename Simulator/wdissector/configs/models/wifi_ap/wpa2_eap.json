@@ -1,0 +1,1599 @@
+{
+    "StatesNodes": {
+        "IDLE": {
+            "direction": 0,
+            "layers_count": 0,
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 580431
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / 802.11 / Action": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 23,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 596145
+            },
+            "timeout": 0,
+            "type_value": 13
+        },
+        "RX / 802.11 / Association Request": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581324
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / 802.11 / Authentication": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581285
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "RX / 802.11 / Deauthentication": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 21,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582586
+            },
+            "timeout": 0,
+            "type_value": 12
+        },
+        "RX / 802.11 / Null function (No data)": {
+            "direction": 1,
+            "layers_count": 0,
+            "node_number": 31,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 622339
+            },
+            "timeout": 0,
+            "type_value": 36
+        },
+        "RX / 802.11 / Probe Request": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 580749
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / 802.11 / QoS Data": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 18,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582138
+            },
+            "timeout": 0,
+            "type_value": 40
+        },
+        "RX / 802.1X / EAPOL RSN Key / Key (Message 2 of 4)": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 14,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582071
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 16,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582105
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / 802.1X / Start / Start": {
+            "direction": 1,
+            "layers_count": 2,
+            "node_number": 29,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 621096
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / Action / Add Block Ack Request": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 17,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582120
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / EAP / Identity": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 9,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581398
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / EAP / Legacy Nak (Response Only)": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 24,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 604350
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / EAP / Password EAP (EAP-pwd)": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 28,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 610949
+            },
+            "timeout": 0,
+            "type_value": 52
+        },
+        "RX / EAP / Protected EAP (EAP-PEAP)": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 11,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581445
+            },
+            "timeout": 0,
+            "type_value": 25
+        },
+        "RX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 26,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 604390
+            },
+            "timeout": 0,
+            "type_value": 21
+        },
+        "TX / 802.11 / Association Response": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581352
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / 802.11 / Authentication": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581296
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "TX / 802.11 / Beacon frame": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 30,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 621131
+            },
+            "timeout": 0,
+            "type_value": 8
+        },
+        "TX / 802.11 / Data": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 19,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582149
+            },
+            "timeout": 0,
+            "type_value": 32
+        },
+        "TX / 802.11 / Deauthentication": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 580774
+            },
+            "timeout": 0,
+            "type_value": 12
+        },
+        "TX / 802.11 / Probe Response": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 580922
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "TX / 802.11 / QoS Data": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 22,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 588963
+            },
+            "timeout": 0,
+            "type_value": 40
+        },
+        "TX / 802.1X / EAPOL RSN Key / Key (Message 1 of 4)": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 13,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582047
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / 802.1X / EAPOL RSN Key / Key (Message 3 of 4)": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 15,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582089
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / Action / Add Block Ack Response": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 20,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582210
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / Action / Delete Block Ack": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 32,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 626086
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / EAP / Identity": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581380
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / EAP / Password EAP (EAP-pwd)": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 27,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 610934
+            },
+            "timeout": 0,
+            "type_value": 52
+        },
+        "TX / EAP / Protected EAP (EAP-PEAP)": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 10,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 581414
+            },
+            "timeout": 0,
+            "type_value": 25
+        },
+        "TX / EAP / Success": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 12,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 582022
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "TX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 25,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638957757,
+                "tv_usec": 604365
+            },
+            "timeout": 0,
+            "type_value": 21
+        }
+    },
+    "StatesTransitions": {
+        "IDLE": {
+            "from_state": null,
+            "to_state": {
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 580752
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Deauthentication": {
+                    "dst_state_name": "TX / 802.11 / Deauthentication",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 594966
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / Action": {
+            "from_state": [
+                "RX / 802.11 / Action",
+                "TX / 802.11 / Probe Response"
+            ],
+            "to_state": {
+                "RX / 802.11 / Action": {
+                    "dst_state_name": "RX / 802.11 / Action",
+                    "src_state_name": "RX / 802.11 / Action",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 596154
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "RX / 802.11 / Action",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 596182
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / Association Request": {
+            "from_state": [
+                "TX / 802.11 / Authentication"
+            ],
+            "to_state": {
+                "TX / 802.11 / Association Response": {
+                    "dst_state_name": "TX / 802.11 / Association Response",
+                    "src_state_name": "RX / 802.11 / Association Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581352
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / Authentication": {
+            "from_state": [
+                "TX / 802.11 / Authentication",
+                "TX / 802.11 / Beacon frame",
+                "TX / 802.11 / Probe Response"
+            ],
+            "to_state": {
+                "TX / 802.11 / Authentication": {
+                    "dst_state_name": "TX / 802.11 / Authentication",
+                    "src_state_name": "RX / 802.11 / Authentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581296
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / Deauthentication": {
+            "from_state": [
+                "TX / 802.11 / Data",
+                "RX / 802.11 / Probe Request",
+                "RX / 802.11 / QoS Data",
+                "TX / 802.11 / Probe Response"
+            ],
+            "to_state": {
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "RX / 802.11 / Deauthentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582615
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / Null function (No data)": {
+            "from_state": [
+                "TX / Action / Add Block Ack Response",
+                "TX / 802.11 / Beacon frame",
+                "TX / 802.11 / Data"
+            ],
+            "to_state": {
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "RX / 802.11 / Null function (No data)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 622448
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "RX / 802.11 / Null function (No data)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 622370
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Deauthentication": {
+                    "dst_state_name": "TX / 802.11 / Deauthentication",
+                    "src_state_name": "RX / 802.11 / Null function (No data)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 627529
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / QoS Data": {
+                    "dst_state_name": "TX / 802.11 / QoS Data",
+                    "src_state_name": "RX / 802.11 / Null function (No data)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 624140
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / Probe Request": {
+            "from_state": [
+                "TX / 802.11 / Beacon frame",
+                "TX / Action / Add Block Ack Response",
+                "RX / 802.11 / Action",
+                "TX / 802.11 / Data",
+                "TX / 802.11 / Association Response",
+                "RX / 802.11 / Deauthentication",
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                "TX / 802.11 / Probe Response",
+                "RX / 802.11 / Probe Request",
+                "TX / 802.11 / Deauthentication",
+                "RX / 802.11 / QoS Data",
+                "IDLE"
+            ],
+            "to_state": {
+                "RX / 802.11 / Deauthentication": {
+                    "dst_state_name": "RX / 802.11 / Deauthentication",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 611994
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 580840
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 589102
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 585237
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 627025
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Deauthentication": {
+                    "dst_state_name": "TX / 802.11 / Deauthentication",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 580775
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Probe Response": {
+                    "dst_state_name": "TX / 802.11 / Probe Response",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 580923
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Identity": {
+                    "dst_state_name": "TX / EAP / Identity",
+                    "src_state_name": "RX / 802.11 / Probe Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 584702
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.11 / QoS Data": {
+            "from_state": [
+                "TX / 802.11 / Deauthentication",
+                "TX / 802.11 / Beacon frame",
+                "RX / 802.11 / Probe Request",
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                "TX / 802.11 / Probe Response",
+                "TX / Action / Add Block Ack Response",
+                "TX / 802.11 / QoS Data",
+                "RX / 802.11 / QoS Data",
+                "RX / 802.11 / Null function (No data)",
+                "TX / 802.11 / Data",
+                "RX / Action / Add Block Ack Request"
+            ],
+            "to_state": {
+                "RX / 802.11 / Deauthentication": {
+                    "dst_state_name": "RX / 802.11 / Deauthentication",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 583740
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582298
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582191
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 583659
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 624187
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Data": {
+                    "dst_state_name": "TX / 802.11 / Data",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582149
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Deauthentication": {
+                    "dst_state_name": "TX / 802.11 / Deauthentication",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 627551
+                    },
+                    "trigger": ""
+                },
+                "TX / Action / Add Block Ack Response": {
+                    "dst_state_name": "TX / Action / Add Block Ack Response",
+                    "src_state_name": "RX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582211
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.1X / EAPOL RSN Key / Key (Message 2 of 4)": {
+            "from_state": [
+                "TX / 802.1X / EAPOL RSN Key / Key (Message 1 of 4)"
+            ],
+            "to_state": {
+                "TX / 802.1X / EAPOL RSN Key / Key (Message 3 of 4)": {
+                    "dst_state_name": "TX / 802.1X / EAPOL RSN Key / Key (Message 3 of 4)",
+                    "src_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 2 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582089
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)": {
+            "from_state": [
+                "TX / 802.1X / EAPOL RSN Key / Key (Message 3 of 4)"
+            ],
+            "to_state": {
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 585227
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 622265
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582120
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 668694
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / 802.1X / Start / Start": {
+            "from_state": [
+                "TX / 802.11 / Association Response"
+            ],
+            "to_state": {
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "RX / 802.1X / Start / Start",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 621131
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / Action / Add Block Ack Request": {
+            "from_state": [
+                "TX / 802.11 / Beacon frame",
+                "RX / Action / Add Block Ack Request",
+                "TX / 802.11 / Data",
+                "RX / 802.11 / Probe Request",
+                "TX / 802.11 / QoS Data",
+                "RX / 802.11 / QoS Data",
+                "TX / Action / Add Block Ack Response",
+                "TX / 802.11 / Probe Response",
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)"
+            ],
+            "to_state": {
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "RX / Action / Add Block Ack Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582138
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "RX / Action / Add Block Ack Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 594320
+                    },
+                    "trigger": ""
+                },
+                "TX / Action / Add Block Ack Response": {
+                    "dst_state_name": "TX / Action / Add Block Ack Response",
+                    "src_state_name": "RX / Action / Add Block Ack Request",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582227
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / EAP / Identity": {
+            "from_state": [
+                "TX / EAP / Identity"
+            ],
+            "to_state": {
+                "TX / EAP / Password EAP (EAP-pwd)": {
+                    "dst_state_name": "TX / EAP / Password EAP (EAP-pwd)",
+                    "src_state_name": "RX / EAP / Identity",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 618683
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Protected EAP (EAP-PEAP)": {
+                    "dst_state_name": "TX / EAP / Protected EAP (EAP-PEAP)",
+                    "src_state_name": "RX / EAP / Identity",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581414
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / EAP / Legacy Nak (Response Only)": {
+            "from_state": [
+                "TX / EAP / Password EAP (EAP-pwd)",
+                "TX / EAP / Protected EAP (EAP-PEAP)"
+            ],
+            "to_state": {
+                "RX / EAP / Password EAP (EAP-pwd)": {
+                    "dst_state_name": "RX / EAP / Password EAP (EAP-pwd)",
+                    "src_state_name": "RX / EAP / Legacy Nak (Response Only)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 613020
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Password EAP (EAP-pwd)": {
+                    "dst_state_name": "TX / EAP / Password EAP (EAP-pwd)",
+                    "src_state_name": "RX / EAP / Legacy Nak (Response Only)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 610935
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+                    "dst_state_name": "TX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                    "src_state_name": "RX / EAP / Legacy Nak (Response Only)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 604365
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / EAP / Password EAP (EAP-pwd)": {
+            "from_state": [
+                "RX / EAP / Legacy Nak (Response Only)",
+                "TX / EAP / Password EAP (EAP-pwd)"
+            ],
+            "to_state": {
+                "TX / EAP / Password EAP (EAP-pwd)": {
+                    "dst_state_name": "TX / EAP / Password EAP (EAP-pwd)",
+                    "src_state_name": "RX / EAP / Password EAP (EAP-pwd)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 610961
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Success": {
+                    "dst_state_name": "TX / EAP / Success",
+                    "src_state_name": "RX / EAP / Password EAP (EAP-pwd)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 611009
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / EAP / Protected EAP (EAP-PEAP)": {
+            "from_state": [
+                "TX / 802.11 / Beacon frame",
+                "TX / EAP / Protected EAP (EAP-PEAP)"
+            ],
+            "to_state": {
+                "TX / EAP / Protected EAP (EAP-PEAP)": {
+                    "dst_state_name": "TX / EAP / Protected EAP (EAP-PEAP)",
+                    "src_state_name": "RX / EAP / Protected EAP (EAP-PEAP)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581465
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Success": {
+                    "dst_state_name": "TX / EAP / Success",
+                    "src_state_name": "RX / EAP / Protected EAP (EAP-PEAP)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582023
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+            "from_state": [
+                "TX / EAP / Tunneled TLS EAP (EAP-TTLS)"
+            ],
+            "to_state": {
+                "TX / EAP / Success": {
+                    "dst_state_name": "TX / EAP / Success",
+                    "src_state_name": "RX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 604757
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+                    "dst_state_name": "TX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                    "src_state_name": "RX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 604409
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / Association Response": {
+            "from_state": [
+                "RX / 802.11 / Association Request"
+            ],
+            "to_state": {
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "TX / 802.11 / Association Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 583014
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.1X / Start / Start": {
+                    "dst_state_name": "RX / 802.1X / Start / Start",
+                    "src_state_name": "TX / 802.11 / Association Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 621098
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Identity": {
+                    "dst_state_name": "TX / EAP / Identity",
+                    "src_state_name": "TX / 802.11 / Association Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581380
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / Authentication": {
+            "from_state": [
+                "RX / 802.11 / Authentication"
+            ],
+            "to_state": {
+                "RX / 802.11 / Association Request": {
+                    "dst_state_name": "RX / 802.11 / Association Request",
+                    "src_state_name": "TX / 802.11 / Authentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581324
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Authentication": {
+                    "dst_state_name": "RX / 802.11 / Authentication",
+                    "src_state_name": "TX / 802.11 / Authentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 667610
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / Beacon frame": {
+            "from_state": [
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                "TX / 802.11 / Probe Response",
+                "RX / 802.11 / Probe Request",
+                "TX / 802.11 / Deauthentication",
+                "TX / 802.11 / QoS Data",
+                "RX / 802.11 / QoS Data",
+                "TX / 802.11 / Data",
+                "RX / 802.11 / Null function (No data)",
+                "TX / EAP / Protected EAP (EAP-PEAP)",
+                "TX / 802.11 / Beacon frame",
+                "RX / 802.1X / Start / Start"
+            ],
+            "to_state": {
+                "RX / 802.11 / Authentication": {
+                    "dst_state_name": "RX / 802.11 / Authentication",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 647981
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Null function (No data)": {
+                    "dst_state_name": "RX / 802.11 / Null function (No data)",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 622438
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 626995
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 623149
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 670663
+                    },
+                    "trigger": ""
+                },
+                "RX / EAP / Protected EAP (EAP-PEAP)": {
+                    "dst_state_name": "RX / EAP / Protected EAP (EAP-PEAP)",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 621287
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 621163
+                    },
+                    "trigger": ""
+                },
+                "TX / Action / Add Block Ack Response": {
+                    "dst_state_name": "TX / Action / Add Block Ack Response",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 624226
+                    },
+                    "trigger": ""
+                },
+                "TX / Action / Delete Block Ack": {
+                    "dst_state_name": "TX / Action / Delete Block Ack",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 626087
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Identity": {
+                    "dst_state_name": "TX / EAP / Identity",
+                    "src_state_name": "TX / 802.11 / Beacon frame",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 621180
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / Data": {
+            "from_state": [
+                "RX / 802.11 / QoS Data"
+            ],
+            "to_state": {
+                "RX / 802.11 / Deauthentication": {
+                    "dst_state_name": "RX / 802.11 / Deauthentication",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 619322
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Null function (No data)": {
+                    "dst_state_name": "RX / 802.11 / Null function (No data)",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 622340
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 585318
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582160
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 592327
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 623451
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / QoS Data": {
+                    "dst_state_name": "TX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 622285
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / Deauthentication": {
+            "from_state": [
+                "RX / 802.11 / Null function (No data)",
+                "RX / 802.11 / QoS Data",
+                "TX / Action / Delete Block Ack",
+                "IDLE",
+                "RX / 802.11 / Probe Request"
+            ],
+            "to_state": {
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "TX / 802.11 / Deauthentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 580814
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / Deauthentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 627543
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "TX / 802.11 / Deauthentication",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 626125
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / Probe Response": {
+            "from_state": [
+                "RX / 802.11 / Probe Request"
+            ],
+            "to_state": {
+                "RX / 802.11 / Action": {
+                    "dst_state_name": "RX / 802.11 / Action",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 596145
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Authentication": {
+                    "dst_state_name": "RX / 802.11 / Authentication",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581286
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Deauthentication": {
+                    "dst_state_name": "RX / 802.11 / Deauthentication",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582586
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 580960
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 585361
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 593295
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 632001
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / QoS Data": {
+                    "dst_state_name": "TX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 588964
+                    },
+                    "trigger": ""
+                },
+                "TX / EAP / Identity": {
+                    "dst_state_name": "TX / EAP / Identity",
+                    "src_state_name": "TX / 802.11 / Probe Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 583057
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.11 / QoS Data": {
+            "from_state": [
+                "RX / 802.11 / Null function (No data)",
+                "TX / 802.11 / Data",
+                "TX / 802.11 / Probe Response"
+            ],
+            "to_state": {
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "TX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 588975
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "TX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 624149
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "TX / 802.11 / QoS Data",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 670652
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.1X / EAPOL RSN Key / Key (Message 1 of 4)": {
+            "from_state": [
+                "TX / EAP / Success"
+            ],
+            "to_state": {
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 2 of 4)": {
+                    "dst_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 2 of 4)",
+                    "src_state_name": "TX / 802.1X / EAPOL RSN Key / Key (Message 1 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582071
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / 802.1X / EAPOL RSN Key / Key (Message 3 of 4)": {
+            "from_state": [
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 2 of 4)"
+            ],
+            "to_state": {
+                "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)": {
+                    "dst_state_name": "RX / 802.1X / EAPOL RSN Key / Key (Message 4 of 4)",
+                    "src_state_name": "TX / 802.1X / EAPOL RSN Key / Key (Message 3 of 4)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582105
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / Action / Add Block Ack Response": {
+            "from_state": [
+                "TX / 802.11 / Beacon frame",
+                "TX / Action / Add Block Ack Response",
+                "RX / Action / Add Block Ack Request",
+                "RX / 802.11 / QoS Data"
+            ],
+            "to_state": {
+                "RX / 802.11 / Null function (No data)": {
+                    "dst_state_name": "RX / 802.11 / Null function (No data)",
+                    "src_state_name": "TX / Action / Add Block Ack Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 624233
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / Probe Request": {
+                    "dst_state_name": "RX / 802.11 / Probe Request",
+                    "src_state_name": "TX / Action / Add Block Ack Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 616103
+                    },
+                    "trigger": ""
+                },
+                "RX / 802.11 / QoS Data": {
+                    "dst_state_name": "RX / 802.11 / QoS Data",
+                    "src_state_name": "TX / Action / Add Block Ack Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582237
+                    },
+                    "trigger": ""
+                },
+                "RX / Action / Add Block Ack Request": {
+                    "dst_state_name": "RX / Action / Add Block Ack Request",
+                    "src_state_name": "TX / Action / Add Block Ack Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582219
+                    },
+                    "trigger": ""
+                },
+                "TX / Action / Add Block Ack Response": {
+                    "dst_state_name": "TX / Action / Add Block Ack Response",
+                    "src_state_name": "TX / Action / Add Block Ack Response",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 583675
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / Action / Delete Block Ack": {
+            "from_state": [
+                "TX / 802.11 / Beacon frame"
+            ],
+            "to_state": {
+                "TX / 802.11 / Deauthentication": {
+                    "dst_state_name": "TX / 802.11 / Deauthentication",
+                    "src_state_name": "TX / Action / Delete Block Ack",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 626096
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / EAP / Identity": {
+            "from_state": [
+                "TX / 802.11 / Beacon frame",
+                "RX / 802.11 / Probe Request",
+                "TX / 802.11 / Probe Response",
+                "TX / 802.11 / Association Response"
+            ],
+            "to_state": {
+                "RX / EAP / Identity": {
+                    "dst_state_name": "RX / EAP / Identity",
+                    "src_state_name": "TX / EAP / Identity",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581398
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / EAP / Password EAP (EAP-pwd)": {
+            "from_state": [
+                "RX / EAP / Password EAP (EAP-pwd)",
+                "RX / EAP / Identity",
+                "RX / EAP / Legacy Nak (Response Only)"
+            ],
+            "to_state": {
+                "RX / EAP / Legacy Nak (Response Only)": {
+                    "dst_state_name": "RX / EAP / Legacy Nak (Response Only)",
+                    "src_state_name": "TX / EAP / Password EAP (EAP-pwd)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 613008
+                    },
+                    "trigger": ""
+                },
+                "RX / EAP / Password EAP (EAP-pwd)": {
+                    "dst_state_name": "RX / EAP / Password EAP (EAP-pwd)",
+                    "src_state_name": "TX / EAP / Password EAP (EAP-pwd)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 610949
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / EAP / Protected EAP (EAP-PEAP)": {
+            "from_state": [
+                "RX / EAP / Protected EAP (EAP-PEAP)",
+                "RX / EAP / Identity"
+            ],
+            "to_state": {
+                "RX / EAP / Legacy Nak (Response Only)": {
+                    "dst_state_name": "RX / EAP / Legacy Nak (Response Only)",
+                    "src_state_name": "TX / EAP / Protected EAP (EAP-PEAP)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 604351
+                    },
+                    "trigger": ""
+                },
+                "RX / EAP / Protected EAP (EAP-PEAP)": {
+                    "dst_state_name": "RX / EAP / Protected EAP (EAP-PEAP)",
+                    "src_state_name": "TX / EAP / Protected EAP (EAP-PEAP)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 581446
+                    },
+                    "trigger": ""
+                },
+                "TX / 802.11 / Beacon frame": {
+                    "dst_state_name": "TX / 802.11 / Beacon frame",
+                    "src_state_name": "TX / EAP / Protected EAP (EAP-PEAP)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 621233
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / EAP / Success": {
+            "from_state": [
+                "RX / EAP / Password EAP (EAP-pwd)",
+                "RX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                "RX / EAP / Protected EAP (EAP-PEAP)"
+            ],
+            "to_state": {
+                "TX / 802.1X / EAPOL RSN Key / Key (Message 1 of 4)": {
+                    "dst_state_name": "TX / 802.1X / EAPOL RSN Key / Key (Message 1 of 4)",
+                    "src_state_name": "TX / EAP / Success",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 582048
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+            "from_state": [
+                "RX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                "RX / EAP / Legacy Nak (Response Only)"
+            ],
+            "to_state": {
+                "RX / EAP / Tunneled TLS EAP (EAP-TTLS)": {
+                    "dst_state_name": "RX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                    "src_state_name": "TX / EAP / Tunneled TLS EAP (EAP-TTLS)",
+                    "time": {
+                        "tv_sec": 1638957757,
+                        "tv_usec": 604391
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

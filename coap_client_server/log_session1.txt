@@ -1,0 +1,1 @@
+log file created with name: /home/asset/Desktop/work/wireless-deep-fuzzer-zigbee/coap_log/time_stamp_log/time_stamp_log_2023-04-17 05:46:38.txt

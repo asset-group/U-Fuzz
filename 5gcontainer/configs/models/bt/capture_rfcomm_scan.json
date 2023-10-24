@@ -1,0 +1,2691 @@
+{
+    "StatesNodes": {
+        "IDLE": {
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602553866,
+                "tv_usec": 916693
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / L2CAP / Configure Request": {
+            "node_number": 39,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19170
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / L2CAP / Configure Response": {
+            "node_number": 42,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19185
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "RX / L2CAP / Connection Response": {
+            "node_number": 38,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19164
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / L2CAP / Disconnection Response": {
+            "node_number": 46,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19238
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "RX / L2CAP / Information Request": {
+            "node_number": 30,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19092
+            },
+            "timeout": 0,
+            "type_value": 10
+        },
+        "RX / L2CAP / Information Response": {
+            "node_number": 36,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19142
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "RX / LMP / Escape 4": {
+            "node_number": 54,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 20490
+            },
+            "timeout": 0,
+            "type_value": 127
+        },
+        "RX / LMP / LMP_Simple_Pairing_Confirm": {
+            "node_number": 53,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 20484
+            },
+            "timeout": 0,
+            "type_value": 63
+        },
+        "RX / LMP / LMP_accepted": {
+            "node_number": 13,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19001
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / LMP / LMP_auto_rate": {
+            "node_number": 22,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19043
+            },
+            "timeout": 0,
+            "type_value": 35
+        },
+        "RX / LMP / LMP_channel_classification_req": {
+            "node_number": 16,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19015
+            },
+            "timeout": 0,
+            "type_value": 16
+        },
+        "RX / LMP / LMP_clkoffset_req": {
+            "node_number": 25,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19057
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "RX / LMP / LMP_detach": {
+            "node_number": 51,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19267
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "RX / LMP / LMP_features_req": {
+            "node_number": 55,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 20731
+            },
+            "timeout": 0,
+            "type_value": 39
+        },
+        "RX / LMP / LMP_features_req_ext": {
+            "node_number": 32,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19107
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / LMP / LMP_features_res": {
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18935
+            },
+            "timeout": 0,
+            "type_value": 40
+        },
+        "RX / LMP / LMP_features_res_ext": {
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18947
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / LMP / LMP_max_slot": {
+            "node_number": 23,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19047
+            },
+            "timeout": 0,
+            "type_value": 45
+        },
+        "RX / LMP / LMP_name_req": {
+            "node_number": 34,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19132
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "RX / LMP / LMP_not_accepted_ext": {
+            "node_number": 27,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19066
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / LMP / LMP_packet_type_table_req": {
+            "node_number": 21,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19038
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "RX / LMP / LMP_power_control_req": {
+            "node_number": 47,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19243
+            },
+            "timeout": 0,
+            "type_value": 31
+        },
+        "RX / LMP / LMP_power_control_res": {
+            "node_number": 50,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19258
+            },
+            "timeout": 0,
+            "type_value": 32
+        },
+        "RX / LMP / LMP_preferred_rate": {
+            "node_number": 24,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19052
+            },
+            "timeout": 0,
+            "type_value": 36
+        },
+        "RX / LMP / LMP_set_AFH": {
+            "node_number": 15,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19010
+            },
+            "timeout": 0,
+            "type_value": 60
+        },
+        "RX / LMP / LMP_setup_complete": {
+            "node_number": 17,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19020
+            },
+            "timeout": 0,
+            "type_value": 49
+        },
+        "RX / LMP / LMP_slot_offset": {
+            "node_number": 10,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18986
+            },
+            "timeout": 0,
+            "type_value": 52
+        },
+        "RX / LMP / LMP_supervision_timeout": {
+            "node_number": 29,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19076
+            },
+            "timeout": 0,
+            "type_value": 55
+        },
+        "RX / LMP / LMP_switch_req": {
+            "node_number": 11,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18991
+            },
+            "timeout": 0,
+            "type_value": 19
+        },
+        "RX / LMP / LMP_timing_accuracy_req": {
+            "node_number": 20,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19033
+            },
+            "timeout": 0,
+            "type_value": 47
+        },
+        "RX / LMP / LMP_timing_accuracy_res": {
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18977
+            },
+            "timeout": 0,
+            "type_value": 48
+        },
+        "RX / LMP / LMP_version_res": {
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18967
+            },
+            "timeout": 0,
+            "type_value": 38
+        },
+        "RX / SDP / Service Search Attribute Response": {
+            "node_number": 44,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19212
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "TX / L2CAP / Configure Request": {
+            "node_number": 40,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19175
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "TX / L2CAP / Configure Response": {
+            "node_number": 41,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19180
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "TX / L2CAP / Connection Request": {
+            "node_number": 37,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19151
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / L2CAP / Disconnection Request": {
+            "node_number": 45,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19232
+            },
+            "timeout": 0,
+            "type_value": 6
+        },
+        "TX / L2CAP / Information Request": {
+            "node_number": 52,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19403
+            },
+            "timeout": 0,
+            "type_value": 10
+        },
+        "TX / L2CAP / Information Response": {
+            "node_number": 31,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19103
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "TX / LMP / LMP_accepted": {
+            "node_number": 12,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18996
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "TX / LMP / LMP_accepted_ext": {
+            "node_number": 28,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19071
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / LMP / LMP_auto_rate": {
+            "node_number": 19,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19029
+            },
+            "timeout": 0,
+            "type_value": 35
+        },
+        "TX / LMP / LMP_clkoffset_res": {
+            "node_number": 26,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19062
+            },
+            "timeout": 0,
+            "type_value": 6
+        },
+        "TX / LMP / LMP_features_req": {
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18926
+            },
+            "timeout": 0,
+            "type_value": 39
+        },
+        "TX / LMP / LMP_features_req_ext": {
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18942
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "TX / LMP / LMP_features_res_ext": {
+            "node_number": 33,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19120
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "TX / LMP / LMP_host_connection_req": {
+            "node_number": 9,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18981
+            },
+            "timeout": 0,
+            "type_value": 51
+        },
+        "TX / LMP / LMP_max_slot": {
+            "node_number": 18,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19024
+            },
+            "timeout": 0,
+            "type_value": 45
+        },
+        "TX / LMP / LMP_name_res": {
+            "node_number": 35,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19136
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / LMP / LMP_power_control_req": {
+            "node_number": 49,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19253
+            },
+            "timeout": 0,
+            "type_value": 31
+        },
+        "TX / LMP / LMP_power_control_res": {
+            "node_number": 48,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19248
+            },
+            "timeout": 0,
+            "type_value": 32
+        },
+        "TX / LMP / LMP_setup_complete": {
+            "node_number": 14,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19005
+            },
+            "timeout": 0,
+            "type_value": 49
+        },
+        "TX / LMP / LMP_timing_accuracy_req": {
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18971
+            },
+            "timeout": 0,
+            "type_value": 47
+        },
+        "TX / LMP / LMP_version_req": {
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 18962
+            },
+            "timeout": 0,
+            "type_value": 37
+        },
+        "TX / SDP / Service Search Attribute Request": {
+            "node_number": 43,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1602548474,
+                "tv_usec": 19201
+            },
+            "timeout": 0,
+            "type_value": 6
+        }
+    },
+    "StatesTransitions": {
+        "IDLE": {
+            "from_state": null,
+            "to_state": {
+                "TX / LMP / LMP_features_req": {
+                    "dst_state_name": "TX / LMP / LMP_features_req",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18927
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / L2CAP / Configure Request": {
+            "from_state": [
+                "TX / L2CAP / Configure Request",
+                "RX / L2CAP / Connection Response",
+                "TX / LMP / LMP_name_res"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Response": {
+                    "dst_state_name": "RX / L2CAP / Configure Response",
+                    "src_state_name": "RX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22212
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Connection Response": {
+                    "dst_state_name": "RX / L2CAP / Connection Response",
+                    "src_state_name": "RX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20855
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Configure Request": {
+                    "dst_state_name": "TX / L2CAP / Configure Request",
+                    "src_state_name": "RX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19175
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Configure Response": {
+                    "dst_state_name": "TX / L2CAP / Configure Response",
+                    "src_state_name": "RX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19448
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / L2CAP / Configure Response": {
+            "from_state": [
+                "TX / L2CAP / Configure Response",
+                "RX / L2CAP / Configure Response",
+                "TX / L2CAP / Configure Request",
+                "RX / L2CAP / Configure Request",
+                "RX / LMP / LMP_power_control_req"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Response": {
+                    "dst_state_name": "RX / L2CAP / Configure Response",
+                    "src_state_name": "RX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19455
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Configure Response": {
+                    "dst_state_name": "TX / L2CAP / Configure Response",
+                    "src_state_name": "RX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21982
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Disconnection Request": {
+                    "dst_state_name": "TX / L2CAP / Disconnection Request",
+                    "src_state_name": "RX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19471
+                    },
+                    "trigger": ""
+                },
+                "TX / SDP / Service Search Attribute Request": {
+                    "dst_state_name": "TX / SDP / Service Search Attribute Request",
+                    "src_state_name": "RX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19202
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / L2CAP / Connection Response": {
+            "from_state": [
+                "TX / LMP / LMP_name_res",
+                "TX / L2CAP / Connection Request",
+                "TX / LMP / LMP_power_control_res",
+                "RX / L2CAP / Information Response",
+                "RX / L2CAP / Configure Request",
+                "RX / L2CAP / Information Request"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Request": {
+                    "dst_state_name": "RX / L2CAP / Configure Request",
+                    "src_state_name": "RX / L2CAP / Connection Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19170
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Configure Request": {
+                    "dst_state_name": "TX / L2CAP / Configure Request",
+                    "src_state_name": "RX / L2CAP / Connection Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19440
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / L2CAP / Disconnection Response": {
+            "from_state": [
+                "TX / L2CAP / Disconnection Request",
+                "TX / LMP / LMP_power_control_res"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "RX / L2CAP / Disconnection Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19243
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_set_AFH": {
+                    "dst_state_name": "RX / LMP / LMP_set_AFH",
+                    "src_state_name": "RX / L2CAP / Disconnection Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19478
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "TX / LMP / LMP_power_control_req",
+                    "src_state_name": "RX / L2CAP / Disconnection Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19938
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / L2CAP / Information Request": {
+            "from_state": [
+                "RX / LMP / LMP_features_res_ext",
+                "TX / LMP / LMP_features_res_ext",
+                "TX / L2CAP / Information Request",
+                "TX / LMP / LMP_features_req_ext",
+                "RX / LMP / LMP_preferred_rate",
+                "TX / LMP / LMP_name_res",
+                "RX / LMP / LMP_features_req_ext",
+                "RX / LMP / LMP_power_control_req"
+            ],
+            "to_state": {
+                "RX / L2CAP / Connection Response": {
+                    "dst_state_name": "RX / L2CAP / Connection Response",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21067
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Information Response": {
+                    "dst_state_name": "RX / L2CAP / Information Response",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19861
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19613
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20051
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19639
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Request": {
+                    "dst_state_name": "TX / L2CAP / Information Request",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21036
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19128
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19097
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / L2CAP / Information Response": {
+            "from_state": [
+                "TX / LMP / LMP_name_res",
+                "RX / LMP / LMP_power_control_req",
+                "TX / L2CAP / Information Response",
+                "RX / LMP / LMP_name_req",
+                "RX / L2CAP / Information Request",
+                "TX / LMP / LMP_features_res_ext"
+            ],
+            "to_state": {
+                "RX / L2CAP / Connection Response": {
+                    "dst_state_name": "RX / L2CAP / Connection Response",
+                    "src_state_name": "RX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19434
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "RX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22400
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Connection Request": {
+                    "dst_state_name": "TX / L2CAP / Connection Request",
+                    "src_state_name": "RX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19152
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "RX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19865
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / Escape 4": {
+            "from_state": [
+                "RX / LMP / LMP_Simple_Pairing_Confirm"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_packet_type_table_req": {
+                    "dst_state_name": "RX / LMP / LMP_packet_type_table_req",
+                    "src_state_name": "RX / LMP / Escape 4",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20494
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_Simple_Pairing_Confirm": {
+            "from_state": [
+                "RX / LMP / LMP_timing_accuracy_req"
+            ],
+            "to_state": {
+                "RX / LMP / Escape 4": {
+                    "dst_state_name": "RX / LMP / Escape 4",
+                    "src_state_name": "RX / LMP / LMP_Simple_Pairing_Confirm",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20491
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_accepted": {
+            "from_state": [
+                "TX / LMP / LMP_accepted",
+                "RX / LMP / LMP_accepted"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_accepted": {
+                    "dst_state_name": "RX / LMP / LMP_accepted",
+                    "src_state_name": "RX / LMP / LMP_accepted",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19991
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_setup_complete": {
+                    "dst_state_name": "TX / LMP / LMP_setup_complete",
+                    "src_state_name": "RX / LMP / LMP_accepted",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19006
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_auto_rate": {
+            "from_state": [
+                "RX / LMP / LMP_packet_type_table_req",
+                "RX / LMP / LMP_features_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_clkoffset_req": {
+                    "dst_state_name": "RX / LMP / LMP_clkoffset_req",
+                    "src_state_name": "RX / LMP / LMP_auto_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19349
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_detach": {
+                    "dst_state_name": "RX / LMP / LMP_detach",
+                    "src_state_name": "RX / LMP / LMP_auto_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20751
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_max_slot": {
+                    "dst_state_name": "RX / LMP / LMP_max_slot",
+                    "src_state_name": "RX / LMP / LMP_auto_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19048
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_channel_classification_req": {
+            "from_state": [
+                "RX / LMP / LMP_set_AFH"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_setup_complete": {
+                    "dst_state_name": "RX / LMP / LMP_setup_complete",
+                    "src_state_name": "RX / LMP / LMP_channel_classification_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19020
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_clkoffset_req": {
+            "from_state": [
+                "RX / LMP / LMP_preferred_rate",
+                "TX / LMP / LMP_accepted_ext",
+                "RX / LMP / LMP_auto_rate",
+                "RX / LMP / LMP_detach"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_supervision_timeout": {
+                    "dst_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "src_state_name": "RX / LMP / LMP_clkoffset_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21444
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_clkoffset_res": {
+                    "dst_state_name": "TX / LMP / LMP_clkoffset_res",
+                    "src_state_name": "RX / LMP / LMP_clkoffset_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19062
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_detach": {
+            "from_state": [
+                "TX / LMP / LMP_features_req",
+                "RX / LMP / LMP_auto_rate"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_clkoffset_req": {
+                    "dst_state_name": "RX / LMP / LMP_clkoffset_req",
+                    "src_state_name": "RX / LMP / LMP_detach",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20756
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res": {
+                    "dst_state_name": "RX / LMP / LMP_features_res",
+                    "src_state_name": "RX / LMP / LMP_detach",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19272
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_features_req": {
+            "from_state": [
+                "RX / LMP / LMP_packet_type_table_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_auto_rate": {
+                    "dst_state_name": "RX / LMP / LMP_auto_rate",
+                    "src_state_name": "RX / LMP / LMP_features_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20736
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_features_req_ext": {
+            "from_state": [
+                "TX / LMP / LMP_features_req_ext",
+                "RX / LMP / LMP_features_res_ext",
+                "RX / LMP / LMP_supervision_timeout",
+                "RX / L2CAP / Information Request",
+                "RX / LMP / LMP_power_control_req",
+                "TX / LMP / LMP_accepted_ext",
+                "RX / LMP / LMP_preferred_rate",
+                "TX / L2CAP / Information Response",
+                "TX / L2CAP / Information Request"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "RX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19858
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "RX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19112
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "RX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20820
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_preferred_rate": {
+                    "dst_state_name": "RX / LMP / LMP_preferred_rate",
+                    "src_state_name": "RX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19379
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_res_ext",
+                    "src_state_name": "RX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19120
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_features_res": {
+            "from_state": [
+                "TX / LMP / LMP_features_req",
+                "RX / LMP / LMP_detach"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_features_req": {
+                    "dst_state_name": "TX / LMP / LMP_features_req",
+                    "src_state_name": "RX / LMP / LMP_features_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19276
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_features_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18942
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_features_res_ext": {
+            "from_state": [
+                "TX / LMP / LMP_features_req_ext",
+                "TX / L2CAP / Information Response",
+                "RX / LMP / LMP_preferred_rate",
+                "RX / LMP / LMP_features_req_ext",
+                "RX / LMP / LMP_power_control_req",
+                "RX / LMP / LMP_supervision_timeout",
+                "TX / LMP / LMP_features_res_ext",
+                "RX / L2CAP / Information Request"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19093
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19115
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20078
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_preferred_rate": {
+                    "dst_state_name": "RX / LMP / LMP_preferred_rate",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19602
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Request": {
+                    "dst_state_name": "TX / L2CAP / Information Request",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19403
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21927
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18952
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_version_req": {
+                    "dst_state_name": "TX / LMP / LMP_version_req",
+                    "src_state_name": "RX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18962
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_max_slot": {
+            "from_state": [
+                "RX / LMP / LMP_auto_rate",
+                "TX / LMP / LMP_clkoffset_res",
+                "RX / LMP / LMP_supervision_timeout"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_preferred_rate": {
+                    "dst_state_name": "RX / LMP / LMP_preferred_rate",
+                    "src_state_name": "RX / LMP / LMP_max_slot",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19053
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_name_req": {
+            "from_state": [
+                "RX / L2CAP / Information Response",
+                "TX / L2CAP / Connection Request",
+                "RX / LMP / LMP_features_res_ext",
+                "RX / LMP / LMP_name_req",
+                "RX / L2CAP / Information Request",
+                "TX / L2CAP / Information Response",
+                "TX / L2CAP / Information Request",
+                "TX / L2CAP / Configure Request",
+                "TX / LMP / LMP_name_res",
+                "RX / LMP / LMP_power_control_req",
+                "TX / LMP / LMP_power_control_res"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Response": {
+                    "dst_state_name": "RX / L2CAP / Information Response",
+                    "src_state_name": "RX / LMP / LMP_name_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23061
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "RX / LMP / LMP_name_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19879
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "RX / LMP / LMP_name_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21254
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Connection Request": {
+                    "dst_state_name": "TX / L2CAP / Connection Request",
+                    "src_state_name": "RX / LMP / LMP_name_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20840
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Request": {
+                    "dst_state_name": "TX / L2CAP / Information Request",
+                    "src_state_name": "RX / LMP / LMP_name_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23255
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_name_res": {
+                    "dst_state_name": "TX / LMP / LMP_name_res",
+                    "src_state_name": "RX / LMP / LMP_name_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19137
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_not_accepted_ext": {
+            "from_state": [
+                "TX / LMP / LMP_clkoffset_res",
+                "RX / LMP / LMP_preferred_rate",
+                "RX / LMP / LMP_supervision_timeout"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_accepted_ext": {
+                    "dst_state_name": "TX / LMP / LMP_accepted_ext",
+                    "src_state_name": "RX / LMP / LMP_not_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19071
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_not_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19583
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_packet_type_table_req": {
+            "from_state": [
+                "RX / LMP / LMP_timing_accuracy_req",
+                "RX / LMP / Escape 4"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_auto_rate": {
+                    "dst_state_name": "RX / LMP / LMP_auto_rate",
+                    "src_state_name": "RX / LMP / LMP_packet_type_table_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19043
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req": {
+                    "dst_state_name": "RX / LMP / LMP_features_req",
+                    "src_state_name": "RX / LMP / LMP_packet_type_table_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20732
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_power_control_req": {
+            "from_state": [
+                "TX / SDP / Service Search Attribute Request",
+                "RX / L2CAP / Disconnection Response",
+                "TX / LMP / LMP_features_res_ext",
+                "TX / LMP / LMP_accepted_ext",
+                "TX / LMP / LMP_name_res",
+                "RX / LMP / LMP_features_req_ext",
+                "TX / L2CAP / Connection Request",
+                "TX / L2CAP / Disconnection Request",
+                "RX / LMP / LMP_name_req",
+                "RX / SDP / Service Search Attribute Response",
+                "TX / L2CAP / Information Response",
+                "TX / L2CAP / Configure Response"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Response": {
+                    "dst_state_name": "RX / L2CAP / Configure Response",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23301
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20824
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Information Response": {
+                    "dst_state_name": "RX / L2CAP / Information Response",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19430
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20529
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21258
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22188
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_power_control_res": {
+                    "dst_state_name": "TX / LMP / LMP_power_control_res",
+                    "src_state_name": "RX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19249
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_power_control_res": {
+            "from_state": [
+                "TX / LMP / LMP_power_control_req",
+                "RX / LMP / LMP_set_AFH"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_set_AFH": {
+                    "dst_state_name": "RX / LMP / LMP_set_AFH",
+                    "src_state_name": "RX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20388
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req": {
+                    "dst_state_name": "TX / LMP / LMP_features_req",
+                    "src_state_name": "RX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19263
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_preferred_rate": {
+            "from_state": [
+                "RX / LMP / LMP_max_slot",
+                "RX / LMP / LMP_features_res_ext",
+                "RX / LMP / LMP_supervision_timeout",
+                "RX / LMP / LMP_features_req_ext",
+                "TX / LMP / LMP_features_req_ext",
+                "TX / LMP / LMP_features_res_ext"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19840
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_clkoffset_req": {
+                    "dst_state_name": "RX / LMP / LMP_clkoffset_req",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19057
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20058
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19084
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_not_accepted_ext": {
+                    "dst_state_name": "RX / LMP / LMP_not_accepted_ext",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19579
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_supervision_timeout": {
+                    "dst_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19362
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_preferred_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19606
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_set_AFH": {
+            "from_state": [
+                "TX / LMP / LMP_setup_complete",
+                "RX / LMP / LMP_set_AFH",
+                "RX / L2CAP / Disconnection Response",
+                "TX / LMP / LMP_power_control_res",
+                "RX / LMP / LMP_power_control_res",
+                "TX / LMP / LMP_power_control_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_channel_classification_req": {
+                    "dst_state_name": "RX / LMP / LMP_channel_classification_req",
+                    "src_state_name": "RX / LMP / LMP_set_AFH",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19016
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_res": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_res",
+                    "src_state_name": "RX / LMP / LMP_set_AFH",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23341
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_set_AFH": {
+                    "dst_state_name": "RX / LMP / LMP_set_AFH",
+                    "src_state_name": "RX / LMP / LMP_set_AFH",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19481
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req": {
+                    "dst_state_name": "TX / LMP / LMP_features_req",
+                    "src_state_name": "RX / LMP / LMP_set_AFH",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20393
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "TX / LMP / LMP_power_control_req",
+                    "src_state_name": "RX / LMP / LMP_set_AFH",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19485
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_setup_complete": {
+            "from_state": [
+                "RX / LMP / LMP_channel_classification_req"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_max_slot": {
+                    "dst_state_name": "TX / LMP / LMP_max_slot",
+                    "src_state_name": "RX / LMP / LMP_setup_complete",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19025
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_slot_offset": {
+            "from_state": [
+                "TX / LMP / LMP_host_connection_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_switch_req": {
+                    "dst_state_name": "RX / LMP / LMP_switch_req",
+                    "src_state_name": "RX / LMP / LMP_slot_offset",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18991
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_supervision_timeout": {
+            "from_state": [
+                "RX / LMP / LMP_preferred_rate",
+                "TX / LMP / LMP_clkoffset_res",
+                "TX / LMP / LMP_features_req_ext",
+                "TX / LMP / LMP_accepted_ext",
+                "RX / LMP / LMP_clkoffset_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19593
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21447
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_max_slot": {
+                    "dst_state_name": "RX / LMP / LMP_max_slot",
+                    "src_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19815
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_not_accepted_ext": {
+                    "dst_state_name": "RX / LMP / LMP_not_accepted_ext",
+                    "src_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19365
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_preferred_rate": {
+                    "dst_state_name": "RX / LMP / LMP_preferred_rate",
+                    "src_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19080
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_switch_req": {
+            "from_state": [
+                "RX / LMP / LMP_slot_offset"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_accepted": {
+                    "dst_state_name": "TX / LMP / LMP_accepted",
+                    "src_state_name": "RX / LMP / LMP_switch_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18996
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_timing_accuracy_req": {
+            "from_state": [
+                "TX / LMP / LMP_auto_rate",
+                "RX / LMP / LMP_timing_accuracy_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_Simple_Pairing_Confirm": {
+                    "dst_state_name": "RX / LMP / LMP_Simple_Pairing_Confirm",
+                    "src_state_name": "RX / LMP / LMP_timing_accuracy_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20485
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_packet_type_table_req": {
+                    "dst_state_name": "RX / LMP / LMP_packet_type_table_req",
+                    "src_state_name": "RX / LMP / LMP_timing_accuracy_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19039
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_timing_accuracy_req": {
+                    "dst_state_name": "RX / LMP / LMP_timing_accuracy_req",
+                    "src_state_name": "RX / LMP / LMP_timing_accuracy_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19558
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_timing_accuracy_res": {
+            "from_state": [
+                "TX / LMP / LMP_timing_accuracy_req"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_host_connection_req": {
+                    "dst_state_name": "TX / LMP / LMP_host_connection_req",
+                    "src_state_name": "RX / LMP / LMP_timing_accuracy_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18981
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / LMP / LMP_version_res": {
+            "from_state": [
+                "TX / LMP / LMP_version_req"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_timing_accuracy_req": {
+                    "dst_state_name": "TX / LMP / LMP_timing_accuracy_req",
+                    "src_state_name": "RX / LMP / LMP_version_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18972
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SDP / Service Search Attribute Response": {
+            "from_state": [
+                "TX / SDP / Service Search Attribute Request",
+                "TX / LMP / LMP_power_control_res"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "RX / SDP / Service Search Attribute Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21541
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Disconnection Request": {
+                    "dst_state_name": "TX / L2CAP / Disconnection Request",
+                    "src_state_name": "RX / SDP / Service Search Attribute Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19233
+                    },
+                    "trigger": ""
+                },
+                "TX / SDP / Service Search Attribute Request": {
+                    "dst_state_name": "TX / SDP / Service Search Attribute Request",
+                    "src_state_name": "RX / SDP / Service Search Attribute Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19221
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / L2CAP / Configure Request": {
+            "from_state": [
+                "RX / L2CAP / Configure Request",
+                "RX / L2CAP / Connection Response"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Request": {
+                    "dst_state_name": "RX / L2CAP / Configure Request",
+                    "src_state_name": "TX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19444
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Configure Response": {
+                    "dst_state_name": "RX / L2CAP / Configure Response",
+                    "src_state_name": "TX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21978
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "TX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22202
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Configure Response": {
+                    "dst_state_name": "TX / L2CAP / Configure Response",
+                    "src_state_name": "TX / L2CAP / Configure Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19180
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / L2CAP / Configure Response": {
+            "from_state": [
+                "TX / L2CAP / Configure Request",
+                "RX / L2CAP / Configure Request",
+                "RX / L2CAP / Configure Response"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Response": {
+                    "dst_state_name": "RX / L2CAP / Configure Response",
+                    "src_state_name": "TX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19185
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23297
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Disconnection Request": {
+                    "dst_state_name": "TX / L2CAP / Disconnection Request",
+                    "src_state_name": "TX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22232
+                    },
+                    "trigger": ""
+                },
+                "TX / SDP / Service Search Attribute Request": {
+                    "dst_state_name": "TX / SDP / Service Search Attribute Request",
+                    "src_state_name": "TX / L2CAP / Configure Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21988
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / L2CAP / Connection Request": {
+            "from_state": [
+                "RX / L2CAP / Information Response",
+                "TX / L2CAP / Information Response",
+                "RX / LMP / LMP_name_req",
+                "TX / LMP / LMP_name_res"
+            ],
+            "to_state": {
+                "RX / L2CAP / Connection Response": {
+                    "dst_state_name": "RX / L2CAP / Connection Response",
+                    "src_state_name": "TX / L2CAP / Connection Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19658
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "TX / L2CAP / Connection Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19155
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / L2CAP / Connection Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20103
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_name_res": {
+                    "dst_state_name": "TX / LMP / LMP_name_res",
+                    "src_state_name": "TX / L2CAP / Connection Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23279
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / L2CAP / Disconnection Request": {
+            "from_state": [
+                "RX / SDP / Service Search Attribute Response",
+                "RX / L2CAP / Configure Response",
+                "TX / L2CAP / Configure Response"
+            ],
+            "to_state": {
+                "RX / L2CAP / Disconnection Response": {
+                    "dst_state_name": "RX / L2CAP / Disconnection Response",
+                    "src_state_name": "TX / L2CAP / Disconnection Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19238
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / L2CAP / Disconnection Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21110
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / L2CAP / Information Request": {
+            "from_state": [
+                "RX / LMP / LMP_features_res_ext",
+                "TX / LMP / LMP_name_res",
+                "TX / L2CAP / Information Response",
+                "RX / L2CAP / Information Request",
+                "RX / LMP / LMP_name_req"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "TX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22585
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "TX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19854
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "TX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19407
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "TX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21040
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_name_res": {
+                    "dst_state_name": "TX / LMP / LMP_name_res",
+                    "src_state_name": "TX / L2CAP / Information Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23259
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / L2CAP / Information Response": {
+            "from_state": [
+                "TX / LMP / LMP_features_req_ext",
+                "RX / L2CAP / Information Request",
+                "RX / L2CAP / Information Response",
+                "TX / LMP / LMP_features_res_ext",
+                "TX / L2CAP / Information Request",
+                "TX / LMP / LMP_name_res",
+                "RX / LMP / LMP_features_res_ext"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Response": {
+                    "dst_state_name": "RX / L2CAP / Information Response",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19649
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19108
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19623
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19132
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23051
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Connection Request": {
+                    "dst_state_name": "TX / L2CAP / Connection Request",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19869
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Request": {
+                    "dst_state_name": "TX / L2CAP / Information Request",
+                    "src_state_name": "TX / L2CAP / Information Response",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21930
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_accepted": {
+            "from_state": [
+                "RX / LMP / LMP_switch_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_accepted": {
+                    "dst_state_name": "RX / LMP / LMP_accepted",
+                    "src_state_name": "TX / LMP / LMP_accepted",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19001
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_accepted_ext": {
+            "from_state": [
+                "RX / LMP / LMP_not_accepted_ext",
+                "TX / LMP / LMP_features_req_ext"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_clkoffset_req": {
+                    "dst_state_name": "RX / LMP / LMP_clkoffset_req",
+                    "src_state_name": "TX / LMP / LMP_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21440
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "TX / LMP / LMP_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19831
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / LMP / LMP_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20525
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_supervision_timeout": {
+                    "dst_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "src_state_name": "TX / LMP / LMP_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19076
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "TX / LMP / LMP_accepted_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19372
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_auto_rate": {
+            "from_state": [
+                "TX / LMP / LMP_max_slot"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_timing_accuracy_req": {
+                    "dst_state_name": "RX / LMP / LMP_timing_accuracy_req",
+                    "src_state_name": "TX / LMP / LMP_auto_rate",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19034
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_clkoffset_res": {
+            "from_state": [
+                "RX / LMP / LMP_clkoffset_req"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_max_slot": {
+                    "dst_state_name": "RX / LMP / LMP_max_slot",
+                    "src_state_name": "TX / LMP / LMP_clkoffset_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19355
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_not_accepted_ext": {
+                    "dst_state_name": "RX / LMP / LMP_not_accepted_ext",
+                    "src_state_name": "TX / LMP / LMP_clkoffset_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19067
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_supervision_timeout": {
+                    "dst_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "src_state_name": "TX / LMP / LMP_clkoffset_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19811
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_features_req": {
+            "from_state": [
+                "IDLE",
+                "RX / LMP / LMP_power_control_res",
+                "RX / LMP / LMP_features_res",
+                "RX / LMP / LMP_set_AFH"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_detach": {
+                    "dst_state_name": "RX / LMP / LMP_detach",
+                    "src_state_name": "TX / LMP / LMP_features_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19267
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res": {
+                    "dst_state_name": "RX / LMP / LMP_features_res",
+                    "src_state_name": "TX / LMP / LMP_features_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18936
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_features_req_ext": {
+            "from_state": [
+                "RX / LMP / LMP_features_res",
+                "RX / LMP / LMP_features_res_ext",
+                "RX / L2CAP / Information Request",
+                "TX / LMP / LMP_accepted_ext",
+                "RX / LMP / LMP_preferred_rate",
+                "RX / LMP / LMP_not_accepted_ext",
+                "TX / LMP / LMP_features_res_ext"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19609
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_req_ext",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19375
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18947
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_preferred_rate": {
+                    "dst_state_name": "RX / LMP / LMP_preferred_rate",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21019
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_supervision_timeout": {
+                    "dst_state_name": "RX / LMP / LMP_supervision_timeout",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20781
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19103
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_accepted_ext": {
+                    "dst_state_name": "TX / LMP / LMP_accepted_ext",
+                    "src_state_name": "TX / LMP / LMP_features_req_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19586
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_features_res_ext": {
+            "from_state": [
+                "RX / LMP / LMP_features_req_ext"
+            ],
+            "to_state": {
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19124
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Information Response": {
+                    "dst_state_name": "RX / L2CAP / Information Response",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21492
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_features_res_ext": {
+                    "dst_state_name": "RX / LMP / LMP_features_res_ext",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19398
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 22184
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_preferred_rate": {
+                    "dst_state_name": "RX / LMP / LMP_preferred_rate",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23014
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19620
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_features_req_ext": {
+                    "dst_state_name": "TX / LMP / LMP_features_req_ext",
+                    "src_state_name": "TX / LMP / LMP_features_res_ext",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20065
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_host_connection_req": {
+            "from_state": [
+                "RX / LMP / LMP_timing_accuracy_res"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_slot_offset": {
+                    "dst_state_name": "RX / LMP / LMP_slot_offset",
+                    "src_state_name": "TX / LMP / LMP_host_connection_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18986
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_max_slot": {
+            "from_state": [
+                "RX / LMP / LMP_setup_complete"
+            ],
+            "to_state": {
+                "TX / LMP / LMP_auto_rate": {
+                    "dst_state_name": "TX / LMP / LMP_auto_rate",
+                    "src_state_name": "TX / LMP / LMP_max_slot",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19029
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_name_res": {
+            "from_state": [
+                "RX / LMP / LMP_name_req",
+                "TX / L2CAP / Information Request",
+                "TX / L2CAP / Connection Request"
+            ],
+            "to_state": {
+                "RX / L2CAP / Configure Request": {
+                    "dst_state_name": "RX / L2CAP / Configure Request",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20850
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Connection Response": {
+                    "dst_state_name": "RX / L2CAP / Connection Response",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19164
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Information Request": {
+                    "dst_state_name": "RX / L2CAP / Information Request",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19413
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Information Response": {
+                    "dst_state_name": "RX / L2CAP / Information Response",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19142
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21505
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19426
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Connection Request": {
+                    "dst_state_name": "TX / L2CAP / Connection Request",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20320
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Request": {
+                    "dst_state_name": "TX / L2CAP / Information Request",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20084
+                    },
+                    "trigger": ""
+                },
+                "TX / L2CAP / Information Response": {
+                    "dst_state_name": "TX / L2CAP / Information Response",
+                    "src_state_name": "TX / LMP / LMP_name_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19645
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_power_control_req": {
+            "from_state": [
+                "TX / LMP / LMP_power_control_res",
+                "RX / LMP / LMP_set_AFH",
+                "RX / L2CAP / Disconnection Response"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_power_control_res": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_res",
+                    "src_state_name": "TX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19258
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_set_AFH": {
+                    "dst_state_name": "RX / LMP / LMP_set_AFH",
+                    "src_state_name": "TX / LMP / LMP_power_control_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23337
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_power_control_res": {
+            "from_state": [
+                "RX / LMP / LMP_power_control_req"
+            ],
+            "to_state": {
+                "RX / L2CAP / Connection Response": {
+                    "dst_state_name": "RX / L2CAP / Connection Response",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 20111
+                    },
+                    "trigger": ""
+                },
+                "RX / L2CAP / Disconnection Response": {
+                    "dst_state_name": "RX / L2CAP / Disconnection Response",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21117
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_name_req": {
+                    "dst_state_name": "RX / LMP / LMP_name_req",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 23058
+                    },
+                    "trigger": ""
+                },
+                "RX / LMP / LMP_set_AFH": {
+                    "dst_state_name": "RX / LMP / LMP_set_AFH",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19716
+                    },
+                    "trigger": ""
+                },
+                "RX / SDP / Service Search Attribute Response": {
+                    "dst_state_name": "RX / SDP / Service Search Attribute Response",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19927
+                    },
+                    "trigger": ""
+                },
+                "TX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "TX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19253
+                    },
+                    "trigger": ""
+                },
+                "TX / SDP / Service Search Attribute Request": {
+                    "dst_state_name": "TX / SDP / Service Search Attribute Request",
+                    "src_state_name": "TX / LMP / LMP_power_control_res",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 21550
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_setup_complete": {
+            "from_state": [
+                "RX / LMP / LMP_accepted"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_set_AFH": {
+                    "dst_state_name": "RX / LMP / LMP_set_AFH",
+                    "src_state_name": "TX / LMP / LMP_setup_complete",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19011
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_timing_accuracy_req": {
+            "from_state": [
+                "RX / LMP / LMP_version_res"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_timing_accuracy_res": {
+                    "dst_state_name": "RX / LMP / LMP_timing_accuracy_res",
+                    "src_state_name": "TX / LMP / LMP_timing_accuracy_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18977
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / LMP / LMP_version_req": {
+            "from_state": [
+                "RX / LMP / LMP_features_res_ext"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_version_res": {
+                    "dst_state_name": "RX / LMP / LMP_version_res",
+                    "src_state_name": "TX / LMP / LMP_version_req",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 18967
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SDP / Service Search Attribute Request": {
+            "from_state": [
+                "RX / L2CAP / Configure Response",
+                "RX / SDP / Service Search Attribute Response",
+                "TX / LMP / LMP_power_control_res",
+                "TX / L2CAP / Configure Response"
+            ],
+            "to_state": {
+                "RX / LMP / LMP_power_control_req": {
+                    "dst_state_name": "RX / LMP / LMP_power_control_req",
+                    "src_state_name": "TX / SDP / Service Search Attribute Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19919
+                    },
+                    "trigger": ""
+                },
+                "RX / SDP / Service Search Attribute Response": {
+                    "dst_state_name": "RX / SDP / Service Search Attribute Response",
+                    "src_state_name": "TX / SDP / Service Search Attribute Request",
+                    "time": {
+                        "tv_sec": 1602548474,
+                        "tv_usec": 19213
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

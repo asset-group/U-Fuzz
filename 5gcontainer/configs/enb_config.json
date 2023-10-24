@@ -1,0 +1,179 @@
+{
+    "config": {
+        "Name": "5gnr",
+        "NR5G": {
+            "MCC": "208",
+            "MNC": "95",
+            "AutoStartCoreNetwork": true,
+            "AutoStartBaseStation": true,
+            "CoreNetworkConfigFile": "open5gs.yaml",
+            "BaseStationConfigFile": "n78.106.conf",
+            "EnableSimulator": false,
+            "SimulatorDelayUS": 2000,
+            "SimulatorUEArguments": "-r 25 --ue-rxgain 140 --basicsim",
+            "Subscribers": [
+                {
+                    "IMSI": "001010000000001",
+                    "K": "00112233445566778899AABBCCDDEEFF",
+                    "OPC": "00112233445566778899AABBCCDDEEFF",
+                    "APN": "default"
+                },
+                {
+                    "IMSI": "001010100011321",
+                    "K": "12345678901234567890123456789012",
+                    "OPC": "12345678901234561234567890123456",
+                    "APN": "default"
+                },
+                {
+                    "IMSI": "999700000064959",
+                    "K": "5FBC6D9274D7D3F03E32B12DBF582424",
+                    "OPC": "32B95812161923774B71D508A1D4D3B6",
+                    "APN": "internet"
+                },
+                {
+                    "IMSI": "901700000039907",
+                    "K": "33CD0E15C56301487706C843E5BC53C1",
+                    "OPC": "3E91AD887FB569F4A68EEB8282872B0F",
+                    "APN": "internet"
+                },
+                {
+                    "IMSI": "222010000039900",
+                    "K": "3ac9ec861c3d5209ddb00d88b8b2c933",
+                    "OPC": "ad3d5e6e6df84bf3fd799b39c70e7c74",
+                    "APN": "internet"
+                },
+                {
+                    "IMSI": "222010100000002",
+                    "K": "0c0a34601d4f07677303652c0462535b",
+                    "OPC": "63bfa50ee6523365ff14c1f45f88737d",
+                    "APN": "internet"
+                }
+            ]
+        },
+        "Monitor": {
+            "Enable": true,
+            "PrintToStdout": true,
+            "WaitExternalEvent": false,
+            "ActiveMonitorTypes": [
+                0
+            ],
+            "MonitorsTypeList": [
+                "SerialUART",
+                "SSH",
+                "Microphone",
+                "ADB",
+                "QCDM"
+            ],
+            "QCDM": {
+                "QCDMADB": false,
+                "QCDMDevice": "/dev/ttyUSB0",
+                "QCDMMagicWords": [
+                    "testtest"
+                ]
+            }
+        },
+        "StateMapper": {
+            "Enable": false,
+            "ShowAllStates": true,
+            "SaveFolder": "configs/models/lte_enb/",
+            "PacketLayerOffset": 1,
+            "Mapping": [
+                {
+                    "AppendSummary": false,
+                    "Filter": "nas-eps",
+                    "LayerName": "NAS",
+                    "StateNameField": [
+                        "nas_eps.nas_msg_esm_type",
+                        "nas_eps.nas_msg_emm_type"
+                    ]
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "nr-rrc",
+                    "LayerName": "RRC",
+                    "StateNameField": [
+                        "nr-rrc.c1"
+                    ]
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "pdcp-lte",
+                    "LayerName": "PDCP",
+                    "StateNameField": "pdcp-lte.pdu-type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "rlc-lte",
+                    "LayerName": "RLC",
+                    "StateNameField": [
+                        "rlc-lte.am.cpt",
+                        "rlc-lte.am.frame-type",
+                        "rlc-lte.channel-type"
+                    ]
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "mac-nr",
+                    "LayerName": "MAC-NR",
+                    "StateNameField": [
+                        "mac-nr.ulsch.lcid",
+                        "mac-nr.rnti-type"
+                    ]
+                }
+            ],
+            "Overrides": {}
+        },
+        "Options": {
+            "DefaultProtocolName": "proto:mac-nr-framed",
+            "DefaultProtocolEncapName": "encap:1",
+            "SaveProtocolCapture": true,
+            "LiveProtocolCapture": false,
+            "SaveLogsToFile": true,
+            "Program": 1,
+            "AutoStartProgram": true,
+            "AutoRestartProgram": false,
+            "LaunchProgramWithGDB": false,
+            "ProgramsList": [
+                "3rd-party/open5gs-core/build/tests/app/5gc",
+                "3rd-party/oai_5g_sa/cmake_targets/ran_build/build/nr-softmodem",
+                "./3rd-party/oai_5g_sa/cmake_targets/ran_build/build/lte-uesoftmodem"
+            ],
+            "MainThreadCore": -1,
+            "SaveCoreDump": false
+        },
+        "Fuzzing": {
+            "EnableDuplication": false,
+            "EnableMutation": false,
+            "EnableOptimization": false,
+            "DefaultMutationProbability": 0.2,
+            "DefaultMutationFieldProbability": 0.1,
+            "FieldMutationBackoffMultipler": 0.5,
+            "MaxFieldsMutation": 6,
+            "DefaultDuplicationProbability": 0.05,
+            "MaxDuplicationTimeMS": 6000,
+            "NormalizeProtocolLayersMutation": true,
+            "PacketRetry": false,
+            "PacketRetryTimeoutMS": 2500,
+            "GlobalTimeout": true,
+            "GlobalTimeoutSeconds": 45,
+            "StateLoopDetection": false,
+            "StateLoopDetectionThreshold": 5,
+            "RandomSeed": 123456789,
+            "RestoreSessionOnStartup": false,
+            "SaveSessionOnExit": false,
+            "StopCondition": {
+                "MaxIterations": 1000,
+                "MaxTimeMinutes": 240,
+                "StopOnMaxIterations": true,
+                "StopOnMaxTimeMinutes": true
+            },
+            "Excludes": [
+                {
+                    "ApplyTo": "",
+                    "Description": "",
+                    "Filter": ""
+                }
+            ]
+        }
+    }
+}

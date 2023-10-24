@@ -1,0 +1,2629 @@
+{
+    "StatesNodes": {
+        "IDLE": {
+            "direction": 0,
+            "layers_count": 0,
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156630
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / AfDataExtSrsp / AF data request extended system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 25,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 158845
+            },
+            "timeout": 0,
+            "type_value": 25602
+        },
+        "RX / AfDataReqSrsp / AF data request system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 18,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157401
+            },
+            "timeout": 0,
+            "type_value": 25601
+        },
+        "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156793
+            },
+            "timeout": 0,
+            "type_value": 24851
+        },
+        "RX / SysPingRsp / SYS ping system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156719
+            },
+            "timeout": 0,
+            "type_value": 24833
+        },
+        "RX / SysVersionSrsp / SYS version system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156752
+            },
+            "timeout": 0,
+            "type_value": 24834
+        },
+        "RX / ZbReadConfigSrsp / AF data request system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 33,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 460726
+            },
+            "timeout": 0,
+            "type_value": 25601
+        },
+        "RX / ZbReadConfigSrsp / ZB bind device system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 36,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500529,
+                "tv_usec": 388792
+            },
+            "timeout": 0,
+            "type_value": 26113
+        },
+        "RX / ZbReadConfigSrsp / ZB read configuration system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156889
+            },
+            "timeout": 0,
+            "type_value": 26116
+        },
+        "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 27,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 166564
+            },
+            "timeout": 0,
+            "type_value": 25857
+        },
+        "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 10,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157024
+            },
+            "timeout": 0,
+            "type_value": 25861
+        },
+        "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 14,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157336
+            },
+            "timeout": 0,
+            "type_value": 25910
+        },
+        "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet": {
+            "direction": 1,
+            "layers_count": 1,
+            "node_number": 12,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157086
+            },
+            "timeout": 0,
+            "type_value": 25860
+        },
+        "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 19,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157412
+            },
+            "timeout": 0,
+            "type_value": 17536
+        },
+        "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 15,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157365
+            },
+            "timeout": 0,
+            "type_value": 9218
+        },
+        "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 23,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157763
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 17,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157389
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / AfDataReqSreqZclWriteAttri / Profile-wide": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 31,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 186236
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 28,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 167830
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 20,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157443
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / AfIncomingMsgArZclReportAttri / Profile-wide": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 22,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157586
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156784
+            },
+            "timeout": 0,
+            "type_value": 8467
+        },
+        "TX / SysPingReq / SYS ping system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156700
+            },
+            "timeout": 0,
+            "type_value": 8449
+        },
+        "TX / SysVersionSreq / SYS version system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156742
+            },
+            "timeout": 0,
+            "type_value": 8450
+        },
+        "TX / ZbReadConfigSrsp / AF data request system request packet": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 21,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157554
+            },
+            "timeout": 0,
+            "type_value": 9217
+        },
+        "TX / ZbReadConfigSrsp / ZB bind device system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 32,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 411766
+            },
+            "timeout": 0,
+            "type_value": 9729
+        },
+        "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 26,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 165161
+            },
+            "timeout": 0,
+            "type_value": 9473
+        },
+        "TX / ZbReadConfigSrsp / ZDO network address request system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 34,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 556732
+            },
+            "timeout": 0,
+            "type_value": 9472
+        },
+        "TX / ZbReadConfigsreq / ZB read configuration system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 156879
+            },
+            "timeout": 0,
+            "type_value": 9732
+        },
+        "TX / ZdoActiveEndpointReqSreq / AF data request system request packet": {
+            "direction": 0,
+            "layers_count": 2,
+            "node_number": 35,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 740426
+            },
+            "timeout": 0,
+            "type_value": 9217
+        },
+        "TX / ZdoActiveEndpointReqSreq / ZDO IEEE address request system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 37,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500529,
+                "tv_usec": 495741
+            },
+            "timeout": 0,
+            "type_value": 9473
+        },
+        "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 9,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157013
+            },
+            "timeout": 0,
+            "type_value": 9477
+        },
+        "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 30,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 173564
+            },
+            "timeout": 0,
+            "type_value": 17797
+        },
+        "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 13,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157327
+            },
+            "timeout": 0,
+            "type_value": 9526
+        },
+        "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 16,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157374
+            },
+            "timeout": 0,
+            "type_value": 17846
+        },
+        "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 11,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157075
+            },
+            "timeout": 0,
+            "type_value": 9476
+        },
+        "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 29,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 171922
+            },
+            "timeout": 0,
+            "type_value": 17796
+        },
+        "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+            "direction": 0,
+            "layers_count": 1,
+            "node_number": 24,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1696500528,
+                "tv_usec": 157985
+            },
+            "timeout": 0,
+            "type_value": 17860
+        }
+    },
+    "StatesTransitions": {
+        "IDLE": {
+            "from_state": null,
+            "to_state": {
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156702
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / AfDataExtSrsp / AF data request extended system response packet": {
+            "from_state": [
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet"
+            ],
+            "to_state": {
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 176182
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158855
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 189159
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 347327
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / AfDataReqSrsp / AF data request system response packet": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide"
+            ],
+            "to_state": {
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157413
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 179445
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157763
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 161928
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 167830
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157443
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 186834
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157554
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 189095
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157985
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet": {
+            "from_state": [
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet"
+            ],
+            "to_state": {
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+                    "dst_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "src_state_name": "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156816
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigsreq / ZB read configuration system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigsreq / ZB read configuration system request packet",
+                    "src_state_name": "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156880
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet",
+                    "src_state_name": "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157013
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SysPingRsp / SYS ping system response packet": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / SysPingReq / SYS ping system request packet"
+            ],
+            "to_state": {
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 441281
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 846910
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156728
+                    },
+                    "trigger": ""
+                },
+                "TX / SysVersionSreq / SYS version system request packet": {
+                    "dst_state_name": "TX / SysVersionSreq / SYS version system request packet",
+                    "src_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156743
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 786869
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SysVersionSrsp / SYS version system response packet": {
+            "from_state": [
+                "TX / SysVersionSreq / SYS version system request packet"
+            ],
+            "to_state": {
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+                    "dst_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "src_state_name": "RX / SysVersionSrsp / SYS version system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156784
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZbReadConfigSrsp / AF data request system response packet": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / ZbReadConfigSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 460737
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "RX / ZbReadConfigSrsp / AF data request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 879609
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZbReadConfigSrsp / ZB bind device system response packet": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / ZbReadConfigSrsp / ZB bind device system response packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 441447
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "RX / ZbReadConfigSrsp / ZB bind device system response packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 388802
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZbReadConfigSrsp / ZB read configuration system response packet": {
+            "from_state": [
+                "TX / ZbReadConfigsreq / ZB read configuration system request packet"
+            ],
+            "to_state": {
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+                    "dst_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "src_state_name": "RX / ZbReadConfigSrsp / ZB read configuration system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156896
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet"
+            ],
+            "to_state": {
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 166573
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 319072
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet": {
+            "from_state": [
+                "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158545
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet",
+                    "src_state_name": "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157044
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet",
+                    "src_state_name": "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 173565
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+                    "dst_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "src_state_name": "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157075
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet": {
+            "from_state": [
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet"
+            ],
+            "to_state": {
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157365
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165223
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 173238
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+                    "dst_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "src_state_name": "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 179421
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet"
+            ],
+            "to_state": {
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 456165
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157328
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+                    "dst_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "src_state_name": "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157094
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet": {
+                    "dst_state_name": "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet",
+                    "src_state_name": "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 171924
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+            "from_state": [
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet",
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                "RX / AfDataExtSrsp / AF data request extended system response packet",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet"
+            ],
+            "to_state": {
+                "RX / AfDataExtSrsp / AF data request extended system response packet": {
+                    "dst_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 189152
+                    },
+                    "trigger": ""
+                },
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 178635
+                    },
+                    "trigger": ""
+                },
+                "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet": {
+                    "dst_state_name": "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 189108
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165962
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 241633
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 162745
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157423
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157507
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 173297
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158880
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / ZDO network address request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / ZDO network address request system request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 556733
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 186758
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 351818
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+            "from_state": [
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet"
+            ],
+            "to_state": {
+                "RX / AfDataExtSrsp / AF data request extended system response packet": {
+                    "dst_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158845
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 172193
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165261
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 161832
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165270
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 169509
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+                    "dst_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "src_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157375
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+            "from_state": [
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "RX / AfDataReqSrsp / AF data request system response packet"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 276366
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 187891
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 340086
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158926
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157773
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 276634
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 160035
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 412340
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+            "from_state": [
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                "RX / SysPingRsp / SYS ping system response packet",
+                "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "RX / AfDataExtSrsp / AF data request extended system response packet",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                "TX / SysPingReq / SYS ping system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157401
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 169481
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 453559
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 519374
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 281991
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157967
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 410811
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 445415
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 184225
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 333436
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158230
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfDataReqSreqZclWriteAttri / Profile-wide": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific"
+            ],
+            "to_state": {
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 463730
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 829048
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 186245
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 236059
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 293689
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "RX / AfDataReqSrsp / AF data request system response packet"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 682452
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 446554
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 391057
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 167840
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 168497
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+            "from_state": [
+                "RX / ZbReadConfigSrsp / ZB bind device system response packet",
+                "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet",
+                "TX / ZbReadConfigSrsp / ZDO network address request system request packet",
+                "TX / ZbReadConfigSrsp / ZB bind device system request packet",
+                "RX / AfDataExtSrsp / AF data request extended system response packet",
+                "RX / SysPingRsp / SYS ping system response packet",
+                "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                "TX / SysPingReq / SYS ping system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                "TX / ZdoActiveEndpointReqSreq / AF data request system request packet",
+                "RX / ZbReadConfigSrsp / AF data request system response packet",
+                "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157452
+                    },
+                    "trigger": ""
+                },
+                "RX / SysPingRsp / SYS ping system response packet": {
+                    "dst_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 786861
+                    },
+                    "trigger": ""
+                },
+                "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet": {
+                    "dst_state_name": "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 351513
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 164393
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 169501
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 460285
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157958
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclWriteAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 186237
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 168488
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157524
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157586
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 160362
+                    },
+                    "trigger": ""
+                },
+                "TX / SysVersionSreq / SYS version system request packet": {
+                    "dst_state_name": "TX / SysVersionSreq / SYS version system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 345905
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157810
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / ZB bind device system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / ZB bind device system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 411766
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointReqSreq / AF data request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / AF data request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 442741
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointReqSreq / ZDO IEEE address request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO IEEE address request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 495742
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158552
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158248
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+                    "dst_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165240
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 457254
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / AfIncomingMsgArZclReportAttri / Profile-wide": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 296922
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 186602
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 336071
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 282067
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 164472
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 448615
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157596
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 236666
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+                    "dst_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 334782
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 601660
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+            "from_state": [
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                "TX / SysVersionSreq / SYS version system request packet",
+                "RX / ZbReadConfigSrsp / ZB read configuration system response packet",
+                "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet",
+                "RX / SysVersionSrsp / SYS version system response packet"
+            ],
+            "to_state": {
+                "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet": {
+                    "dst_state_name": "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet",
+                    "src_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156794
+                    },
+                    "trigger": ""
+                },
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+                    "dst_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "src_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 161025
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 161078
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigsreq / ZB read configuration system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigsreq / ZB read configuration system request packet",
+                    "src_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 177386
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SysPingReq / SYS ping system request packet": {
+            "from_state": [
+                "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                "IDLE",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "TX / SysPingReq / SYS ping system request packet",
+                "RX / SysPingRsp / SYS ping system response packet",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / ZbReadConfigsreq / ZB read configuration system request packet",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide"
+            ],
+            "to_state": {
+                "RX / SysPingRsp / SYS ping system response packet": {
+                    "dst_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "src_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156720
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 440997
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 382386
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 161091
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 409733
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 453043
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SysVersionSreq / SYS version system request packet": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "RX / SysPingRsp / SYS ping system response packet"
+            ],
+            "to_state": {
+                "RX / SysVersionSrsp / SYS version system response packet": {
+                    "dst_state_name": "RX / SysVersionSrsp / SYS version system response packet",
+                    "src_state_name": "TX / SysVersionSreq / SYS version system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156752
+                    },
+                    "trigger": ""
+                },
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet": {
+                    "dst_state_name": "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                    "src_state_name": "TX / SysVersionSreq / SYS version system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 160925
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / SysVersionSreq / SYS version system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 345917
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZbReadConfigSrsp / AF data request system request packet": {
+            "from_state": [
+                "RX / ZbReadConfigSrsp / ZB bind device system response packet",
+                "TX / ZdoActiveEndpointReqSreq / AF data request system request packet",
+                "RX / ZbReadConfigSrsp / AF data request system response packet",
+                "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet",
+                "RX / AfDataExtSrsp / AF data request extended system response packet",
+                "TX / SysVersionSreq / SYS version system request packet",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / SysPingReq / SYS ping system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "TX / ZdoActiveEndpointReqSreq / ZDO IEEE address request system request packet",
+                "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / AfIncomingMsgArZclReadAttriRsp / Profile-wide",
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                "RX / SysPingRsp / SYS ping system response packet",
+                "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157752
+                    },
+                    "trigger": ""
+                },
+                "RX / SysPingRsp / SYS ping system response packet": {
+                    "dst_state_name": "RX / SysPingRsp / SYS ping system response packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 848834
+                    },
+                    "trigger": ""
+                },
+                "RX / ZbReadConfigSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / ZbReadConfigSrsp / AF data request system response packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 460727
+                    },
+                    "trigger": ""
+                },
+                "RX / ZbReadConfigSrsp / ZB bind device system response packet": {
+                    "dst_state_name": "RX / ZbReadConfigSrsp / ZB bind device system response packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 388793
+                    },
+                    "trigger": ""
+                },
+                "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet": {
+                    "dst_state_name": "RX / ZbReadConfigSrsp / ZDO IEEE address request system response packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 166564
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 183499
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 187884
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158107
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157572
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 444698
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158273
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157605
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / ZB bind device system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / ZB bind device system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 265862
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165162
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoActiveEndpointReqSreq / AF data request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / AF data request system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 740427
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 179406
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+                    "dst_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 173245
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+                    "dst_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 446360
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZbReadConfigSrsp / ZB bind device system request packet": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZbReadConfigSrsp / ZB bind device system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 411775
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet": {
+            "from_state": [
+                "TX / ZbReadConfigSrsp / AF data request system request packet"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165172
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZbReadConfigSrsp / ZDO IEEE address request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 523625
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZbReadConfigSrsp / ZDO network address request system request packet": {
+            "from_state": [
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZbReadConfigSrsp / ZDO network address request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 556742
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZbReadConfigsreq / ZB read configuration system request packet": {
+            "from_state": [
+                "TX / SysOsalNvLenSreq / SYS OSAL NV length system request packet",
+                "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet"
+            ],
+            "to_state": {
+                "RX / ZbReadConfigSrsp / ZB read configuration system response packet": {
+                    "dst_state_name": "RX / ZbReadConfigSrsp / ZB read configuration system response packet",
+                    "src_state_name": "TX / ZbReadConfigsreq / ZB read configuration system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 156889
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / ZbReadConfigsreq / ZB read configuration system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 177391
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoActiveEndpointReqSreq / AF data request system request packet": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / ZbReadConfigSrsp / AF data request system request packet"
+            ],
+            "to_state": {
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZdoActiveEndpointReqSreq / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 740437
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZdoActiveEndpointReqSreq / AF data request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 897999
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoActiveEndpointReqSreq / ZDO IEEE address request system request packet": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific"
+            ],
+            "to_state": {
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO IEEE address request system request packet",
+                    "time": {
+                        "tv_sec": 1696500529,
+                        "tv_usec": 495752
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet": {
+            "from_state": [
+                "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                "RX / SysOsalNvLenSrsp / SYS OSAL NV length system response packet"
+            ],
+            "to_state": {
+                "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet": {
+                    "dst_state_name": "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet",
+                    "src_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157024
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet": {
+            "from_state": [
+                "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet"
+            ],
+            "to_state": {
+                "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet": {
+                    "dst_state_name": "TX / ZdoActiveEndpointReqSreq / ZDO active endpoint request system request packet",
+                    "src_state_name": "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 175833
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+                    "dst_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "src_state_name": "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 173582
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+            "from_state": [
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "TX / AfDataReqSreqZclWriteAttri / Profile-wide",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "RX / AfDataReqSrsp / AF data request system response packet",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet",
+                "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet"
+            ],
+            "to_state": {
+                "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet": {
+                    "dst_state_name": "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                    "src_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157336
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 189101
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 270448
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 160346
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 158256
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 167153
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet": {
+            "from_state": [
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "RX / ZdoMgmtPermitJoinSrsp / ZDO management permit join request system response packet",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / AfDataReqExtSreq / AF data request extended system request packet"
+            ],
+            "to_state": {
+                "RX / AfDataExtSrsp / AF data request extended system response packet": {
+                    "dst_state_name": "RX / AfDataExtSrsp / AF data request extended system response packet",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 185275
+                    },
+                    "trigger": ""
+                },
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 184650
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 279557
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 165250
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157390
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 179429
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZdoPermitJoinRspAr / ZDO management permit join response asynchronous request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 169224
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+            "from_state": [
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                "TX / ZdoActiveEndpointRspSreq / ZDO active endpoint response application request packet",
+                "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet",
+                "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                "RX / ZdoActiveEndpointReqSrsp / ZDO active endpoint request system response packet"
+            ],
+            "to_state": {
+                "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet": {
+                    "dst_state_name": "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet",
+                    "src_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157087
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 351506
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 160869
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+                    "dst_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "src_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 337383
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet": {
+            "from_state": [
+                "RX / ZdoSimpleDespReqSrsp / ZDO simple description request system response packet"
+            ],
+            "to_state": {
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 176152
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet": {
+                    "dst_state_name": "TX / ZdoSampileDespReqSreq / ZDO simple description request system request packet",
+                    "src_state_name": "TX / ZdoSimpleDespRspAr / ZDO simple description response application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 171934
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet": {
+            "from_state": [
+                "TX / SysPingReq / SYS ping system request packet",
+                "TX / AfIncomingMsgArZclReportAttri / Profile-wide",
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                "TX / ZbReadConfigSrsp / AF data request system request packet",
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                "RX / AfDataReqSrsp / AF data request system response packet"
+            ],
+            "to_state": {
+                "RX / AfDataReqSrsp / AF data request system response packet": {
+                    "dst_state_name": "RX / AfDataReqSrsp / AF data request system response packet",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 621655
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataConfirmAr / AF data confirm asynchronous request packet": {
+                    "dst_state_name": "TX / AfDataConfirmAr / AF data confirm asynchronous request packet",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 556870
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqExtSreq / AF data request extended system request packet": {
+                    "dst_state_name": "TX / AfDataReqExtSreq / AF data request extended system request packet",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 347313
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclDefaultRsp / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclDefaultRsp / Profile-wide",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 168812
+                    },
+                    "trigger": ""
+                },
+                "TX / AfDataReqSreqZclReadAttri / Profile-wide": {
+                    "dst_state_name": "TX / AfDataReqSreqZclReadAttri / Profile-wide",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 218483
+                    },
+                    "trigger": ""
+                },
+                "TX / AfIncomingMsgArZclReportAttri / Cluster-specific": {
+                    "dst_state_name": "TX / AfIncomingMsgArZclReportAttri / Cluster-specific",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 157993
+                    },
+                    "trigger": ""
+                },
+                "TX / SysPingReq / SYS ping system request packet": {
+                    "dst_state_name": "TX / SysPingReq / SYS ping system request packet",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 241671
+                    },
+                    "trigger": ""
+                },
+                "TX / ZbReadConfigSrsp / AF data request system request packet": {
+                    "dst_state_name": "TX / ZbReadConfigSrsp / AF data request system request packet",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 295393
+                    },
+                    "trigger": ""
+                },
+                "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet": {
+                    "dst_state_name": "TX / ZdoMangmentPermitJoinSreq / ZDO management permit join request system request packet",
+                    "src_state_name": "TX / ZdoSrsRoutingIndicationAr / ZDO source routing indication application request packet",
+                    "time": {
+                        "tv_sec": 1696500528,
+                        "tv_usec": 406414
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

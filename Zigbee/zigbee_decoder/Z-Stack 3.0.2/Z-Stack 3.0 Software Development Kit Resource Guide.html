@@ -1,0 +1,878 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List
+href="Z-Stack%20Home%20Software%20Development%20Kit%20Resource%20Guide_2_files/filelist.xml">
+<title>Z-Stack Home Development Kit Release Notes</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Sandre, Roberto</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Sandre, Roberto</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>296</o:TotalTime>
+  <o:Created>2015-02-23T00:00:00Z</o:Created>
+  <o:LastSaved>2015-02-23T00:00:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>855</o:Words>
+  <o:Characters>4879</o:Characters>
+  <o:Company>Texas Instruments Incorporated</o:Company>
+  <o:Lines>40</o:Lines>
+  <o:Paragraphs>11</o:Paragraphs>
+  <o:CharactersWithSpaces>5723</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData
+href="Z-Stack%20Home%20Software%20Development%20Kit%20Resource%20Guide_2_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Z-Stack%20Home%20Software%20Development%20Kit%20Resource%20Guide_2_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>110</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<link rel=Stylesheet type="text/css" media=all
+href="file:///C:\Users\a0919206\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Content.Outlook\1VKHJ2MR\release_notes_template_files\css.htm">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#0000EE;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#551A8B;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link="#0000EE" vlink="#551A8B" style='tab-interval:.5in'
+alink="#ee0000">
+
+<div class=WordSection1>
+<!--Resource Guide not available for this beta release -->
+
+<table class=MsoNormalTable border=0 cellspacing=3 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=1 style='width:.6pt;background:black;padding:.75pt .75pt .75pt .75pt'>
+  <p><span class=SpellE><strong><span style='font-size:16.5pt;color:white'>SimpleLink</span></strong></span><strong><span
+  style='font-size:16.5pt;color:white'>™ <span class=SpellE>ZigBee</span>®
+  Wireless MCU<o:p></o:p></span></strong></p>
+  <p><strong><span style='font-size:16.5pt;color:white'>Z</span></strong><strong><span
+  style='font-size:15.0pt;mso-fareast-font-family:"Times New Roman";color:white'>-Stack™
+  3.0 Software Development Kit Resource Guide</span></strong></p>
+  </td>
+ </tr>
+</table>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman";color:black'>Version:
+3.0.2</span><span style='mso-no-proof:yes'> </span><span style='mso-fareast-font-family:
+"Times New Roman";color:black'><br>
+May 10, 2017<o:p></o:p></span></h3>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman";color:black'>The
+Texas Instruments Z-Stack™ 3.0 software development kit (SDK) includes
+all the necessary software to get started on the development of <span
+class=SpellE>ZigBee</span>® 3.0 applications using the <span
+class=SpellE>SimpleLink</span> portfolio of Wireless MCUs from Texas
+Instruments (CC2530/1, and CC2538). <o:p></o:p></span></h3>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman";color:black'>It
+includes object code with the <span class=SpellE>ZigBee</span> ® protocol
+stack, sample projects and applications, and several tools for the design and
+development of applications powered by <span class=SpellE>ZigBee</span> ®
+technology.</span></h3>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman";color:black'>In
+addition to the software, the kit contains the following documentation and
+tools to aid in development:<o:p></o:p></span></h3>
+
+<h3><span style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman"'>General
+Product Documentation:</span><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p></o:p></span></h3>
+
+<table class=MsoNormalTable border=1 cellspacing=1 cellpadding=0 width=1470
+ style='width:881.7pt;mso-cellspacing:.6pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ .6pt .6pt .6pt .6pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Getting%20Started%20Guide%20-%20CC2530.pdf">Getting Started Guide -
+  CC2530</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Getting%20Started%20Guide%20-%20CC2538.pdf">Getting Started Guide -
+  CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Overview
+  of the Z-Stack™ SDK to get started<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Z-Stack%20Core%20Release%20Notes.txt">Core Release note - CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span class=SpellE><span style='mso-fareast-font-family:
+  "Times New Roman"'>ZigBee</span></span><span style='mso-fareast-font-family:
+  "Times New Roman"'> core stack release note for the core <span class=SpellE>ZigBee</span>
+  layers <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Z-Stack%203.0%20Release%20Notes.txt">3.0 Release note - CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span class=SpellE><span style='mso-fareast-font-family:
+  "Times New Roman"'>ZigBee</span></span><span style='mso-fareast-font-family:
+  "Times New Roman"'> 3.0 features release note for the BDB, GP and
+  ZCL <span class=SpellE>ZigBee</span> layers<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Z-Stack_3.0.2_Manifest.html">Release Manifest</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Manifest
+  document of the release with licensing information<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="EULA.pdf">End User License Agreement</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>License
+  Agreement Document for the usage of the SW contained in the SDK<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<div>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></h3>
+
+<h3><span style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman"'>Guides:</span><span
+style='mso-fareast-font-family:"Times New Roman";color:black'><o:p></o:p></span></h3>
+
+<table class=MsoNormalTable border=1 cellspacing=1 cellpadding=0 width=1470
+ style='width:881.7pt;mso-cellspacing:.6pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ .6pt .6pt .6pt .6pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/Z-Stack%203.0%20Sample%20Application%20User's%20Guide.pdf">Z-Stack 3.0
+  Sample Application User's Guide - CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Guides
+  through the example application workspace: setup, build and running<o:p></o:p></span></p>
+  </td>
+ </tr>
+  <tr style='mso-yfti-irow:2'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/Z-Stack%203.0%20Developer's%20Guide.pdf">Z-Stack 3.0 Developer's guide -
+  CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Describes
+  <span class=SpellE>ZigBee</span> and Z-Stack™ core stack theory of operation,
+  configuration parameters, knobs, application example design and compilation flags 
+  for advanced users. <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/Z-Stack%20OTA%20Upgrade%20User's%20Guide.pdf">Z-Stack OTA
+  User guide for CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Describes
+  how to use, configure and design applications with Over-the-air upgrade
+  functionality<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="http://www.ti.com/lit/ug/swru325a/swru325a.pdf"><span class=SpellE>Driverlib</span>
+  for CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>User
+  guide document which describes the CC2538 <span class=SpellE>driverlib</span>
+  SW component for CC2538 on-chip modules<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="http://www.ti.com/lit/ug/swru327/swru327.pdf"><span class=SpellE>Bsplib</span>
+  for CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>User
+  guide document which describes the CC2538 <span class=SpellE>bsplib</span> SW
+  component for SRF06 peripherals<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><span style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman"'>API
+Documents:<o:p></o:p></span></h3>
+
+<table class=MsoNormalTable border=1 cellspacing=1 cellpadding=0 width=1468
+ style='width:880.7pt;mso-cellspacing:.6pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ .6pt .6pt .6pt .6pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/Z-Stack%20ZCL%20API.pdf">Z-Stack ZCL API - CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document for applications using <span class=SpellE>ZigBee</span> core stack
+  as application interface model for both the data and management plane<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/Z-Stack%20API.pdf">Z-Stack API - CC2530/CC2538</a><o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document for applications using <span class=SpellE>ZigBee</span> core stack as
+  application interface model for both the data and management plane<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/Z-Stack%20Monitor%20and%20Test%20API.pdf">MT API -
+  CC2530/CC2538</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document for accessing the Z-Stack™ test interface<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/HAL%20Driver%20API.pdf">HAL API - CC2530</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document for accessing the Hardware Abstraction layer SW component for CC253x
+  Wireless MCU<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/OSAL%20API.pdf">OSAL API - CC2530/CC2538</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document for accessing the Operating System Abstraction Layer SW component<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/802.15.4%20MAC%20API.pdf">MAC API - CC2530/CC2538</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document which describes the interface to the 802.15.4 MAC layer<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
+  <td width=701 style='width:420.65pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/API/Z-Stack%20ZNP%20Interface%20Specification.pdf">ZNP
+  Interface document - CC2530/CC2538</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.25pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>API
+  document which describes the interface with TI <span class=SpellE>ZigBee</span>
+  Network Processor for hosts driving <span class=SpellE>ZigBee</span> as modem
+  <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><span style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman"'>Tools
+and system performance:<o:p></o:p></span></h3>
+
+<table class=MsoNormalTable border=1 cellspacing=1 cellpadding=0 width=1470
+ style='width:881.7pt;mso-cellspacing:.6pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ .6pt .6pt .6pt .6pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>[YOUR
+  INSTALL]\Tools\Z-Tool\Scripts<o:p></o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Library
+  of example scripts for Z-tool, a PC based tool to drive the test/ZNP
+  interface<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/CC2530/Power%20Management%20For%20The%20CC2530.pdf">Power
+  management - CC2530</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/CC2538/Power%20Management%20For%20The%20CC2538.pdf">Power
+  management - CC2538</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Document
+  which describes compilation flags and power management interface for CC253x
+  platform<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=703 style='width:421.8pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/CC2530/Serial%20Boot%20Loader%20for%20CC2530.pdf">Serial <span
+  class=SpellE>bootloader</span> - CC2530</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><a
+  href="Documents/CC2538/Serial%20Boot%20Loader%20for%20CC2538.pdf">Serial <span
+  class=SpellE>bootloader</span> - CC2538</a><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=764 style='width:458.1pt;padding:.6pt .6pt .6pt .6pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Document
+  which describes the architecture, design and guides the development of
+  applications using the flash serial <span class=SpellE>bootloader</span> for CC253x
+  platforms <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<div>
+
+<p class=MsoNormal><strong><span style='mso-fareast-font-family:"Times New Roman";
+color:black'>Notices</span></strong><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'>&nbsp;&nbsp;&nbsp;&nbsp; - All CC2538 projects have been built and
+tested with IAR EWARM 8.11.1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'>&nbsp;&nbsp;&nbsp;&nbsp; - All CC2530 and CC2531 projects have
+been built and tested with IAR EW8051 10.10.1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<div>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'>&nbsp;Z-Stack ™ SW has been certified as <span class=SpellE>ZigBee</span>
+Compliant Platform (ZCP) with binaries generated with the afore-mentioned <span
+class=SpellE>toolchain</span>. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<div>
+
+<p class=MsoNormal><strong><span style='mso-fareast-font-family:"Times New Roman";
+color:black'>Additional Support</span></strong><span style='mso-fareast-font-family:
+"Times New Roman";color:black'><o:p></o:p></span></p>
+
+</div>
+
+<div>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+color:black'>&nbsp;&nbsp;&nbsp;&nbsp; - For technical support please visit the <a
+href="https://e2e.ti.com/support/wireless-connectivity/">Texas Instruments <span class=SpellE>ZigBee</span>
+E2E Forum</a>.<br>
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp; - For additional sample applications, guides, and
+documentation, visit the <a
+href="http://processors.wiki.ti.com/index.php/Category:ZigBee_Home_Automation">Texas
+Instruments <span class=SpellE>ZigBee</span> wiki page. </a><o:p></o:p></span></p>
+-->
+</div>
+
+</div>
+
+</body>
+
+</html>

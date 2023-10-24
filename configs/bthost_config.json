@@ -1,0 +1,213 @@
+{
+    "config": {
+        "Bluetooth": {
+            "AuthReq": 3,
+            "BridgeHCI": true,
+            "DisableRoleSwitch": false,
+            "EnableBounding": true,
+            "IOCap": 3,
+            "InterceptTX": false,
+            "LMPSniffing": false,
+            "OwnBDAddress": "bc:62:6f:b1:82:a1",
+            "Pin": "0000",
+            "RXBypass": false,
+            "RXBypassOnDemand": false,
+            "RandomizeOwnBTAddress": false,
+            "SerialAutoDiscovery": false,
+            "SerialBaudRate": 4000000,
+            "SerialEnableDebug": false,
+            "SerialEnableDebugHCI": true,
+            "SerialPort": "/dev/ttyUSB1",
+            "ShowNullPollPackets": false,
+            "TargetBDAddress": "a4:c1:38:d8:ad:a9",
+            "TargetBDAddressList": [
+                "4E:8B:89:59:ED:BE",
+                "24:0A:C4:61:1C:1A",
+                "E0:D4:E8:19:C7:69"
+            ]
+        },
+        "Fuzzing": {
+            "DefaultDuplicationProbability": 0.5,
+            "DefaultMutationFieldProbability": 0.1,
+            "DefaultMutationProbability": 0.15,
+            "DefaultMutators": [
+                "Random",
+                "RandomBit",
+                "RandomZeroByte",
+                "RandomFullByte",
+                "ToggleBit"
+            ],
+            "DefaultSelectors": [
+                "Random",
+                "Sequential",
+                "Overlap"
+            ],
+            "Excludes": [
+                {
+                    "ApplyTo": "V",
+                    "Description": "L2CAP Command Reject",
+                    "Filter": "btl2cap.rej_reason"
+                }
+            ],
+            "FieldMutationBackoffMultipler": 0.7,
+            "MaxDuplicationTime": 6000,
+            "MaxFieldsMutation": 6,
+            "Mutator": 1,
+            "PacketRetry": false,
+            "PacketRetryTimeoutMS": 500,
+            "Selector": 0,
+            "enable_duplication": false,
+            "enable_mutation": false,
+            "enable_optimization": false,
+            "RestoreSession": true,
+            "SaveSession": true,
+            "RandomSeed": 123456789,
+            "StopCondition": {
+                "StopOnMaxIterations": true,
+                "MaxIterations": 1000,
+                "StopOnMaxTimeMinutes": true,
+                "MaxTimeMinutes": 240
+            }
+        },
+        "Monitor": {
+            "ADB": {
+                "ADBDevice": "66766e89",
+                "ADBFilter": "",
+                "ADBMagicWords": [
+                    "SOC crashed",
+                    "Unable to wake SOC"
+                ],
+                "ADBProgram": "logcat"
+            },
+            "Enable": false,
+            "Microphone": {
+                "MicrophoneDetectionSensitivity": 0.7,
+                "MicrophoneDeviceId": -1
+            },
+            "MonitorType": 0,
+            "MonitorTypeList": [
+                "Serial",
+                "SSH",
+                "Microphone",
+                "ADB"
+            ],
+            "PrintToStdout": true,
+            "SSH": {
+                "SSHCommand": "sudo dmesg -C && sudo dmesg -e -w",
+                "SSHEnablePreCommands": true,
+                "SSHHostAddress": "127.0.0.1",
+                "SSHMagicWords": [
+                    "Backtrace:",
+                    "Oops:",
+                    "BUG:",
+                    "RIP:",
+                    "Call Trace:"
+                ],
+                "SSHPassword": "",
+                "SSHPort": 22,
+                "SSHPreCommands": [
+                    "sudo sh -c \"echo 'module btusb +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module btintel +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module bluetooth +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo sh -c \"echo 'module rfcomm +p' > /sys/kernel/debug/dynamic_debug/control\"",
+                    "sudo hciconfig hci0 inqparms 18:18",
+                    "sudo hciconfig hci0 pageparms 18:18"
+                ],
+                "SSHUsername": "matheus"
+            },
+            "SerialUART": {
+                "SerialBaudRate": 115200,
+                "SerialMagicWords": [
+                    "v1.0 Start",
+                    "OpenStack()",
+                    "DBFW_ASSERT_TYPE_FATAL!!!",
+                    "WRAP THOR AI",
+                    "BT Started!",
+                    "Guru Meditation Error",
+                    "Abort()"
+                ],
+                "SerialPortName": "/dev/ttyUSB0"
+            }
+        },
+        "Name": "BTHost",
+        "Options": {
+            "AutoRestart": true,
+            "AutoStart": true,
+            "CoreDump": true,
+            "DefaultPCAPProtocol": "encap:BLUETOOTH_HCI_H4",
+            "DefaultPrograms": [
+                "bin/gatt_browser"
+            ],
+            "DefaultProtocol": "encap:BLUETOOTH_HCI_H4",
+            "FileLogger": true,
+            "GlobalTimeout": 10,
+            "LiveCapture": false,
+            "MainThreadCore": -1,
+            "Program": 0,
+            "SaveCapture": true
+        },
+        "ServerOptions": {
+            "APINamespace": "/",
+            "Enable": true,
+            "EnableEvents": false,
+            "ListenAddress": "127.0.0.1",
+            "Logging": false,
+            "Port": 3000,
+            "ServerModule": 1,
+            "ServerModulesList": [
+                "SocketIOServer",
+                "RESTServer"
+            ]
+        },
+        "StateMapper": {
+            "Enable": false,
+            "Mapping": [
+                {
+                    "AppendSummary": false,
+                    "Filter": "btatt.uuid16",
+                    "LayerName": "GATT",
+                    "StateNameField": "btatt.uuid16"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btatt.error_code",
+                    "LayerName": "ATT Error",
+                    "StateNameField": "btatt.error_code"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btatt",
+                    "LayerName": "ATT",
+                    "StateNameField": "btatt.opcode.method"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btsmp",
+                    "LayerName": "SMP",
+                    "StateNameField": "btsmp.opcode"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "btl2cap",
+                    "LayerName": "L2CAP",
+                    "StateNameField": "btl2cap.cmd_code"
+                }
+            ],
+            "Overrides": {},
+            "PacketLayerOffset": 1,
+            "SaveFolder": "configs/models/bthost/",
+            "ShowAllStates": false
+        },
+        "Validation": {
+            "CommonRejections": [
+                {
+                    "Description": "L2CAP Command Reject",
+                    "Filter": "btl2cap.rej_reason"
+                }
+            ],
+            "DefaultFragmentsLayer": "btl2cap",
+            "DefaultPacketLayer": "btl2cap",
+            "InitialState": "IDLE"
+        }
+    }
+}

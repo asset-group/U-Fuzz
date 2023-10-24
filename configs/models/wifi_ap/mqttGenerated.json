@@ -1,0 +1,337 @@
+{
+    "StatesNodes": {
+        "IDLE": {
+            "direction": 0,
+            "layers_count": 0,
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828677
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / MQTTConnectAck / Connect Ack": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828886
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / MQTTPingRsp / Ping Response": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 829008
+            },
+            "timeout": 0,
+            "type_value": 13
+        },
+        "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828964
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / MQTTSubscribeAck / Subscribe Ack": {
+            "direction": 1,
+            "layers_count": 3,
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828936
+            },
+            "timeout": 0,
+            "type_value": 9
+        },
+        "TX / MQTTConnectCmd / Connect Command": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828850
+            },
+            "timeout": 0,
+            "type_value": 1
+        },
+        "TX / MQTTPingReq / Ping Request": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828988
+            },
+            "timeout": 0,
+            "type_value": 12
+        },
+        "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 829055
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "TX / MQTTSubscribeReq / Subscribe Request": {
+            "direction": 0,
+            "layers_count": 3,
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1665556510,
+                "tv_usec": 828915
+            },
+            "timeout": 0,
+            "type_value": 8
+        }
+    },
+    "StatesTransitions": {
+        "IDLE": {
+            "from_state": null,
+            "to_state": {
+                "TX / MQTTConnectCmd / Connect Command": {
+                    "dst_state_name": "TX / MQTTConnectCmd / Connect Command",
+                    "src_state_name": "IDLE",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 828852
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / MQTTConnectAck / Connect Ack": {
+            "from_state": [
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                "TX / MQTTConnectCmd / Connect Command"
+            ],
+            "to_state": {
+                "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "RX / MQTTConnectAck / Connect Ack",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829092
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "RX / MQTTConnectAck / Connect Ack",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829348
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTSubscribeReq / Subscribe Request": {
+                    "dst_state_name": "TX / MQTTSubscribeReq / Subscribe Request",
+                    "src_state_name": "RX / MQTTConnectAck / Connect Ack",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 828916
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / MQTTPingRsp / Ping Response": {
+            "from_state": [
+                "TX / MQTTPingReq / Ping Request"
+            ],
+            "to_state": {
+                "TX / MQTTConnectCmd / Connect Command": {
+                    "dst_state_name": "TX / MQTTConnectCmd / Connect Command",
+                    "src_state_name": "RX / MQTTPingRsp / Ping Response",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829028
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTPingReq / Ping Request": {
+                    "dst_state_name": "TX / MQTTPingReq / Ping Request",
+                    "src_state_name": "RX / MQTTPingRsp / Ping Response",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829138
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+            "from_state": [
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                "RX / MQTTSubscribeAck / Subscribe Ack",
+                "RX / MQTTConnectAck / Connect Ack"
+            ],
+            "to_state": {
+                "TX / MQTTConnectCmd / Connect Command": {
+                    "dst_state_name": "TX / MQTTConnectCmd / Connect Command",
+                    "src_state_name": "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829315
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTPingReq / Ping Request": {
+                    "dst_state_name": "TX / MQTTPingReq / Ping Request",
+                    "src_state_name": "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 828989
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829381
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / MQTTSubscribeAck / Subscribe Ack": {
+            "from_state": [
+                "TX / MQTTSubscribeReq / Subscribe Request"
+            ],
+            "to_state": {
+                "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "RX / MQTTSubscribeAck / Subscribe Ack",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 828965
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / MQTTConnectCmd / Connect Command": {
+            "from_state": [
+                "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                "IDLE",
+                "RX / MQTTPingRsp / Ping Response"
+            ],
+            "to_state": {
+                "RX / MQTTConnectAck / Connect Ack": {
+                    "dst_state_name": "RX / MQTTConnectAck / Connect Ack",
+                    "src_state_name": "TX / MQTTConnectCmd / Connect Command",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 828887
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "TX / MQTTConnectCmd / Connect Command",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829057
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / MQTTPingReq / Ping Request": {
+            "from_state": [
+                "RX / MQTTPingRsp / Ping Response",
+                "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)"
+            ],
+            "to_state": {
+                "RX / MQTTPingRsp / Ping Response": {
+                    "dst_state_name": "RX / MQTTPingRsp / Ping Response",
+                    "src_state_name": "TX / MQTTPingReq / Ping Request",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829008
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+            "from_state": [
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                "TX / MQTTConnectCmd / Connect Command",
+                "RX / MQTTConnectAck / Connect Ack"
+            ],
+            "to_state": {
+                "RX / MQTTConnectAck / Connect Ack": {
+                    "dst_state_name": "RX / MQTTConnectAck / Connect Ack",
+                    "src_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829075
+                    },
+                    "trigger": ""
+                },
+                "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "RX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 829364
+                    },
+                    "trigger": ""
+                },
+                "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)": {
+                    "dst_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "src_state_name": "TX / MQTTPublishMsg / At most once delivery (Fire and Forget)",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 831199
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / MQTTSubscribeReq / Subscribe Request": {
+            "from_state": [
+                "RX / MQTTConnectAck / Connect Ack"
+            ],
+            "to_state": {
+                "RX / MQTTSubscribeAck / Subscribe Ack": {
+                    "dst_state_name": "RX / MQTTSubscribeAck / Subscribe Ack",
+                    "src_state_name": "TX / MQTTSubscribeReq / Subscribe Request",
+                    "time": {
+                        "tv_sec": 1665556510,
+                        "tv_usec": 828937
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

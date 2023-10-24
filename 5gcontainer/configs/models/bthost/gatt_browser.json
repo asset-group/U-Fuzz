@@ -1,0 +1,2510 @@
+{
+    "StatesNodes": {
+        "Connect": {
+            "direction": 0,
+            "layers_count": 0,
+            "node_number": 0,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 139832
+            },
+            "timeout": 0,
+            "type_value": 0
+        },
+        "RX / ATT / Exchange MTU Response": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 2,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140403
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / ATT / Find Information Request": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 16,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155004
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / ATT / Read Response": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 29,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155739
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "RX / ATT / Write Response": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 48,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162372
+            },
+            "timeout": 0,
+            "type_value": 19
+        },
+        "RX / ATT Error / Attribute Not Found": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 27,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155713
+            },
+            "timeout": 0,
+            "type_value": 10
+        },
+        "RX / ATT Error / Write Not Permitted": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 47,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162345
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / GATT / Appearance": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 43,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162151
+            },
+            "timeout": 0,
+            "type_value": 10753
+        },
+        "RX / GATT / Battery Service": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 12,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154885
+            },
+            "timeout": 0,
+            "type_value": 6159
+        },
+        "RX / GATT / Body Sensor Location": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 58,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163499
+            },
+            "timeout": 0,
+            "type_value": 10808
+        },
+        "RX / GATT / Central Address Resolution": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 54,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163443
+            },
+            "timeout": 0,
+            "type_value": 10918
+        },
+        "RX / GATT / Characteristic Presentation Format": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 25,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155525
+            },
+            "timeout": 0,
+            "type_value": 10500
+        },
+        "RX / GATT / Characteristic User Description": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 26,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155544
+            },
+            "timeout": 0,
+            "type_value": 10497
+        },
+        "RX / GATT / Client Characteristic Configuration": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 20,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155064
+            },
+            "timeout": 0,
+            "type_value": 10498
+        },
+        "RX / GATT / Device Name": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 13,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154903
+            },
+            "timeout": 0,
+            "type_value": 10752
+        },
+        "RX / GATT / GATT Characteristic Declaration": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 7,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140505
+            },
+            "timeout": 0,
+            "type_value": 10243
+        },
+        "RX / GATT / GATT Include Declaration": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 22,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155095
+            },
+            "timeout": 0,
+            "type_value": 10242
+        },
+        "RX / GATT / GATT Primary Service Declaration": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 5,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140475
+            },
+            "timeout": 0,
+            "type_value": 10240
+        },
+        "RX / GATT / GATT Secondary Service Declaration": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 18,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155039
+            },
+            "timeout": 0,
+            "type_value": 10241
+        },
+        "RX / GATT / Generic Access Profile": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 4,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140453
+            },
+            "timeout": 0,
+            "type_value": 6144
+        },
+        "RX / GATT / Generic Attribute Profile": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 23,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155456
+            },
+            "timeout": 0,
+            "type_value": 6145
+        },
+        "RX / GATT / Heart Rate Control Point": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 60,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163530
+            },
+            "timeout": 0,
+            "type_value": 10809
+        },
+        "RX / GATT / Heart Rate Measurement": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 56,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163472
+            },
+            "timeout": 0,
+            "type_value": 10807
+        },
+        "RX / GATT / Server Supported Features": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 10,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154778
+            },
+            "timeout": 0,
+            "type_value": 11066
+        },
+        "RX / GATT / Service Changed": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 45,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162180
+            },
+            "timeout": 0,
+            "type_value": 10757
+        },
+        "RX / SMP / Encryption Information": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 38,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 161880
+            },
+            "timeout": 0,
+            "type_value": 6
+        },
+        "RX / SMP / Identity Address Information": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 51,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163043
+            },
+            "timeout": 0,
+            "type_value": 9
+        },
+        "RX / SMP / Identity Information": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 50,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163032
+            },
+            "timeout": 0,
+            "type_value": 8
+        },
+        "RX / SMP / Master Identification": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 39,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 161888
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "RX / SMP / Pairing Confirm": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 33,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155805
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "RX / SMP / Pairing Failed": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 21,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155083
+            },
+            "timeout": 0,
+            "type_value": 5
+        },
+        "RX / SMP / Pairing Public Key": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 32,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155795
+            },
+            "timeout": 0,
+            "type_value": 12
+        },
+        "RX / SMP / Pairing Random": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 35,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155822
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "RX / SMP / Pairing Response": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 30,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155770
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "RX / SMP / Security Request": {
+            "direction": 1,
+            "layers_count": 4,
+            "node_number": 49,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162839
+            },
+            "timeout": 0,
+            "type_value": 11
+        },
+        "TX / ATT / Exchange MTU Request": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 1,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140365
+            },
+            "timeout": 0,
+            "type_value": 2
+        },
+        "TX / ATT / Find Information Request": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 24,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155514
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "TX / ATT / Read Request": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 28,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155728
+            },
+            "timeout": 0,
+            "type_value": 10
+        },
+        "TX / ATT / Write Request": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 46,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162330
+            },
+            "timeout": 0,
+            "type_value": 18
+        },
+        "TX / GATT / Appearance": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 42,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162136
+            },
+            "timeout": 0,
+            "type_value": 10753
+        },
+        "TX / GATT / Body Sensor Location": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 57,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163485
+            },
+            "timeout": 0,
+            "type_value": 10808
+        },
+        "TX / GATT / Central Address Resolution": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 53,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163428
+            },
+            "timeout": 0,
+            "type_value": 10918
+        },
+        "TX / GATT / Client Characteristic Configuration": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 17,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155027
+            },
+            "timeout": 0,
+            "type_value": 10498
+        },
+        "TX / GATT / Device Name": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 14,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154918
+            },
+            "timeout": 0,
+            "type_value": 10752
+        },
+        "TX / GATT / GATT Characteristic Declaration": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 6,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140485
+            },
+            "timeout": 0,
+            "type_value": 10243
+        },
+        "TX / GATT / GATT Include Declaration": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 19,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155051
+            },
+            "timeout": 0,
+            "type_value": 10242
+        },
+        "TX / GATT / GATT Primary Service Declaration": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 3,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 140417
+            },
+            "timeout": 0,
+            "type_value": 10240
+        },
+        "TX / GATT / GATT Secondary Service Declaration": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 15,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154993
+            },
+            "timeout": 0,
+            "type_value": 10241
+        },
+        "TX / GATT / Generic Access Profile": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 11,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154829
+            },
+            "timeout": 0,
+            "type_value": 6144
+        },
+        "TX / GATT / Heart Rate Control Point": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 59,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163511
+            },
+            "timeout": 0,
+            "type_value": 10809
+        },
+        "TX / GATT / Heart Rate Measurement": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 55,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163455
+            },
+            "timeout": 0,
+            "type_value": 10807
+        },
+        "TX / GATT / Server Supported Features": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 9,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154759
+            },
+            "timeout": 0,
+            "type_value": 11066
+        },
+        "TX / GATT / Service Changed": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 44,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 162166
+            },
+            "timeout": 0,
+            "type_value": 10757
+        },
+        "TX / SMP / Encryption Information": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 40,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 161934
+            },
+            "timeout": 0,
+            "type_value": 6
+        },
+        "TX / SMP / Identity Address Information": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 52,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 163102
+            },
+            "timeout": 0,
+            "type_value": 9
+        },
+        "TX / SMP / Identity Information": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 61,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 165737
+            },
+            "timeout": 0,
+            "type_value": 8
+        },
+        "TX / SMP / Master Identification": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 41,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 161943
+            },
+            "timeout": 0,
+            "type_value": 7
+        },
+        "TX / SMP / Pairing Confirm": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 37,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 161828
+            },
+            "timeout": 0,
+            "type_value": 3
+        },
+        "TX / SMP / Pairing DHKey Check": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 36,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 156228
+            },
+            "timeout": 0,
+            "type_value": 13
+        },
+        "TX / SMP / Pairing Public Key": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 31,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155786
+            },
+            "timeout": 0,
+            "type_value": 12
+        },
+        "TX / SMP / Pairing Random": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 34,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 155814
+            },
+            "timeout": 0,
+            "type_value": 4
+        },
+        "TX / SMP / Pairing Request": {
+            "direction": 0,
+            "layers_count": 4,
+            "node_number": 8,
+            "on_timeout": "",
+            "time": {
+                "tv_sec": 1638443286,
+                "tv_usec": 154728
+            },
+            "timeout": 0,
+            "type_value": 1
+        }
+    },
+    "StatesTransitions": {
+        "Connect": {
+            "from_state": null,
+            "to_state": {
+                "TX / ATT / Exchange MTU Request": {
+                    "dst_state_name": "TX / ATT / Exchange MTU Request",
+                    "src_state_name": "Connect",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140367
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing Request": {
+                    "dst_state_name": "TX / SMP / Pairing Request",
+                    "src_state_name": "Connect",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154729
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ATT / Exchange MTU Response": {
+            "from_state": [
+                "RX / ATT / Exchange MTU Response",
+                "TX / GATT / GATT Primary Service Declaration",
+                "TX / ATT / Exchange MTU Request"
+            ],
+            "to_state": {
+                "RX / ATT / Exchange MTU Response": {
+                    "dst_state_name": "RX / ATT / Exchange MTU Response",
+                    "src_state_name": "RX / ATT / Exchange MTU Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140434
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Access Profile": {
+                    "dst_state_name": "RX / GATT / Generic Access Profile",
+                    "src_state_name": "RX / ATT / Exchange MTU Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140453
+                    },
+                    "trigger": ""
+                },
+                "RX / SMP / Security Request": {
+                    "dst_state_name": "RX / SMP / Security Request",
+                    "src_state_name": "RX / ATT / Exchange MTU Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162839
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / ATT / Exchange MTU Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140418
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Server Supported Features": {
+                    "dst_state_name": "TX / GATT / Server Supported Features",
+                    "src_state_name": "RX / ATT / Exchange MTU Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154760
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ATT / Find Information Request": {
+            "from_state": [
+                "TX / GATT / GATT Primary Service Declaration",
+                "TX / GATT / GATT Secondary Service Declaration"
+            ],
+            "to_state": {
+                "TX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "RX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155028
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ATT / Read Response": {
+            "from_state": [
+                "TX / ATT / Read Request"
+            ],
+            "to_state": {
+                "RX / SMP / Pairing Response": {
+                    "dst_state_name": "RX / SMP / Pairing Response",
+                    "src_state_name": "RX / ATT / Read Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155770
+                    },
+                    "trigger": ""
+                },
+                "TX / ATT / Read Request": {
+                    "dst_state_name": "TX / ATT / Read Request",
+                    "src_state_name": "RX / ATT / Read Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155750
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "RX / ATT / Read Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162236
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ATT / Write Response": {
+            "from_state": [
+                "TX / ATT / Write Request"
+            ],
+            "to_state": {
+                "TX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "RX / ATT / Write Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162382
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ATT Error / Attribute Not Found": {
+            "from_state": [
+                "TX / ATT / Find Information Request"
+            ],
+            "to_state": {
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / ATT Error / Attribute Not Found",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163321
+                    },
+                    "trigger": ""
+                },
+                "TX / ATT / Read Request": {
+                    "dst_state_name": "TX / ATT / Read Request",
+                    "src_state_name": "RX / ATT Error / Attribute Not Found",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155728
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / ATT Error / Write Not Permitted": {
+            "from_state": [
+                "TX / ATT / Write Request"
+            ],
+            "to_state": {
+                "TX / ATT / Write Request": {
+                    "dst_state_name": "TX / ATT / Write Request",
+                    "src_state_name": "RX / ATT Error / Write Not Permitted",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162357
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Appearance": {
+            "from_state": [
+                "TX / ATT / Find Information Request",
+                "TX / GATT / Appearance"
+            ],
+            "to_state": {
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / GATT / Appearance",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163301
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Central Address Resolution": {
+                    "dst_state_name": "TX / GATT / Central Address Resolution",
+                    "src_state_name": "RX / GATT / Appearance",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163428
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Service Changed": {
+                    "dst_state_name": "TX / GATT / Service Changed",
+                    "src_state_name": "RX / GATT / Appearance",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162166
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Battery Service": {
+            "from_state": [
+                "TX / GATT / GATT Characteristic Declaration",
+                "TX / GATT / GATT Primary Service Declaration"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / GATT / Battery Service",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154894
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Body Sensor Location": {
+            "from_state": [
+                "TX / GATT / Body Sensor Location"
+            ],
+            "to_state": {
+                "TX / GATT / Heart Rate Control Point": {
+                    "dst_state_name": "TX / GATT / Heart Rate Control Point",
+                    "src_state_name": "RX / GATT / Body Sensor Location",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163513
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Central Address Resolution": {
+            "from_state": [
+                "TX / GATT / Central Address Resolution"
+            ],
+            "to_state": {
+                "TX / GATT / Heart Rate Measurement": {
+                    "dst_state_name": "TX / GATT / Heart Rate Measurement",
+                    "src_state_name": "RX / GATT / Central Address Resolution",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163456
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Characteristic Presentation Format": {
+            "from_state": [
+                "TX / ATT / Find Information Request"
+            ],
+            "to_state": {
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / GATT / Characteristic Presentation Format",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155533
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Characteristic User Description": {
+            "from_state": [
+                "TX / ATT / Find Information Request"
+            ],
+            "to_state": {
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / GATT / Characteristic User Description",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155555
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Client Characteristic Configuration": {
+            "from_state": [
+                "TX / GATT / Client Characteristic Configuration",
+                "TX / GATT / GATT Characteristic Declaration",
+                "TX / ATT / Find Information Request",
+                "TX / GATT / GATT Primary Service Declaration",
+                "TX / GATT / GATT Include Declaration"
+            ],
+            "to_state": {
+                "TX / ATT / Exchange MTU Request": {
+                    "dst_state_name": "TX / ATT / Exchange MTU Request",
+                    "src_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 164169
+                    },
+                    "trigger": ""
+                },
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155589
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155074
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Device Name": {
+                    "dst_state_name": "TX / GATT / Device Name",
+                    "src_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162258
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 156928
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Service Changed": {
+                    "dst_state_name": "TX / GATT / Service Changed",
+                    "src_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163362
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Device Name": {
+            "from_state": [
+                "TX / GATT / Device Name",
+                "TX / GATT / GATT Primary Service Declaration"
+            ],
+            "to_state": {
+                "TX / GATT / Appearance": {
+                    "dst_state_name": "TX / GATT / Appearance",
+                    "src_state_name": "RX / GATT / Device Name",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162137
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Device Name": {
+                    "dst_state_name": "TX / GATT / Device Name",
+                    "src_state_name": "RX / GATT / Device Name",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154919
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / GATT Characteristic Declaration": {
+            "from_state": [
+                "TX / SMP / Encryption Information",
+                "TX / ATT / Find Information Request",
+                "TX / SMP / Master Identification",
+                "TX / SMP / Identity Address Information",
+                "TX / GATT / GATT Primary Service Declaration",
+                "TX / GATT / GATT Characteristic Declaration"
+            ],
+            "to_state": {
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155514
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140514
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155222
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / GATT Include Declaration": {
+            "from_state": [
+                "RX / SMP / Pairing Failed"
+            ],
+            "to_state": {
+                "TX / SMP / Pairing Request": {
+                    "dst_state_name": "TX / SMP / Pairing Request",
+                    "src_state_name": "RX / GATT / GATT Include Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155105
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / GATT Primary Service Declaration": {
+            "from_state": [
+                "TX / GATT / GATT Characteristic Declaration",
+                "TX / GATT / Client Characteristic Configuration",
+                "TX / GATT / Device Name",
+                "TX / GATT / Generic Access Profile",
+                "TX / GATT / GATT Primary Service Declaration"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140488
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154853
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Secondary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "src_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154993
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Generic Access Profile": {
+                    "dst_state_name": "TX / GATT / Generic Access Profile",
+                    "src_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154830
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / GATT Secondary Service Declaration": {
+            "from_state": [
+                "RX / SMP / Pairing Failed",
+                "TX / GATT / Client Characteristic Configuration"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Include Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Include Declaration",
+                    "src_state_name": "RX / GATT / GATT Secondary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155051
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing Request": {
+                    "dst_state_name": "TX / SMP / Pairing Request",
+                    "src_state_name": "RX / GATT / GATT Secondary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155383
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Generic Access Profile": {
+            "from_state": [
+                "TX / GATT / GATT Secondary Service Declaration",
+                "TX / GATT / Server Supported Features",
+                "TX / GATT / Generic Access Profile",
+                "TX / GATT / GATT Primary Service Declaration",
+                "TX / GATT / GATT Include Declaration",
+                "RX / ATT / Exchange MTU Response"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Include Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Include Declaration",
+                    "src_state_name": "RX / GATT / Generic Access Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161750
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / GATT / Generic Access Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140462
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Secondary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "src_state_name": "RX / GATT / Generic Access Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155444
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing Request": {
+                    "dst_state_name": "TX / SMP / Pairing Request",
+                    "src_state_name": "RX / GATT / Generic Access Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161790
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Generic Attribute Profile": {
+            "from_state": [
+                "TX / GATT / GATT Primary Service Declaration",
+                "TX / GATT / Server Supported Features",
+                "TX / GATT / GATT Include Declaration",
+                "TX / GATT / GATT Secondary Service Declaration"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / GATT / Generic Attribute Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155481
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Include Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Include Declaration",
+                    "src_state_name": "RX / GATT / Generic Attribute Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155465
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / GATT / Generic Attribute Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155875
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Secondary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "src_state_name": "RX / GATT / Generic Attribute Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155895
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing Request": {
+                    "dst_state_name": "TX / SMP / Pairing Request",
+                    "src_state_name": "RX / GATT / Generic Attribute Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162934
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Heart Rate Control Point": {
+            "from_state": [
+                "TX / GATT / Heart Rate Control Point"
+            ],
+            "to_state": {
+                "TX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "RX / GATT / Heart Rate Control Point",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163540
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Heart Rate Measurement": {
+            "from_state": [
+                "TX / GATT / Heart Rate Measurement"
+            ],
+            "to_state": {
+                "TX / GATT / Body Sensor Location": {
+                    "dst_state_name": "TX / GATT / Body Sensor Location",
+                    "src_state_name": "RX / GATT / Heart Rate Measurement",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163486
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Server Supported Features": {
+            "from_state": [
+                "TX / ATT / Find Information Request",
+                "TX / GATT / GATT Characteristic Declaration",
+                "TX / GATT / Server Supported Features"
+            ],
+            "to_state": {
+                "TX / ATT / Find Information Request": {
+                    "dst_state_name": "TX / ATT / Find Information Request",
+                    "src_state_name": "RX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162069
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Device Name": {
+                    "dst_state_name": "TX / GATT / Device Name",
+                    "src_state_name": "RX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162113
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 156983
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154787
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / GATT / Service Changed": {
+            "from_state": [
+                "TX / GATT / Service Changed"
+            ],
+            "to_state": {
+                "TX / ATT / Read Request": {
+                    "dst_state_name": "TX / ATT / Read Request",
+                    "src_state_name": "RX / GATT / Service Changed",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162191
+                    },
+                    "trigger": ""
+                },
+                "TX / ATT / Write Request": {
+                    "dst_state_name": "TX / ATT / Write Request",
+                    "src_state_name": "RX / GATT / Service Changed",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162331
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / Device Name": {
+                    "dst_state_name": "TX / GATT / Device Name",
+                    "src_state_name": "RX / GATT / Service Changed",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163385
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Encryption Information": {
+            "from_state": [
+                "RX / SMP / Pairing Random"
+            ],
+            "to_state": {
+                "RX / SMP / Master Identification": {
+                    "dst_state_name": "RX / SMP / Master Identification",
+                    "src_state_name": "RX / SMP / Encryption Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161889
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Identity Address Information": {
+            "from_state": [
+                "RX / SMP / Identity Information"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / SMP / Identity Address Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163052
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Identity Information": {
+            "from_state": [
+                "RX / SMP / Master Identification"
+            ],
+            "to_state": {
+                "RX / SMP / Identity Address Information": {
+                    "dst_state_name": "RX / SMP / Identity Address Information",
+                    "src_state_name": "RX / SMP / Identity Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163044
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Master Identification": {
+            "from_state": [
+                "RX / SMP / Encryption Information"
+            ],
+            "to_state": {
+                "RX / SMP / Identity Information": {
+                    "dst_state_name": "RX / SMP / Identity Information",
+                    "src_state_name": "RX / SMP / Master Identification",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163033
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "RX / SMP / Master Identification",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161897
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Pairing Confirm": {
+            "from_state": [
+                "TX / SMP / Pairing Public Key",
+                "TX / SMP / Pairing Confirm",
+                "RX / SMP / Pairing Public Key"
+            ],
+            "to_state": {
+                "TX / SMP / Pairing Random": {
+                    "dst_state_name": "TX / SMP / Pairing Random",
+                    "src_state_name": "RX / SMP / Pairing Confirm",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155814
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Pairing Failed": {
+            "from_state": [
+                "TX / GATT / GATT Secondary Service Declaration",
+                "TX / GATT / Client Characteristic Configuration"
+            ],
+            "to_state": {
+                "RX / GATT / GATT Include Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Include Declaration",
+                    "src_state_name": "RX / SMP / Pairing Failed",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155095
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Secondary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Secondary Service Declaration",
+                    "src_state_name": "RX / SMP / Pairing Failed",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155372
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Pairing Public Key": {
+            "from_state": [
+                "TX / SMP / Pairing Public Key"
+            ],
+            "to_state": {
+                "RX / SMP / Pairing Confirm": {
+                    "dst_state_name": "RX / SMP / Pairing Confirm",
+                    "src_state_name": "RX / SMP / Pairing Public Key",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155806
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Pairing Random": {
+            "from_state": [
+                "TX / SMP / Pairing Random"
+            ],
+            "to_state": {
+                "RX / SMP / Encryption Information": {
+                    "dst_state_name": "RX / SMP / Encryption Information",
+                    "src_state_name": "RX / SMP / Pairing Random",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161880
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing DHKey Check": {
+                    "dst_state_name": "TX / SMP / Pairing DHKey Check",
+                    "src_state_name": "RX / SMP / Pairing Random",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 156229
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing Request": {
+                    "dst_state_name": "TX / SMP / Pairing Request",
+                    "src_state_name": "RX / SMP / Pairing Random",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155834
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Pairing Response": {
+            "from_state": [
+                "TX / SMP / Pairing Request",
+                "RX / ATT / Read Response"
+            ],
+            "to_state": {
+                "TX / SMP / Pairing Confirm": {
+                    "dst_state_name": "TX / SMP / Pairing Confirm",
+                    "src_state_name": "RX / SMP / Pairing Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161829
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Pairing Public Key": {
+                    "dst_state_name": "TX / SMP / Pairing Public Key",
+                    "src_state_name": "RX / SMP / Pairing Response",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155787
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "RX / SMP / Security Request": {
+            "from_state": [
+                "RX / ATT / Exchange MTU Response"
+            ],
+            "to_state": {
+                "TX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "RX / SMP / Security Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162848
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ATT / Exchange MTU Request": {
+            "from_state": [
+                "TX / SMP / Pairing Request",
+                "RX / GATT / Client Characteristic Configuration",
+                "TX / ATT / Exchange MTU Request",
+                "Connect"
+            ],
+            "to_state": {
+                "RX / ATT / Exchange MTU Response": {
+                    "dst_state_name": "RX / ATT / Exchange MTU Response",
+                    "src_state_name": "TX / ATT / Exchange MTU Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140403
+                    },
+                    "trigger": ""
+                },
+                "TX / ATT / Exchange MTU Request": {
+                    "dst_state_name": "TX / ATT / Exchange MTU Request",
+                    "src_state_name": "TX / ATT / Exchange MTU Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140383
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ATT / Find Information Request": {
+            "from_state": [
+                "RX / ATT Error / Attribute Not Found",
+                "RX / GATT / Appearance",
+                "RX / GATT / Client Characteristic Configuration",
+                "RX / GATT / Server Supported Features",
+                "RX / GATT / Characteristic User Description",
+                "RX / GATT / Characteristic Presentation Format",
+                "RX / GATT / GATT Characteristic Declaration"
+            ],
+            "to_state": {
+                "RX / ATT Error / Attribute Not Found": {
+                    "dst_state_name": "RX / ATT Error / Attribute Not Found",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155714
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Appearance": {
+                    "dst_state_name": "RX / GATT / Appearance",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163293
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Characteristic Presentation Format": {
+                    "dst_state_name": "RX / GATT / Characteristic Presentation Format",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155525
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Characteristic User Description": {
+                    "dst_state_name": "RX / GATT / Characteristic User Description",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155545
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155581
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163265
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Server Supported Features": {
+                    "dst_state_name": "RX / GATT / Server Supported Features",
+                    "src_state_name": "TX / ATT / Find Information Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162103
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ATT / Read Request": {
+            "from_state": [
+                "RX / GATT / Service Changed",
+                "RX / ATT / Read Response",
+                "RX / ATT Error / Attribute Not Found"
+            ],
+            "to_state": {
+                "RX / ATT / Read Response": {
+                    "dst_state_name": "RX / ATT / Read Response",
+                    "src_state_name": "TX / ATT / Read Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155740
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / ATT / Write Request": {
+            "from_state": [
+                "RX / ATT Error / Write Not Permitted",
+                "RX / GATT / Service Changed"
+            ],
+            "to_state": {
+                "RX / ATT / Write Response": {
+                    "dst_state_name": "RX / ATT / Write Response",
+                    "src_state_name": "TX / ATT / Write Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162372
+                    },
+                    "trigger": ""
+                },
+                "RX / ATT Error / Write Not Permitted": {
+                    "dst_state_name": "RX / ATT Error / Write Not Permitted",
+                    "src_state_name": "TX / ATT / Write Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162346
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Appearance": {
+            "from_state": [
+                "RX / GATT / Device Name"
+            ],
+            "to_state": {
+                "RX / GATT / Appearance": {
+                    "dst_state_name": "RX / GATT / Appearance",
+                    "src_state_name": "TX / GATT / Appearance",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162152
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Body Sensor Location": {
+            "from_state": [
+                "RX / GATT / Heart Rate Measurement"
+            ],
+            "to_state": {
+                "RX / GATT / Body Sensor Location": {
+                    "dst_state_name": "RX / GATT / Body Sensor Location",
+                    "src_state_name": "TX / GATT / Body Sensor Location",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163500
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Central Address Resolution": {
+            "from_state": [
+                "RX / GATT / Appearance"
+            ],
+            "to_state": {
+                "RX / GATT / Central Address Resolution": {
+                    "dst_state_name": "RX / GATT / Central Address Resolution",
+                    "src_state_name": "TX / GATT / Central Address Resolution",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163444
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Client Characteristic Configuration": {
+            "from_state": [
+                "RX / GATT / Heart Rate Control Point",
+                "RX / ATT / Write Response",
+                "RX / ATT / Read Response",
+                "RX / GATT / Client Characteristic Configuration",
+                "RX / ATT / Find Information Request"
+            ],
+            "to_state": {
+                "RX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162249
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155311
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Secondary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Secondary Service Declaration",
+                    "src_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155041
+                    },
+                    "trigger": ""
+                },
+                "RX / SMP / Pairing Failed": {
+                    "dst_state_name": "RX / SMP / Pairing Failed",
+                    "src_state_name": "TX / GATT / Client Characteristic Configuration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155084
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Device Name": {
+            "from_state": [
+                "RX / GATT / Service Changed",
+                "RX / GATT / Client Characteristic Configuration",
+                "RX / GATT / Server Supported Features",
+                "RX / GATT / Device Name"
+            ],
+            "to_state": {
+                "RX / GATT / Device Name": {
+                    "dst_state_name": "RX / GATT / Device Name",
+                    "src_state_name": "TX / GATT / Device Name",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162125
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "TX / GATT / Device Name",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154934
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / GATT Characteristic Declaration": {
+            "from_state": [
+                "RX / SMP / Master Identification",
+                "RX / SMP / Identity Address Information",
+                "RX / GATT / Server Supported Features",
+                "RX / GATT / Client Characteristic Configuration",
+                "TX / GATT / GATT Characteristic Declaration",
+                "RX / GATT / Generic Attribute Profile",
+                "RX / GATT / GATT Characteristic Declaration",
+                "RX / GATT / GATT Primary Service Declaration"
+            ],
+            "to_state": {
+                "RX / GATT / Battery Service": {
+                    "dst_state_name": "RX / GATT / Battery Service",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155260
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 156920
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140505
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154982
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Server Supported Features": {
+                    "dst_state_name": "RX / GATT / Server Supported Features",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 156975
+                    },
+                    "trigger": ""
+                },
+                "TX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155494
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Encryption Information": {
+                    "dst_state_name": "TX / SMP / Encryption Information",
+                    "src_state_name": "TX / GATT / GATT Characteristic Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161935
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / GATT Include Declaration": {
+            "from_state": [
+                "RX / GATT / Generic Access Profile",
+                "RX / GATT / Generic Attribute Profile",
+                "RX / GATT / GATT Secondary Service Declaration"
+            ],
+            "to_state": {
+                "RX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "TX / GATT / GATT Include Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155064
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Access Profile": {
+                    "dst_state_name": "RX / GATT / Generic Access Profile",
+                    "src_state_name": "TX / GATT / GATT Include Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161762
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Attribute Profile": {
+                    "dst_state_name": "RX / GATT / Generic Attribute Profile",
+                    "src_state_name": "TX / GATT / GATT Include Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155473
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / GATT Primary Service Declaration": {
+            "from_state": [
+                "RX / SMP / Security Request",
+                "RX / GATT / Generic Attribute Profile",
+                "RX / GATT / GATT Characteristic Declaration",
+                "RX / GATT / Battery Service",
+                "RX / GATT / Server Supported Features",
+                "RX / GATT / Generic Access Profile",
+                "RX / GATT / GATT Primary Service Declaration",
+                "RX / ATT / Exchange MTU Response"
+            ],
+            "to_state": {
+                "RX / ATT / Exchange MTU Response": {
+                    "dst_state_name": "RX / ATT / Exchange MTU Response",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140426
+                    },
+                    "trigger": ""
+                },
+                "RX / ATT / Find Information Request": {
+                    "dst_state_name": "RX / ATT / Find Information Request",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155277
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Battery Service": {
+                    "dst_state_name": "RX / GATT / Battery Service",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154886
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Client Characteristic Configuration": {
+                    "dst_state_name": "RX / GATT / Client Characteristic Configuration",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155329
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Device Name": {
+                    "dst_state_name": "RX / GATT / Device Name",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154905
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154950
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 140476
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Access Profile": {
+                    "dst_state_name": "RX / GATT / Generic Access Profile",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154798
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Attribute Profile": {
+                    "dst_state_name": "RX / GATT / Generic Attribute Profile",
+                    "src_state_name": "TX / GATT / GATT Primary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155887
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / GATT Secondary Service Declaration": {
+            "from_state": [
+                "RX / GATT / Generic Attribute Profile",
+                "RX / GATT / Generic Access Profile",
+                "RX / GATT / GATT Primary Service Declaration"
+            ],
+            "to_state": {
+                "RX / ATT / Find Information Request": {
+                    "dst_state_name": "RX / ATT / Find Information Request",
+                    "src_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155004
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Access Profile": {
+                    "dst_state_name": "RX / GATT / Generic Access Profile",
+                    "src_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161740
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Attribute Profile": {
+                    "dst_state_name": "RX / GATT / Generic Attribute Profile",
+                    "src_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155456
+                    },
+                    "trigger": ""
+                },
+                "RX / SMP / Pairing Failed": {
+                    "dst_state_name": "RX / SMP / Pairing Failed",
+                    "src_state_name": "TX / GATT / GATT Secondary Service Declaration",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155363
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Generic Access Profile": {
+            "from_state": [
+                "RX / GATT / GATT Primary Service Declaration"
+            ],
+            "to_state": {
+                "RX / GATT / GATT Primary Service Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Primary Service Declaration",
+                    "src_state_name": "TX / GATT / Generic Access Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154843
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Access Profile": {
+                    "dst_state_name": "RX / GATT / Generic Access Profile",
+                    "src_state_name": "TX / GATT / Generic Access Profile",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155176
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Heart Rate Control Point": {
+            "from_state": [
+                "RX / GATT / Body Sensor Location"
+            ],
+            "to_state": {
+                "RX / GATT / Heart Rate Control Point": {
+                    "dst_state_name": "RX / GATT / Heart Rate Control Point",
+                    "src_state_name": "TX / GATT / Heart Rate Control Point",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163530
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Heart Rate Measurement": {
+            "from_state": [
+                "RX / GATT / Central Address Resolution"
+            ],
+            "to_state": {
+                "RX / GATT / Heart Rate Measurement": {
+                    "dst_state_name": "RX / GATT / Heart Rate Measurement",
+                    "src_state_name": "TX / GATT / Heart Rate Measurement",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163472
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Server Supported Features": {
+            "from_state": [
+                "RX / ATT / Exchange MTU Response"
+            ],
+            "to_state": {
+                "RX / GATT / Generic Access Profile": {
+                    "dst_state_name": "RX / GATT / Generic Access Profile",
+                    "src_state_name": "TX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155414
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Generic Attribute Profile": {
+                    "dst_state_name": "RX / GATT / Generic Attribute Profile",
+                    "src_state_name": "TX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155867
+                    },
+                    "trigger": ""
+                },
+                "RX / GATT / Server Supported Features": {
+                    "dst_state_name": "RX / GATT / Server Supported Features",
+                    "src_state_name": "TX / GATT / Server Supported Features",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154778
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / GATT / Service Changed": {
+            "from_state": [
+                "RX / GATT / Client Characteristic Configuration",
+                "RX / GATT / Appearance"
+            ],
+            "to_state": {
+                "RX / GATT / Service Changed": {
+                    "dst_state_name": "RX / GATT / Service Changed",
+                    "src_state_name": "TX / GATT / Service Changed",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 162180
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Encryption Information": {
+            "from_state": [
+                "TX / GATT / GATT Characteristic Declaration"
+            ],
+            "to_state": {
+                "RX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / SMP / Encryption Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 164448
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Master Identification": {
+                    "dst_state_name": "TX / SMP / Master Identification",
+                    "src_state_name": "TX / SMP / Encryption Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161943
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Identity Address Information": {
+            "from_state": [
+                "TX / SMP / Identity Information",
+                "TX / SMP / Master Identification"
+            ],
+            "to_state": {
+                "RX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / SMP / Identity Address Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163124
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Identity Information": {
+            "from_state": [
+                "TX / SMP / Master Identification"
+            ],
+            "to_state": {
+                "TX / SMP / Identity Address Information": {
+                    "dst_state_name": "TX / SMP / Identity Address Information",
+                    "src_state_name": "TX / SMP / Identity Information",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 165745
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Master Identification": {
+            "from_state": [
+                "TX / SMP / Encryption Information"
+            ],
+            "to_state": {
+                "RX / GATT / GATT Characteristic Declaration": {
+                    "dst_state_name": "RX / GATT / GATT Characteristic Declaration",
+                    "src_state_name": "TX / SMP / Master Identification",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161964
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Identity Address Information": {
+                    "dst_state_name": "TX / SMP / Identity Address Information",
+                    "src_state_name": "TX / SMP / Master Identification",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 163103
+                    },
+                    "trigger": ""
+                },
+                "TX / SMP / Identity Information": {
+                    "dst_state_name": "TX / SMP / Identity Information",
+                    "src_state_name": "TX / SMP / Master Identification",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 165738
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Pairing Confirm": {
+            "from_state": [
+                "RX / SMP / Pairing Response"
+            ],
+            "to_state": {
+                "RX / SMP / Pairing Confirm": {
+                    "dst_state_name": "RX / SMP / Pairing Confirm",
+                    "src_state_name": "TX / SMP / Pairing Confirm",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161842
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Pairing DHKey Check": {
+            "from_state": [
+                "RX / SMP / Pairing Random"
+            ],
+            "to_state": null
+        },
+        "TX / SMP / Pairing Public Key": {
+            "from_state": [
+                "RX / SMP / Pairing Response"
+            ],
+            "to_state": {
+                "RX / SMP / Pairing Confirm": {
+                    "dst_state_name": "RX / SMP / Pairing Confirm",
+                    "src_state_name": "TX / SMP / Pairing Public Key",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 156205
+                    },
+                    "trigger": ""
+                },
+                "RX / SMP / Pairing Public Key": {
+                    "dst_state_name": "RX / SMP / Pairing Public Key",
+                    "src_state_name": "TX / SMP / Pairing Public Key",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155796
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Pairing Random": {
+            "from_state": [
+                "RX / SMP / Pairing Confirm"
+            ],
+            "to_state": {
+                "RX / SMP / Pairing Random": {
+                    "dst_state_name": "RX / SMP / Pairing Random",
+                    "src_state_name": "TX / SMP / Pairing Random",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 155822
+                    },
+                    "trigger": ""
+                }
+            }
+        },
+        "TX / SMP / Pairing Request": {
+            "from_state": [
+                "RX / GATT / Generic Access Profile",
+                "RX / GATT / Generic Attribute Profile",
+                "RX / SMP / Pairing Random",
+                "RX / GATT / GATT Include Declaration",
+                "RX / GATT / GATT Secondary Service Declaration",
+                "Connect"
+            ],
+            "to_state": {
+                "RX / SMP / Pairing Response": {
+                    "dst_state_name": "RX / SMP / Pairing Response",
+                    "src_state_name": "TX / SMP / Pairing Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 161802
+                    },
+                    "trigger": ""
+                },
+                "TX / ATT / Exchange MTU Request": {
+                    "dst_state_name": "TX / ATT / Exchange MTU Request",
+                    "src_state_name": "TX / SMP / Pairing Request",
+                    "time": {
+                        "tv_sec": 1638443286,
+                        "tv_usec": 154741
+                    },
+                    "trigger": ""
+                }
+            }
+        }
+    }
+}

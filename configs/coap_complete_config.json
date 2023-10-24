@@ -1,0 +1,300 @@
+{
+    "config": {
+        "Fuzzing": {
+            "DefaultDuplicationProbability": 0.1,
+            "DefaultMutationFieldProbability": 0.50000000000000002,
+            "DefaultMutationProbability": 0.9000000000000002,
+            "DefaultMutators": [
+                "Random",
+                "RandomBit",
+                "RandomZeroByte",
+                "RandomFullByte",
+                "ToggleBit"
+            ],
+            "DefaultSelectors": [
+                "Random",
+                "Sequential",
+                "Overlap"
+            ],
+            "Excludes": [
+                {
+                    "ApplyTo": "A",
+                    "Description": "Filter all packets which is not mqtt packets",
+                    "Filter": "!coap"
+                },
+                {
+                    "ApplyTo": "A",
+                    "Description": "Filter all packets which is icmp packets",
+                    "Filter": "icmp"
+                }
+            ],
+            "FieldMutationBackoffMultipler": 0.7,
+            "MaxDuplicationTime": 6000,
+            "MaxFieldsMutation": 4,
+            "Mutator": 1,
+            "PacketRetry": false,
+            "PacketRetryTimeoutMS": 1500,
+            "Selector": 0,
+            "enable_duplication": true,
+            "enable_mutation": true,
+            "enable_optimization": false,
+            "RestoreSession": false,
+            "SaveSession": false,
+            "RandomSeed": 123456789,
+            "StopCondition": {
+                "StopOnMaxIterations": false,
+                "MaxIterations": 1000,
+                "StopOnMaxTimeMinutes": true,
+                "MaxTimeMinutes": 720
+            }
+        },
+        "Monitor": {
+            "ADB": {
+                "ADBDevice": "3ffd4d9a",
+                "ADBFilter": "",
+                "ADBMagicWords": [
+                    "brcmf_fw_crashed",
+                    "SOC crashed",
+                    "Unable to wake SOC",
+                    "crash",
+                    "ESP-IDF 4.4.2"
+                ],
+                "ADBProgram": "logcat"
+            },
+            "Enable": true,
+            "Microphone": {
+                "MicrophoneDetectionSensitivity": 0.7,
+                "MicrophoneDeviceId": -1
+            },
+            "MonitorType": 0,
+            "MonitorTypeList": [
+                "Serial",
+                "SSH",
+                "Microphone",
+                "ADB"
+            ],
+            "PrintToStdout": true,
+            "SSH": {
+                "SSHCommand": "sudo dmesg -C && sudo dmesg -e -w",
+                "SSHEnablePreCommands": true,
+                "SSHHostAddress": "10.42.0.220",
+                "SSHMagicWords": [
+                    "brcmf_fw_crashed",
+                    "Backtrace:",
+                    "Oops:",
+                    "BUG:",
+                    "RIP:",
+                    "Call Trace:"
+                ],
+                "SSHPassword": "raspberry123",
+                "SSHPort": 22,
+                "SSHPreCommands": [
+                    ""
+                ],
+                "SSHUsername": "pi"
+            },
+            "SerialUART": {
+                "SerialBaudRate": 115200,
+                "SerialMagicWords": [
+                    "ESP-IDF 4.4.2",
+                    "Crash",
+                    "Rebooting",
+                    "error",
+                    "time out",
+                    "Call Trace:"
+                ],
+                "SerialPortName": "/dev/ttyUSB1"
+            }
+        },
+        "Name": "wifi_ap",
+        "Options": {
+            "AutoRestart": false,
+            "AutoStart": true,
+            "CoreDump": true,
+            "DefaultPCAPProtocol": "encap:1",
+            "DefaultPrograms": [
+                "3rd-party/hostapd/hostapd",
+                "3rd-party/hostapd/hostapd_cli"
+            ],
+            "DefaultProtocol": "encap:1",
+            "FileLogger": true,
+            "GlobalTimeout": 15000,
+            "LaunchProgramWithGDB": false,
+            "LiveCapture": false,
+            "MainThreadCore": 2,
+            "Program": 0,
+            "SaveCapture": true
+        },
+        "ServerOptions": {
+            "APINamespace": "/",
+            "Enable": true,
+            "EnableEvents": false,
+            "ListenAddress": "0.0.0.0",
+            "Logging": false,
+            "Port": 3000,
+            "ServerModule": 0,
+            "ServerModulesList": [
+                "SocketIOServer",
+                "RESTServer"
+            ]
+        },
+        "StateMapper": {
+            "Enable": false,
+            "Mapping": [
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 1",
+                    "LayerName": "Get",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==0",
+                    "LayerName": "EmptyMsg",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==3&&coap.payload_length == 1280",
+                    "LayerName": "PUT_Endofblock",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==3&&coap.opt.block_size == 2",
+                    "LayerName": "Put_BlockPayload",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==3&&coap.payload_desc == \"text/plain; charset=utf-8\"",
+                    "LayerName": "Put_shortpayload",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==3",
+                    "LayerName": "Put_Normal",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==2&&coap.payload_length == 1280",
+                    "LayerName": "POST_Endofblock",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==2&&coap.opt.block_size == 2",
+                    "LayerName": "POST_BlockPayload",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==2&&coap.payload_desc == \"text/plain; charset=utf-8\"",
+                    "LayerName": "POST_shortpayload",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code ==2",
+                    "LayerName": "POST_Normal",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 4",
+                    "LayerName": "DELETE",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 69",
+                    "LayerName": "2.05_Content",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 65",
+                    "LayerName": "2.01_Created",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 66",
+                    "LayerName": "2.02_Deleted",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 67",
+                    "LayerName": "2.03_Valid",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 68",
+                    "LayerName": "2.04_Changed",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 95",
+                    "LayerName": "2.31_Continue",
+                    "StateNameField": "coap.type"
+                },
+                {
+                    "AppendSummary": false,
+                    "Filter": "coap.code == 140",
+                    "LayerName": "4.12_Precondition_Failed",
+                    "StateNameField": "coap.type"
+                }
+            ],
+            "Overrides": {},
+            "PacketLayerOffset": 0,
+            "SaveFolder": "configs/models/wifi_ap/",
+            "ShowAllStates": true
+        },
+        "Validation": {
+            "CommonRejections": [
+                {
+                    "Description": "LMP_not_accepted",
+                    "Filter": "btbrlmp.op == 4"
+                }
+            ],
+            "DefaultFragmentsLayer": "wlan",
+            "DefaultPacketLayer": "wlan",
+            "InitialState": "IDLE"
+        },
+        "Wifi": {
+            "Wifi802.11w": false,
+            "WifiAllowInternet": true,
+            "WifiChannel": 9,
+            "WifiCountryCode": "US",
+            "WifiDHCP": true,
+            "WifiDHCPGatewayAddress": "192.168.101.1",
+            "WifiEAPMethod": 0,
+            "WifiEAPMethodList": [
+                "PEAP",
+                "PWD",
+                "TTLS",
+                "TLS"
+            ],
+            "WifiInterface": "wlan1",
+            "WifiKeyAuth": 0,
+            "WifiKeyAuthList": [
+                "WPA-EAP",
+                "WPA-PSK",
+                "SAE"
+            ],
+            "WifiPassword": "testtest",
+            "WifiRSNCrypto": 0,
+            "WifiRSNCryptoList": [
+                "CCMP",
+                "TKIP"
+            ],
+            "WifiSSID": "TEST_KRA",
+            "WifiUsername": "matheus_garbelini"
+        }
+    }
+}

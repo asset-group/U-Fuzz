@@ -1,0 +1,354 @@
+#
+# logger:
+#
+#  o Set OGS_LOG_INFO to all domain level
+#   - If `level` is omitted, the default level is OGS_LOG_INFO)
+#   - If `domain` is omitted, the all domain level is set from 'level'
+#    (Nothing is needed)
+#
+#  o Set OGS_LOG_ERROR to all domain level
+#   - `level` can be set with none, fatal, error, warn, info, debug, trace
+#    level: error
+#
+#  o Set OGS_LOG_DEBUG to mme/emm domain level
+#    level: debug
+#    domain: mme,emm
+#
+#  o Set OGS_LOG_TRACE to all domain level
+#    level: trace
+#    domain: core,pfcp,fd,pfcp,gtp,smf,event,tlv,mem,sock
+#
+logger:
+    file: /home/matheus/5g/open5gs-core/install/var/log/open5gs/smf.log
+#
+# smf:
+#
+#  <SBI Server>
+#
+#  o SBI Server(http://<all address available>:80)
+#    sbi:
+#
+#  o SBI Server(http://<any address>:80)
+#    sbi:
+#      - addr:
+#          - 0.0.0.0
+#          - ::0
+#        port: 7777
+#
+#  o SBI Server(https://<all address avaiable>:443)
+#    sbi:
+#        tls:
+#          key: smf.key
+#          pem: smf.pem
+#
+#  o SBI Server(https://127.0.0.4:443, http://[::1]:80)
+#    sbi:
+#      - addr: 127.0.0.4
+#        tls:
+#          key: smf.key
+#          pem: smf.pem
+#      - addr: ::1
+#
+#  o SBI Server(http://smf.open5gs.org:80)
+#    sbi:
+#      name: smf.open5gs.org
+#
+#  o SBI Server(http://127.0.0.4:7777)
+#    sbi:
+#      - addr: 127.0.0.4
+#        port: 7777
+#
+#  o SBI Server(http://<eth0 IP address>:80)
+#    sbi:
+#      dev: eth0
+#
+#  <PFCP Server>
+#
+#  o PFCP Server(127.0.0.4:8805, ::1:8805)
+#    pfcp:
+#      - addr: 127.0.0.4
+#      - addr: ::1
+#
+#  <GTP-C Server>
+#
+#  o GTP-C Server(127.0.0.4:2123, [fe80::3%lo]:2123)
+#    gtpc:
+#      addr:
+#        - 127.0.0.4
+#        - fe80::3%lo
+#
+#  o On SMF, Same configuration
+#    (127.0.0.4:2123, [fe80::3%lo]:2123).
+#    gtpc:
+#      - addr: 127.0.0.4
+#      - addr: fe80::3%lo
+#
+#  <PDN Configuration with UE Pool>
+#
+#  o IPv4 Pool
+#    pdn:
+#      addr: 10.45.0.1/16
+#
+#  o IPv4/IPv6 Pool
+#    pdn:
+#      - addr: 10.45.0.1/16
+#      - addr: cafe:1::1/64
+#
+#
+#  o Specific DNN/APN(e.g 'ims') uses 10.46.0.1/16, cafe:2::1/64
+#    pdn:
+#      - addr: 10.45.0.1/16
+#        apn: internet
+#      - addr: cafe:1::1/64
+#        apn: internet
+#      - addr: 10.46.0.1/16
+#        apn: ims
+#      - addr: cafe:2::1/64
+#        apn: ims
+#
+#  o Multiple Devices (default: ogstun)
+#    pdn:
+#      - addr: 10.45.0.1/16
+#        apn: internet
+#      - addr: cafe:1::1/64
+#        apn: internet
+#        dev: ogstun2
+#      - addr: 10.46.0.1/16
+#        apn: ims
+#        dev: ogstun3
+#      - addr: cafe:2::1/64
+#        apn: ims
+#        dev: ogstun3
+#
+#  o Pool Range Sample
+#    pdn:
+#      - addr: 10.45.0.1/24
+#        range: 10.45.0.100-10.45.0.200
+#
+#    pdn:
+#      - addr: 10.45.0.1/24
+#        range:
+#          - 10.45.0.5-10.45.0.50
+#          - 10.45.0.100-
+#
+#    pdn:
+#      - addr: 10.45.0.1/24
+#        range:
+#          - -10.45.0.200
+#          - 10.45.0.210-10.45.0.220
+#
+#    pdn:
+#      - addr: 10.45.0.1/16
+#        range:
+#          - 10.45.0.100-10.45.0.200
+#          - 10.45.1.100-10.45.1.200
+#      - addr: cafe::1/64
+#        range:
+#          - cafe::a0-cafe:b0
+#          - cafe::c0-cafe:d0
+#
+#  <Domain Name Server>
+#
+#  o Primary/Secondary can be configured. Others are ignored.
+#
+#  <MTU Size>
+#
+#  o Provisioning a limit on the size of the packets sent by the MS
+#    to avoid packet fragmentation in the backbone network
+#    between the MS and the GGSN/PGW and/or across the (S)Gi reference point)
+#    when some of the backbone links does not support
+#    packets larger then 1500 octets
+#
+#  <P-CSCF>
+#
+#  o Proxy Call Session Control Function
+#
+#    p-cscf:
+#      - 127.0.0.1
+#      - ::1
+#
+smf:
+    # sbi:
+    #   - addr: 127.0.0.4
+    #     port: 7777
+    gtpc:
+      - addr: 127.0.0.4
+      - addr: ::1
+    pfcp:
+      - addr: 127.0.0.4
+      - addr: ::1
+    pdn:
+      - addr: 10.45.0.1/16
+      - addr: cafe::1/64
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+      - 2001:4860:4860::8888
+      - 2001:4860:4860::8844
+    mtu: 1400
+    freeDiameter: /home/matheus/5g/open5gs-core/install/etc/freeDiameter/smf.conf
+
+#
+# nrf:
+#
+#  <SBI Client>>
+#
+#  o SBI Client(http://127.0.0.1:7777)
+#    sbi:
+#      addr: 127.0.0.10
+#      port: 7777
+#
+#  o SBI Client(https://127.0.0.10:443, http://nrf.open5gs.org:80)
+#    sbi:
+#      - addr: 127.0.0.10
+#        tls:
+#          key: nrf.key
+#          pem: nrf.pem
+#      - name: nrf.open5gs.org
+#
+#  o SBI Client(http://[fe80::1%lo]:80)
+#    If prefer_ipv4 is true, http://127.0.0.10:80 is selected.
+#
+#    sbi:
+#      addr:
+#        - 127.0.0.10
+#        - fe80::1%lo
+#
+nrf:
+    # sbi:
+    #   - addr:
+    #       - 127.0.0.10
+    #       - ::1
+    #     port: 7777
+
+#
+# upf:
+#
+#  <PFCP Client>>
+#
+#  o PFCP Client(127.0.0.7:8805)
+# 
+#    pfcp:
+#      addr: 127.0.0.7
+#
+#  <UPF_SELECTION_MODE - EPC only>
+#
+# o Round-Robin
+#   (note that round robin can be disabled for a particular node
+#     by setting flag 'rr' to 0)
+#
+#  upf:
+#    pfcp:
+#      - addr: 127.0.0.7
+#      - addr: 127.0.0.12
+#        rr: 0
+#      - addr: 127.0.0.19
+#
+# o UPF selection by eNodeB TAC
+#   (either single TAC or multiple TACs, DECIMAL representation)
+#
+#  upf:
+#    pfcp:
+#      - addr: 127.0.0.7
+#        tac: 1
+#      - addr: 127.0.0.12
+#        tac: [3,5,8]
+#
+# o UPF selection by UE's DNN/APN (either single DNN/APN or multiple DNNs/APNs)
+#
+#  upf:
+#    pfcp:
+#      - addr: 127.0.0.7
+#        dnn: ims
+#      - addr: 127.0.0.12
+#        apn: [internet, web]
+#
+# o UPF selection by CellID(e_cell_id: 28bit, nr_cell_id: 36bit)
+#   (either single enb_id or multiple enb_ids, HEX representation)
+#
+#  upf:
+#    pfcp:
+#      - addr: 127.0.0.7
+#        e_cell_id: 463
+#      - addr: 127.0.0.12
+#        nr_cell_id: [123456789, 9413]
+#
+upf:
+    pfcp:
+      - addr: 127.0.0.7
+
+#
+# parameter:
+#
+#  o Number of output streams per SCTP associations.
+#      sctp_streams: 30
+#
+#  o Disable use of IPv4 addresses (only IPv6)
+#      no_ipv4: true
+#
+#  o Disable use of IPv6 addresses (only IPv4)
+#      no_ipv6: true
+#
+#  o Prefer IPv4 instead of IPv6 for estabishing new GTP connections.
+#      prefer_ipv4: true
+#
+#  o Enable Multicast traffic to the UE
+#      multicast: true
+#
+#  o Disable Stateless Address Autoconfiguration for IPv6
+#      no_slaac: true
+#
+parameter:
+
+#
+# max:
+#
+# o Maximum Number of UE per AMF/MME
+#    ue: 1024
+# o Maximum Number of gNB/eNB per AMF/MME
+#    gnb: 32
+#
+max:
+
+#
+# pool:
+#
+# o The Number of Default Memory Pool Size
+#
+#   - Pool-size 128         => 32768 Number
+#   - Pool-size 256         => 4096 Number
+#   - Pool-size 512         => 2048 Number
+#   - Pool-size 1024        => 1024 Number
+#   - Pool-size 2048        => 512 Number
+#   - Pool-size 8192        => 128 Number
+#   - Pool-size 1024*1024   => 8 Number
+#
+#    128:  32768
+#    256:  4096
+#    512:  2048
+#    1024: 1024
+#    2048: 512
+#    8192: 128
+#    big:  8
+#
+pool:
+
+#
+# time:
+#
+#  o NF Instance Heartbeat (Default : 10 seconds)
+#
+#  o NF Instance Heartbeat (Disabled)
+#    nf_instance:
+#      heartbeat: 0
+#
+#  o NF Instance Heartbeat (10 seconds)
+#    nf_instance:
+#      heartbeat: 10
+#
+#  o Message Wait Duration (Default : 10,000 ms = 10 seconds)
+#
+#  o Message Wait Duration (3000 ms)
+#    message:
+#        duration: 3000
+time:

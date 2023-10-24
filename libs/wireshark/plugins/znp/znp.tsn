@@ -1,0 +1,129 @@
+ZnpCpmmandType ::= enumerated
+{
+    AF_DATA_REQUEST_SREQ (0x2401),
+    AF_DATA_REQUEST_SRSP (0x6401),
+    AF_DATA_REQUEST_EXT_SREQ (0x2402),
+    AF_DATA_REQUEST_EXT_SRSP (0x6402),
+    AF_DATA_CONFIRM_AREQ (0x4480),
+    AF_INCOMING_MSG_AREQ (0x4481),
+    ZDO_MGMT_PERMIT_JOIN_REQ_SREQ (0x2536),
+    ZDO_MGMT_PERMIT_JOIN_REQ_SRSP (0x6536),
+    ZDO_MGMT_PERMIT_JOIN_RSP_AREQ (0x45b6)
+}
+
+OptionsType ::= enumerated
+{
+    AF_ACK_REQUEST (0x10),
+    AF_DISCV_ROUTE (0x20),
+    AF_EN_SECURITY (0x40)
+}
+
+StatusType ::= enumerated
+{
+    SUCCESS,
+    FAILURE
+}
+
+AFDataReqSreq() ::=
+{
+    DestnationAddress   16;
+    DestnationEndPoint  8;
+    SourceEndPoint       8;
+    ClusterId           16;
+    TransId             8;
+    Options             8 enumerated OptionsType;
+    Radius              8;
+    Len                 8;
+    Data                8 * Len;
+}
+
+AFDataReqSrsp() ::=
+{
+    Status 8 enumerated StatusType;
+
+}
+
+AFDataReqExtSreq() ::=
+{
+    DestnationAddressMode 8;
+    DestnationAddress     64;
+    DestnationEndPoint    8;
+    PanId                 16;
+    SourceEndPoint         8;
+    ClusterId             16;
+    TransId               8;
+    Options               8 enumerated OptionsType;
+    Radius                8;
+    Len                   16;
+    Data                  8 * Len;
+}
+
+AFDataReqExtSrsp() ::=
+{
+    Status 8 enumerated StatusType;
+}
+
+AFDataConfirmAreq() ::=
+{
+    Status     8 enumerated StatusType;
+    EndPoint   8;
+    TransId    8;
+}
+
+AFIncomingMsgAreq() ::=
+{
+    GroupId             16;
+    ClusterId           16;
+    SourceAddress       16;
+    SourceEndpoint      8;
+    DestnationEndPoint  8;
+    WasBroadcast        8;
+    LinkQuality         8;
+    SecurityUse         8;
+    TimeStamp           32;
+    TransSequenceNumber 8;
+    Len                 8;
+    Data                8 * Len;
+    MacSourceAddress    16;
+    MessageResultRadius 8;
+}
+
+ZDOMgmtPermitJoinReqSreq() ::=
+{
+    DestnationAddress   16;
+    Duration            8;
+    TCSignificance      8;
+}
+
+ZDOMgmtPermitJoinReqSrsp() ::=
+{
+    Status        8 enumerated StatusType;
+}
+
+ZDOMgmtPermitJoinRspAreq() ::=
+{
+    SourceAddress     16;
+    Status            8 enumerated StatusType;
+}
+
+ZnpPacket() ::= 
+{
+    // Header Fields 
+    StartBytes          8;
+    CmdType             16 enumerated ZnpCpmmandType;
+    
+    // Message Specific Fields
+    Payload : case CmdType of
+    {
+        AF_DATA_REQUEST_SREQ => afDataReqSreq : AFDataReqSreq;
+        AF_DATA_REQUEST_SRSP => afDataReqSrsp : AFDataReqSrsp;
+        AF_DATA_REQUEST_EXT_SREQ => afDataReqExtSreq : AFDataReqExtSreq;
+        AF_DATA_REQUEST_EXT_SRSP => afDataReqExtSrsp : AFDataReqExtSrsp;
+        AF_DATA_CONFIRM_AREQ => adDataConfirmAreq : AFDataConfirmAreq;
+        AF_INCOMING_MSG_AREQ => afIncomingMsgAreq : AFIncomingMsgAreq;
+        ZDO_MGMT_PERMIT_JOIN_REQ_SREQ => zdoMgmtPermitJoinReqSreq : ZDOMgmtPermitJoinReqSreq;
+        ZDO_MGMT_PERMIT_JOIN_REQ_SRSP => zdoMgmtPermitJoinReqSrsp : ZDOMgmtPermitJoinReqSrsp;
+        ZDO_MGMT_PERMIT_JOIN_RSP_AREQ => zdoMgmtPermitJoinRspAreq : ZDOMgmtPermitJoinRspAreq;
+    }
+
+}

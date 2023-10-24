@@ -1,0 +1,24 @@
+Texas Instruments, Inc.
+
+Z-Stack Core Release Notes
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Version 2.7.2
+June 21, 2018
+
+Notices:
+ - Z-Stack 2.7.2 has been certified as a ZigBee Compliant Platform (ZCP)
+
+Changes:
+- APS layer now will request short address for those binds for which the stack does not have the short address to send the frame.
+ 
+Bug Fixes:
+- Fix an issue that caused that parent announce with multiple child device were not process correctly.
+
+- Fix an issue that causes ZED to not set properly the poll rate for queued messages in the parent after being power cycled.
+
+- Fixed and issue that caused Nv corruption if there was a Nv Write operation while the power supply was under 2V. The device under 2V will not longer attempt the Nv Write operation (avoiding Nv corruption) and will notify the application via Callback message (see RegisterVoltageWarningCB) so the application can handle this.
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------

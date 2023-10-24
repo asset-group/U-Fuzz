@@ -1,0 +1,22 @@
+# "Decode As" entries file for Wireshark 3.7.0.
+#
+# This file is regenerated each time "Decode As" preferences
+# are saved within Wireshark. Making manual changes should be safe,
+# however.
+decode_as_entry: btl2cap.cid,65,(none),BT SDP
+decode_as_entry: btl2cap.cid,66,(none),BT SDP
+decode_as_entry: btl2cap.cid,67,(none),BT SDP
+decode_as_entry: btl2cap.cid,68,(none),BT SDP
+decode_as_entry: btl2cap.cid,69,(none),BT SDP
+decode_as_entry: btl2cap.cid,70,(none),BT SDP
+decode_as_entry: btl2cap.cid,71,(none),BT SDP
+decode_as_entry: btl2cap.cid,72,(none),BT SDP
+decode_as_entry: btl2cap.cid,73,(none),BT SDP
+decode_as_entry: btl2cap.cid,74,(none),BT SDP
+decode_as_entry: btl2cap.cid,75,(none),BT SDP
+decode_as_entry: btl2cap.cid,76,(none),BT SDP
+decode_as_entry: btl2cap.cid,77,(none),BT SDP
+decode_as_entry: btl2cap.cid,78,(none),BT SDP
+decode_as_entry: btl2cap.cid,79,(none),BT SDP
+decode_as_entry: btl2cap.cid,80,(none),BT SDP
+decode_as_entry: btl2cap.cid,81,(none),BT SDP

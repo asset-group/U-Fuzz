@@ -1,0 +1,13 @@
+info  2023-02-13 08:18:27: Logging to console and directory: '/app/data/log/2023-02-13.08-18-27' filename: log.txt
+info  2023-02-13 08:18:27: Starting Zigbee2MQTT version 1.27.2 (commit #7dc48fb)
+info  2023-02-13 08:18:27: Starting zigbee-herdsman (0.14.53)
+error 2023-02-13 08:18:47: Error while starting zigbee-herdsman
+error 2023-02-13 08:18:47: Failed to start zigbee
+error 2023-02-13 08:18:47: Check https://www.zigbee2mqtt.io/guide/installation/20_zigbee2mqtt-fails-to-start.html for possible solutions
+error 2023-02-13 08:18:47: Exiting...
+error 2023-02-13 08:18:47: Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)
+    at ZStackAdapter.start (/app/node_modules/zigbee-herdsman/src/adapter/z-stack/adapter/zStackAdapter.ts:103:27)
+    at Controller.start (/app/node_modules/zigbee-herdsman/src/controller/controller.ts:132:29)
+    at Zigbee.start (/app/lib/zigbee.ts:58:27)
+    at Controller.start (/app/lib/controller.ts:101:27)
+    at start (/app/index.js:109:5)

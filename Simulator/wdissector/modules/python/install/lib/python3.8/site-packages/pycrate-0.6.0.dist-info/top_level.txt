@@ -1,0 +1,14 @@
+pycrate_asn1c
+pycrate_asn1dir
+pycrate_asn1rt
+pycrate_core
+pycrate_corenet
+pycrate_crypto
+pycrate_csn1
+pycrate_csn1dir
+pycrate_diameter
+pycrate_ether
+pycrate_media
+pycrate_mobile
+pycrate_osmo
+pycrate_sys

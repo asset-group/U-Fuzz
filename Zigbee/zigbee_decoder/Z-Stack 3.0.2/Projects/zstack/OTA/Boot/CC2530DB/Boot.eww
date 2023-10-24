@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\Boot.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>ALL</name>
+      <member>
+        <project>Boot</project>
+        <configuration>OTA Boot Loader</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\CC2530.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\CC2531.ewp</path>
+    </project>
+    <batchBuild>
+        <batchDefinition>
+            <name>ALL</name>
+            <member>
+                <project>CC2530</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
+                <project>CC2531</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
+                <project>CC2530</project>
+                <configuration>ZNP-without-SBL</configuration>
+            </member>
+            <member>
+                <project>CC2530</project>
+                <configuration>ZNP-with-SBL</configuration>
+            </member>
+            <member>
+                <project>CC2531</project>
+                <configuration>ZNP-without-SBL</configuration>
+            </member>
+            <member>
+                <project>CC2531</project>
+                <configuration>ZNP-with-SBL</configuration>
+            </member>
+        </batchDefinition>
+    </batchBuild>
+</workspace>

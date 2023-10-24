@@ -1,0 +1,30 @@
+EchoMsgType ::= enumerated
+{
+   ECHO_REQUEST,
+   ECHO_RESPONSE
+}
+
+EchoReq() ::=
+{
+   SequenceNumber  8;
+}
+
+EchoRsp() ::=
+{
+   SequenceNumber  8;
+}
+
+EchoPacket() ::=
+{
+   // Header Fields
+   Type        8  enumerated EchoMsgType;
+   SrcAddress  32; <display>ipv4</display>
+   DstAddress  32; <display>ipv4</display>
+
+   // Message Specific Fields
+   Payload : case Type of
+   {
+      ECHO_REQUEST  => echoReq : EchoReq;
+      ECHO_RESPONSE => echoRsp : EchoRsp;
+   }
+}

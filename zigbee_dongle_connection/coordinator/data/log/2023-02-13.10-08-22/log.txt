@@ -1,0 +1,102 @@
+info  2023-02-13 10:08:22: Logging to console and directory: '/app/data/log/2023-02-13.10-08-22' filename: log.txt
+info  2023-02-13 10:08:22: Starting Zigbee2MQTT version 1.30.1 (commit #eb878d3)
+info  2023-02-13 10:08:22: Starting zigbee-herdsman (0.14.89)
+info  2023-02-13 10:08:23: zigbee-herdsman started (resumed)
+info  2023-02-13 10:08:23: Coordinator firmware version: '{"meta":{"maintrel":3,"majorrel":2,"minorrel":6,"product":0,"revision":20211116,"transportrev":2},"type":"zStack12"}'
+info  2023-02-13 10:08:23: Currently 2 devices are joined:
+info  2023-02-13 10:08:23: Router1 (0x00124b001cde5546): CC2530.ROUTER - Custom devices (DiY) [CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/) (Router)
+info  2023-02-13 10:08:23: Tuya_TH_Sensor (0xa4c13852c87d504f): TS0201 - TuYa Temperature & humidity sensor with display (EndDevice)
+warn  2023-02-13 10:08:23: `permit_join` set to  `true` in configuration.yaml.
+warn  2023-02-13 10:08:23: Allowing new devices to join.
+warn  2023-02-13 10:08:23: Set `permit_join` to `false` once you joined all devices.
+info  2023-02-13 10:08:23: Zigbee: allowing new devices to join.
+info  2023-02-13 10:08:23: Connecting to MQTT server at mqtt://127.0.0.1:1883
+info  2023-02-13 10:08:23: Connected to MQTT server
+info  2023-02-13 10:08:23: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+info  2023-02-13 10:08:23: MQTT publish: topic 'zigbee2mqtt/Router1/availability', payload 'online'
+info  2023-02-13 10:08:23: MQTT publish: topic 'zigbee2mqtt/Tuya_TH_Sensor/availability', payload 'online'
+info  2023-02-13 10:08:23: Started frontend on port 0.0.0.0:8080
+info  2023-02-13 10:08:23: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"eb878d3","coordinator":{"meta":{"maintrel":3,"majorrel":2,"minorrel":6,"product":0,"revision":20211116,"transportrev":2},"type":"zStack12"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b001cd49979","panID":6754},"permit_join":true,"version":"1.30.1"}'
+info  2023-02-13 10:08:23: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:08:23: MQTT publish: topic 'zigbee2mqtt/Tuya_TH_Sensor', payload '{"battery":81,"humidity":55.3,"linkquality":194,"temperature":25.97,"voltage":2900}'
+info  2023-02-13 10:08:23: Zigbee2MQTT started!
+info  2023-02-13 10:08:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+error 2023-02-13 10:09:16: Publish 'set' 'read' to 'Tuya_TH_Sensor' failed: 'Error: Read 0xa4c13852c87d504f/1 msTemperatureMeasurement(["measuredValue"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 55727 - 1 - 3 - 1026 - 1 after 10000ms)'
+info  2023-02-13 10:09:16: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"Publish 'set' 'read' to 'Tuya_TH_Sensor' failed: 'Error: Read 0xa4c13852c87d504f/1 msTemperatureMeasurement([\"measuredValue\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (Timeout - 55727 - 1 - 3 - 1026 - 1 after 10000ms)'","meta":{"friendly_name":"Tuya_TH_Sensor"},"type":"zigbee_publish_error"}'
+info  2023-02-13 10:09:54: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+error 2023-02-13 10:10:23: Publish 'set' 'read' to 'Tuya_TH_Sensor' failed: 'Error: Read 0xa4c13852c87d504f/1 msTemperatureMeasurement(["measuredValue"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 55727 - 1 - 4 - 1026 - 1 after 10000ms)'
+info  2023-02-13 10:10:23: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"Publish 'set' 'read' to 'Tuya_TH_Sensor' failed: 'Error: Read 0xa4c13852c87d504f/1 msTemperatureMeasurement([\"measuredValue\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (Timeout - 55727 - 1 - 4 - 1026 - 1 after 10000ms)'","meta":{"friendly_name":"Tuya_TH_Sensor"},"type":"zigbee_publish_error"}'
+info  2023-02-13 10:10:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:11:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:12:36: MQTT publish: topic 'zigbee2mqtt/Tuya_TH_Sensor', payload '{"battery":81,"humidity":55.3,"linkquality":194,"temperature":25.78,"voltage":2900}'
+info  2023-02-13 10:12:36: MQTT publish: topic 'zigbee2mqtt/Tuya_TH_Sensor', payload '{"battery":81,"humidity":59.8,"linkquality":194,"temperature":25.78,"voltage":2900}'
+info  2023-02-13 10:12:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:13:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+error 2023-02-13 10:14:53: Publish 'set' 'write' to 'Tuya_TH_Sensor' failed: 'Error: Write 0xa4c13852c87d504f/1 msTemperatureMeasurement({"measuredValue":null}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 55727 - 1 - 6 - 1026 - 4 after 10000ms)'
+info  2023-02-13 10:14:53: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"Publish 'set' 'write' to 'Tuya_TH_Sensor' failed: 'Error: Write 0xa4c13852c87d504f/1 msTemperatureMeasurement({\"measuredValue\":null}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (Timeout - 55727 - 1 - 6 - 1026 - 4 after 10000ms)'","meta":{"friendly_name":"Tuya_TH_Sensor"},"type":"zigbee_publish_error"}'
+info  2023-02-13 10:14:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+error 2023-02-13 10:15:16: Publish 'set' 'scene_store' to 'Tuya_TH_Sensor' failed: 'Error: Command 0xa4c13852c87d504f/1 genScenes.store({"groupid":0,"sceneid":1}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 55727 - 1 - 7 - 5 - 4 after 10000ms)'
+info  2023-02-13 10:15:16: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"Publish 'set' 'scene_store' to 'Tuya_TH_Sensor' failed: 'Error: Command 0xa4c13852c87d504f/1 genScenes.store({\"groupid\":0,\"sceneid\":1}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (Timeout - 55727 - 1 - 7 - 5 - 4 after 10000ms)'","meta":{"friendly_name":"Tuya_TH_Sensor"},"type":"zigbee_publish_error"}'
+error 2023-02-13 10:15:39: Publish 'set' 'scene_recall' to 'Tuya_TH_Sensor' failed: 'Error: Command 0xa4c13852c87d504f/1 genScenes.recall({"groupid":0,"sceneid":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 55727 - 1 - 8 - 5 - 11 after 10000ms)'
+info  2023-02-13 10:15:39: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"Publish 'set' 'scene_recall' to 'Tuya_TH_Sensor' failed: 'Error: Command 0xa4c13852c87d504f/1 genScenes.recall({\"groupid\":0,\"sceneid\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (Timeout - 55727 - 1 - 8 - 5 - 11 after 10000ms)'","meta":{"friendly_name":"Tuya_TH_Sensor"},"type":"zigbee_publish_error"}'
+error 2023-02-13 10:15:51: Request 'zigbee2mqtt/bridge/request/device/configure_reporting' failed with error: 'Bind 0xa4c13852c87d504f/1 msTemperatureMeasurement from '0x00124b001cd49979/1' failed (AREQ - ZDO - bindRsp after 10000ms)'
+info  2023-02-13 10:15:51: MQTT publish: topic 'zigbee2mqtt/bridge/response/device/configure_reporting', payload '{"data":{},"error":"Bind 0xa4c13852c87d504f/1 msTemperatureMeasurement from '0x00124b001cd49979/1' failed (AREQ - ZDO - bindRsp after 10000ms)","status":"error","transaction":"qvod6-1"}'
+info  2023-02-13 10:15:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:16:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:17:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:18:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:19:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:20:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:21:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:22:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:23:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:24:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:25:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:26:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:27:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:28:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:29:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:30:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:31:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:32:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:33:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:34:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:35:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:36:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:37:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:38:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:39:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:40:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:41:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:42:36: MQTT publish: topic 'zigbee2mqtt/Tuya_TH_Sensor', payload '{"battery":81,"humidity":59.8,"linkquality":194,"temperature":25.55,"voltage":2900}'
+info  2023-02-13 10:42:36: MQTT publish: topic 'zigbee2mqtt/Tuya_TH_Sensor', payload '{"battery":81,"humidity":60.4,"linkquality":194,"temperature":25.55,"voltage":2900}'
+info  2023-02-13 10:42:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:43:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:44:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:45:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:46:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:47:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":191}'
+info  2023-02-13 10:48:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:49:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:50:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:51:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:52:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:53:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:54:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:55:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:56:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:57:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:58:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 10:59:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:00:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:01:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:02:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:03:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:04:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:05:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:06:53: MQTT publish: topic 'zigbee2mqtt/Router1', payload '{"led":false,"linkquality":194}'
+info  2023-02-13 11:07:44: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'offline'
+info  2023-02-13 11:07:44: Disconnecting from MQTT server
+info  2023-02-13 11:07:44: Stopping zigbee-herdsman...
+info  2023-02-13 11:07:45: Stopped zigbee-herdsman
+info  2023-02-13 11:07:45: Stopped Zigbee2MQTT

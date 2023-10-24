@@ -1,0 +1,65 @@
+homeassistant: false
+permit_join: true
+frontend: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://127.0.0.1:1883
+  user: admin
+  password: password
+serial:
+  port: /dev/ttyV0
+advanced:
+  log_level: debug
+  pan_id: 6754
+  ext_pan_id:
+    - 221
+    - 221
+    - 221
+    - 221
+    - 221
+    - 221
+    - 221
+    - 221
+  channel: 11
+  network_key:
+    - 1
+    - 3
+    - 5
+    - 7
+    - 9
+    - 11
+    - 13
+    - 15
+    - 0
+    - 2
+    - 4
+    - 6
+    - 8
+    - 10
+    - 12
+    - 13
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 514
+    protocol: udp4
+    type: '5424'
+  adapter_delay: 1
+  cache_state: false
+  cache_state_send_on_startup: false
+availability:
+  active:
+    timeout: 10
+  passive:
+    timeout: 1500
+devices:
+  '0xa4c13852c87d504f':
+    friendly_name: '0xa4c13852c87d504f'
+  '0x70b3d52b60018b62':
+    friendly_name: Tuya_smart_plug
+  '0x001788010c8336f3':
+    friendly_name: philp_hue_light
