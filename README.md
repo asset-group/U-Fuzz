@@ -26,8 +26,8 @@ Before running the fuzzer, the multi-protocol Statemapper need to be run to gene
 
 the multi-protocol-statemapper needs two inputs,
 
-==1: Capture_trace_for target_protocol.pcapng(can input via terminal)==
-==2: configuration templete to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423"==
+1: Capture_trace_for target_protocol.pcapng(can input via terminal)
+2: configuration templete to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423"
 After compile from the project with the correct software environment, please run the following command with the two inputs mentioned previously.
 ```
 $ cd .../cots-iot-fuzzer/multi_protocol_statemapper/wdissector
@@ -37,8 +37,10 @@ $ python3 multi_protocol_state_mapper.py
 
 ## Running the fuzzer
 1. Zigbee
+
 **Step1:**
 *build the project (zigbee_real_time_fuzzer)*
+
 ```
 Edit the CMakeLists.txt
 $ Uncomments line:802, 810-814
@@ -48,17 +50,20 @@ $ ./build.sh all
 
 ```
 **Step2:**
+
 *install Zigbee2Mqtt *from link: https://www.zigbee2mqtt.io/
 the sample configuration file is located at 
 ==cots-iot-fuzzer/zigbee_dongle_connection/coordinator/data==
 
 **Step3:**
+
 *prepare the hardware * for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod)
 and zigbee smart devices 
 
 
 **Step 4:**
 *Run the fuzzer *
+
 ```
 open a new terminal then run 
 $ mosquitto
@@ -72,6 +77,7 @@ $ docker-compose up
 ```
 
 2. CoAP
+
 **Step1:**
 *build the project (coap_realtime_fuzzer)*
 ```
