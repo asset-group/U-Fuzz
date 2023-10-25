@@ -53,7 +53,7 @@ $ ./build.sh all
 
 *install Zigbee2Mqtt *from link: https://www.zigbee2mqtt.io/
 the sample configuration file is located at 
-==cots-iot-fuzzer/zigbee_dongle_connection/coordinator/data==
+cots-iot-fuzzer/zigbee_dongle_connection/coordinator/data
 
 **Step3:**
 
