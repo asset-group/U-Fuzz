@@ -93,7 +93,7 @@ cots-iot-fuzzer/zigbee_dongle_connection/coordinator/data
 *prepare the hardware * for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod)
 and zigbee smart devices 
 
-![figdongle](figs/zigbeedongle.png "title-8")
+![figdongle](figs/zigbeedongle.jpg "title-8")
 
 **Step 4:**
 *Run the fuzzer *
