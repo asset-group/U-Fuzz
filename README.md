@@ -36,8 +36,31 @@ $ python3 multi_protocol_state_mapper.py
 ```
 
 # Manual Mode Running details
-Step1: input capture trace
+
+Step1: input the final capture trace
 ![figStep1](figs/Step1.png "title-1")
+```
+user can choose to combine multiple capture file by themselves
+or use U-Fuzz combiner by input y.
+```
+
+Step2: input the template config file
+![figStep2](figs/step2.png "title-2")
+```
+Can use the config file located at \configs as reference
+```
+
+Step3: After the capture analysis all the potential state and pkt list 
+will be print out, user can proceed to form new state by entering y then the 
+potential pkt lst (can copy and paste from above).
+![figStep3](figs/step3.png "title-3")
+
+Step4: After the potential pkt list was input, one by one analysis will be performed
+
+then followed by 2 by 2 if filer was not found by 1 by 1.
+![fig2by2](figs/twobytwo.png "title-5")
+
+
 
 
 ## Running the fuzzer
