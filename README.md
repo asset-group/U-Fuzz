@@ -37,7 +37,7 @@ $ python3 multi_protocol_state_mapper.py
 
 # Manual Mode Running details
 Step1: input capture trace
-![figStep1](fig/Step1.png)
+![figStep1](figs/Step1.png "title-1")
 
 
 ## Running the fuzzer
