@@ -45,6 +45,7 @@ or use U-Fuzz combiner by input y.
 ```
 
 Step2: input the template config file
+
 ![figStep2](figs/step2.png "title-2")
 ```
 Can use the config file located at \configs as reference
