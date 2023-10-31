@@ -35,6 +35,11 @@ $ cd .../cots-iot-fuzzer/multi_protocol_statemapper/wdissector
 $ python3 multi_protocol_state_mapper.py
 ```
 
+# Manual Mode Running details
+Step1: input capture trace
+![fig1](https://drive.google.com/file/d/1BWecfvZ5LbJW8nPiExCxHnwcISPKPp2F/view?usp=sharing)
+
+
 ## Running the fuzzer
 1. Zigbee
 
