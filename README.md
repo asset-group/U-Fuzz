@@ -127,6 +127,14 @@ $ cd cots-iot-fuzzer/coap_client_server
 $ sudo ip netns exec veth5 node client_complete.js
 ```
 3. 5G
+# Download the 5G container from the docker hub
+Credential: 
+```
+docker login -u a80568681433
+
+Access token:
+dckr_pat_A7VRSeNGp_tJPhIAuk4Iksk0pxM
+```
 ```
 $ chmod +x container.sh
 $ ./container.sh run release-5g
