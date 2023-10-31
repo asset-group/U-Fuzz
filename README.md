@@ -62,6 +62,10 @@ then followed by 2 by 2 if filer was not found by 1 by 1.
 ![fig2by2](figs/twobytwo.png "title-5")
 
 
+# Model representation figure
+![figmodel](figs/model-fig.png "title-7")
+
+
 
 
 ## Running the fuzzer
