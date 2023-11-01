@@ -44,22 +44,51 @@ user can choose to combine multiple capture file by themselves
 or use U-Fuzz combiner by input y.
 ```
 
-Step2: input the template config file
-
-![figStep2](figs/step2.png "title-2")
-```
-Can use the config file located at \configs as reference
-```
-
-Step3: After the capture analysis all the potential state and pkt list 
+Step2: After the capture analysis all the potential state and pkt list 
 will be print out, user can proceed to form new state by entering y then the 
 potential pkt lst (can copy and paste from above).
-![figStep3](figs/step3.png "title-3")
 
-Step4: After the potential pkt list was input, one by one analysis will be performed
+![figStep2](figs/Step2.png "title-2")
+
+![figStep2follow](figs/Step2_follow.png "title-2follow")
+
+After the initial pkt list was input, if the user wants to continuously input packets,
+they can input 'y' for the follow question, or can just input 'n' to proceed.
+
+![figStep3](figs/Step3.png "title-3")
+
+Step3: After the potential pkt list was input, the capture processor will out put all the 
+common layers which shared by all packets the user just input, then analysis form the most 
+relevant layer.
+
+![figStep4](figs/Step4.png "title-4")
+
+In the mean time, the user needs to input a name for that state, can copy and paste from above also.
+
+![figStep4follow](figs/Step4_follow.png "title-4follow")
+
+Step4: one by one analysis will be performed
+
+![figStep5](figs/Step5.png "title-5")
 
 then followed by 2 by 2 if filer was not found by 1 by 1.
-![fig2by2](figs/twobytwo.png "title-5")
+
+![fig2by6](figs/twobytwo.png "title-6")
+
+Step5: Once the filter is found, user can decide to continuously create new state by input 
+'y' or stop by input 'n'.
+
+![figStep7](figs/Step5.png "title-7")
+
+Step6: Once 'n' was input for the previous step, three input will be asked for the statemachine 
+generation
+
+1. previous inputed Capture file 
+2. Tamplete config file
+3. The outfile name, (.json is for the statemachine generatoin, .png is for the statemachine image generation)
+
+![figStep8](figs/Step8.png "title-8")
+
 
 
 # Model representation figure
