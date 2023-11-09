@@ -282,7 +282,7 @@ def generate_stateMapper():
     cap_location = input(Fore.BLUE+"Please enter the directory of the capture file including the file name : ")
     config_location = input(Fore.BLUE+"Please enter the directory of the config file including the file name : ")
     target_name = input(Fore.BLUE+"Please enter the target name of the output file : ")
-    command = "bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name
+    command = "sudo ../../bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name
     print(command)
     os.system(command)
 
@@ -566,10 +566,16 @@ if __name__ == '__main__':
     c = pyshark.FileCapture(final_file_name,include_raw=True, use_json=True)
     # print(colored("hello",'green'))
     encap_type = get_encap_type(c)
+    # print("This is encap_type: ", encap_type)
+    fuzzing_5g = input(Fore.RED+"Are you fuzzing 5G? (y/n) ")
+    if fuzzing_5g=="y":
+        init = "encap:1"
+    else:
+        init = "proto:"+encap_type
     # init = "proto:"+encap_type
     # init = "encap:25"
     # init = "proto:mac-nr-framed"
-    init = "encap:1"
+    # init = "encap:1"
     # print(init)
     # print("\033[1;37;40m This is the encapsulation type {init}\033[0;37;40m \n")
     print(Fore.YELLOW+"This is the encapsulation type",init)
