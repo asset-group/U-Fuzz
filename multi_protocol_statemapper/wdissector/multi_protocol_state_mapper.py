@@ -124,8 +124,18 @@ def get_dic(c):
         # print(s)
         # decoded_summary = ((s.decode()).split(','))[0]
         decoded_summary = ((s.decode()))
-        pkt_summary_dic[key] = decoded_summary
-        # print(decoded_summary)
+        # print("This is Decoded_summary",decoded_summary)
+        # pkt_summary_dic[key] = decoded_summary
+        splited_decoded_summary= decoded_summary.split(',')
+        # print(splited_decoded_summary)
+        for ele in splited_decoded_summary:
+            if 'MID' in ele:
+                splited_decoded_summary.remove(ele)
+            elif 'TKN' in ele:
+                splited_decoded_summary.remove(ele)
+        new_decoded_summary = ''.join(map(lambda x: x, splited_decoded_summary[0:]))
+        # print("This is the new_decoded_summary",new_decoded_summary)
+        pkt_summary_dic[key] = new_decoded_summary
         dictionary_haha.clear()
         packet_navigate(1,0,test)
         testit_dic = dictionary_haha.copy()
@@ -174,7 +184,7 @@ def auto_gen_state_dic(pkt_sum_dic):
         x = []
         for i in value:
             x.append(hex(i))
-        print(Fore.GREEN+"This is the state name: "+str(key)+"This is the packet list: "+ str(value))
+        print(Fore.GREEN+"This is the state name: "+str(key)+Fore.RED+" This is the packet list: "+ str(value))
         # This block allows people to edit each pkt list one by one
         # flag_state_name = input(Fore.RED+"Do you think this packet name is good enough (y/n)?: ")
         # if flag_state_name == 'n':
