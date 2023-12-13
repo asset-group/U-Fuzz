@@ -73,7 +73,7 @@ Step4: one by one analysis will be performed
 
 then followed by 2 by 2 if filer was not found by 1 by 1.
 
-![fig2by6](figs/twobytwo.png "title-6")
+![fig2by2](figs/twobytwo.png "title-6")
 
 Step5: Once the filter is found, user can decide to continuously create new state by input 
 'y' or stop by input 'n'.
