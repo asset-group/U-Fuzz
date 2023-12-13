@@ -161,6 +161,20 @@ $ cd cots-iot-fuzzer/coap_client_server
 $ sudo ip netns exec veth5 node client_complete.js
 ```
 3. 5G
+
+Approach 1:
+$ cd */wireless-deep-fuzzer/5gcontainer
+
+$ chmod +x container.sh
+
+$ ./container.sh run release-5g
+
+If just wanna run the 5G simulator can use the following command
+$ sudo bin/lte_fuzzer --EnableSimulator=true
+
+if wanna run 5G fuzzing with real UE, please contact me before running the experiment then i can prepare the fuzzing setup for testing.
+
+Approach 2: 
 # Download the 5G container from the docker hub
 Credential: 
 ```
