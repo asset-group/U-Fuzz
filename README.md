@@ -192,3 +192,27 @@ $ chmod +x container.sh
 $ ./container.sh run release-5g
 $ sudo bin/lte_fuzzer  --EnableSimulator=true
 ```
+## Summary of CVEs:
+Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
+U-Fuzz vulnerability is shown in the Table below.
+
+| Protocol Under Test | U-Fuzz Vulnerability Name                             | Affected Hardware/Software Implementation | CVE            |
+| --------------------|-------------------------------------------------------|-------------------------------------------|----------------|
+| 5G                  | V1 - Invalid CellGroupConfig                          | OnePlus Nord CE 2                         | CVE-2024-20004           |
+| 5G                  | V2 - Invalid CellGroupId                              | OnePlus Nord CE 2                         | CVE-2024-20003           |
+| 5G                  | V3 - Invalid RLC Sequence                             | OnePlus Nord CE 2                         | CVE-2023-20702 (existed) |
+| 5G                  | V4 - Invalid Uplink Config Element                    | OnePlus Nord CE 2                         | CVE-2023-32843 (existed) |
+| 5G                  | V5 - Null Uplink Config Element                       | OnePlus Nord CE 2                         | CVE-2023-32845 (existed) |
+| Zigbee              | V6 - Invalid Transaction and Cluster ID               | Texas Instrument CC2531 USB Dongle Z-stack version: Z-Stack_Home_1.2 SONOFF Zigbee 3.0 USB Dongle-P Z-stack version: Z-Stack_3.0.x | CVE-2023-41388           |
+| Zigbee              | V7 - Invalid Transaction and Cluster ID               | Zigbee2Mqtt Version:3.8                   | CVE-2023-41003           |
+| Zigbee              | V8 - Malformed AF_Data_Request                        | Zigbee2Mqtt Version:3.8                   | CVE-2023-42386           |
+| Zigbee              | V9 - Out of Sync State Information                    | Zigbee2Mqtt Version:3.8                   | CVE-2023-41004           |
+| Zigbee              | A1 - Skip Link Status                                 | Tuya Smart Plug                           | Not applicable           |
+| Zigbee              | A2 - Skip Link Status                                 | Philips Hue Smart Light Bulb              | Not applicable           |
+| CoAP                | V10 - NullPointerException                            | Jcoap                                     | CVE-2023-34918           |
+| CoAP                | V11 - Illegal_Argument_Exception_Invalid_Token_Length | Jcoap                                     | CVE-2023-34920           |
+| CoAP                | V12 - Slice_Bounds_out_of_Range                       | Canopus                                   | CVE-2023-34919           |
+| CoAP                | V13 - Bad Get Request                                 | Canopus                                   | CVE-2023-34921           |
+| CoAP                | V14 - Invalid Size1 Size2 Options                     | libcoap                                   | CVE-2023-33605           |
+| CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
+| CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
