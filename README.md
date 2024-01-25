@@ -44,21 +44,21 @@ user can choose to combine multiple capture file by themselves
 or use U-Fuzz combiner by input y.
 ```
 
-Step2: After the capture analysis all the potential state and pkt list 
+Step2: After the capture analysis all the potential state and packet list 
 will be print out, user can proceed to form new state by entering y then the 
-potential pkt lst (can copy and paste from above).
+potential packet lst (can copy and paste from above).
 
 ![figStep2](figs/step2.png "title-2")
 
 ![figStep2follow](figs/Step2_follow.png "title-2follow")
 
-After the initial pkt list was input, if the user wants to continuously input packets,
+After the initial packet list was input, if the user wants to continuously input packets,
 they can input 'y' for the follow question, or can just input 'n' to proceed.
 
 ![figStep3](figs/step3.png "title-3")
 
-Step3: After the potential pkt list was input, the capture processor will out put all the 
-common layers which shared by all packets the user just input, then analysis form the most 
+Step3: After the potential packet list was input, the capture processor will out put all the 
+common layers which shared by all packets the user just input, then analysis from the most 
 relevant layer.
 
 ![figStep4](figs/step4.png "title-4")
@@ -170,10 +170,10 @@ $ chmod +x container.sh
 
 $ ./container.sh run release-5g
 
-If just wanna run the 5G simulator can use the following command
+Use the following command to just run 5G simulator
 $ sudo bin/lte_fuzzer --EnableSimulator=true
 
-if wanna run 5G fuzzing with real UE, please contact me before running the experiment then i can prepare the fuzzing setup for testing.
+if you want to run 5G fuzzing with real UE, please contact me before running the experiment then i can prepare the fuzzing setup for testing.
 
 ##Approach 2: 
 
