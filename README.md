@@ -1,12 +1,41 @@
-# U-Fuzz
+# U-Fuzz: Stateful Fuzzing of IoT Protocols on COTS Devices
 COTS_IoT_Fuzzer is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. COTS_IoT_Fuzzer offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,begin) communication. 
 
-## Software Environment
+![U-Fuzz Overview and Design](figs/Uni_overal_Design.png)
+
+
+------
+
+**Table of Contents**
+
+1. [📋 Software Environment](#1-📋-software-environment)
+
+2. [⏩ Initial Compilation](#2-⏩-initial-compilation)
+
+3. [🔀 Running Multi-protocol Statemapper](#3-🔀-running-multi-protocol-statemapper)
+    * [Manual Mode Running details](#31-manual-mode-running-details)
+    * [Model representation figure](#model-representation-figure)
+
+4. [🧑‍💻 Running the fuzzer](#4-🧑‍💻-running-the-fuzzer)
+    * [Zigbee](#41-zigbee)
+    * [CoAP](#42-coap)
+    * [5G](#43-5g)
+        * [Approach 1](#431-approach-1)
+        * [Approach 2](#432-approach-2)
+    * [📄 Summary of CVEs](#summary-of-cves)
+
+5. [📝 Citing U-Fuzz](#5-📝-citing-u-fuzz)
+
+
+
+------
+
+# 1. 📋 Software Environment
 **OS:** Ubuntu 18.04
 **Wireshark Version:** V4.1 (patched)
 **Bindings:** Python3, Golang
 
-## Compile from the source
+# 2. ⏩ Initial Compilation 
 Several requirements needs to be installed before compiling the project. An automated script for Ubuntu 18.04 is provided on `requirements.sh`. To compile from source, simply run the following commands:
 ```
 $ Download the content from this github link:
@@ -21,7 +50,7 @@ $./requirements.sh doc  # Install nodejs requirements to generate documentation
 $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe!
 ```
 
-## Running the multi-protocol Statemapper
+# 3. 🔀 Running Multi-protocol Statemapper
 Before running the fuzzer, the multi-protocol-Statemapper need to be run to generate both the configuration file and the state model.
 
 The multi-protocol-statemapper needs two inputs,
@@ -35,7 +64,7 @@ $ cd .../cots-iot-fuzzer/multi_protocol_statemapper/wdissector
 $ python3 multi_protocol_state_mapper.py
 ```
 
-# Manual Mode Running details
+## 3.1 Manual Mode Running details
 
 Step1: input the final capture trace
 ![figStep1](figs/Step1.png "title-1")
@@ -91,14 +120,14 @@ generation
 
 
 
-# Model representation figure
+## Model representation figure
 ![figmodel](figs/model-fig.png "title-7")
 
 
 
 
-## Running the fuzzer
-1. Zigbee
+# 4. 🧑‍💻 Running the fuzzer
+## 4.1 Zigbee
 
 **Step1:**
 *build the project (zigbee_real_time_fuzzer)*
@@ -139,7 +168,7 @@ $ cd zigbee_dongle_connection/coordinator
 $ docker-compose up
 ```
 
-2. CoAP
+## 4.2 CoAP
 
 **Step1:**
 *build the project (coap_realtime_fuzzer)*
@@ -160,9 +189,9 @@ $ sudo bin/coap_realtime_fuzzer --EnableMutation=true
 $ cd cots-iot-fuzzer/coap_client_server
 $ sudo ip netns exec veth5 node client_complete.js
 ```
-3. 5G
+## 4.3 5G
 
-## Approach 1:
+### 4.3.1 Approach 1:
 
 $ cd */wireless-deep-fuzzer/5gcontainer
 
@@ -175,7 +204,7 @@ $ sudo bin/lte_fuzzer --EnableSimulator=true
 
 if you want to run 5G fuzzing with real UE, please contact me before running the experiment then i can prepare the fuzzing setup for testing.
 
-##Approach 2: 
+### 4.3.2 Approach 2: 
 
 Download the 5G container from the docker hub
 
@@ -192,7 +221,7 @@ $ chmod +x container.sh
 $ ./container.sh run release-5g
 $ sudo bin/lte_fuzzer  --EnableSimulator=true
 ```
-## Summary of CVEs:
+## 📄 Summary of CVEs:
 Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
 U-Fuzz vulnerability is shown in the Table below.
 
@@ -217,7 +246,7 @@ U-Fuzz vulnerability is shown in the Table below.
 | CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
 | CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
 
-## Citing U-Fuzz
+# 5. 📝 Citing U-Fuzz
 
 ```
 @article{
