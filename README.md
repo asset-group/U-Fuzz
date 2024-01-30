@@ -1,5 +1,5 @@
 # U-Fuzz
-COTS_IoT_Fuzzer is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. COTS_IoT_Fuzzer offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,benign) communication. 
+COTS_IoT_Fuzzer is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. COTS_IoT_Fuzzer offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,begin) communication. 
 
 ## Software Environment
 **OS:** Ubuntu 18.04
@@ -22,12 +22,12 @@ $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe
 ```
 
 ## Running the multi-protocol Statemapper
-Before running the fuzzer, the multi-protocol Statemapper need to be run to generate both the configuration file and the state model.
+Before running the fuzzer, the multi-protocol-Statemapper need to be run to generate both the configuration file and the state model.
 
-the multi-protocol-statemapper needs two inputs,
+The multi-protocol-statemapper needs two inputs,
 
 1: Capture_trace_for target_protocol.pcapng(can input via terminal)
-2: configuration templete to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423"
+2: configuration template to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423"
 After compile from the project with the correct software environment, please run the following command with the two inputs mentioned previously.
 ```
 $ cd .../cots-iot-fuzzer/multi_protocol_statemapper/wdissector
@@ -46,7 +46,7 @@ or use U-Fuzz combiner by input y.
 
 Step2: After the capture analysis all the potential state and packet list 
 will be print out, user can proceed to form new state by entering y then the 
-potential packet lst (can copy and paste from above).
+potential packet list (can copy and paste from above).
 
 ![figStep2](figs/step2.png "title-2")
 
@@ -216,3 +216,14 @@ U-Fuzz vulnerability is shown in the Table below.
 | CoAP                | V14 - Invalid Size1 Size2 Options                     | libcoap                                   | CVE-2023-33605           |
 | CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
 | CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
+
+## Citing U-Fuzz
+
+```
+@article{
+  author={Shang, Zewen and Garbelini, Matheus E and Chattopadhyay, Sudipta},
+  booktitle={2024 IEEE Conference on Software Testing, Verification and Validation (ICST)}, 
+  title={U-Fuzz: A Tool for Stateful Fuzzing of IoT Protocols on COTS Devices}, 
+  year={2024},
+}
+```
