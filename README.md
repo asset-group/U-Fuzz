@@ -6,7 +6,7 @@ COTS_IoT_Fuzzer is a framework to systematically discover and replicate security
 
 **Table of Contents**
 
-1. [📋 Software Environment](#1. Software Environment)
+1. [📋 Software Environment](#1--Software Environment)
 
 ------
 
