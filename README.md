@@ -1,7 +1,7 @@
 # U-Fuzz
 COTS_IoT_Fuzzer is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. COTS_IoT_Fuzzer offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,begin) communication. 
 
-![U-Fuzz Overview and Design](figs/overial_Design.png)
+![U-Fuzz Overview and Design](figs/overal_Design.png)
 
 
 ------
