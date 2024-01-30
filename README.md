@@ -10,7 +10,7 @@ COTS_IoT_Fuzzer is a framework to systematically discover and replicate security
 
 ------
 
-## 1. Software Environment <a name="#1. Software Environment"></a>
+## 1. Software Environment <a name="1. Software Environment"></a>
 **OS:** Ubuntu 18.04
 **Wireshark Version:** V4.1 (patched)
 **Bindings:** Python3, Golang
