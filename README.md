@@ -8,15 +8,15 @@ COTS_IoT_Fuzzer is a framework to systematically discover and replicate security
 
 **Table of Contents**
 
-1. [📋 Software Environment](#1-software-environment)
+1. [📋 Software Environment](#1-📋-software-environment)
 
-2. [⏩ Initial Compilation](#2-initial-compilation)
+2. [⏩ Initial Compilation](#2-⏩-initial-compilation)
 
-3. [🔀 Running Multi-protocol Statemapper](#3-running-multi-protocol-statemapper)
+3. [🔀 Running Multi-protocol Statemapper](#3-🔀-running-multi-protocol-statemapper)
     * [Manual Mode Running details](#31-manual-mode-running-details)
     * [Model representation figure](#model-representation-figure)
 
-4. [🧑‍💻 Running the fuzzer](#4-running-the-fuzzer)
+4. [🧑‍💻 Running the fuzzer](#4-🧑‍💻-running-the-fuzzer)
     * [Zigbee](#41-zigbee)
     * [CoAP](#42-coap)
     * [5G](#43-5g)
@@ -24,18 +24,18 @@ COTS_IoT_Fuzzer is a framework to systematically discover and replicate security
         * [Approach 2](#432-approach-2)
     * [📄 Summary of CVEs](#summary-of-cves)
 
-5. [📝 Citing U-Fuzz](#5-citing-u-fuzz)
+5. [📝 Citing U-Fuzz](#5-📝-citing-u-fuzz)
 
 
 
 ------
 
-# 1. Software Environment
+# 1. 📋 Software Environment
 **OS:** Ubuntu 18.04
 **Wireshark Version:** V4.1 (patched)
 **Bindings:** Python3, Golang
 
-# 2. Initial Compilation 
+# 2. ⏩ Initial Compilation 
 Several requirements needs to be installed before compiling the project. An automated script for Ubuntu 18.04 is provided on `requirements.sh`. To compile from source, simply run the following commands:
 ```
 $ Download the content from this github link:
@@ -50,7 +50,7 @@ $./requirements.sh doc  # Install nodejs requirements to generate documentation
 $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe!
 ```
 
-# 3. Running Multi-protocol Statemapper
+# 3. 🔀 Running Multi-protocol Statemapper
 Before running the fuzzer, the multi-protocol-Statemapper need to be run to generate both the configuration file and the state model.
 
 The multi-protocol-statemapper needs two inputs,
@@ -126,7 +126,7 @@ generation
 
 
 
-# 4. Running the fuzzer
+# 4. 🧑‍💻 Running the fuzzer
 ## 4.1 Zigbee
 
 **Step1:**
@@ -221,7 +221,7 @@ $ chmod +x container.sh
 $ ./container.sh run release-5g
 $ sudo bin/lte_fuzzer  --EnableSimulator=true
 ```
-## Summary of CVEs:
+## 📄 Summary of CVEs:
 Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
 U-Fuzz vulnerability is shown in the Table below.
 
@@ -246,7 +246,7 @@ U-Fuzz vulnerability is shown in the Table below.
 | CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
 | CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
 
-# 5. Citing U-Fuzz
+# 5. 📝 Citing U-Fuzz
 
 ```
 @article{
