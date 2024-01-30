@@ -223,7 +223,7 @@ U-Fuzz vulnerability is shown in the Table below.
 @article{
   author={Shang, Zewen and Garbelini, Matheus E and Chattopadhyay, Sudipta},
   booktitle={2024 IEEE Conference on Software Testing, Verification and Validation (ICST)}, 
-  title={U-Fuzz: A Tool for Stateful Fuzzing of IoT Protocols on COTS Devices}, 
+  title={U-Fuzz: Stateful Fuzzing of IoT Protocols on COTS Devices}, 
   year={2024},
 }
 ```
