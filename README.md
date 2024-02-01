@@ -21,8 +21,8 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
     * [Zigbee](#41-zigbee)
     * [CoAP](#42-coap)
     * [5G](#43-5g)
-        * [Approach 1](#431-approach-1)
-        * [Approach 2](#432-approach-2)
+        * [Run 5G with Simulator](#431-simulator)
+        * [Run 5G with Container](#432-container)
     * [📄 Summary of CVEs](#summary-of-cves)
 
 5. [📝 Citing U-Fuzz](#5-📝-citing-u-fuzz)
@@ -192,7 +192,7 @@ $ sudo ip netns exec veth5 node client_complete.js
 ```
 ## 4.3 5G
 
-### 4.3.1 Approach 1:
+### 4.3.1 Simulator:
 
 $ cd */wireless-deep-fuzzer/5gcontainer
 
@@ -205,7 +205,7 @@ $ sudo bin/lte_fuzzer --EnableSimulator=true
 
 if you want to run 5G fuzzing with real UE, please contact me before running the experiment then i can prepare the fuzzing setup for testing.
 
-### 4.3.2 Approach 2: 
+### 4.3.2 Container: 
 
 Download the 5G container from the docker hub
 
