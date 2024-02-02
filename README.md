@@ -145,7 +145,7 @@ generation
 
 
 ## Model representation figure
-![figmodel](figs/model-fig.png "title-7")
+
 <p align="center">
   <img src="figs/model-fig.png" alt="figmodel">
 </p>
