@@ -202,21 +202,7 @@ $ sudo ip netns exec veth5 node client_complete.js
 ```
 ## 4.3 5G
 
-### 4.3.1 Simulator:
-
-$ cd */wireless-deep-fuzzer/5gcontainer
-
-$ chmod +x container.sh
-
-$ ./container.sh run release-5g
-
-Use the following command to just run 5G simulator
-$ sudo bin/lte_fuzzer --EnableSimulator=true
-
-if you want to run 5G fuzzing with real UE, please contact me before running the experiment then i can prepare the fuzzing setup for testing.
-
-### 4.3.2 Container: 
-
+### 4.3.1 5G Container:
 Download the 5G container from the docker hub
 
 Credential: 
@@ -227,10 +213,35 @@ docker login -u a80568681433
 Access token:
 dckr_pat_A7VRSeNGp_tJPhIAuk4Iksk0pxM
 ```
+
+### 4.3.2 Fuzzing 5G with 5G Simulator:
+
+$ cd */wireless-deep-fuzzer/5gcontainer
+
+$ chmod +x container.sh
+
+$ ./container.sh run release-5g
+
+Use the following command to just run 5G simulator
+$ sudo bin/lte_fuzzer --EnableSimulator=true
+
+
+### 4.3.3 Fuzzing 5G with real COTS: 
+Hardware Preparation:
+
+  5G COTS UE e.g. [OnePlus Nord CE2](https://www.oneplus.com/sg/nord-ce-2-5g/specs)
+
+  [USRP B210](https://www.ettus.com/all-products/usrp-b200-enclosure/)
+
+Command:
+
 ```
 $ chmod +x container.sh
+
 $ ./container.sh run release-5g
-$ sudo bin/lte_fuzzer  --EnableSimulator=true
+
+$ sudo bin/lte_fuzzer  --EnableSimulator=false
+
 ```
 ## 📄 Summary of CVEs:
 Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
