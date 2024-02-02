@@ -223,8 +223,8 @@ $ ./container.sh run release-5g
 $ sudo bin/lte_fuzzer  --EnableSimulator=true
 ```
 ## 📄 Summary of CVEs:
-Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
-U-Fuzz vulnerability is shown in the Table below.
+As of today, U-Fuzz has discovered 11 new security flaws which have been assigned 11 CVE IDs. The correspondence between the exploit name and
+U-Fuzz discovered vulnerability is shown in the Table below:
 
 | Protocol Under Test | U-Fuzz Vulnerability Name                             | Affected Hardware/Software Implementation | CVE            |
 | --------------------|-------------------------------------------------------|-------------------------------------------|----------------|
