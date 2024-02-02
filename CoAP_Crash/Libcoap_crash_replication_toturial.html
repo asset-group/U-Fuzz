@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esp32 Coap crash 1 repot</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="coap-server-crashed-by-sending-multiple-invalid-requests">Coap Server Crashed by sending multiple invalid requests</h1>
+<h2 id="short-description">Short Description</h2>
+<p><strong>Target Libcoap version:</strong> 4.3.1~1<br>
+<strong>Platform Os:</strong> Ubuntu 18.04 with kernel 6.1.21-x64v3-xanmode1<br>
+<strong>Discovered by:</strong> Zewen Shang  <a href="https://asset-group.github.io/">Asset Research Group</a><br>
+<strong>Vulnerability Short Summary:</strong> An attacker can send the exact same packets in the same order to crash the coap server (implemented by using libcoap)<br>
+<strong>Vulnerability Impact:</strong> After the attack is successful, the server will crash immediately.</p>
+<h2 id="summary-of-relevant-files-in-this-report">Summary of Relevant Files in This Report</h2>
+<p><strong>scripts/attack1_coap.py:</strong> This script contains the attack code to crash the coap-server, the python version i used is 3.6.9<br>
+<strong>scripts/requirements.txt</strong> This script include all dependencies to run the script</p>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>In order to trigger this crash, we build the simple coap_server and by using the command</p>
+<pre><code>dir: packages/framework-espidf2/
+./install.sh
+. ./export.sh
+
+dir: packages/framework-espidf2/examples/protocols/coap_server
+idf.py build
+</code></pre>
+<p>we also config the esp32 board to make sure it connect to the same wifi with the laptop it connected with and flash the code to the esp32 board by running the command</p>
+<pre><code>dir: packages/framework-espidf2/examples/protocols/coap_server
+idf.py menuconfig
+idf.py -p [port numebr] flash 
+</code></pre>
+<p>Before running the script, the source and destination mac address need to be updated to the  mac address of the wifi and the mac address of the board by changing the following two line of code:</p>
+<pre><code>frame[scapy.Ether].src ='wifi mac'
+
+frame[scapy.Ether].dst = 'esp32 mac'
+</code></pre>
+<p>The destination ip of the packet will also need to be updated to the ip of esp32 board by updating the following line of code:</p>
+<pre><code>pkt[IP].dst = "esp32 ip"
+</code></pre>
+<p>2 packets must sent in sequence as specified in the python script attached. These two packets are all belongs to the Put Confirmable request.</p>
+<p>After sending these two packets in sequence, the esp32 board will be rebooted as shown bellow:<br>
+<a href="https://drive.google.com/file/d/1UDysC0HvlwOgqNgFJKbUJo_noziXGv7J/view?usp=share_link">Esp32 Reboot</a></p>
+<p>and the following log of the server from <mark><a href="http://idf.py">idf.py</a> openocd monitor</mark> indicates that the server has been crashed:</p>
+<pre><code>v:1 t:CON c:PUT i:c02a {591187a8deb9b733} [ Uri-Path:Espressif, Content-Format:text/plain, Block1:0/_/16, Size1:16 ] :: 'hhhhhhhhhhhh'
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Setting breakpoint at 0x400d9eb8 and returning...
+0x400d9eb8: coap_handle_request_put_block at /home/asset/.platformio/packages/framework-espidf2/examples/protocols/coap_server/build/../managed_components/espressif__coap/libcoap/src/block.c:1649 (discriminator 3)
+</code></pre>
+<h2 id="video-of-the-attack">Video of the attack</h2>
+<p>We also attached two videos to demonstrate the attack<br>
+<a href="https://drive.google.com/file/d/1Yu8hjNrTDvpUNin5UphjM23RgEKrcIxU/view?usp=share_link">Attack on openocd monitor</a><br>
+<a href="https://drive.google.com/file/d/1GzQYhFyc6BkO-oCSt-GwwZI01ZR7CVcG/view?usp=share_link">Attack on esp32 platformio</a></p>
+</div>
+</body>
+
+</html>

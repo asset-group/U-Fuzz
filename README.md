@@ -21,11 +21,14 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
     * [Zigbee](#41-zigbee)
     * [CoAP](#42-coap)
     * [5G](#43-5g)
-        * [Run 5G with Simulator](#431-simulator)
-        * [Run 5G with Container](#432-container)
-    * [📄 Summary of CVEs](#summary-of-cves)
-
-5. [📝 Citing U-Fuzz](#5-📝-citing-u-fuzz)
+        * [5G Container](#431-5g-container)
+        * [Fuzzing 5G with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
+        * [Fuzzing 5G with real COTS](#433-fuzzing-5g-with-real-cots)
+5. [📄 Exploits](#5-📄-exploits)
+  * [Summary of CVEs](#51-summary-of-cves)
+  * [Available Exploits](#52-available-exploits)
+    * [V14 replication](#521-v14-replication)
+6. [📝 Citing U-Fuzz](#6-📝-citing-u-fuzz)
 
 
 
@@ -244,7 +247,8 @@ $ sudo bin/lte_fuzzer  --EnableSimulator=false
 
 ```
 
-## 📄 Summary of CVEs:
+# 5. 📄 Exploits
+## 5.1.  Summary of CVEs:
 Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
 U-Fuzz vulnerability is shown in the Table below.
 
@@ -269,7 +273,7 @@ U-Fuzz vulnerability is shown in the Table below.
 | CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
 | CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
 
-## Available Exploits
+## 5.2. Available Exploits
 | U-Fuzz Vulnerability Name                             | Exploit                |
 | ----------------------------------------------------- | ---------------------- |
 | V1 - Invalid CellGroupConfig                          | [mac_sch_mtk_rrc_setup_crash_2](/modules/exploits/5gnr_gnb/mac_sch_mtk_rrc_setup_crash_2.cpp)|
@@ -283,7 +287,13 @@ U-Fuzz vulnerability is shown in the Table below.
 | V13 - Bad Get Request                                 | [replicate_crash_canpous](/CoAP_Crash/replicate_crash_canpous.py)|
 | V15 - Bad POST Request                                | [replicate_crash_CoAPthon](/CoAP_Crash/replicate_crash_CoAPthon.py)|
 | V16 - Invalid Unicode Decoding                        | [replicate_crash_CoAPthon](/CoAP_Crash/replicate_crash_CoAPthon.py)|
-# 5. 📝 Citing U-Fuzz
+
+### 5.2.1 V14 replication
+Our group use Esp32 board to fuzz libcoap and replicate the V14 we found on libcoap, the detailed replication toturial 
+could be found at [Libcoap_crash_replication_toturial](/CoAP_Crash/Libcoap_crash_replication_toturial.html). The replication 
+script can be found at [replicate_crash_libcoap](/CoAP_Crash/replicate_crash_libcoap.py).
+
+# 6. 📝 Citing U-Fuzz
 
 ```
 @article{
