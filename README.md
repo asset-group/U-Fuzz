@@ -1,5 +1,5 @@
 # U-Fuzz: Stateful Fuzzing of IoT Protocols on COTS Devices
-U-Fuzz is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. U-Fuzz offers possibility to automatically construct the protocol state machine with only a few packet traces of normal (i.e., benign) communication. 
+U-Fuzz is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. COTS_IoT_Fuzzer offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,begin) communication. 
 
 <p align="center">
   <img src="figs/Uni_overal_Design.png" alt="U-Fuzz Overview and Design">
@@ -135,8 +135,18 @@ generation
 
 ```
 Edit the CMakeLists.txt
-$ Uncomments line:802, 810-814
-$ Comments line: 804, 824-828
+$ Uncomments line:802, 810-814 
+  (`set(ZIGBEE_SRC src/zigbee_real_time_fuzzer.cpp libs/shared_memory.c)`)
+  (`add_executable(zigbee_real_time_fuzzer ${ZIGBEE_SRC} libs/profiling.c)`)
+  (`target_link_libraries(zigbee_real_time_fuzzer PRIVATE ${MINIMAL_FUZZER_LIBS} viface)`)
+  (`target_compile_options(zigbee_real_time_fuzzer PRIVATE -w -O0)`)
+  (`target_compile_definitions(zigbee_real_time_fuzzer PRIVATE -DFUZZ_ZNP)`)
+$ Comments line: 804, 824-828 which were configured for CoAP fuzzing
+  (`set(COAP_SRC src/coap_realtime_fuzzer.cpp libs/shared_memory.c)`)
+  (`add_executable(coap_realtime_fuzzer ${COAP_SRC} libs/profiling.c)`)
+  (`target_link_libraries(coap_realtime_fuzzer PRIVATE ${MINIMAL_FUZZER_LIBS} viface)`)
+  (`target_compile_options(coap_realtime_fuzzer PRIVATE -w -O0)`)
+  (`target_compile_definitions(coap_realtime_fuzzer PRIVATE -DFUZZ_WIFI_AP)`)
 
 $ ./build.sh all
 
@@ -223,8 +233,8 @@ $ ./container.sh run release-5g
 $ sudo bin/lte_fuzzer  --EnableSimulator=true
 ```
 ## 📄 Summary of CVEs:
-As of today, U-Fuzz has discovered 11 new security flaws which have been assigned 11 CVE IDs. The correspondence between the exploit name and
-U-Fuzz discovered vulnerability is shown in the Table below:
+Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
+U-Fuzz vulnerability is shown in the Table below.
 
 | Protocol Under Test | U-Fuzz Vulnerability Name                             | Affected Hardware/Software Implementation | CVE            |
 | --------------------|-------------------------------------------------------|-------------------------------------------|----------------|
