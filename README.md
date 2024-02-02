@@ -1,5 +1,5 @@
 # U-Fuzz: Stateful Fuzzing of IoT Protocols on COTS Devices
-U-Fuzz is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. COTS_IoT_Fuzzer offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,begin) communication. 
+U-Fuzz is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. U-Fuzz offers possibility to automatically construct the protocol state machine with only a few packet traces of normal (i.e., benign) communication.
 
 <p align="center">
   <img src="figs/Uni_overal_Design.png" alt="U-Fuzz Overview and Design">
@@ -271,8 +271,7 @@ $ sudo bin/lte_fuzzer  --EnableSimulator=false
 
 # 5. 📄 Exploits
 ## 5.1.  Summary of CVEs:
-Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
-U-Fuzz vulnerability is shown in the Table below.
+As of today, U-Fuzz has discovered 11 new security flaws which have been assigned 11 CVE IDs. The correspondence between the exploit name and U-Fuzz discovered vulnerability is shown in the Table below:
 
 | Protocol Under Test | U-Fuzz Vulnerability Name                             | Affected Hardware/Software Implementation | CVE            |
 | --------------------|-------------------------------------------------------|-------------------------------------------|----------------|
