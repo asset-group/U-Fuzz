@@ -254,7 +254,7 @@ $ sudo bin/lte_fuzzer --EnableSimulator=true
 ### 4.3.3 Fuzzing 5G with real COTS: 
 Hardware Preparation:
 
-  5G COTS UE e.g. [OnePlus Nord CE2](https://www.oneplus.com/sg/nord-ce-2-5g/specs)
+  [OnePlus Nord CE2](https://www.oneplus.com/sg/nord-ce-2-5g/specs) or other 5G COTS UE.
 
   [USRP B210](https://www.ettus.com/all-products/usrp-b200-enclosure/)
 
