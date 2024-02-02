@@ -269,7 +269,7 @@ U-Fuzz vulnerability is shown in the Table below.
 | CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
 | CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
 
-# Available Exploits
+## Available Exploits
 | U-Fuzz Vulnerability Name                             | Exploit                |
 | ----------------------------------------------------- | ---------------------- |
 | V1 - Invalid CellGroupConfig                          | [mac_sch_mtk_rrc_setup_crash_2](/modules/exploits/5gnr_gnb/mac_sch_mtk_rrc_setup_crash_2.cpp)|
@@ -277,13 +277,12 @@ U-Fuzz vulnerability is shown in the Table below.
 | V3 - Invalid RLC Sequence                             | [mac_sch_mtk_rlc_crash](/modules/exploits/5gnr_gnb/mac_sch_mtk_rlc_crash.cpp)|
 | V4 - Invalid Uplink Config Element                    | [mac_sch_mtk_rrc_setup_crash_3](/modules/exploits/5gnr_gnb/mac_sch_mtk_rrc_setup_crash_3.cpp)|
 | V5 - Null Uplink Config Element                       | [mac_sch_mtk_rrc_setup_crash_4](/modules/exploits/5gnr_gnb/mac_sch_mtk_rrc_setup_crash_4.cpp)|
-| V10 - NullPointerException                            |
-| V11 - Illegal_Argument_Exception_Invalid_Token_Length | | 
-| V12 - Slice_Bounds_out_of_Range                       | |
-| V13 - Bad Get Request                                 | |
-| V14 - Invalid Size1 Size2 Options                     | |
-| V15 - Bad POST Request                                | |
-| V16 - Invalid Unicode Decoding                        | |
+| V10 - NullPointerException                            | [replicate_crash_jcoap_1](/CoAP_Crash/replicate_crash_jcoap_1.py)|
+| V11 - Illegal_Argument_Exception_Invalid_Token_Length | Can replace replicate_crash_jcoap_1 to any PUT request | 
+| V12 - Slice_Bounds_out_of_Range                       | [replicate_crash_canpous](/CoAP_Crash/replicate_crash_canpous.py)|
+| V13 - Bad Get Request                                 | [replicate_crash_canpous](/CoAP_Crash/replicate_crash_canpous.py)|
+| V15 - Bad POST Request                                | [replicate_crash_CoAPthon](/CoAP_Crash/replicate_crash_CoAPthon.py)|
+| V16 - Invalid Unicode Decoding                        | [replicate_crash_CoAPthon](/CoAP_Crash/replicate_crash_CoAPthon.py)|
 # 5. 📝 Citing U-Fuzz
 
 ```
