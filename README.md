@@ -243,6 +243,7 @@ $ ./container.sh run release-5g
 $ sudo bin/lte_fuzzer  --EnableSimulator=false
 
 ```
+
 ## 📄 Summary of CVEs:
 Currently, U-Fuzz has 11 CVEs available. The correspondence between the exploit name and
 U-Fuzz vulnerability is shown in the Table below.
@@ -268,6 +269,21 @@ U-Fuzz vulnerability is shown in the Table below.
 | CoAP                | V15 - Bad POST Request                                | CoAPthon                                  | CVE-2018-12680 (existed) |
 | CoAP                | V16 - Invalid Unicode Decoding                        | CoAPthon                                  | CVE-2018-12680 (existed) |
 
+# Available Exploits
+| U-Fuzz Vulnerability Name                             | CVE                      | Exploit                |
+| ----------------------------------------------------- | ------------------------ | ---------------------- |
+| V1 - Invalid CellGroupConfig                          | CVE-2024-20004           | [mac_sch_mtk_rrc_setup_crash_2](/modules/exploits/5gnr_gnb/mac_sch_mtk_rrc_setup_crash_2.cpp)
+| V2 - Invalid CellGroupId                              | CVE-2024-20003           |
+| V3 - Invalid RLC Sequence                             | CVE-2023-20702 (existed) |
+| V4 - Invalid Uplink Config Element                    | CVE-2023-32843 (existed) |
+| V5 - Null Uplink Config Element                       | CVE-2023-32845 (existed) |
+| V10 - NullPointerException                            | CVE-2023-34918           |
+| V11 - Illegal_Argument_Exception_Invalid_Token_Length | CVE-2023-34920           | 
+| V12 - Slice_Bounds_out_of_Range                       | CVE-2023-34919           |
+| V13 - Bad Get Request                                 | CVE-2023-34921           |
+| V14 - Invalid Size1 Size2 Options                     | CVE-2023-33605           |
+| V15 - Bad POST Request                                | CVE-2018-12680 (existed) |
+| V16 - Invalid Unicode Decoding                        | CVE-2018-12680 (existed) |
 # 5. 📝 Citing U-Fuzz
 
 ```
