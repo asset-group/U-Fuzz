@@ -71,7 +71,9 @@ $ python3 multi_protocol_state_mapper.py
 ## 3.1 Manual Mode Running details
 
 Step1: input the final capture trace
-![figStep1](figs/Step1.png "title-1")
+<p align="center">
+  <img src="figs/Step1.png" alt="figStep1">
+</p>
 ```
 user can choose to combine multiple capture file by themselves
 or use U-Fuzz combiner by input y.
@@ -81,37 +83,53 @@ Step2: After the capture analysis all the potential state and packet list
 will be print out, user can proceed to form new state by entering y then the 
 potential packet list (can copy and paste from above).
 
-![figStep2](figs/step2.png "title-2")
+<p align="center">
+  <img src="figs/step2.png" alt="figStep2">
+</p>
 
-![figStep2follow](figs/Step2_follow.png "title-2follow")
+<p align="center">
+  <img src="figs/Step2_follow.png" alt="fig-2follow">
+</p>
 
 After the initial packet list was input, if the user wants to continuously input packets,
 they can input 'y' for the follow question, or can just input 'n' to proceed.
 
-![figStep3](figs/step3.png "title-3")
+<p align="center">
+  <img src="figs/step3.png" alt="figStep3">
+</p>
 
 Step3: After the potential packet list was input, the capture processor will out put all the 
 common layers which shared by all packets the user just input, then analysis from the most 
 relevant layer.
 
-![figStep4](figs/step4.png "title-4")
+<p align="center">
+  <img src="figs/step4.png" alt="figStep4">
+</p>
 
 In the mean time, the user needs to input a name for that state, can copy and paste from above also.
 
-![figStep4follow](figs/Step4_follow.png "title-4follow")
+<p align="center">
+  <img src="figs/Step4_follow.png" alt="fig-4follow">
+</p>
 
 Step4: one by one analysis will be performed
 
-![figStep5](figs/step5.png "title-5")
+<p align="center">
+  <img src="figs/step5.png" alt="figStep5">
+</p>
 
 then followed by 2 by 2 if filer was not found by 1 by 1.
 
-![fig2by2](figs/twobytwo.png "title-6")
+<p align="center">
+  <img src="figs/twobytwo.png" alt="fig2by2">
+</p>
 
 Step5: Once the filter is found, user can decide to continuously create new state by input 
 'y' or stop by input 'n'.
 
-![figStep7](figs/step5.png "title-7")
+<p align="center">
+  <img src="figs/step5.png" alt="figStep7">
+</p>
 
 Step6: Once 'n' was input for the previous step, three input will be asked for the statemachine 
 generation
@@ -120,13 +138,17 @@ generation
 2. Tamplete config file
 3. The outfile name, (.json is for the statemachine generatoin, .png is for the statemachine image generation)
 
-![figStep8](figs/Step8.png "title-8")
 
+<p align="center">
+  <img src="figs/Step8.png" alt="figStep8">
+</p>
 
 
 ## Model representation figure
 ![figmodel](figs/model-fig.png "title-7")
-
+<p align="center">
+  <img src="figs/model-fig.png" alt="figmodel">
+</p>
 
 
 
