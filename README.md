@@ -310,7 +310,7 @@ As of today, U-Fuzz has discovered 11 new security flaws which have been assigne
 
 ### 5.2.1 V14 replication
 Our group used Esp32 board to fuzz libcoap and to replicate the vulnerability V14 that we found on libcoap. The detailed replication tutorial 
-can be found at [Libcoap_crash_replication_toturial](/CoAP_Crash/Libcoap_crash_replication_toturial.html). Additionally, the replication 
+can be found at [Libcoap_crash_replication_tutorial](/CoAP_Crash/Libcoap_crash_replication_toturial.html). Additionally, the replication 
 script can be found at [replicate_crash_libcoap](/CoAP_Crash/replicate_crash_libcoap.py).
 
 # 6. 📝 Citing U-Fuzz
