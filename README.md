@@ -35,7 +35,7 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
 ------
 
 # 1. 📋 Software Environment
-* **OS:** Ubuntu 18.04 - We recommend using Ubuntu 18.04 to build and run U-Fuzz, otherwise, U-Fuzz and the Multiprotocol Statemapper might fail to execute properly. Alternativelly, you can use a Ubuntu 18.04 [docker dev. container]([url](https://code.visualstudio.com/docs/devcontainers/create-dev-container)) to ensure the correct OS environment.
+* **OS:** Ubuntu 18.04 - We recommend using Ubuntu 18.04 to build and run U-Fuzz, otherwise, U-Fuzz and the Multiprotocol Statemapper might fail to execute properly. Alternativelly, you can use an Ubuntu 18.04 [docker dev. container]([url](https://code.visualstudio.com/docs/devcontainers/create-dev-container)) to ensure the correct OS environment.
 * **Wireshark Version:** V4.1 (patched) - This is provided by U-Fuzz.
 * **Bindings:** Python3, Golang - This is provided by U-Fuzz.
 
