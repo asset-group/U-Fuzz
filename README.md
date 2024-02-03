@@ -35,9 +35,9 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
 ------
 
 # 1. 📋 Software Environment
-**OS:** Ubuntu 18.04
-**Wireshark Version:** V4.1 (patched)
-**Bindings:** Python3, Golang
+* **OS:** Ubuntu 18.04 - We recommend using Ubuntu 18.04 to build and run U-Fuzz, otherwise, U-Fuzz and the Multiprotocol Statemapper might fail to execute properly. Alternativelly, you can use a Ubuntu 18.04 [docker dev. container]([url](https://code.visualstudio.com/docs/devcontainers/create-dev-container)) to ensure the correct OS environment.
+* **Wireshark Version:** V4.1 (patched) - This is provided by U-Fuzz.
+* **Bindings:** Python3, Golang - This is provided by U-Fuzz.
 
 # 2. ⏩ Initial Compilation 
 Several requirements needs to be installed before compiling the project. An automated script for Ubuntu 18.04 is provided on `requirements.sh`. To compile from source, simply run the following commands:
@@ -49,7 +49,7 @@ $ cd wdissector
 
 $ ./requirements.sh dev # Install all requirements to compile wdissector from source
 
-$./requirements.sh doc  # Install nodejs requirements to generate documentation
+$./requirements.sh doc  # Optional: Install nodejs requirements to generate documentation
 
 $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe!
 ```
@@ -70,18 +70,19 @@ $ python3 multi_protocol_state_mapper.py
 
 ## 3.1 Manual Mode Running details
 
-Step1: input the final capture trace
+**Step 1**: Input the final capture trace as illustrated in the figure below.
 <p align="center">
   <img src="figs/Step1.png" alt="figStep1">
 </p>
+
 ```
-user can choose to combine multiple capture file by themselves
-or use U-Fuzz combiner by input y.
+The user can choose to combine multiple capture file by themselves
+or use U-Fuzz combiner by inputting "y" in the terminal prompt.
 ```
 
-Step2: After the capture analysis all the potential state and packet list 
-will be print out, user can proceed to form new state by entering y then the 
-potential packet list (can copy and paste from above).
+**Step 2**: After the capture analysis, all the potential state and packet list 
+will be printed out. Then, the user can proceed to form a new state by entering "y". Finally, the 
+potential packet list is shown (you can copy and paste from above).
 
 <p align="center">
   <img src="figs/step2.png" alt="figStep2">
@@ -91,52 +92,51 @@ potential packet list (can copy and paste from above).
   <img src="figs/Step2_follow.png" alt="fig-2follow">
 </p>
 
-After the initial packet list was input, if the user wants to continuously input packets,
-they can input 'y' for the follow question, or can just input 'n' to proceed.
+After the initial packet list is inserted, the user can proceed by inputting 'n', or continuously add more packet lists by inputting 'y' in the question as shown in the figure below:
 
 <p align="center">
   <img src="figs/step3.png" alt="figStep3">
 </p>
 
-Step3: After the potential packet list was input, the capture processor will out put all the 
-common layers which shared by all packets the user just input, then analysis from the most 
-relevant layer.
+**Step 3**: After the potential packet list was inserted, the capture processor will first output all the 
+common layers which are shared by all packets provided by the user. Then, the capture processor will start analysing from the most 
+relevant layer as shown in the figure below:
 
 <p align="center">
   <img src="figs/step4.png" alt="figStep4">
 </p>
 
-In the mean time, the user needs to input a name for that state, can copy and paste from above also.
+In the mean time, the user needs to input a name for that state. You can alternatively copy and paste from the above figure.
 
 <p align="center">
   <img src="figs/Step4_follow.png" alt="fig-4follow">
 </p>
 
-Step4: one by one analysis will be performed
+**Step 4**: One by one analysis (1 by 1) will be performed.
 
 <p align="center">
   <img src="figs/step5.png" alt="figStep5">
 </p>
 
-then followed by 2 by 2 if filer was not found by 1 by 1.
+Then, 2 by 2 analysis will be performed if a filter was not found by the previous 1 by 1 step.
 
 <p align="center">
   <img src="figs/twobytwo.png" alt="fig2by2">
 </p>
 
-Step5: Once the filter is found, user can decide to continuously create new state by input 
-'y' or stop by input 'n'.
+**Step 5**: Once the filter is found, the user can decide to continuously create a new state by inputting 
+'y', or to stop by inputting 'n'.
 
 <p align="center">
   <img src="figs/step5.png" alt="figStep7">
 </p>
 
-Step6: Once 'n' was input for the previous step, three input will be asked for the statemachine 
-generation
+**Step 6**: Once 'n' was input in the previous step, other three inputs will be asked to the user for the statemachine 
+generation:
 
-1. previous inputed Capture file 
-2. Tamplete config file
-3. The outfile name, (.json is for the statemachine generatoin, .png is for the statemachine image generation)
+1. Previous input capture file;
+2. Template config file;
+3. The output file name, (.json is for the statemachine generatoin, .png is for the statemachine image generation).
 
 
 <p align="center">
@@ -177,20 +177,19 @@ $ ./build.sh all
 
 ```
 **Step2:**
+*Install Zigbee2Mqtt* from link: [https://www.zigbee2mqtt.io/]([url](https://www.zigbee2mqtt.io/))
 
-*install Zigbee2Mqtt *from link: https://www.zigbee2mqtt.io/
-the sample configuration file is located at 
+The sample configuration file for Zigbee2Mqtt is located at folder 
 cots-iot-fuzzer/zigbee_dongle_connection/coordinator/data
 
 **Step3:**
-
-*prepare the hardware * for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod)
+*Prepare the hardware* for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod)
 and zigbee smart devices 
 
 ![figdongle](figs/zigbeedongle.jpg "title-8")
 
 **Step 4:**
-*Run the fuzzer *
+*Run the fuzzer*
 
 ```
 open a new terminal then run 
@@ -228,7 +227,7 @@ $ sudo ip netns exec veth5 node client_complete.js
 ## 4.3 5G
 
 ### 4.3.1 5G Container:
-Download the 5G container from the docker hub
+Download the 5G container from the docker hub.
 
 Credential: 
 
@@ -310,8 +309,8 @@ As of today, U-Fuzz has discovered 11 new security flaws which have been assigne
 | V16 - Invalid Unicode Decoding                        | [replicate_crash_CoAPthon](/CoAP_Crash/replicate_crash_CoAPthon.py)|
 
 ### 5.2.1 V14 replication
-Our group use Esp32 board to fuzz libcoap and replicate the V14 we found on libcoap, the detailed replication toturial 
-could be found at [Libcoap_crash_replication_toturial](/CoAP_Crash/Libcoap_crash_replication_toturial.html). The replication 
+Our group used Esp32 board to fuzz libcoap and to replicate the vulnerability V14 that we found on libcoap. The detailed replication tutorial 
+can be found at [Libcoap_crash_replication_toturial](/CoAP_Crash/Libcoap_crash_replication_toturial.html). Additionally, the replication 
 script can be found at [replicate_crash_libcoap](/CoAP_Crash/replicate_crash_libcoap.py).
 
 # 6. 📝 Citing U-Fuzz
