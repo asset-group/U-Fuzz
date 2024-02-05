@@ -166,6 +166,7 @@ $ Uncomments line:802, 810-814
   (`target_link_libraries(zigbee_real_time_fuzzer PRIVATE ${MINIMAL_FUZZER_LIBS} viface)`)
   (`target_compile_options(zigbee_real_time_fuzzer PRIVATE -w -O0)`)
   (`target_compile_definitions(zigbee_real_time_fuzzer PRIVATE -DFUZZ_ZNP)`)
+
 $ Comments line: 804, 824-828 which were configured for CoAP fuzzing
   (`set(COAP_SRC src/coap_realtime_fuzzer.cpp libs/shared_memory.c)`)
   (`add_executable(coap_realtime_fuzzer ${COAP_SRC} libs/profiling.c)`)
@@ -270,7 +271,7 @@ $ sudo bin/lte_fuzzer  --EnableSimulator=false
 
 # 5. 📄 Exploits
 ## 5.1.  Summary of CVEs:
-As of today, U-Fuzz has discovered 11 new security flaws which have been assigned 11 CVE IDs. The correspondence between the exploit name and U-Fuzz discovered vulnerability is shown in the Table below:
+As of today, U-Fuzz has discovered 11 new security flaws which have been assigned 11 CVE IDs. The correspondence between the exploit name, U-Fuzz discovered vulnerability and the CVE IDs are shown in the Tables below:
 
 | Protocol Under Test | U-Fuzz Vulnerability Name                             | Affected Hardware/Software Implementation | CVE            |
 | --------------------|-------------------------------------------------------|-------------------------------------------|----------------|
