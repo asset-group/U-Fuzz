@@ -57,10 +57,12 @@ $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe
 # 3. 🔀 Running Multi-protocol Statemapper
 Before running the fuzzer, the multi-protocol-Statemapper needs to be run to generate both the configuration file and the state machine model.
 
-The multi-protocol-statemapper needs two inputs,
+The multi-protocol-statemapper needs two inputs as follows: 
 
-1: Capture_trace_for target_protocol.pcapng (can be provided via terminal)
-2: configuration template to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423"
+1: Capture_trace_for target_protocol.pcapng (can be provided via terminal). 
+
+2: configuration template to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423". 
+
 After compiling the project with the correct software environment, please run the following command with the two inputs mentioned previously.
 ```
 $ cd .../cots-iot-fuzzer/multi_protocol_statemapper/wdissector
