@@ -40,7 +40,7 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
 * **Bindings:** Python3, Golang - This is provided by U-Fuzz.
 
 # 2. ⏩ Initial Compilation 
-Several requirements needs to be installed before compiling the project. An automated script for Ubuntu 18.04 is provided on `requirements.sh`. To compile from source, simply run the following commands:
+Several requirements need to be installed before compiling the project. An automated script for Ubuntu 18.04 is provided on `requirements.sh`. To compile from source, simply run the following commands:
 ```
 $ Download the content from this github link:
 https://anonymous.4open.science/r/cots-iot-fuzzer/
@@ -55,13 +55,13 @@ $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe
 ```
 
 # 3. 🔀 Running Multi-protocol Statemapper
-Before running the fuzzer, the multi-protocol-Statemapper need to be run to generate both the configuration file and the state model.
+Before running the fuzzer, the multi-protocol-Statemapper needs to be run to generate both the configuration file and the state machine model.
 
 The multi-protocol-statemapper needs two inputs,
 
-1: Capture_trace_for target_protocol.pcapng(can input via terminal)
+1: Capture_trace_for target_protocol.pcapng (can be provided via terminal)
 2: configuration template to append the mapping rules needs to specify the file name in "multi_protocol_state_mapper.py :line: 423"
-After compile from the project with the correct software environment, please run the following command with the two inputs mentioned previously.
+After compiling the project with the correct software environment, please run the following command with the two inputs mentioned previously.
 ```
 $ cd .../cots-iot-fuzzer/multi_protocol_statemapper/wdissector
 
@@ -106,19 +106,19 @@ relevant layer as shown in the figure below:
   <img src="figs/step4.png" alt="figStep4">
 </p>
 
-In the mean time, the user needs to input a name for that state. You can alternatively copy and paste from the above figure.
+The user may need to input a name for that state. She can alternatively copy and paste from the above figure.
 
 <p align="center">
   <img src="figs/Step4_follow.png" alt="fig-4follow">
 </p>
 
-**Step 4**: One by one analysis (1 by 1) will be performed.
+**Step 4**: One by one analysis (1 by 1) will be performed to find state filters. 
 
 <p align="center">
   <img src="figs/step5.png" alt="figStep5">
 </p>
 
-Then, 2 by 2 analysis will be performed if a filter was not found by the previous 1 by 1 step.
+If a state filter was not found by the previous 1 by 1 step, then 2 by 2 analysis will be performed. 
 
 <p align="center">
   <img src="figs/twobytwo.png" alt="fig2by2">
@@ -131,12 +131,12 @@ Then, 2 by 2 analysis will be performed if a filter was not found by the previou
   <img src="figs/step5.png" alt="figStep7">
 </p>
 
-**Step 6**: Once 'n' was input in the previous step, other three inputs will be asked to the user for the statemachine 
+**Step 6**: Once 'n' was provided in the previous step, other three inputs will be asked to the user for the state machine 
 generation:
 
 1. Previous input capture file;
 2. Template config file;
-3. The output file name, (.json is for the statemachine generatoin, .png is for the statemachine image generation).
+3. The output file name, (.json is for the statemachine generation, .png is for the state machine image generation).
 
 
 <p align="center">
@@ -185,7 +185,7 @@ cots-iot-fuzzer/zigbee_dongle_connection/coordinator/data
 
 **Step3:**
 *Prepare the hardware* for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod)
-and zigbee smart devices 
+and zigbee smart devices.
 
 ![figdongle](figs/zigbeedongle.jpg "title-8")
 
@@ -225,7 +225,7 @@ $ sudo bin/coap_realtime_fuzzer --EnableMutation=true
 $ cd cots-iot-fuzzer/coap_client_server
 $ sudo ip netns exec veth5 node client_complete.js
 ```
-## 4.3 5G
+## 4.3 5G NR (Standalone)
 
 ### 4.3.1 5G Container:
 Download the 5G container from the docker hub.
