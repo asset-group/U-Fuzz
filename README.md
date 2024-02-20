@@ -275,7 +275,7 @@ $ sudo bin/lte_fuzzer  --EnableSimulator=false
 ## 5.1.  Summary of CVEs:
 As of today, U-Fuzz has discovered 11 new security flaws which have been assigned 11 CVE IDs. The correspondence between the exploit name, U-Fuzz discovered vulnerability and the CVE IDs are shown in the Tables below:
 
-| Protocol Under Test | U-Fuzz Vulnerability Name | Affected Hardware/<br>Software Implementation | CVE            |
+| Protocol Under Test | U-Fuzz Vulnerability Name | Affected Hardware/<br>Software Implementation    | CVE            |
 | --------------------|---------------------------|-------------------------------------------|----------------|
 | 5G                  | V1 - Invalid CellGroupConfig | OnePlus Nord CE 2 | CVE-2024-20004           |
 | 5G                  | V2 - Invalid CellGroupId     | OnePlus Nord CE 2 | CVE-2024-20003           |
