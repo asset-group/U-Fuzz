@@ -282,10 +282,10 @@ As of today, U-Fuzz has discovered 11 new security flaws which have been assigne
 | 5G                  | V3 - Invalid RLC Sequence    | OnePlus Nord CE 2 | CVE-2023-20702 (existed) |
 | 5G                  | V4 - Invalid Uplink Config Element| OnePlus Nord CE 2| CVE-2023-32843 (existed) |
 | 5G                  | V5 - Null Uplink Config Element | OnePlus Nord CE 2| CVE-2023-32845 (existed) |
-| Zigbee              | V6 - Invalid Transaction and Cluster ID | Texas Instrument CC2531 USB Dongle Z-stack version: Z-Stack_Home_1.2 SONOFF Zigbee 3.0 USB Dongle-P Z-stack version: Z-Stack_3.0.x | CVE-2023-41388 |
+| Zigbee              | V6 - Invalid Transaction and Cluster ID | Texas Instrument CC2531<br>USB Dongle Z-stack version:<br>Z-Stack_Home_1.2<br> SONOFF Zigbee 3.0 USB<br> Dongle-P Z-stack version:<br> Z-Stack_3.0.x | CVE-2023-41388 |
 | Zigbee              | V7 - Invalid Transaction and Cluster ID| Zigbee2Mqtt Version:3.8| CVE-2023-41003           |
 | Zigbee              | V8 - Malformed AF_Data_Request| Zigbee2Mqtt Version:3.8 | CVE-2023-42386           |
-| Zigbee              | V9 - Out of Sync State Information| Zigbee2Mqtt Version:3.8 CVE-2023-41004           |
+| Zigbee              | V9 - Out of Sync State Information| Zigbee2Mqtt Version:3.8 |CVE-2023-41004           |
 | Zigbee              | A1 - Skip Link Status| Tuya Smart Plug| Not applicable |
 | Zigbee              | A2 - Skip Link Status| Philips Hue Smart Light Bulb| Not applicable           |
 | CoAP                | V10 - NullPointerException| Jcoap | CVE-2023-34918           |
