@@ -13,7 +13,7 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
 
 2. [⏩ Initial Compilation](#2--initial-compilation)
 
-3. [🔀 Running Multi-protocol Statemapper](#3-🔀-running-multi-protocol-statemapper)
+3. [🔀 Running Multi-protocol Statemapper](#3--running-multi-protocol-statemapper)
     * [Manual Mode Running details](#31-manual-mode-running-details)
     * [Model representation figure](#32-model-representation-figure)
 
