@@ -23,7 +23,7 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
     * [5G NR Implementation](#43-5g)
         * [Fuzzing 5G NR using Container](#431-5g-container)
         * [Fuzzing 5G NR with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
-        * [Fuzzing 5G with real COTS](#433-fuzzing-5g-with-real-cots)
+        * [Fuzzing 5G NR with real COTS](#433-fuzzing-5g-with-real-cots)
 5. [📄 Exploits](#5-📄-exploits)
     * [Summary of CVEs](#51-summary-of-cves)
     * [Available Exploits](#52-available-exploits)
@@ -253,7 +253,7 @@ Use the following command to just run 5G simulator
 $ sudo bin/lte_fuzzer --EnableSimulator=true
 
 
-### 4.3.3 Fuzzing 5G with real COTS: 
+### 4.3.3 Fuzzing 5G NR with real COTS: 
 Hardware Preparation:
 
   [OnePlus Nord CE2](https://www.oneplus.com/sg/nord-ce-2-5g/specs) or other 5G COTS UE.
