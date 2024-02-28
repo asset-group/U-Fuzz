@@ -18,11 +18,11 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
     * [Model representation figure](#model-representation-figure)
 
 4. [🧑‍💻 Running the fuzzer](#4-🧑‍💻-running-the-fuzzer)
-    * [Zigbee](#41-zigbee)
-    * [CoAP](#42-coap)
-    * [5G](#43-5g)
-        * [5G Container](#431-5g-container)
-        * [Fuzzing 5G with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
+    * [Zigbee Protocol Implementation](#41-zigbee)
+    * [CoAP Protocol Implementation](#42-coap)
+    * [5G NR Implementation](#43-5g)
+        * [Fuzzing 5G NR with Container](#431-5g-container)
+        * [Fuzzing 5G NR with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
         * [Fuzzing 5G with real COTS](#433-fuzzing-5g-with-real-cots)
 5. [📄 Exploits](#5-📄-exploits)
     * [Summary of CVEs](#51-summary-of-cves)
@@ -155,7 +155,7 @@ generation:
 
 
 # 4. 🧑‍💻 Running the fuzzer
-## 4.1 Zigbee
+## 4.1 Zigbee Protocol Implementation
 
 **Step1:**
 *build the project (zigbee_real_time_fuzzer)*
@@ -206,7 +206,7 @@ $ cd zigbee_dongle_connection/coordinator
 $ docker-compose up
 ```
 
-## 4.2 CoAP
+## 4.2 CoAP Protocol Implementation
 
 **Step1:**
 *build the project (coap_realtime_fuzzer)*
@@ -227,9 +227,9 @@ $ sudo bin/coap_realtime_fuzzer --EnableMutation=true
 $ cd cots-iot-fuzzer/coap_client_server
 $ sudo ip netns exec veth5 node client_complete.js
 ```
-## 4.3 5G NR (Standalone)
+## 4.3 5G NR Implementation (Standalone)
 
-### 4.3.1 5G Container:
+### 4.3.1 Fuzzing 5G NR using Container:
 Download the 5G container from the docker hub.
 
 Credential: 
@@ -241,7 +241,7 @@ Access token:
 dckr_pat_A7VRSeNGp_tJPhIAuk4Iksk0pxM
 ```
 
-### 4.3.2 Fuzzing 5G with 5G Simulator:
+### 4.3.2 Fuzzing 5G NR with 5G Simulator:
 
 $ cd */wireless-deep-fuzzer/5gcontainer
 
