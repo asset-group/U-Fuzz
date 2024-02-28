@@ -9,26 +9,26 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
 
 **Table of Contents**
 
-1. [📋 Software Environment](#1-software-environment)
+1. [📋 Software Environment](#1--software-environment)
 
-2. [⏩ Initial Compilation](#2-⏩-initial-compilation)
+2. [⏩ Initial Compilation](#2--initial-compilation)
 
 3. [🔀 Running Multi-protocol Statemapper](#3-🔀-running-multi-protocol-statemapper)
     * [Manual Mode Running details](#31-manual-mode-running-details)
-    * [Model representation figure](#model-representation-figure)
+    * [Model representation figure](#32-model-representation-figure)
 
-4. [🧑‍💻 Running the fuzzer](#4-🧑‍💻-running-the-fuzzer)
-    * [Zigbee Protocol Implementation](#41-zigbee)
-    * [CoAP Protocol Implementation](#42-coap)
-    * [5G NR Implementation](#43-5g)
-        * [Fuzzing 5G NR using Container](#431-5g-container)
-        * [Fuzzing 5G NR with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
-        * [Fuzzing 5G NR with real COTS](#433-fuzzing-5g-with-real-cots)
-5. [📄 Exploits](#5-📄-exploits)
-    * [Summary of CVEs](#51-summary-of-cves)
+4. [🧑‍💻 Running the fuzzer](#4--running-the-fuzzer)
+    * [Zigbee Protocol Implementation](#41-zigbee-protocol-implementation)
+    * [CoAP Protocol Implementation](#42-coap-protocol-implementation)
+    * [5G NR Implementation](#43-5g-nr-implementation-standalone)
+        * [Fuzzing 5G NR using Container](#431-fuzzing-5g-nr-using-container)
+        * [Fuzzing 5G NR with 5G Simulator](#432-fuzzing-5g-nr-with-5g-simulator)
+        * [Fuzzing 5G NR with real COTS](#433-fuzzing-5g-nr-with-real-cots)
+5. [📄 Exploits](#5--exploits)
+    * [Summary of CVEs](#51--summary-of-cves)
     * [Available Exploits](#52-available-exploits)
         * [V14 replication](#521-v14-replication)
-6. [📝 Citing U-Fuzz](#6-📝-citing-u-fuzz)
+6. [📝 Citing U-Fuzz](#6--citing-u-fuzz)
 
 
 
