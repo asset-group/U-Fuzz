@@ -9,7 +9,7 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
 
 **Table of Contents**
 
-1. [📋 Software Environment](#1-📋-software-environment)
+1. [📋 Software Environment](#1-software-environment)
 
 2. [⏩ Initial Compilation](#2-⏩-initial-compilation)
 
@@ -319,7 +319,7 @@ script can be found at [replicate_crash_libcoap](/CoAP_Crash/replicate_crash_lib
 # 6. 📝 Citing U-Fuzz
 
 ```
-@article{
+@inproceedings{
   author={Shang, Zewen and Garbelini, Matheus E and Chattopadhyay, Sudipta},
   booktitle={2024 IEEE Conference on Software Testing, Verification and Validation (ICST)}, 
   title={U-Fuzz: Stateful Fuzzing of IoT Protocols on COTS Devices}, 
