@@ -21,7 +21,7 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
     * [Zigbee Protocol Implementation](#41-zigbee)
     * [CoAP Protocol Implementation](#42-coap)
     * [5G NR Implementation](#43-5g)
-        * [Fuzzing 5G NR with Container](#431-5g-container)
+        * [Fuzzing 5G NR using Container](#431-5g-container)
         * [Fuzzing 5G NR with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
         * [Fuzzing 5G with real COTS](#433-fuzzing-5g-with-real-cots)
 5. [📄 Exploits](#5-📄-exploits)
