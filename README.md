@@ -146,7 +146,7 @@ generation:
 </p>
 
 
-## Model representation figure
+## 3.2 Model representation figure
 
 <p align="center">
   <img src="figs/model-fig.png" alt="figmodel">
