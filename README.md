@@ -25,9 +25,9 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
         * [Fuzzing 5G with 5G Simulator](#432-fuzzing-5g-with-5g-simulator)
         * [Fuzzing 5G with real COTS](#433-fuzzing-5g-with-real-cots)
 5. [📄 Exploits](#5-📄-exploits)
-  * [Summary of CVEs](#51-summary-of-cves)
-  * [Available Exploits](#52-available-exploits)
-    * [V14 replication](#521-v14-replication)
+    * [Summary of CVEs](#51-summary-of-cves)
+    * [Available Exploits](#52-available-exploits)
+        * [V14 replication](#521-v14-replication)
 6. [📝 Citing U-Fuzz](#6-📝-citing-u-fuzz)
 
 
