@@ -288,11 +288,12 @@ def cp_to_config(dest_directory,target_name):
     os.system("cp test.json "+dest_directory+"/"+target_name)
 
 # generate the png for the state mapper
-def generate_stateMapper():
-    cap_location = input(Fore.BLUE+"Please enter the directory of the capture file including the file name : ")
-    config_location = input(Fore.BLUE+"Please enter the directory of the config file including the file name : ")
+def generate_stateMapper(final_cap,complete_config):
+    # cap_location = input(Fore.BLUE+"Please enter the directory of the capture file including the file name : ")
+    cap_location = final_cap
+    config_location = "./"+complete_config
     target_name = input(Fore.BLUE+"Please enter the target name of the output file : ")
-    command = "sudo ../../bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name
+    command = "sudo ./bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name
     print(command)
     os.system(command)
 
@@ -480,9 +481,10 @@ def create_state(cap_dic,d,finalFileName):
         #     continue
     targetFileName = "test.json"
     # cp_to_config("/home/asset/Desktop/work/wireless-deep-fuzzer-wdissector-zigbee/configs",targetFileName)
-    os.system("mv test.json "+str(current_time)+".json")
+    complete_config_name = str(current_time)+".json"
+    os.system("mv test.json "+complete_config_name)
     # print("This is the filter dictionary: ", state_dic)
-    return state_dic
+    return state_dic,complete_config_name
 # This function will output the list of target layer for later filter inspection (start from layer number 3)
 def find_target_layer_name(pkt_lst,cap_dic):
     # This list contains the length of the target packet's dictonary which indicates the number of layers of that packet
@@ -597,5 +599,5 @@ if __name__ == '__main__':
     print(Fore.YELLOW+"Loaded Profile: " + wdissector_profile_info().decode())
     cap_dic,pkt_summ_dic = get_dic(c)
     auto_gen_state_dic(pkt_summ_dic)
-    create_state(cap_dic,c,final_file_name)
-    generate_stateMapper()
+    state_dic, final_config_name = create_state(cap_dic,c,final_file_name)
+    generate_stateMapper(final_file_name,final_config_name)
