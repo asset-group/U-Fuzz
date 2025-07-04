@@ -293,9 +293,13 @@ def generate_stateMapper(final_cap,complete_config):
     cap_location = final_cap
     config_location = "./"+complete_config
     target_name = input(Fore.BLUE+"Please enter the target name of the output file : ")
-    command = "sudo ./bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name
+    command = "./bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name+".png"
+    # this command is used to generate the json 
+    command_2 = "./bin/wdmapper "+"-i "+cap_location+" -c "+config_location+" -o "+target_name+".json"
     print(command)
+    print(command_2)
     os.system(command)
+    os.system(command_2)
 
 # using the wdmapper function convert the hex value to string
 def value_to_string(field_name, integer_value):
@@ -421,6 +425,97 @@ def lst_packet():
             end_flag = input(Fore.RED+"Do you want to continuesly input packet? y/n : ")
     return pkt_lst
 
+# This function runs the auto mode
+def create_state_auto(cap_dic,d,state_pred_dic):
+    # flag = input("Do you want to generate basic states automatically (y/n) ?")
+    rel_filter = {}
+    tim = time.localtime()
+    current_time = time.strftime("%H:%M:%S", tim)
+    # os.system("cp bthost_mqtt_config.json test.json")
+    # os.system("cp wifi_templete_config.json test.json")
+    # os.system("cp zigbee_config_templete.json test.json")
+    # os.system("cp bthost_config.json test.json")
+    # os.system("cp 5gnr_gnb_templete_config.json test.json")
+    os.system("cp ble_templete_config.json test.json")
+
+
+
+    # create a state dictionary for all new state with the key as the state name and value as the filter list
+    state_dic = {}
+    length_of_pstates = len(state_pred_dic)
+    state_names = list(state_pred_dic.keys())
+    pred_pkt_st = list(state_pred_dic.values())
+    if length_of_pstates>0:
+        flg = 'y'
+    # flg = input(Fore.RED+"Do you want to create a new state? (y/n): ")
+    while flg == 'y':
+        # pkt_lst = lst_packet()
+        pkt_lst = pred_pkt_st[length_of_pstates-1]
+        print("this is the pkt lst",pkt_lst)
+        state_name = state_names[length_of_pstates-1]
+        print("This is the state name",state_name)
+        if state_name != "Ethernet II":
+
+            fil_dic_dic = filter_dic(pkt_lst, cap_dic)
+        # state_name = input(Fore.RED+"Enter the name of the state: ")
+        # state_name = state_names[length_of_pstates-1]
+        # print("This is the state name",state_name)
+
+            state_dic[state_name] = fil_dic_dic[0]
+        # The error maybe because of the encodeing of the string
+        # get_filter(rel_filter,pkt_lst,fil_dic,cap_dic,'capture_wifi_ap_eap_peap.pcapng',target_layer_name,state_name,d)
+        # get_filter(rel_filter,pkt_lst,fil_dic,cap_dic,'zigbee.pcapng',target_layer_name,state_name,d)
+        # get_filter(rel_filter,pkt_lst,fil_dic_dic,cap_dic,finalFileName,state_name,d)
+        # print("This is the state_dic: ", state_dic)
+            get_filter(rel_filter,pkt_lst,fil_dic_dic,cap_dic,state_name,d,state_dic)
+        else:
+            print("Encounter log packets")
+        # print("This is the state_dic: ",state_dic)
+
+        # get_filter(rel_filter,pkt_lst,fil_dic,cap_dic,'mqtt_packets.pcapng',target_layer_name,state_name)
+        # print("This is the real filter",rel_filter)
+        length_of_pstates -= 1
+        if length_of_pstates >=0:
+            flg = 'y'
+        else:
+            flg = 'n'
+        # flg = input(Fore.RED+"Do you want to create a new state? (y/n): ")
+    # transfer the first element of the filter list to the json format.
+    for key, value in state_dic.items():
+        for key1, value1 in value.items():
+            # create the filter dictionary for each state
+            jsn_dic = {"AppendSummary": False}
+            # jsn_dic["Filter"] = target_layer_name+"."+key1+"=="+str(value1)
+            jsn_dic["Filter"] = rel_filter[key]
+            jsn_dic["LayerName"] = key
+            # jsn_dic["StateNameField"]= jsn_dic["Filter"]
+            for key2,value2 in value.items():
+                # print("This is key2",key2)
+                state_name_field = key2
+                # print("This is value 2",value2)
+                if value_to_string(state_name_field,value2)!=None:
+                    # print(Fore.GREEN+"got statename field")
+                    # jsn_dic["StateNameField"] = state_name_field
+                    jsn_dic["StateNameField"] = jsn_dic["Filter"].split('==')[0]
+                    break
+            if "StateNameField" not in jsn_dic:
+                # jsn_dic["StateNameField"]=key1
+                jsn_dic["StateNameField"]=jsn_dic["Filter"].split('==')[0]
+            # print(Fore.GREEN+"This is the jsn_dic", jsn_dic)
+            # time.sleep(0.2)
+            print(json.dumps(jsn_dic) + ',')
+            write_json(jsn_dic)
+            jsn_dic = {}
+            break
+        # else:
+        #     continue
+    targetFileName = "test.json"
+    # cp_to_config("/home/asset/Desktop/work/wireless-deep-fuzzer-wdissector-zigbee/configs",targetFileName)
+    complete_config_name = str(current_time)+".json"
+    os.system("mv test.json "+complete_config_name)
+    # print("This is the filter dictionary: ", state_dic)
+    return state_dic,complete_config_name
+
 # allow the user to create their own state
 def create_state(cap_dic,d,finalFileName):
     # flag = input("Do you want to generate basic states automatically (y/n) ?")
@@ -468,10 +563,12 @@ def create_state(cap_dic,d,finalFileName):
                 # print("This is value 2",value2)
                 if value_to_string(state_name_field,value2)!=None:
                     print(Fore.GREEN+"got statename field")
-                    jsn_dic["StateNameField"] = state_name_field
+                    # jsn_dic["StateNameField"] = state_name_field
+                    jsn_dic["StateNameField"] = jsn_dic["Filter"]
                     break
             if "StateNameField" not in jsn_dic:
-                jsn_dic["StateNameField"]=key1
+                # jsn_dic["StateNameField"]=key1
+                jsn_dic["StateNameField"]=jsn_dic["Filter"]
             print(Fore.GREEN+"This is the jsn_dic", jsn_dic)
             time.sleep(0.2)
             write_json(jsn_dic)
@@ -597,7 +694,15 @@ if __name__ == '__main__':
     wdissector_enable_fast_full_dissection(1)
     print(Fore.YELLOW+"Version: " + wdissector_version_info().decode())
     print(Fore.YELLOW+"Loaded Profile: " + wdissector_profile_info().decode())
-    cap_dic,pkt_summ_dic = get_dic(c)
-    auto_gen_state_dic(pkt_summ_dic)
-    state_dic, final_config_name = create_state(cap_dic,c,final_file_name)
-    generate_stateMapper(final_file_name,final_config_name)
+    auto_flag = input(Fore.RED+"Do you want to use auto mode? (y/n) ")
+    if auto_flag == "y":
+        cap_dic,pkt_summ_dic = get_dic(c)
+        state_predication_dic = auto_gen_state_dic(pkt_summ_dic)
+        print("This is the state prediction dictionary", state_predication_dic)
+        state_dic,final_config_name = create_state_auto(cap_dic,c,state_predication_dic)
+        generate_stateMapper(final_file_name,final_config_name)
+    else:
+        cap_dic,pkt_summ_dic = get_dic(c)
+        auto_gen_state_dic(pkt_summ_dic)
+        state_dic, final_config_name = create_state(cap_dic,c,final_file_name)
+        generate_stateMapper(final_file_name,final_config_name)
