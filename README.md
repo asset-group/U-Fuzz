@@ -28,7 +28,10 @@ U-Fuzz is a framework to systematically discover and replicate security vulnerab
     * [Summary of CVEs](#51--summary-of-cves)
     * [Available Exploits](#52-available-exploits)
         * [V14 replication](#521-v14-replication)
-6. [📝 Citing U-Fuzz](#6--citing-u-fuzz)
+6. [🧑‍💻 U-fuzz Docker](#6--ufuzz-docker)
+   * [Download Link](#61-download-link)
+   * [Running Toturial and potential issues](#62-running-toturial-and-potential-issues)
+8.  [📝 Citing U-Fuzz](#7--citing-u-fuzz)
 
 
 
@@ -316,7 +319,28 @@ Our group used Esp32 board to fuzz libcoap and to replicate the vulnerability V1
 can be found at [Libcoap_crash_replication_tutorial](/CoAP_Crash/Libcoap_crash_replication_tutorial.pdf). Additionally, the replication 
 script can be found at [replicate_crash_libcoap](/CoAP_Crash/replicate_crash_libcoap.py).
 
-# 6. 📝 Citing U-Fuzz
+# 6. 🧑‍💻 U-fuzz Docker
+## 6.1 Download Link
+[U-fuzz](https://drive.google.com/file/d/1ZUzkxGx1fvjOTZ63kSdm0cKpakbmoI-K/view?usp=sharing "https://drive.google.com/file/d/1ZUzkxGx1fvjOTZ63kSdm0cKpakbmoI-K/view?usp=sharing")
+## 6.2 Running Toturials and Potential Issues
+*More detials can refer to the file U_Fuzz_build_from_scrach.html*
+### 6.2.1 U-Fuzz container running command
+```
+$ docker load -i u-fuzz-docker.tar
+
+$ docker run -it --privileged -d --restart=unless-stopped --network=host -v /dev:/dev -v /var/run/netns:/var/run/netns u-fuzz-docker:latest
+
+get the docker-id by using cmd
+$ docker ps -a 
+
+then run 
+$ docker exec -it <docker-id> bash
+```
+### 6.2.2 Potential Issue:
+if encounter a python configuration problem while building the fuzzer by using command ./build.sh all, you can go to ~/U-Fuzz/modules/python/install/bin and run 
+chmod +x python*
+to give python3 the correct privilege.
+# 7. 📝 Citing U-Fuzz
 
 ```
 @inproceedings{
