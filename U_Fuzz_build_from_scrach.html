@@ -1,44 +1,39 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReadMe</title>
+  <title>U-Fuzz Container Running Toturial</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
 <body class="stackedit">
   <div class="stackedit__html"><h1 id="u_fuzz">U_Fuzz</h1>
-<p>U_Fuzz is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. U_Fuzz offers possibility to automatically construct the fuzzing statemachine with only a few packet traces of normal (i.e.,benign) communication.</p>
-<h2 id="software-environment">Software Environment</h2>
-<p><strong>OS:</strong> Ubuntu 18.04<br>
-<strong>Wireshark Version:</strong> V4.1 (patched)<br>
-<strong>Bindings:</strong> Python3, Golang</p>
-<h2 id="compile-from-the-source">Compile from the source</h2>
-<p>Several requirements needs to be installed before compiling the project. An automated script for Ubuntu 18.04 is provided on <code>requirements.sh</code>. To compile from source, simply run the following commands:</p>
-<pre><code>$ Git clone from the our gitlab repo by using the command:
-git clone -b u_fuzz https://gitlab.com/asset-sutd/software/wireless-deep-fuzzer.git
+<p>U_Fuzz is a framework to systematically discover and replicate security vulnerabilities on arbitrary wired and wireless IoT protocol (e.g., CoAP, Zigbee, 5G NR) implementations. U_Fuzz offers possibility to automatically construct the fuzzing state machine with only a few packet traces of normal (i.e.,benign) communication.</p>
+<h2 id="u-fuzz-container-download-link">U-Fuzz container download link</h2>
+<p><a href="https://drive.google.com/file/d/1ZUzkxGx1fvjOTZ63kSdm0cKpakbmoI-K/view?usp=sharing" title="https://drive.google.com/file/d/1ZUzkxGx1fvjOTZ63kSdm0cKpakbmoI-K/view?usp=sharing">https://drive.google.com/file/d/1ZUzkxGx1fvjOTZ63kSdm0cKpakbmoI-K/view?usp=sharing</a></p>
+<h2 id="u-fuzz-container-running-command">U-Fuzz container running command</h2>
+<pre><code>$ docker load -i u-fuzz-docker.tar
 
-$ cd cd wireless-deep-fuzzer
+$ docker run -it --privileged -d --restart=unless-stopped --network=host -v /dev:/dev -v /var/run/netns:/var/run/netns u-fuzz-docker:latest
 
-$ ./requirements.sh dev # Install all requirements to compile wdissector from source
+get the docker-id by using cmd
+$ docker ps -a 
 
-$./requirements.sh doc  # Install nodejs requirements to generate documentation
-
-$./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe!
+then run 
+$ docker exec -it &lt;docker-id&gt; bash
 </code></pre>
-<p>If the error related to libvifaced moudle is missing shows up during the building process, you can download the libvifaced folder from<br>
-<a href="https://drive.google.com/drive/folders/1J6gY7iPNpDDWtQOF4hhSWPLu7FvyRput?usp=sharing">here</a>  then copy and paste to wireless-deep-fuzzer/libs</p>
 <h2 id="running-the-multi-protocol-statemapper">Running the multi-protocol Statemapper</h2>
 <p>Before running the fuzzer, the multi-protocol Statemapper need to be run to generate both the configuration file and the state model.</p>
 <p>the multi-protocol-statemapper needs two inputs,</p>
-<p>1: Capture_trace_for target_protocol.pcapng(can input via terminal)</p>
-<p>2: configuration templete to append the mapping rules needs to specify the file name in “multi_protocol_state_mapper.py :line: 423”</p>
-<p>After compile from the project with the correct software environment, please run the following command with the two inputs mentioned previously.</p>
-<p>$ cd …/wireless-deep-fuzzer/Simulator/wdissector</p>
-<p>$ python3 multi_protocol_state_mapper.py</p>
-<p>if running error related to bin folder shows up, please download the required bin folder form <a href="https://drive.google.com/file/d/1m9aBkPM5smge_7nCg2hZPK3AeC1doxag/view?usp=sharing">here</a> then copy and paste to the directory …/wireless-deep-fuzzer/Simulator/wdissector</p>
+<p><mark>1: Capture_trace_for target_protocol.pcapng(can input via terminal)</mark><br>
+<mark>2: configuration templete to append the mapping rules needs to specify the file name in “multi_protocol_state_mapper.py :line: 440”</mark></p>
+<pre><code>$ cd ~/UFuzz/multi_protocol_statemapper/wdissector
+
+$ python3 multi_protocol_state_mapper.py
+</code></pre>
+<p><mark>U-Fuzz’s multi-protocol-statemapper supports both manual mode and auto mode, the auto mode will generate the statemachine automatically with only the capture trace as input, the manual mode allows the user to customised the state based on their own knowledges</mark></p>
 <h1 id="manual-mode-running-details">Manual Mode Running details</h1>
 <p>Step1: input the final capture trace</p>
 <p><a href="https://drive.google.com/file/d/1Q_ZQZiKv6wEHrtKwKiXJ1iUNagv3-8nU/view?usp=sharing">figStep1</a></p>
@@ -80,65 +75,66 @@ $./build.sh all # Compile all binaries. It may take around 15min. Go get a coffe
 <p><a href="https://drive.google.com/file/d/1a3lruUsG-GnTDWrams3p6n5DbpUHzBGh/view?usp=sharing">figmodel</a></p>
 <h2 id="running-the-fuzzer">Running the fuzzer</h2>
 <ol>
-<li>Zigbee</li>
+<li>Zigbee<br>
+<strong>Step1:</strong><br>
+<em>build the project (zigbee_real_time_fuzzer)</em></li>
 </ol>
-<p><em>Step1:</em></p>
-<p>build the project (zigbee_real_time_fuzzer)</p>
-<ol>
-<li>
-<p>Edit the CMakeLists.txt<br>
-$ Uncomments line:801, 807-811<br>
-$ Comments line: 803, 821-825</p>
-</li>
-<li>
-<p>Edit the <a href="http://build.sh">build.sh</a><br>
-$ remove the coap_realtime_fuzzer, add the zigbee_real_time_fuzzer<br>
-$ ./build.sh</p>
-</li>
-</ol>
-<p><em>Step2:</em><br>
-*install Zigbee2Mqtt *from link: <a href="https://www.zigbee2mqtt.io/">https://www.zigbee2mqtt.io/</a></p>
-<p>the sample configuration file is located at<br>
-~/zigbee_dongle_connection/coordinator/data</p>
-<p><em>Step3:</em><br>
-*prepare the hardware * for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod) and zigbee smart devices</p>
-<p><a href="https://drive.google.com/file/d/1Dz7EFU0AO1kJn5Gs3HyR6-OkASbqhHHa/view?usp=sharing">figdongle</a></p>
-<p><em>Step 4:</em></p>
-<p><em>Run the fuzzer</em></p>
-<p>open a new terminal then run</p>
-<p>$ mosquitto</p>
-<p>Then run the fuzzer at directory<br>
-*/wireless-deep-fuzzer<br>
-by using command<br>
-$ sudo bin/zigbee_real_time_fuzzer --EnableMutation=true</p>
-<p>Then run the zigbee2mqtt docker to enable the communication<br>
-$ cd zigbee_dongle_connection/coordinator</p>
-<p>$ docker-compose up</p>
+<pre><code>Edit the CMakeLists.txt
+$ Uncomments line:802, 810-814
+$ Comments line: 804, 824-828
+
+$ ./build.sh all
+</code></pre>
+<p><mark>if encounter a python configuration problem while building, you can go to ~/U-Fuzz/modules/python/install/bin and run<br>
+chmod +x python*<br>
+to give python3 the correct privilege.</mark></p>
+<p><strong>Step2:</strong><br>
+*install Zigbee2Mqtt *from link: <a href="https://www.zigbee2mqtt.io/">https://www.zigbee2mqtt.io/</a><br>
+the sample configuration file is located at<br>
+<mark>/zigbee_dongle_connection/coordinator/data</mark></p>
+<p><strong>Step3:</strong><br>
+*prepare the hardware * for fuzzing Zigbee including coordinator dongle (e.g., CC2531 ZNP-Prod)<br>
+and zigbee smart devices</p>
+<p><strong>Step 4:</strong><br>
+*Run the fuzzer *</p>
+<pre><code>open a new terminal then run 
+$ mosquitto
+
+run the fuzzer at directory
+$ cd ~/U-Fuzz
+$ sudo bin/zigbee_real_time_fuzzer
+
+$ cd zigbee_dongle_connection/coordinator
+$ docker-compose up
+</code></pre>
 <ol start="2">
-<li>CoAP</li>
+<li>CoAP<br>
+<strong>Step1:</strong><br>
+<em>build the project (coap_realtime_fuzzer)</em></li>
 </ol>
-<p><em>Step1:</em></p>
-<p>build the project (coap_realtime_fuzzer),<br>
-Since the default CMakeList.txt and <a href="http://build.sh">build.sh</a> are created for coap fuzzing, can just run ./build.sh to build.</p>
-<p><em>Step2:</em></p>
-<p>Set up target CoAP sever implementation (e.g., Libcoap)</p>
-<p><em>Step3:</em></p>
-<p>Run the Fuzzer</p>
-<p>$ Run CoAP Server</p>
-<p>$ cd wireless-deep-fuzzer/</p>
-<p>$ sudo bin/coap_realtime_fuzzer --EnableMutation=true</p>
-<p>$ cd cots-iot-fuzzer/coap_client_server</p>
-<p>$ sudo ip netns exec veth5 node client_complete.js</p>
+<pre><code>$ ./build.sh all
+
+</code></pre>
+<p><strong>Step2:</strong><br>
+Set up target CoAP sever implementation (e.g., Libcoap)</p>
+<p><strong>Step3:</strong><br>
+<em>Run the Fuzzer</em></p>
+<pre><code>$ Run CoAP Server
+
+$ cd ~/U-Fuzz
+$ sudo bin/coap_realtime_fuzzer 
+
+Attach a new terminal with the running container then run
+
+$ cd cots-iot-fuzzer/coap_client_server
+$ sudo ip netns exec veth5 node client_complete.js
+</code></pre>
 <ol start="3">
-<li>5G</li>
+<li>5G Container Running<br>
+As for 5G since running a container inside a container is complicated, you can refer our another project 5Ghoul which using the same fuzzing engine to run the 5G container locally. As for the statemachine generation, you can run the auto-statemapper-generator script in  U-Fuzz  container to generate it then copy and paste to the 5ghoul container to run it.</li>
 </ol>
-<h1 id="download-the-5g-container-for-5g-fuzzing">Download the 5G container, for 5G fuzzing</h1>
-<p>$ cd */wireless-deep-fuzzer/5gcontainer</p>
-<p>$ chmod +x <a href="http://container.sh">container.sh</a></p>
-<p>$ ./container.sh run release-5g</p>
-<p>If just wanna run the 5G simulator can use the following command<br>
-$ sudo bin/lte_fuzzer --EnableSimulator=true</p>
-<p>if wanna run 5G fuzzing with real UE,  please contact me before running the experiment then i can prepare the fuzzing setup for testing.</p>
+<p>The 5ghoul container tutorial could be found at this link:</p>
+<p><a href="https://github.com/asset-group/5ghoul-5g-nr-attacks" title="https://github.com/asset-group/5ghoul-5g-nr-attacks">https://github.com/asset-group/5ghoul-5g-nr-attacks</a></p>
 </div>
 </body>
 
